@@ -40,3 +40,5 @@
 }
 
 .summary-grid .summary-card{padding-left:22px}
+
+.recommendations>.eyebrow{margin:0 0 8px}.recommendations .table-wrap{margin-top:0}.selection-table thead th{border-top:0;border-bottom:1px solid var(--line);padding-top:17px;padding-bottom:15px;font-size:13px;font-weight:650;color:var(--text)}.selection-table th small{font-size:10px;line-height:1.5;color:var(--muted);font-weight:400;margin-top:3px}.selection-table td{padding-top:17px;padding-bottom:17px}

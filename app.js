@@ -90,7 +90,7 @@ async function boot(){
       const pool=x.candidates.map(c=>models[c]).filter(Boolean);
       return `<tr><td class="role-cell"><strong>${x.label==='fable'?'Fable':x.label==='opus'?'Opus':x.label==='sonnet'?'Sonnet':x.label==='haiku'?'Haiku':x.label}</strong><p class="field-description">${x.positioning}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,metrics.speed)}</td><td>${ranking(pool,metrics.value)}</td></tr>`;
     }).join('');
-    $('.selection-table th').textContent=activeTool==='claude'?'Claude 档位 / 用途':'GPT 档位 / 用途';
+    $('.selection-table th').textContent=activeTool==='claude'?'Claude 档位':'GPT 档位';
     $('.field-hint').hidden=activeTool!=='claude';
   };
   renderRanking();
