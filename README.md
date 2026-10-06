@@ -1,56 +1,29 @@
 # Model Select
 
-一个面向 CC Switch / Claude Code 用户的百炼模型选择站：根据公开 benchmark、百炼官方价格和速度数据，用固定公式推荐 Fable / Opus / Sonnet / Haiku 的能力最优、速度最优和性价比最优模型。
+**用数据选模型。** 为 Claude Code 等编程工具提供模型选择参考，将能力、速度、价格与证据完整度放到同一张表里。
 
-## 架构
+[打开网站 →](https://blog.imlk.top/model-select/)
 
-- 前端：纯静态 HTML/CSS/JS
-- 数据：`data/models.json` + `data/recommendations.json`
-- 评分：`config/scoring.json`
-- 每日更新：GitHub Actions → `scripts/update.py`
-- Benchmark：Artificial Analysis Free API（可选，需要 API Key）
-- 百炼：价格、model code、context 等硬事实保存在 `models.json`；后续 collector 可自动同步官方文档
+## 怎么用
 
-## 本地预览
+1. 按任务选择档位：Fable / Opus 面向复杂任务，Sonnet 面向日常开发，Haiku 面向轻量任务。
+2. 比较能力、速度和成本，再检查证据覆盖率。
+3. 点击 model code 复制，在你的工具中配置。
 
-```bash
-python3 -m http.server 8080
-```
+## 数值怎么看
 
-打开 `http://localhost:8080`。
+| 指标 | 含义 |
+| --- | --- |
+| 能力 / Coding / Agentic | 已收录的 benchmark 指标，缺失显示 N/A |
+| 输出速度 | 每秒输出 token 数（tok/s） |
+| 输入 / 输出价格 | 人民币 / 百万 token，当前展示百炼北京区域价格 |
+| 上下文 | 模型上下文窗口，单位 K tokens |
+| 证据覆盖 | 已收录证据的完整程度，不代表成功率 |
 
-## GitHub Pages 部署
+当前版本的 benchmark 数据尚不完整。推荐是初始参考，不应视为经过完整跑分验证的排名；缺失数值不会用估计值填充。价格和可用性以供应商最新信息为准。
 
-1. 新建 GitHub 仓库并上传本目录。
-2. Settings → Pages → Build and deployment → Deploy from a branch。
-3. 选择 `main` / `/ (root)`。
-4. 如果需要自动 benchmark：在 Settings → Secrets and variables → Actions 中新增：
-   - `ARTIFICIAL_ANALYSIS_API_KEY`
-5. Actions 每天 02:17（中国时间）自动刷新数据。
+目前支持 Claude Code，后续扩展其他编程工具。
 
-## Cloudflare Pages / Vercel
+---
 
-这是纯静态站：
-
-- Build command：留空
-- Output directory：`.`
-- Root directory：仓库根目录
-
-## 为什么第一版不使用 Agent / LLM
-
-排名必须可复现。价格、速度和 benchmark 均来自结构化数据；评分由代码按固定权重计算。AI 以后只作为可选的“解释层”，不参与基础排名。
-
-## 数据安全策略
-
-- 缺失字段显示 N/A，不补猜。
-- 证据覆盖不足的模型不自动进入主排名。
-- API/抓取失败时保留上一次结果，不用空数据覆盖生产结果。
-- 百炼价格与 model code 需要保留官方来源 URL 和更新时间（下一版会拆成独立 provenance 字段）。
-
-## 下一步建议
-
-1. 增加 `collectors/bailian.py`：自动同步百炼价格与新模型列表。
-2. 完善 Artificial Analysis 的模型 ID 映射，不依赖展示名。
-3. 加入 LiveBench / Terminal-Bench adapter（仅在有稳定可再分发接口时）。
-4. 新增 `config/codex.json`，复用同一数据层支持 Codex。
-5. 输出 CC Switch 可复制配置片段。
+[维护与部署说明](docs/maintenance.md) · [评分配置](config/scoring.json)

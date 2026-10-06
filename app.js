@@ -1,7 +1,7 @@
 const $ = s => document.querySelector(s);
 const fmt = n => (n === null || n === undefined) ? 'N/A' : Number(n).toFixed(Number(n)%1?1:0);
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
-const copy = async text => { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); };
+const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };
 const modelLabel = m => `${m.name} (${m.code})`;
 
 async function boot(){
@@ -27,9 +27,9 @@ async function boot(){
     return `<tr>
       <td class="role-cell"><strong>${r[0].toUpperCase()+r.slice(1)}</strong></td>
       <td>${x.positioning}</td>
-      <td>${picks.map(m=>`<span class="pill copy" data-copy="${m.code}">${modelLabel(m)}</span>`).join('')}</td>
-      <td><span class="pill copy" data-copy="${fast?.code}">${fast?modelLabel(fast):'N/A'}</span></td>
-      <td><span class="pill copy" data-copy="${value?.code}">${value?modelLabel(value):'N/A'}</span></td>
+      <td>${picks.map(m=>`<button class="pill copy" data-copy="${m.code}">${modelLabel(m)}</button>`).join('')}</td>
+      <td><button class="pill copy" data-copy="${fast?.code}">${fast?modelLabel(fast):'N/A'}</button></td>
+      <td><button class="pill copy" data-copy="${value?.code}">${value?modelLabel(value):'N/A'}</button></td>
       <td class="price">${p ? `¥${fmt(p.input)}/¥${fmt(p.output)}` : 'N/A'}</td>
       <td><span class="evidence ${x.confidence>=.8?'good':'mid'}">${Math.round(x.confidence*100)}%</span></td>
     </tr>`;
@@ -37,16 +37,13 @@ async function boot(){
 
   const renderCards = q => {
     const needle=q.trim().toLowerCase();
-    $('#modelCards').innerHTML=modelsDoc.models.filter(m=>!needle || `${m.name} ${m.code}`.toLowerCase().includes(needle)).map(m=>{
+    const filtered=modelsDoc.models.filter(m=>!needle || `${m.name} ${m.code}`.toLowerCase().includes(needle));
+    const cell = n => `<td class="numeric ${n==null?'missing':''}">${fmt(n)}</td>`;
+    $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<article class="model-card"><div class="model-top"><div><div class="model-name">${m.name}</div><div class="code copy" data-copy="${m.code}">${m.code}</div></div><span class="pill">${m.context_k?`${m.context_k}K ctx`:'ctx N/A'}</span></div>
-      <div class="score-grid">
-        <div class="metric"><div class="label">能力</div><div class="value">${fmt(m.scores?.capability)}</div></div>
-        <div class="metric"><div class="label">速度 t/s</div><div class="value">${fmt(m.speed?.tokens_per_second)}</div></div>
-        <div class="metric"><div class="label">¥ 输入/输出</div><div class="value" style="font-size:14px">${p.input!=null?`${fmt(p.input)} / ${fmt(p.output)}`:'N/A'}</div></div>
-      </div>
-      <div class="sources">证据覆盖 ${Math.round((m.evidence_coverage||0)*100)}% · ${m.sources.join(' · ')}</div></article>`;
-    }).join('');
+      return `<tr><td><div class="model-name">${m.name}</div><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+    }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
+    $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS · PRICE: ${modelsDoc.region}`;
     document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
   renderCards('');
