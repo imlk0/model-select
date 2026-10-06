@@ -1,3 +1,8 @@
+const themeNames={system:'跟随系统',light:'浅色',dark:'深色'};
+const themeButton=document.querySelector('#themeToggle');
+const updateThemeLabel=()=>{const mode=document.documentElement.dataset.theme||'system';themeButton.textContent='主题 · '+themeNames[mode];themeButton.setAttribute('aria-label','当前'+themeNames[mode]+'，点击切换主题');};
+updateThemeLabel();
+themeButton.onclick=()=>{const modes=['system','light','dark'],current=document.documentElement.dataset.theme||'system',next=modes[(modes.indexOf(current)+1)%3];document.documentElement.dataset.theme=next;try{localStorage.setItem('model-select:theme',next);}catch{}updateThemeLabel();};
 const $ = s => document.querySelector(s);
 const fmt = n => (n === null || n === undefined) ? 'N/A' : Number(n).toFixed(Number(n)%1?1:0);
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
