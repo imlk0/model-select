@@ -29,7 +29,8 @@ async function boot(){
   $('#updatedAt').textContent = new Date(data.updated_at).toLocaleString('zh-CN',{hour12:false});
   $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;
 
-  const roles=['fable','opus','sonnet','haiku'];
+  let activeTool='claude';
+  const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'flagship',label:'GPT 旗舰',positioning:'复杂编程、推理与 Agent 任务',candidates:data.roles.opus.candidates},{key:'mini',label:'GPT Mini',positioning:'日常开发，兼顾能力与成本',candidates:data.roles.sonnet.candidates},{key:'nano',label:'GPT Nano',positioning:'轻量任务、快速响应',candidates:data.roles.haiku.candidates}]};
   const valid = n => typeof n === 'number' && Number.isFinite(n);
   // Compare coding and agentic only when they are supplied on the same scale.
   const ability = m => valid(m.scores?.coding) && valid(m.scores?.agentic) && m.scores?.comparable_scale === true ? (m.scores.coding+m.scores.agentic)/2 : null;
@@ -43,15 +44,15 @@ async function boot(){
   let selectedMetric='ability';
   const renderSummary=()=>{
     const metric=metrics[selectedMetric];
-    $('#summaryGrid').innerHTML=roles.map(role=>{
-      const pool=data.roles[role].candidates.map(c=>models[c]).filter(Boolean);
+    $('#summaryGrid').innerHTML=profiles[activeTool].map(role=>{
+      const pool=role.candidates.map(c=>models[c]).filter(Boolean);
       const m=pool.filter(m=>valid(metric(m))).sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code))[0];
-      return `<article class="summary-card"><div class="role">${role}</div><div class="pick">${m.name}</div><button class="code copy" data-copy="${m.code}">${m.code}</button></article>`;
+      return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">${m.name}</div><button class="code copy" data-copy="${m.code}">${m.code}</button></article>`;
     }).join('');
     $('#summaryGrid').querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
   renderSummary();
-  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary();renderCodexPicks();});
+  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary();});
   let transition=null;
   $('#toggleRanking').onclick=()=>{
     const button=$('#toggleRanking'), expanded=button.getAttribute('aria-expanded')!=='true';
@@ -68,10 +69,15 @@ async function boot(){
       (expanded?details:summary).animate([{opacity:0,transform:'translateY(-6px)'},{opacity:1,transform:'translateY(0)'}],{duration:220,easing:'ease-out'});
     }
   };
-  $('#recommendationRows').innerHTML=roles.map(role=>{
-    const x=data.roles[role],pool=x.candidates.map(c=>models[c]).filter(Boolean);
-    return `<tr><td class="role-cell"><strong>${role[0].toUpperCase()+role.slice(1)}</strong><p class="field-description">${x.positioning}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,m=>m.speed?.tokens_per_second)}</td><td>${ranking(pool,m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;})}</td></tr>`;
-  }).join('');
+  const renderRanking=()=>{
+    $('#recommendationRows').innerHTML=profiles[activeTool].map(x=>{
+      const pool=x.candidates.map(c=>models[c]).filter(Boolean);
+      return `<tr><td class="role-cell"><strong>${x.label==='fable'?'Fable':x.label==='opus'?'Opus':x.label==='sonnet'?'Sonnet':x.label==='haiku'?'Haiku':x.label}</strong><p class="field-description">${x.positioning}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,metrics.speed)}</td><td>${ranking(pool,metrics.value)}</td></tr>`;
+    }).join('');
+    $('.selection-table th').textContent=activeTool==='claude'?'Claude 档位 / 用途':'GPT 档位 / 用途';
+    $('.field-hint').hidden=activeTool!=='claude';
+  };
+  renderRanking();
   const popover=$('#modelPopover');
   let active=null,closeTimer;
   const close=()=>{popover.hidden=true;active=null;};
@@ -87,7 +93,7 @@ async function boot(){
     popover.style.left=side+'px';
     popover.style.top=Math.max(8,Math.min(r.top-12,window.innerHeight-h-8))+'px';
   };
-  document.querySelectorAll('[data-model]').forEach(el=>{
+  const bindModels=()=>document.querySelectorAll('[data-model]').forEach(el=>{
     el.onmouseenter=()=>show(el); el.onfocus=()=>show(el); el.onclick=()=>{
       clearTimeout(closeTimer); close();
       $('#search').value=''; renderCards('');
@@ -98,6 +104,7 @@ async function boot(){
     el.onmouseleave=()=>{closeTimer=setTimeout(close,600);};
     el.onblur=e=>{if(!popover.contains(e.relatedTarget))closeTimer=setTimeout(close,600);};
   });
+  bindModels();
   popover.onmouseenter=()=>clearTimeout(closeTimer);
   popover.onmouseleave=()=>{closeTimer=setTimeout(close,600);};
   popover.onfocusin=()=>clearTimeout(closeTimer);
@@ -115,9 +122,8 @@ async function boot(){
     const cell = n => `<td class="numeric ${n==null?'missing':''}">${fmt(n)}</td>`;
     $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${m.name}</div><button class="catalog-add ranking-toggle" data-catalog-add="${m.code}">＋ 加入清单</button><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${m.name}</div><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
-    document.querySelectorAll('[data-catalog-add]').forEach(el=>el.onclick=()=>addModel(el.dataset.catalogAdd));
     $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;
     document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
@@ -126,27 +132,12 @@ async function boot(){
     sortDirection=tableSort===button.dataset.sort?-sortDirection:(['name','input','output'].includes(button.dataset.sort)?1:-1);tableSort=button.dataset.sort;
     document.querySelectorAll('[data-sort]').forEach(b=>{const active=b===button;b.parentElement.setAttribute('aria-sort',active?(sortDirection===1?'ascending':'descending'):'none');b.querySelector('span').textContent=active?(sortDirection===1?' ↑':' ↓'):'';});renderCards($('#search').value);
   });
-  const config=new Map();let defaultCode=null;
-  const escapeAttr=s=>String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
-  const renderConfig=()=>{
-    $('#codexRows').innerHTML=[...config].map(([code,x])=>`<tr><td><input type="radio" name="codex-default" data-default="${escapeAttr(code)}" ${code===defaultCode?'checked':''} aria-label="设为默认 ${escapeAttr(x.name)}"></td>${['name','code','context','reasoning'].map(key=>`<td><input data-config="${escapeAttr(code)}" data-field="${key}" value="${escapeAttr(x[key])}" aria-label="${({name:'菜单显示名',code:'实际请求模型',context:'上下文窗口',reasoning:'思考等级'})[key]}" placeholder="${key==='context'||key==='reasoning'?'按服务商填写':''}"></td>`).join('')}<td><button class="ranking-toggle" data-remove="${escapeAttr(code)}">移除</button></td></tr>`).join('')||'<tr><td colspan="6">从上方加入你想使用的模型。</td></tr>';
-    document.querySelectorAll('[data-config]').forEach(el=>el.oninput=()=>config.get(el.dataset.config)[el.dataset.field]=el.value);
-    document.querySelectorAll('[data-default]').forEach(el=>el.onchange=()=>defaultCode=el.dataset.default);
-    document.querySelectorAll('[data-remove]').forEach(el=>el.onclick=()=>{config.delete(el.dataset.remove);if(defaultCode===el.dataset.remove)defaultCode=config.keys().next().value;renderConfig();renderCodexPicks();});
-  };
-  const addModel=code=>{const m=models[code];if(!config.has(code))config.set(code,{name:m.name,code:m.code,context:'',reasoning:''});defaultCode??=code;renderConfig();renderCodexPicks();toast('已加入配置清单');};
-  const renderCodexPicks=()=>{
-    const metric=metrics[selectedMetric];
-    $('#codexPicks').innerHTML=modelsDoc.models.slice().sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code)).slice(0,3).map((m,i)=>`<article class="summary-card"><div class="role">${i+1} / ${selectedMetric==='ability'?'能力':selectedMetric==='speed'?'速度':'性价比'}</div><div class="pick">${m.name}</div><button class="code" data-add="${m.code}" ${config.has(m.code)?'disabled':''}>${config.has(m.code)?'已加入':'＋ 加入清单'}</button></article>`).join('');
-    document.querySelectorAll('[data-add]').forEach(el=>el.onclick=()=>{addModel(el.dataset.add);});
-  };
-  $('#copyCodex').onclick=()=>{if(!config.size){toast('先加入一个模型');return;}copy('默认模型\t'+(config.get(defaultCode)?.code||'')+'\n菜单显示名\t实际请求模型\t上下文窗口\t思考等级\n'+[...config.values()].map(x=>[x.name,x.code,x.context,x.reasoning].join('\t')).join('\n'));};
   document.querySelectorAll('[data-tool]').forEach(el=>el.onclick=()=>{
-    const codex=el.dataset.tool==='codex';document.body.classList.toggle('codex-active',codex);document.querySelectorAll('[data-tool]').forEach(b=>{b.classList.toggle('active',b===el);b.setAttribute('aria-selected',String(b===el));});
-    $('#codexView').hidden=!codex;$('#toggleRanking').hidden=codex;
-    const expanded=$('#toggleRanking').getAttribute('aria-expanded')==='true';$('#summaryGrid').hidden=codex||expanded;$('#rankingDetails').hidden=codex||!expanded;$('.sort-control').hidden=!codex&&expanded;
+    activeTool=el.dataset.tool;
+    document.querySelectorAll('[data-tool]').forEach(b=>{b.classList.toggle('active',b===el);b.setAttribute('aria-selected',String(b===el));});
+    $('#summaryGrid').classList.toggle('gpt-summary',activeTool==='codex');
+    close();renderSummary();renderRanking();bindModels();
   });
-  renderConfig();renderCodexPicks();
   $('#search').addEventListener('input',e=>renderCards(e.target.value));
   document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
 }
