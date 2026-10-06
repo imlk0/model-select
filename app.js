@@ -63,7 +63,13 @@ async function boot(){
     popover.style.top=Math.max(8,Math.min(r.top-12,window.innerHeight-h-8))+'px';
   };
   document.querySelectorAll('[data-model]').forEach(el=>{
-    el.onmouseenter=()=>show(el); el.onfocus=()=>show(el); el.onclick=()=>show(el);
+    el.onmouseenter=()=>show(el); el.onfocus=()=>show(el); el.onclick=()=>{
+      clearTimeout(closeTimer); close();
+      $('#search').value=''; renderCards('');
+      const row=document.getElementById('model-'+encodeURIComponent(el.dataset.model));
+      document.querySelectorAll('.model-selected').forEach(r=>r.classList.remove('model-selected'));
+      if(row){row.classList.add('model-selected');row.focus({preventScroll:true});row.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});}
+    };
     el.onmouseleave=()=>{closeTimer=setTimeout(close,600);};
     el.onblur=e=>{if(!popover.contains(e.relatedTarget))closeTimer=setTimeout(close,600);};
   });
@@ -81,7 +87,7 @@ async function boot(){
     const cell = n => `<td class="numeric ${n==null?'missing':''}">${fmt(n)}</td>`;
     $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<tr><td><div class="model-name">${m.name}</div><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${m.name}</div><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
     $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;
     document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
