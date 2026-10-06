@@ -4,14 +4,29 @@ const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('
 const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };
 const modelLabel = m => `${m.name} (${m.code})`;
 
+const complete = snapshot => {
+  if(!snapshot?.modelsDoc?.models?.length || !snapshot?.data?.roles) return false;
+  const models=snapshot.modelsDoc.models;
+  const codes=new Set(models.map(m=>m.code));
+  return models.every(m=>m.name && m.code && Number.isFinite(m.scores?.coding) && Number.isFinite(m.scores?.agentic) && m.scores?.comparable_scale===true && Number.isFinite(m.scores?.capability) && Number.isFinite(m.speed?.tokens_per_second) && Number.isFinite(m.pricing?.beijing?.input) && Number.isFinite(m.pricing?.beijing?.output) && Number.isFinite(m.context_k)) && ['fable','opus','sonnet','haiku'].every(r=>snapshot.data.roles[r]?.candidates?.length>=3 && snapshot.data.roles[r].candidates.every(c=>codes.has(c)) && codes.has(snapshot.data.roles[r].best));
+};
+async function loadSnapshot(){
+  const key='model-select:last-good:v1';
+  const get=async path=>{const r=await fetch(path,{signal:AbortSignal.timeout(4000)});if(!r.ok)throw Error('Unavailable');return r.json();};
+  if(new URLSearchParams(location.search).get('demo')==='1')return window.MODEL_SELECT_DEMO;
+  try{
+    const [data,modelsDoc]=await Promise.all([get('data/recommendations.json'),get('data/models.json')]);
+    const live={data,modelsDoc,mode:'live'};
+    if(complete(live)){try{localStorage.setItem(key,JSON.stringify(live));}catch{}return live;}
+  }catch{}
+  try{const saved=JSON.parse(localStorage.getItem(key));if(complete(saved))return {...saved,mode:'cached'};}catch{}
+  return window.MODEL_SELECT_DEMO;
+}
 async function boot(){
-  const [data, modelsDoc] = await Promise.all([
-    fetch('data/recommendations.json').then(r=>r.json()),
-    fetch('data/models.json').then(r=>r.json())
-  ]);
+  const {data,modelsDoc,mode}=await loadSnapshot();
   const models = Object.fromEntries(modelsDoc.models.map(m=>[m.code,m]));
   $('#updatedAt').textContent = new Date(data.updated_at).toLocaleString('zh-CN',{hour12:false});
-  $('#evidenceNote').textContent = `评分版本 ${data.scoring_version} · ${data.region}`;
+  $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;
 
   const roles=['fable','opus','sonnet','haiku'];
   $('#summaryGrid').innerHTML = roles.map(r=>{
@@ -23,12 +38,10 @@ async function boot(){
   // Compare coding and agentic only when they are supplied on the same scale.
   const ability = m => valid(m.scores?.coding) && valid(m.scores?.agentic) && m.scores?.comparable_scale === true ? (m.scores.coding+m.scores.agentic)/2 : null;
   const cost = m => { const p=m.pricing?.beijing; return valid(p?.input)&&valid(p?.output) ? p.input*.01+p.output*.002 : null; };
-  const entry = (m, value, rank) => `<button class="model-trigger" data-model="${m.code}" data-status="${valid(value)?'排序值 '+fmt(value):'缺少指标，暂未排序'}" aria-describedby="modelPopover">${rank?`<span class="rank-number">${rank}</span>`:''}${m.name}</button>`;
+  const entry = (m, value, rank) => `<button class="model-trigger" data-model="${m.code}" data-status="${valid(value)?'排序值 '+fmt(value):'数据快照'}" aria-describedby="modelPopover">${rank?`<span class="rank-number">${rank}</span>`:''}${m.name}</button>`;
   const ranking = (pool, metric) => {
     const ranked=pool.map(m=>({m,value:metric(m)})).filter(x=>valid(x.value)).sort((a,b)=>b.value-a.value || a.m.code.localeCompare(b.m.code));
-    const selected=ranked.slice(0,3);
-    const missing=pool.filter(m=>!valid(metric(m))).slice(0,3-selected.length);
-    return selected.map(x=>entry(x.m,x.value,1+ranked.filter(y=>y.value>x.value).length)).join('')+missing.map(m=>entry(m,null,null)).join('')+(missing.length?'<div class="unranked">'+(ranked.length?'其余候选暂未排序':'候选 · 暂未排序')+'</div>':'');
+    return ranked.slice(0,3).map(x=>entry(x.m,x.value,1+ranked.filter(y=>y.value>x.value).length)).join('');
   };
   $('#recommendationRows').innerHTML=roles.map(role=>{
     const x=data.roles[role],pool=x.candidates.map(c=>models[c]).filter(Boolean);
@@ -39,7 +52,7 @@ async function boot(){
   const close=()=>{popover.hidden=true;active=null;};
   const show=el=>{
     clearTimeout(closeTimer); active=el; const m=models[el.dataset.model],p=m.pricing?.beijing;
-    popover.innerHTML=`<strong>${m.name}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${m.code}" aria-label="复制模型代码">${m.code} ↗ 复制</button><dl><dt>输入 / 输出价格</dt><dd>¥${fmt(p?.input)} / ¥${fmt(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${modelsDoc.region} · 1M 声明请核实实际端点支持</p>`;
+    popover.innerHTML=`<strong>${m.name}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${m.code}" aria-label="复制模型代码">${m.code} ↗ 复制</button><dl><dt>输入 / 输出价格</dt><dd>¥${fmt(p?.input)} / ¥${fmt(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${modelsDoc.region}</p>`;
     popover.querySelector('[data-copy]').onclick=()=>copy(m.code);
     popover.hidden=false;
     const r=el.getBoundingClientRect(),h=popover.offsetHeight,w=popover.offsetWidth;
@@ -67,11 +80,11 @@ async function boot(){
       const p=m.pricing?.beijing||{};
       return `<tr><td><div class="model-name">${m.name}</div><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
-    $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS · PRICE: ${modelsDoc.region}`;
+    $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;
     document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
   renderCards('');
   $('#search').addEventListener('input',e=>renderCards(e.target.value));
   document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
 }
-boot().catch(err=>{console.error(err);document.body.insertAdjacentHTML('beforeend',`<pre style="color:#ff9c9c">${err.message}</pre>`)});
+boot().catch(()=>{ $('#evidenceNote').textContent='数据暂不可用'; });

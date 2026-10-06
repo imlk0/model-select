@@ -1,0 +1,259 @@
+{
+  "mode": "demo",
+  "modelsDoc": {
+    "region": "华北2（北京）",
+    "currency": "CNY",
+    "price_unit": "per 1M tokens",
+    "models": [
+      {
+        "name": "Qwen3.8 Max",
+        "code": "qwen3.8-max-0902",
+        "context_k": 1000,
+        "pricing": {
+          "beijing": {
+            "input": 12,
+            "output": 36
+          }
+        },
+        "scores": {
+          "capability": 94,
+          "coding": 96,
+          "agentic": 93,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 62
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      },
+      {
+        "name": "GLM-5.3",
+        "code": "glm-5.3",
+        "context_k": 1048,
+        "pricing": {
+          "beijing": {
+            "input": 8,
+            "output": 28
+          }
+        },
+        "scores": {
+          "capability": 92,
+          "coding": 93,
+          "agentic": 94,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 95
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      },
+      {
+        "name": "DeepSeek-V4.1-Flash",
+        "code": "deepseek-v4.1-flash",
+        "context_k": 1000,
+        "pricing": {
+          "beijing": {
+            "input": 2,
+            "output": 8,
+            "input_offpeak": 1,
+            "output_offpeak": 4
+          }
+        },
+        "scores": {
+          "capability": 86,
+          "coding": 88,
+          "agentic": 85,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 132
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      },
+      {
+        "name": "Qwen3.8 Flash",
+        "code": "qwen3.8-flash",
+        "context_k": 1000,
+        "pricing": {
+          "beijing": {
+            "input": 0.8,
+            "output": 2.7
+          }
+        },
+        "scores": {
+          "capability": 80,
+          "coding": 82,
+          "agentic": 79,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 165
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      },
+      {
+        "name": "Qwen3.7 Plus",
+        "code": "qwen3.7-plus",
+        "context_k": 1000,
+        "pricing": {
+          "beijing": {
+            "input": 2,
+            "output": 8
+          }
+        },
+        "scores": {
+          "capability": 83,
+          "coding": 85,
+          "agentic": 82,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 115
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      },
+      {
+        "name": "Qwen3.7 Flash",
+        "code": "qwen3.7-flash",
+        "context_k": 1000,
+        "pricing": {
+          "beijing": {
+            "input": 0.2,
+            "output": 0.8
+          }
+        },
+        "scores": {
+          "capability": 72,
+          "coding": 74,
+          "agentic": 70,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 190
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      },
+      {
+        "name": "Kimi-K3",
+        "code": "kimi-k3",
+        "context_k": 1000,
+        "pricing": {
+          "beijing": {
+            "input": 20,
+            "output": 100
+          }
+        },
+        "scores": {
+          "capability": 95,
+          "coding": 94,
+          "agentic": 96,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 55
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      },
+      {
+        "name": "GLM-5.3 FlashX",
+        "code": "ZHIPU/GLM-5.3-FlashX",
+        "context_k": 1048,
+        "pricing": {
+          "beijing": {
+            "input": 2,
+            "output": 7
+          }
+        },
+        "scores": {
+          "capability": 78,
+          "coding": 80,
+          "agentic": 76,
+          "comparable_scale": true
+        },
+        "speed": {
+          "tokens_per_second": 200
+        },
+        "evidence_coverage": 1,
+        "sources": [
+          "Mock"
+        ]
+      }
+    ]
+  },
+  "data": {
+    "updated_at": "2026-10-06T04:35:54.287493+00:00",
+    "region": "华北2（北京）",
+    "scoring_version": "0.1.0",
+    "roles": {
+      "fable": {
+        "positioning": "极限能力、长程 Agent、复杂 Coding",
+        "candidates": [
+          "qwen3.8-max-0902",
+          "glm-5.3",
+          "kimi-k3"
+        ],
+        "best": "qwen3.8-max-0902",
+        "fastest": "glm-5.3",
+        "best_value": "glm-5.3",
+        "confidence": 0.55
+      },
+      "opus": {
+        "positioning": "高端推理、Coding、Agent 重型任务",
+        "candidates": [
+          "glm-5.3",
+          "qwen3.8-max-0902",
+          "kimi-k3"
+        ],
+        "best": "glm-5.3",
+        "fastest": "glm-5.3",
+        "best_value": "glm-5.3",
+        "confidence": 0.55
+      },
+      "sonnet": {
+        "positioning": "日常主力，能力 / 延迟 / 成本均衡",
+        "candidates": [
+          "deepseek-v4.1-flash",
+          "qwen3.7-plus",
+          "qwen3.8-flash"
+        ],
+        "best": "deepseek-v4.1-flash",
+        "fastest": "qwen3.8-flash",
+        "best_value": "deepseek-v4.1-flash",
+        "confidence": 0.55
+      },
+      "haiku": {
+        "positioning": "快速、便宜、高并发、Subagent",
+        "candidates": [
+          "qwen3.8-flash",
+          "qwen3.7-flash",
+          "ZHIPU/GLM-5.3-FlashX"
+        ],
+        "best": "qwen3.8-flash",
+        "fastest": "ZHIPU/GLM-5.3-FlashX",
+        "best_value": "qwen3.7-flash",
+        "confidence": 0.55
+      }
+    }
+  }
+}

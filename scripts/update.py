@@ -121,14 +121,24 @@ def compute(models,cfg):
 
 def main():
     doc=load(MODELS_PATH); cfg=load(SCORING_PATH)
-    aa=fetch_aa()
+    try:
+        aa=fetch_aa()
+    except Exception as exc:
+        print(f"Retaining published snapshot: API unavailable ({type(exc).__name__})")
+        return
+    if not aa:
+        print("Retaining published snapshot: no API data")
+        return
     doc["models"]=enrich(doc["models"],aa)
-    dump(MODELS_PATH,doc)
     roles=compute(doc["models"],cfg)
-    # Safety: if API data is insufficient, preserve current seed recommendations.
-    if len(roles)<4 and OUT_PATH.exists():
-        old=load(OUT_PATH); roles=old.get("roles",roles)
+    # Publish only a complete snapshot. Do not refresh timestamps on failed updates.
+    required=("capability","coding","agentic")
+    if len(roles)<4 or any(any(m["scores"].get(k) is None for k in required) or m["speed"].get("tokens_per_second") is None or m["scores"].get("comparable_scale") is not True for m in doc["models"]):
+        print("Retaining published snapshot: incomplete or incomparable metrics")
+        return
     out={"updated_at":datetime.now(timezone.utc).isoformat(),"region":doc["region"],"scoring_version":cfg["version"],"roles":roles}
+    dump(MODELS_PATH,doc)
     dump(OUT_PATH,out)
     print(f"updated {OUT_PATH}; AA rows={len(aa)}; roles={len(roles)}")
+
 if __name__=="__main__": main()
