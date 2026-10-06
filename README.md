@@ -1,4 +1,4 @@
-# CC Model Router
+# Model Select
 
 一个面向 CC Switch / Claude Code 用户的百炼模型选择站：根据公开 benchmark、百炼官方价格和速度数据，用固定公式推荐 Fable / Opus / Sonnet / Haiku 的能力最优、速度最优和性价比最优模型。
 
