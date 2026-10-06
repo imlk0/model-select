@@ -29,11 +29,6 @@ async function boot(){
   $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;
 
   const roles=['fable','opus','sonnet','haiku'];
-  $('#summaryGrid').innerHTML = roles.map(r=>{
-    const x=data.roles[r], m=models[x.best];
-    return `<article class="summary-card"><div class="role">${r}</div><div class="pick">${m?.name||x.best}</div><div class="code">${x.best}</div></article>`;
-  }).join('');
-
   const valid = n => typeof n === 'number' && Number.isFinite(n);
   // Compare coding and agentic only when they are supplied on the same scale.
   const ability = m => valid(m.scores?.coding) && valid(m.scores?.agentic) && m.scores?.comparable_scale === true ? (m.scores.coding+m.scores.agentic)/2 : null;
@@ -43,6 +38,18 @@ async function boot(){
     const ranked=pool.map(m=>({m,value:metric(m)})).filter(x=>valid(x.value)).sort((a,b)=>b.value-a.value || a.m.code.localeCompare(b.m.code));
     return ranked.slice(0,3).map(x=>entry(x.m,x.value,1+ranked.filter(y=>y.value>x.value).length)).join('');
   };
+  const metrics={ability:ability,speed:m=>m.speed?.tokens_per_second,value:m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;}};
+  const renderSummary=()=>{
+    const metric=metrics[$('#sortMetric').value];
+    $('#summaryGrid').innerHTML=roles.map(role=>{
+      const pool=data.roles[role].candidates.map(c=>models[c]).filter(Boolean);
+      const m=pool.filter(m=>valid(metric(m))).sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code))[0];
+      return `<article class="summary-card"><div class="role">${role}</div><div class="pick">${m.name}</div><button class="code copy" data-copy="${m.code}">${m.code}</button></article>`;
+    }).join('');
+    $('#summaryGrid').querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
+  };
+  renderSummary(); $('#sortMetric').onchange=renderSummary;
+  $('#toggleRanking').onclick=()=>{const expanded=$('#toggleRanking').getAttribute('aria-expanded')!=='true';$('#toggleRanking').setAttribute('aria-expanded',String(expanded));$('#toggleRanking').textContent=expanded?'收起排名':'展开排名';$('#rankingDetails').hidden=!expanded;};
   $('#recommendationRows').innerHTML=roles.map(role=>{
     const x=data.roles[role],pool=x.candidates.map(c=>models[c]).filter(Boolean);
     return `<tr><td class="role-cell"><strong>${role[0].toUpperCase()+role.slice(1)}</strong><p class="field-description">${x.positioning}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,m=>m.speed?.tokens_per_second)}</td><td>${ranking(pool,m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;})}</td></tr>`;
