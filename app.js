@@ -64,11 +64,11 @@ async function boot(){
   };
   document.querySelectorAll('[data-model]').forEach(el=>{
     el.onmouseenter=()=>show(el); el.onfocus=()=>show(el); el.onclick=()=>show(el);
-    el.onmouseleave=()=>{closeTimer=setTimeout(close,70);};
-    el.onblur=e=>{if(!popover.contains(e.relatedTarget))closeTimer=setTimeout(close,70);};
+    el.onmouseleave=()=>{closeTimer=setTimeout(close,600);};
+    el.onblur=e=>{if(!popover.contains(e.relatedTarget))closeTimer=setTimeout(close,600);};
   });
   popover.onmouseenter=()=>clearTimeout(closeTimer);
-  popover.onmouseleave=()=>{closeTimer=setTimeout(close,70);};
+  popover.onmouseleave=()=>{closeTimer=setTimeout(close,600);};
   popover.onfocusin=()=>clearTimeout(closeTimer);
   popover.onfocusout=e=>{if(!popover.contains(e.relatedTarget))close();};
   document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
