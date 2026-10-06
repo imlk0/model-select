@@ -50,17 +50,25 @@ async function boot(){
     });
   };
   let selectedMetric='ability';
-  const renderSummary=()=>{
+  const renderSummary=(animateChanges=false)=>{
     const metric=metrics[selectedMetric];
-    $('#summaryGrid').innerHTML=profiles[activeTool].map(role=>{
+    const previous=[...$('#summaryGrid').children];
+    const next=profiles[activeTool].map(role=>{
       const pool=role.candidates.map(c=>models[c]).filter(Boolean);
       const m=pool.filter(m=>valid(metric(m))).sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code))[0];
       return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">${m.name}</div><button class="code copy" data-copy="${m.code}">${m.code}</button></article>`;
-    }).join('');
+    });
+    if(animateChanges&&previous.length===next.length){
+      next.forEach((html,i)=>{const template=document.createElement('template');template.innerHTML=html;const fresh=template.content.firstElementChild,old=previous[i];
+        if(old.querySelector('.copy').dataset.copy===fresh.querySelector('.copy').dataset.copy)return;
+        ['.pick','.copy'].forEach(selector=>{const element=old.querySelector(selector);element.replaceWith(fresh.querySelector(selector));});
+        if(motionAllowed())old.querySelectorAll('.pick,.copy').forEach(el=>el.animate([{opacity:0,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:210,easing:'ease-out'}));
+      });
+    }else $('#summaryGrid').innerHTML=next.join('');
     $('#summaryGrid').querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
   renderSummary();
-  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary();reveal('#summaryGrid .summary-card');});
+  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary(true);});
   let transition=null;
   $('#toggleRanking').onclick=()=>{
     const button=$('#toggleRanking'), expanded=button.getAttribute('aria-expanded')!=='true';

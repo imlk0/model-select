@@ -38,3 +38,5 @@
 .model-trigger{transition:color .15s ease,transform .15s ease}.model-trigger:hover{transform:translateX(3px)}
 .model-table tbody tr{transition:background-color .4s ease}
 }
+
+.summary-grid .summary-card{padding-left:22px}
