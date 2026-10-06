@@ -24,6 +24,7 @@ async function loadSnapshot(){
 }
 async function boot(){
   const {data,modelsDoc,mode}=await loadSnapshot();
+  $('#demoWarning').hidden=mode!=='demo';
   const models = Object.fromEntries(modelsDoc.models.map(m=>[m.code,m]));
   $('#updatedAt').textContent = new Date(data.updated_at).toLocaleString('zh-CN',{hour12:false});
   $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;

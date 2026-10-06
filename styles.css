@@ -26,3 +26,5 @@
 #codexPicks button{border:0;background:transparent;padding:0;color:#315d22;cursor:pointer;font:inherit;border-bottom:1px dotted #315d22}#codexPicks button:disabled{color:#8a9185;border-bottom:0;cursor:default}.model-table thead th{padding:0}.column-sort{padding:17px 0}.column-sort span{color:#315d22}
 
 .catalog-add{display:none}.codex-active .catalog-add{display:block;font-size:11px;margin:5px 0}
+
+.demo-warning{background:#fff0ce;color:#714600;border-bottom:1px solid #d5aa50;padding:14px 40px;display:flex;gap:16px;align-items:baseline;font-size:14px}.demo-warning[hidden]{display:none}.demo-warning strong{white-space:nowrap}@media(max-width:800px){.demo-warning{padding:12px 22px;flex-direction:column;gap:3px}}
