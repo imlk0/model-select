@@ -1,0 +1,55 @@
+{
+  "updated_at": "2026-10-06T04:35:54.287493+00:00",
+  "region": "华北2（北京）",
+  "scoring_version": "0.1.0",
+  "roles": {
+    "fable": {
+      "positioning": "极限能力、长程 Agent、复杂 Coding",
+      "candidates": [
+        "qwen3.8-max-0902",
+        "glm-5.3",
+        "kimi-k3"
+      ],
+      "best": "qwen3.8-max-0902",
+      "fastest": "glm-5.3",
+      "best_value": "glm-5.3",
+      "confidence": 0.55
+    },
+    "opus": {
+      "positioning": "高端推理、Coding、Agent 重型任务",
+      "candidates": [
+        "glm-5.3",
+        "qwen3.8-max-0902",
+        "kimi-k3"
+      ],
+      "best": "glm-5.3",
+      "fastest": "glm-5.3",
+      "best_value": "glm-5.3",
+      "confidence": 0.55
+    },
+    "sonnet": {
+      "positioning": "日常主力，能力 / 延迟 / 成本均衡",
+      "candidates": [
+        "deepseek-v4.1-flash",
+        "qwen3.7-plus",
+        "qwen3.8-flash"
+      ],
+      "best": "deepseek-v4.1-flash",
+      "fastest": "qwen3.8-flash",
+      "best_value": "deepseek-v4.1-flash",
+      "confidence": 0.55
+    },
+    "haiku": {
+      "positioning": "快速、便宜、高并发、Subagent",
+      "candidates": [
+        "qwen3.8-flash",
+        "qwen3.7-flash",
+        "ZHIPU/GLM-5.3-FlashX"
+      ],
+      "best": "qwen3.8-flash",
+      "fastest": "ZHIPU/GLM-5.3-FlashX",
+      "best_value": "qwen3.7-flash",
+      "confidence": 0.55
+    }
+  }
+}

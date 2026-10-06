@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "standard_task": {"input_tokens": 100000, "output_tokens": 10000},
+  "minimum_evidence_coverage": 0.55,
+  "profiles": {
+    "fable":  {"capability": 0.45, "coding": 0.20, "agentic": 0.20, "speed": 0.05, "value": 0.05, "context": 0.05},
+    "opus":   {"capability": 0.35, "coding": 0.25, "agentic": 0.20, "speed": 0.05, "value": 0.10, "context": 0.05},
+    "sonnet": {"capability": 0.20, "coding": 0.25, "agentic": 0.20, "speed": 0.15, "value": 0.15, "context": 0.05},
+    "haiku":  {"capability": 0.10, "coding": 0.10, "agentic": 0.10, "speed": 0.30, "value": 0.35, "context": 0.05}
+  }
+}

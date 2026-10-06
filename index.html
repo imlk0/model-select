@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CC Model Router</title>
+  <meta name="description" content="基于公开 benchmark、百炼价格与速度数据，为 Claude Code 自动推荐模型。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">CC SWITCH · MODEL ROUTER</p>
+        <h1>Claude Code 模型选择</h1>
+        <p class="sub">公开 benchmark + 百炼价格 + 推理速度，自动给出 Fable / Opus / Sonnet / Haiku 的能力、速度与性价比选择。</p>
+      </div>
+      <div class="meta-card">
+        <div class="meta-label">数据更新时间</div>
+        <div id="updatedAt" class="meta-value">—</div>
+        <div id="evidenceNote" class="meta-note">加载中</div>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="segmented" role="tablist">
+        <button class="active" data-target="claude-code">Claude Code</button>
+        <button disabled title="后续支持">Codex · Coming soon</button>
+      </div>
+      <label class="search"><span>筛选</span><input id="search" placeholder="模型名 / model code" /></label>
+    </section>
+
+    <section class="summary-grid" id="summaryGrid"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>推荐表</h2>
+          <p>每个模型 code 都可一键复制。排序由固定评分公式计算，不由 LLM 决定。</p>
+        </div>
+        <div class="legend"><span class="dot ability"></span>能力 <span class="dot speed"></span>速度 <span class="dot value"></span>性价比</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Claude 档位</th><th>定位</th><th>建议替代</th><th>速度最优</th><th>性价比最优</th><th>价格 ¥/M tokens</th><th>证据</th>
+            </tr>
+          </thead>
+          <tbody id="recommendationRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>候选模型</h2><p>能力、速度、价格和证据覆盖分开显示，避免单一总分掩盖差异。</p></div>
+      </div>
+      <div id="modelCards" class="model-grid"></div>
+    </section>
+
+    <footer>
+      <div>数据源：阿里云百炼官方文档、Artificial Analysis（需 API Key 才会自动刷新 benchmark）。</div>
+      <div>所有价格以页面标注区域与原价为准；活动价、缓存价可能不同。</div>
+    </footer>
+  </main>
+  <div id="toast" class="toast">已复制</div>
+  <script src="app.js"></script>
+</body>
+</html>
