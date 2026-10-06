@@ -142,7 +142,7 @@ async function boot(){
   $('#copyCodex').onclick=()=>{if(!config.size){toast('先加入一个模型');return;}copy('默认模型\t'+(config.get(defaultCode)?.code||'')+'\n菜单显示名\t实际请求模型\t上下文窗口\t思考等级\n'+[...config.values()].map(x=>[x.name,x.code,x.context,x.reasoning].join('\t')).join('\n'));};
   document.querySelectorAll('[data-tool]').forEach(el=>el.onclick=()=>{
     const codex=el.dataset.tool==='codex';document.body.classList.toggle('codex-active',codex);document.querySelectorAll('[data-tool]').forEach(b=>{b.classList.toggle('active',b===el);b.setAttribute('aria-selected',String(b===el));});
-    $('#codexView').hidden=!codex;$('#claudeHelp').hidden=codex;$('#toggleRanking').hidden=codex;
+    $('#codexView').hidden=!codex;$('#toggleRanking').hidden=codex;
     const expanded=$('#toggleRanking').getAttribute('aria-expanded')==='true';$('#summaryGrid').hidden=codex||expanded;$('#rankingDetails').hidden=codex||!expanded;$('.sort-control').hidden=!codex&&expanded;
   });
   renderConfig();renderCodexPicks();
