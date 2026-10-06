@@ -30,7 +30,7 @@ async function boot(){
   $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;
 
   let activeTool='claude';
-  const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'astra',label:'Astra',positioning:'GPT-6 Astra · 高难度分析、复杂 Agent 任务',candidates:data.roles.fable.candidates},{key:'sol',label:'Sol',positioning:'GPT-6.1 Sol · 复杂编程与日常主力',candidates:data.roles.opus.candidates},{key:'terra',label:'Terra',positioning:'GPT-5.6 Terra · 能力与成本均衡',candidates:data.roles.sonnet.candidates},{key:'luna',label:'Luna',positioning:'GPT-6 Luna · 明确的小任务、快速响应',candidates:data.roles.haiku.candidates}]};
+  const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'astra',label:'Astra',positioning:'高难度分析、复杂 Agent 任务',candidates:data.roles.fable.candidates},{key:'sol',label:'Sol',positioning:'复杂编程与日常主力',candidates:data.roles.opus.candidates},{key:'terra',label:'Terra',positioning:'能力与成本均衡',candidates:data.roles.sonnet.candidates},{key:'luna',label:'Luna',positioning:'明确的小任务、快速响应',candidates:data.roles.haiku.candidates}]};
   const valid = n => typeof n === 'number' && Number.isFinite(n);
   // Compare coding and agentic only when they are supplied on the same scale.
   const ability = m => valid(m.scores?.coding) && valid(m.scores?.agentic) && m.scores?.comparable_scale === true ? (m.scores.coding+m.scores.agentic)/2 : null;
