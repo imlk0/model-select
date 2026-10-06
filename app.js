@@ -49,7 +49,7 @@ async function boot(){
     $('#summaryGrid').querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
   renderSummary(); $('#sortMetric').onchange=renderSummary;
-  $('#toggleRanking').onclick=()=>{const expanded=$('#toggleRanking').getAttribute('aria-expanded')!=='true';$('#toggleRanking').setAttribute('aria-expanded',String(expanded));$('#toggleRanking').textContent=expanded?'收起排名':'展开排名';$('#rankingDetails').hidden=!expanded;};
+  $('#toggleRanking').onclick=()=>{const expanded=$('#toggleRanking').getAttribute('aria-expanded')!=='true';$('#toggleRanking').setAttribute('aria-expanded',String(expanded));$('#toggleRanking').textContent=expanded?'收起排名':'展开排名';$('#rankingDetails').hidden=!expanded;$('#summaryGrid').hidden=expanded;$('.sort-control').hidden=expanded;};
   $('#recommendationRows').innerHTML=roles.map(role=>{
     const x=data.roles[role],pool=x.candidates.map(c=>models[c]).filter(Boolean);
     return `<tr><td class="role-cell"><strong>${role[0].toUpperCase()+role.slice(1)}</strong><p class="field-description">${x.positioning}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,m=>m.speed?.tokens_per_second)}</td><td>${ranking(pool,m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;})}</td></tr>`;
