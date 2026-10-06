@@ -29,4 +29,12 @@
 
 .demo-warning{background:#fff0ce;color:#714600;border-bottom:1px solid #d5aa50;padding:14px 40px;display:flex;gap:16px;align-items:baseline;font-size:14px}.demo-warning[hidden]{display:none}.demo-warning strong{white-space:nowrap}@media(max-width:800px){.demo-warning{padding:12px 22px;flex-direction:column;gap:3px}}
 
-.gpt-summary{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+
+@media(prefers-reduced-motion:no-preference){
+.segmented button,.metric-option,.ranking-toggle,.copy,.column-sort{transition:color .16s ease,background-color .16s ease,border-color .2s ease}
+.summary-card{transition:background-color .2s ease}.summary-card:hover{background:#f0f2eb}
+.metric-option:hover,.ranking-toggle:hover{color:#203d17}
+.model-trigger{transition:color .15s ease,transform .15s ease}.model-trigger:hover{transform:translateX(3px)}
+.model-table tbody tr{transition:background-color .4s ease}
+}

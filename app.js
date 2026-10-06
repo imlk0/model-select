@@ -30,7 +30,7 @@ async function boot(){
   $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;
 
   let activeTool='claude';
-  const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'flagship',label:'GPT 旗舰',positioning:'复杂编程、推理与 Agent 任务',candidates:data.roles.opus.candidates},{key:'mini',label:'GPT Mini',positioning:'日常开发，兼顾能力与成本',candidates:data.roles.sonnet.candidates},{key:'nano',label:'GPT Nano',positioning:'轻量任务、快速响应',candidates:data.roles.haiku.candidates}]};
+  const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'astra',label:'Astra',positioning:'GPT-6 Astra · 高难度分析、复杂 Agent 任务',candidates:data.roles.fable.candidates},{key:'sol',label:'Sol',positioning:'GPT-6.1 Sol · 复杂编程与日常主力',candidates:data.roles.opus.candidates},{key:'terra',label:'Terra',positioning:'GPT-5.6 Terra · 能力与成本均衡',candidates:data.roles.sonnet.candidates},{key:'luna',label:'Luna',positioning:'GPT-6 Luna · 明确的小任务、快速响应',candidates:data.roles.haiku.candidates}]};
   const valid = n => typeof n === 'number' && Number.isFinite(n);
   // Compare coding and agentic only when they are supplied on the same scale.
   const ability = m => valid(m.scores?.coding) && valid(m.scores?.agentic) && m.scores?.comparable_scale === true ? (m.scores.coding+m.scores.agentic)/2 : null;
@@ -41,6 +41,14 @@ async function boot(){
     return ranked.slice(0,3).map(x=>entry(x.m,x.value,1+ranked.filter(y=>y.value>x.value).length)).join('');
   };
   const metrics={ability:ability,speed:m=>m.speed?.tokens_per_second,value:m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;}};
+  const motionAllowed=()=>!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reveal=(selector)=>{
+    if(!motionAllowed())return;
+    document.querySelectorAll(selector).forEach((el,i)=>{
+      el.getAnimations().forEach(a=>a.cancel());
+      el.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,delay:Math.min(i,7)*24,easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'});
+    });
+  };
   let selectedMetric='ability';
   const renderSummary=()=>{
     const metric=metrics[selectedMetric];
@@ -52,7 +60,7 @@ async function boot(){
     $('#summaryGrid').querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
   renderSummary();
-  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary();});
+  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary();reveal('#summaryGrid .summary-card');});
   let transition=null;
   $('#toggleRanking').onclick=()=>{
     const button=$('#toggleRanking'), expanded=button.getAttribute('aria-expanded')!=='true';
@@ -85,7 +93,9 @@ async function boot(){
     clearTimeout(closeTimer); active=el; const m=models[el.dataset.model],p=m.pricing?.beijing;
     popover.innerHTML=`<strong>${m.name}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${m.code}" aria-label="复制模型代码">${m.code} ↗ 复制</button><dl><dt>输入 / 输出价格</dt><dd>¥${fmt(p?.input)} / ¥${fmt(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${modelsDoc.region}</p>`;
     popover.querySelector('[data-copy]').onclick=()=>copy(m.code);
+    const wasHidden=popover.hidden;
     popover.hidden=false;
+    if(wasHidden&&motionAllowed()){popover.getAnimations().forEach(a=>a.cancel());popover.animate([{opacity:0,transform:'translateY(4px)'},{opacity:1,transform:'translateY(0)'}],{duration:150,easing:'ease-out'});}
     const r=el.getBoundingClientRect(),h=popover.offsetHeight,w=popover.offsetWidth;
     const cell=el.closest('td').getBoundingClientRect();
     const right=cell.right+10,left=cell.left-w-10;
@@ -124,6 +134,7 @@ async function boot(){
       const p=m.pricing?.beijing||{};
       return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${m.name}</div><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
+    reveal('#modelCards tr');
     $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;
     document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
@@ -133,10 +144,13 @@ async function boot(){
     document.querySelectorAll('[data-sort]').forEach(b=>{const active=b===button;b.parentElement.setAttribute('aria-sort',active?(sortDirection===1?'ascending':'descending'):'none');b.querySelector('span').textContent=active?(sortDirection===1?' ↑':' ↓'):'';});renderCards($('#search').value);
   });
   document.querySelectorAll('[data-tool]').forEach(el=>el.onclick=()=>{
+    if(activeTool===el.dataset.tool)return;
+    const host=$('.recommendations'),before=host.getBoundingClientRect().height;
     activeTool=el.dataset.tool;
     document.querySelectorAll('[data-tool]').forEach(b=>{b.classList.toggle('active',b===el);b.setAttribute('aria-selected',String(b===el));});
     $('#summaryGrid').classList.toggle('gpt-summary',activeTool==='codex');
     close();renderSummary();renderRanking();bindModels();
+    if(motionAllowed()){host.getAnimations().forEach(a=>a.cancel());host.animate([{height:before+'px'},{height:host.getBoundingClientRect().height+'px'}],{duration:260,easing:'cubic-bezier(.2,.8,.2,1)'});reveal($('#rankingDetails').hidden?'#summaryGrid .summary-card':'#recommendationRows tr');}
   });
   $('#search').addEventListener('input',e=>renderCards(e.target.value));
   document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));

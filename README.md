@@ -9,7 +9,7 @@
 ## 我用它做什么
 
 - **Claude Code**：按 Fable、Opus、Sonnet、Haiku 查看替代模型，切换能力、速度或性价比；展开排名比较每档的前三个选择。
-- **Codex**：按 GPT 旗舰、Mini、Nano 三档查看替代模型，同样支持三种排序和展开排名。
+- **Codex**：按 Astra、Sol、Terra、Luna 四档查看替代模型，同样支持三种排序和展开排名。
 - **查数据**：筛选模型，按任意表头排序，对比指标、价格和上下文。悬停查看详情，点击排名中的模型跳到数据表。
 
 ## 数据状态
@@ -21,3 +21,5 @@
 ---
 
 [维护与部署](docs/maintenance.md) · [评分配置](config/scoring.json)
+
+GPT 档位名称与定位参考 [OpenAI 官方模型目录](https://developers.openai.com/api/docs/models/all)；Terra 对应 GPT-5.6，其他档位采用当前主推版本。
