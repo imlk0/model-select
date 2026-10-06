@@ -56,16 +56,19 @@ async function boot(){
     popover.querySelector('[data-copy]').onclick=()=>copy(m.code);
     popover.hidden=false;
     const r=el.getBoundingClientRect(),h=popover.offsetHeight,w=popover.offsetWidth;
-    popover.style.left=Math.max(8,Math.min(r.left,window.innerWidth-w-8))+'px';
-    popover.style.top=Math.max(8,Math.min(r.bottom+6,window.innerHeight-h-8))+'px';
+    const cell=el.closest('td').getBoundingClientRect();
+    const right=cell.right+10,left=cell.left-w-10;
+    const side=right+w<=window.innerWidth-8?right:left>=8?left:Math.max(8,window.innerWidth-w-8);
+    popover.style.left=side+'px';
+    popover.style.top=Math.max(8,Math.min(r.top-12,window.innerHeight-h-8))+'px';
   };
   document.querySelectorAll('[data-model]').forEach(el=>{
     el.onmouseenter=()=>show(el); el.onfocus=()=>show(el); el.onclick=()=>show(el);
-    el.onmouseleave=()=>{closeTimer=setTimeout(close,180);};
-    el.onblur=e=>{if(!popover.contains(e.relatedTarget))closeTimer=setTimeout(close,180);};
+    el.onmouseleave=()=>{closeTimer=setTimeout(close,70);};
+    el.onblur=e=>{if(!popover.contains(e.relatedTarget))closeTimer=setTimeout(close,70);};
   });
   popover.onmouseenter=()=>clearTimeout(closeTimer);
-  popover.onmouseleave=()=>{closeTimer=setTimeout(close,180);};
+  popover.onmouseleave=()=>{closeTimer=setTimeout(close,70);};
   popover.onfocusin=()=>clearTimeout(closeTimer);
   popover.onfocusout=e=>{if(!popover.contains(e.relatedTarget))close();};
   document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
