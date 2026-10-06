@@ -39,8 +39,9 @@ async function boot(){
     return ranked.slice(0,3).map(x=>entry(x.m,x.value,1+ranked.filter(y=>y.value>x.value).length)).join('');
   };
   const metrics={ability:ability,speed:m=>m.speed?.tokens_per_second,value:m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;}};
+  let selectedMetric='ability';
   const renderSummary=()=>{
-    const metric=metrics[$('#sortMetric').value];
+    const metric=metrics[selectedMetric];
     $('#summaryGrid').innerHTML=roles.map(role=>{
       const pool=data.roles[role].candidates.map(c=>models[c]).filter(Boolean);
       const m=pool.filter(m=>valid(metric(m))).sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code))[0];
@@ -48,8 +49,24 @@ async function boot(){
     }).join('');
     $('#summaryGrid').querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
-  renderSummary(); $('#sortMetric').onchange=renderSummary;
-  $('#toggleRanking').onclick=()=>{const expanded=$('#toggleRanking').getAttribute('aria-expanded')!=='true';$('#toggleRanking').setAttribute('aria-expanded',String(expanded));$('#toggleRanking').textContent=expanded?'收起排名':'展开排名';$('#rankingDetails').hidden=!expanded;$('#summaryGrid').hidden=expanded;$('.sort-control').hidden=expanded;};
+  renderSummary();
+  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary();});
+  let transition=null;
+  $('#toggleRanking').onclick=()=>{
+    const button=$('#toggleRanking'), expanded=button.getAttribute('aria-expanded')!=='true';
+    const summary=$('#summaryGrid'),details=$('#rankingDetails'), host=summary.parentElement;
+    transition?.cancel(); host.style.height=''; host.style.overflow='';
+    const before=host.getBoundingClientRect().height;
+    button.setAttribute('aria-expanded',String(expanded));button.textContent=expanded?'收起排名':'展开排名';
+    details.hidden=!expanded;summary.hidden=expanded;$('.sort-control').hidden=expanded;
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      const after=host.getBoundingClientRect().height;
+      host.style.overflow='hidden';
+      transition=host.animate([{height:before+'px'},{height:after+'px'}],{duration:260,easing:'cubic-bezier(.2,.8,.2,1)'});
+      transition.onfinish=()=>{host.style.overflow='';transition=null;};
+      (expanded?details:summary).animate([{opacity:0,transform:'translateY(-6px)'},{opacity:1,transform:'translateY(0)'}],{duration:220,easing:'ease-out'});
+    }
+  };
   $('#recommendationRows').innerHTML=roles.map(role=>{
     const x=data.roles[role],pool=x.candidates.map(c=>models[c]).filter(Boolean);
     return `<tr><td class="role-cell"><strong>${role[0].toUpperCase()+role.slice(1)}</strong><p class="field-description">${x.positioning}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,m=>m.speed?.tokens_per_second)}</td><td>${ranking(pool,m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;})}</td></tr>`;
@@ -75,7 +92,7 @@ async function boot(){
       $('#search').value=''; renderCards('');
       const row=document.getElementById('model-'+encodeURIComponent(el.dataset.model));
       document.querySelectorAll('.model-selected').forEach(r=>r.classList.remove('model-selected'));
-      if(row){row.classList.add('model-selected');row.focus({preventScroll:true});row.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});}
+      if(row){setTimeout(()=>row.classList.remove('model-selected'),1500);row.classList.add('model-selected');row.focus({preventScroll:true});row.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});}
     };
     el.onmouseleave=()=>{closeTimer=setTimeout(close,600);};
     el.onblur=e=>{if(!popover.contains(e.relatedTarget))closeTimer=setTimeout(close,600);};
