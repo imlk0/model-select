@@ -1,6 +1,7 @@
 const themeNames={system:'跟随系统',light:'浅色',dark:'深色'};
 const themeButton=document.querySelector('#themeToggle');
-const updateThemeLabel=()=>{const mode=document.documentElement.dataset.theme||'system';themeButton.textContent='主题 · '+themeNames[mode];themeButton.setAttribute('aria-label','当前'+themeNames[mode]+'，点击切换主题');};
+const themeIcons={system:'<rect x="3" y="4" width="18" height="13" rx="1"></rect><path d="M8 21h8m-4-4v4"></path>',light:'<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path>',dark:'<path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5 8.5 8.5 0 1 0 20.5 13.2Z"></path>'};
+const updateThemeLabel=()=>{const mode=document.documentElement.dataset.theme||'system';themeButton.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24">'+themeIcons[mode]+'</svg>';themeButton.title='当前：'+themeNames[mode]+' · 点击切换';themeButton.setAttribute('aria-label','当前'+themeNames[mode]+'，点击切换主题');};
 updateThemeLabel();
 themeButton.onclick=()=>{const modes=['system','light','dark'],current=document.documentElement.dataset.theme||'system',next=modes[(modes.indexOf(current)+1)%3];document.documentElement.dataset.theme=next;try{localStorage.setItem('model-select:theme',next);}catch{}updateThemeLabel();};
 const $ = s => document.querySelector(s);
