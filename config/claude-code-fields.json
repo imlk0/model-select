@@ -1,0 +1,16 @@
+{
+  "subagent": {
+    "label": "Subagent",
+    "positioning": "子任务使用的模型；独立于主对话档位配置。复杂子任务优先能力，轻量并行任务可优先速度与成本。",
+    "reference": "glm-5.3",
+    "pool": "sonnet",
+    "reason": "配置示例沿用 GLM-5.3；子任务若更轻量，可改用已核实支持工具调用的低成本模型。"
+  },
+  "fallback": {
+    "label": "默认兜底模型",
+    "positioning": "未映射到具体档位的请求使用的模型；不是失败后自动重试模型。第三方端点建议填写有效 model code，避免发送供应商不支持的 Claude 模型名。",
+    "reference": "deepseek-v4.1-flash",
+    "pool": "sonnet",
+    "reason": "配置示例复用 Sonnet 的日常主力，减少额外维护一个模型映射。"
+  }
+}

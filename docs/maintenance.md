@@ -31,3 +31,7 @@ GitHub Actions 每天北京时间 02:17 运行，也可在 Actions 中手动触�
 仓库：`imlk0/model-select`。GitHub Pages 从 `main` 的根目录部署。推送变更后，在 Actions 检查 `pages build and deployment`。
 
 公开地址：https://blog.imlk.top/model-select/
+
+## 任务表排序与配置字段
+
+`config/claude-code-fields.json` 维护 Subagent 与默认兜底的配置示例和用途，独立于自动评分输出。三种排序限定于各档位候选和填写参考的并集，不是全站排行榜。Coding 与 Agentic 必须来自可比较的同一量纲，核实后设置 `scores.comparable_scale: true`，前端才计算均值。不要把不同 benchmark 的原始值直接合并。性价比使用均值 /（10,000 输入 + 2,000 输出 token 的费用）。这是一项展示比较指标，与旧的角色综合评分不同。
