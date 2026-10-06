@@ -152,7 +152,7 @@ async function boot(){
     document.querySelectorAll('[data-sort]').forEach(b=>{const active=b===button;b.parentElement.setAttribute('aria-sort',active?(sortDirection===1?'ascending':'descending'):'none');b.querySelector('span').textContent=active?(sortDirection===1?' ↑':' ↓'):'';});renderCards($('#search').value);
   });
   document.querySelectorAll('[data-tool]').forEach(el=>el.onclick=()=>{
-    if(activeTool===el.dataset.tool)return;
+    if(activeTool===el.dataset.tool){$('#toggleRanking').click();return;}
     const host=$('.recommendations'),before=host.getBoundingClientRect().height;
     activeTool=el.dataset.tool;
     document.querySelectorAll('[data-tool]').forEach(b=>{b.classList.toggle('active',b===el);b.setAttribute('aria-selected',String(b===el));});
