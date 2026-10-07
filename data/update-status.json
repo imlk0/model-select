@@ -1,0 +1,17 @@
+{
+  "status": "partial",
+  "attempted_at": "2026-10-07T01:47:55.638976+00:00",
+  "execution": "github-actions",
+  "run_url": "https://github.com/imlk0/model-select/actions/runs/37558853797",
+  "reason": "Published dynamic provider catalog",
+  "models": 123,
+  "benchmark_matches": 0,
+  "aa_status": "failed:HTTPError",
+  "catalog_endpoint": "https://dashscope.aliyuncs.com/api/v1/models",
+  "field_counts": {
+    "capability": 0,
+    "coding": 0,
+    "agentic": 0
+  },
+  "speed_count": 0
+}
