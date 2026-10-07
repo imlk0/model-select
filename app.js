@@ -13,18 +13,27 @@ const priceLines = (m,side) => {
   const quotes=m.pricing?.quotes;
   if(!quotes)return fmtPrice(m.pricing?.beijing?.[side]);
   if(!quotes.length)return '<span class="missing">'+(m.pricing?.raw?.length?'未识别':'未提供')+'</span>';
-  return quotes.map(q=>`<div class="price-line">${q[side]==null?'<span class="missing">未提供</span>':fmtPrice(q[side])}${priceLabel(q)||quotes.length>1?`<small>${escapeHTML(priceLabel(q)||'普通')}</small>`:''}</div>`).join('');
+  const value=(n,label,tone='')=>`<span class="price-value ${tone}"${label?` title="${escapeHTML(label)}"`:''}>${n==null?'<span class="missing">未提供</span>':fmtPrice(n)}${label?`<small>${escapeHTML(label)}</small>`:''}</span>`;
+  const values=quotes.map(q=>value(q[side],priceLabel(q),q.time_band==='offpeak'?'price-secondary':''));
+  if(side==='input'){
+    const groups=m.pricing.raw||[],range=m.pricing.comparison?.input_range;
+    const selected=range?groups.filter(g=>g.range_name===range):groups.length===1?groups:[];
+    const seen=new Set();
+    for(const g of selected)for(const p of g.prices||[]){
+      if(!p.type?.includes('cache')||p.price_unit!=='每百万tokens'||p.price==null||p.price===''||!Number.isFinite(Number(p.price)))continue;
+      const label=[p.type.startsWith('thinking_')?'思考':'',p.type.includes('creation')?'写缓存':p.type.endsWith('_read')?'读缓存':'缓存',({peak:'高峰',offpeak:'低谷'})[p.time_band]||''].filter(Boolean).join(' · ');
+      const key=label+':'+p.price;if(seen.has(key))continue;seen.add(key);
+      values.push(value(Number(p.price),label,'price-cache'));
+    }
+  }
+  return `<div class="price-values">${values.join('')}</div>`;
 };
 const billingDetails = m => `<details class="data-source billing"><summary>计费明细</summary>${m.pricing?.status==='incomplete'?'<p>百炼未提供完整输入、输出价格，不参与性价比计算。</p>':''}<p>价格单位沿用百炼原始响应；排序采用 10k 输入档位，分时模型采用高峰价。</p>${(m.pricing?.raw||[]).map(g=>`<p>${escapeHTML(g.range_name)}<br>${(g.prices||[]).map(p=>`${escapeHTML(p.price_name||p.type)}${p.time_band?' · '+escapeHTML(({peak:'高峰',offpeak:'低谷'})[p.time_band]||p.time_band):''}：${escapeHTML(p.price)} ${escapeHTML(p.price_unit)}`).join('<br>')}</p>`).join('')||'<p>百炼未提供价格列表。</p>'}</details>`;
-const detailPrices = m => {
-  const quotes=m.pricing?.quotes||[{input:m.pricing?.beijing?.input,output:m.pricing?.beijing?.output}];
-  const variant=quotes.length>1||quotes.some(q=>priceLabel(q));
-  return `<table class="detail-prices"><thead><tr>${variant?'<th></th>':''}<th>输入</th><th>输出</th></tr></thead><tbody>${(quotes.length?quotes:[{}]).map(q=>`<tr>${variant?`<th>${escapeHTML(priceLabel(q)||'普通')}</th>`:''}<td>${q.input==null?'未提供':fmtPrice(q.input)}</td><td>${q.output==null?'未提供':fmtPrice(q.output)}</td></tr>`).join('')}</tbody></table>`;
-};
+const detailPrices = m => `<div class="detail-price-columns"><div><div class="price-heading">输入 <small>¥/M tokens</small></div>${priceLines(m,'input')}</div><div><div class="price-heading">输出 <small>¥/M tokens</small></div>${priceLines(m,'output')}</div></div>`;
 const modelDetails = m => {
   const benchmark=m.provenance?.benchmark;
   const sources=`<nav class="popover-sources" aria-label="模型数据来源"><a href="https://bailian.console.aliyun.com/cn-beijing/model/market/detail/${encodeURIComponent(m.code)}" target="_blank" rel="noopener" title="模型介绍、上下文和价格">阿里云百炼 ↗</a>${benchmark?`<a href="https://artificialanalysis.ai/models/${encodeURIComponent(benchmark.aa_slug)}" target="_blank" rel="noopener" title="模型测评、参考速度和公开发布时间">Artificial Analysis ↗</a>`:''}</nav>`;
-  return `<strong>${escapeHTML(m.name)}</strong>${sources}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} · 复制</button><dl><dt title="按 10k 输入档位展示，完整计费规则见计费明细">价格（¥ / 百万 tokens）</dt><dd>${detailPrices(m)}</dd><dt>上下文（K tokens）</dt><dd>${fmt(m.context_k)}</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt title="Artificial Analysis 跨供应商参考，非百炼实测">输出速度（tok/s）</dt><dd>${fmt(m.speed?.tokens_per_second)}</dd><dt>发布日期</dt><dd title="${m.release_date_source==='Bailian'?'百炼上架：'+escapeHTML(m.release_date||'未收录')+'；公开发布日期未收录':'公开发布日期'}">${escapeHTML(m.release_date_source==='Bailian'?'未收录':m.release_date||'未收录')}</dd></dl>${billingDetails(m)}`;
+  return `<strong>${escapeHTML(m.name)}</strong>${sources}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} · 复制</button>${detailPrices(m)}<dl><dt>上下文（K tokens）</dt><dd>${fmt(m.context_k)}</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt title="Artificial Analysis 跨供应商参考，非百炼实测">输出速度（tok/s）</dt><dd>${fmt(m.speed?.tokens_per_second)}</dd><dt>发布日期</dt><dd title="${m.release_date_source==='Bailian'?'百炼上架：'+escapeHTML(m.release_date||'未收录')+'；公开发布日期未收录':'公开发布日期'}">${escapeHTML(m.release_date_source==='Bailian'?'未收录':m.release_date||'未收录')}</dd></dl>${billingDetails(m)}`;
 };
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
 const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };

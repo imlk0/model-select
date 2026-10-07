@@ -43,6 +43,15 @@ assert.match(card, /<dt>发布日期<\/dt>/);
 assert.doesNotMatch(card, /公开发布时间 · AA|华北2|目录核验|百炼模型目录/);
 assert.match(details({name:'Other',code:'other',release_date:'2025-01-01',release_date_source:'Bailian'}), /百炼上架：2025-01-01；公开发布日期未收录">未收录/);
 const prices=details({name:'Timed',code:'timed',pricing:{quotes:[{time_band:'peak',input:9,output:27},{time_band:'offpeak',input:4.5,output:13.5}]}});
-assert.equal((prices.match(/<th>高峰<\/th>/g)||[]).length,1);
-assert.match(prices, /<th>低谷<\/th><td>4.5<\/td><td>13.5<\/td>/);
+assert.match(prices, /9<small>高峰/);
+assert.match(prices, /price-secondary[^>]*>4.5<small>低谷/);
+assert.doesNotMatch(prices, /<dt[^>]*>价格/);
+const cached=priceHelpers.priceLines({pricing:{quotes:[{input:4,output:12}],raw:[{range_name:'Default',prices:[{type:'input_token_cache',price:'0.8',price_unit:'每百万tokens'}]}]}},'input');
+assert.match(cached,/price-cache[^>]*>0.8<small>缓存/);
+assert.doesNotMatch(priceHelpers.priceLines({pricing:{quotes:[{input:4,output:12}],raw:[{prices:[{type:'input_token_cache',price:'0.8',price_unit:'每百万tokens'}]}]}},'output'),/缓存/);
 console.log('Compact shared model details passed');
+
+const cacheVariants=priceHelpers.priceLines({pricing:{quotes:[{input:2,output:3}],comparison:{input_range:'selected'},raw:[{range_name:'other',prices:[{type:'input_token_cache',price:99,price_unit:'每百万tokens'}]},{range_name:'selected',prices:[{type:'input_token_cache_read',price:0,price_unit:'每百万tokens'},{type:'input_token_cache_creation_5m',price:1,price_unit:'每百万tokens'}]}]}},'input');
+assert.match(cacheVariants,/0<small>读缓存/);
+assert.match(cacheVariants,/1<small>写缓存/);
+assert.doesNotMatch(cacheVariants,/99/);

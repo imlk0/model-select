@@ -76,3 +76,5 @@
 .model-popover .popover-sources{margin:6px 0 12px;padding:0;border:0;gap:6px 16px;font-size:11px;color:var(--muted)}.model-popover .popover-sources a{transition:color .2s ease}.model-popover .popover-sources a:hover{color:var(--accent)}
 
 .model-popover .detail-prices{width:100%;min-width:0;border:0;margin:4px 0;border-collapse:collapse}.model-popover .detail-prices th,.model-popover .detail-prices td{padding:3px 8px 3px 0;border:0;text-align:left;font:11px var(--mono)}.model-popover .detail-prices th{color:var(--muted);font:10px system-ui}
+
+.price-values{display:flex;flex-wrap:wrap;gap:4px 10px}.price-value{display:inline-flex;align-items:baseline;gap:4px;color:var(--text);white-space:nowrap}.price-value small{font:10px system-ui;color:inherit;opacity:.75}.price-value.price-secondary{color:var(--muted)}.price-value.price-cache{color:var(--muted);opacity:.8}.detail-price-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}.price-heading{color:var(--muted);font:10px system-ui;margin-bottom:5px}.price-heading small{font-size:9px;margin-left:3px}.detail-price-columns .price-values{gap:5px 10px;font:11px var(--mono)}
