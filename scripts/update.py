@@ -46,7 +46,7 @@ def fetch_catalog(endpoint, key):
 def fetch_aa(key):
     rows, pages, version = [], [], None
     for page in range(1, 1001):
-        payload = get(AA_URL, {'x-api-key':key}, {'page':page, 'page_size':200, 'prompt_type':'long'})
+        payload = get(AA_URL, {'x-api-key':key}, {'page':page})
         batch, pagination = payload.get('data'), payload.get('pagination')
         if not isinstance(batch, list) or not isinstance(pagination, dict): raise ValueError('AA schema changed')
         current = payload.get('intelligence_index_version')
@@ -59,16 +59,16 @@ def fetch_aa(key):
 
 def input_range_matches(label, tokens=10000):
     # Recognize documented input-token ranges only; reject unknown billing rules.
-    label = label.replace(' ', '').lower()
+    label = label.replace(' ', '').replace('输入','input').lower()
     if label == 'default': return True
-    if not re.fullmatch(r'(?:[0-9.]+k?(?:<|<=))?input(?:<|<=)[0-9.]+k?', label): return False
-    def value(text): return float(text[:-1])*1000 if text.endswith('k') else float(text)
+    if not re.fullmatch(r'(?:[0-9.]+[km]?(?:<|<=))?input(?:<|<=)[0-9.]+[km]?', label): return False
+    def value(text): return float(text[:-1])*({'k':1000,'m':1000000}[text[-1]]) if text.endswith(('k','m')) else float(text)
     left, right = label.split('input')
     if left:
-        match = re.fullmatch(r'([0-9.]+k?)(<=|<)',left)
+        match = re.fullmatch(r'([0-9.]+[km]?)(<=|<)',left)
         low = value(match[1])
         if not (low <= tokens if match[2]=='<=' else low < tokens): return False
-    match = re.fullmatch(r'(<=|<)([0-9.]+k?)',right)
+    match = re.fullmatch(r'(<=|<)([0-9.]+[km]?)',right)
     high = value(match[2])
     return tokens <= high if match[1]=='<=' else tokens < high
 
@@ -112,7 +112,7 @@ def build_models(rows, aa_rows, version, mappings, timestamp):
         context = number((row.get('model_info') or {}).get('context_window'))
         price = simple_prices(row)
         speed = number(((matched or {}).get('performance') or {}).get('median_output_tokens_per_second'))
-        model = {'code':code,'name':row.get('name') or code,'context_k':context/1000 if context is not None else None,'pricing':{'beijing':price,'raw':row.get('prices') or [],'input_tokens_basis':10000},'scores':scores,'speed':{'tokens_per_second':speed,'scope':'AA 跨供应商中位数，非百炼实测速率','prompt_type':'long'},'features':row.get('features') or [],'sources':['Bailian']+(['Artificial Analysis'] if matched else []),'provenance':{'catalog':{'url':BAILIAN_DOC,'fetched_at':timestamp,'model_id':code},'benchmark':{'url':AA_DOC,'fetched_at':timestamp,'aa_id':matched.get('id'),'aa_slug':matched.get('slug'),'aa_name':matched.get('name'),'match_method':'explicit-aa-id' if code in mappings else 'unique-normalized-slug','index_version':version} if matched else None}}
+        model = {'code':code,'name':row.get('name') or code,'context_k':context/1000 if context is not None else None,'pricing':{'beijing':price,'raw':row.get('prices') or [],'input_tokens_basis':10000},'scores':scores,'speed':{'tokens_per_second':speed,'scope':'AA 跨供应商中位数，非百炼实测速率','prompt_type':'free-endpoint-default'},'features':row.get('features') or [],'sources':['Bailian']+(['Artificial Analysis'] if matched else []),'provenance':{'catalog':{'url':BAILIAN_DOC,'fetched_at':timestamp,'model_id':code},'benchmark':{'url':AA_DOC,'fetched_at':timestamp,'aa_id':matched.get('id'),'aa_slug':matched.get('slug'),'aa_name':matched.get('name'),'match_method':'explicit-aa-id' if code in mappings else 'unique-normalized-slug','index_version':version} if matched else None}}
         checks = [context is not None,price['input'] is not None and price['output'] is not None,*[v is not None for k,v in scores.items() if k in ('capability','coding','agentic')],speed is not None]
         model['evidence_coverage'] = sum(checks)/len(checks)
         models.append(model)

@@ -16,7 +16,7 @@ benchmark：Actions secret `ARTIFICIAL_ANALYSIS_API_KEY`。使用 AA 免费接�
 | 综合能力 | AA `evaluations.artificial_analysis_intelligence_index` | 原值及版本，能力排序采用该指标 |
 | Coding | AA `evaluations.artificial_analysis_coding_index` | 原值，不拿 LiveCodeBench 替代 |
 | Agentic | AA `evaluations.artificial_analysis_agentic_index` | 原值，不拿 Terminal-Bench 替代 |
-| 速度 | AA `performance.median_output_tokens_per_second` | long prompt；跨供应商中位数，不是百炼实测 |
+| 速度 | AA `performance.median_output_tokens_per_second` | 免费端点默认测量口径；跨供应商中位数，不是百炼实测 |
 | 性价比 | 能力 /（输入单价 × 0.01 + 输出单价 × 0.002） | 对应 10k 输入 + 2k 输出；任一字段缺失不排名 |
 | 字段完整率 | 六类字段是否有值 | 不代表可信度或成功率 |
 

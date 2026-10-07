@@ -15,6 +15,7 @@ class DataTests(unittest.TestCase):
     def test_aa_pagination(self):
         with patch.object(u,'get',side_effect=[{'data':[{'id':'a'}],'pagination':{'has_more':True},'intelligence_index_version':4.3},{'data':[{'id':'b'}],'pagination':{'has_more':False},'intelligence_index_version':4.3}]):
             rows,_,version=u.fetch_aa('key');self.assertEqual(len(rows),2);self.assertEqual(version,4.3)
+            self.assertEqual(u.get.call_args.args[2],{'page':2})
     def test_tiered_price_not_flattened(self):
         row=model();row['prices'][0]['range_name']='32k<Input<=128k';self.assertIsNone(u.simple_prices(row)['input'])
     def test_standard_task_selects_tier_and_preserves_unknown(self):
@@ -24,6 +25,8 @@ class DataTests(unittest.TestCase):
         self.assertFalse(u.input_range_matches('32k<Input<=128k'))
         self.assertTrue(u.input_range_matches('Input<=10k'))
         self.assertFalse(u.input_range_matches('Input<10k'))
+        self.assertTrue(u.input_range_matches('输入<=32k'))
+        self.assertFalse(u.input_range_matches('256k<输入<=1m'))
     def test_legacy_endpoint_default(self):
         self.assertEqual(u.DEFAULT_CATALOG_URL,'https://dashscope.aliyuncs.com/api/v1/models')
     def test_exact_mapping_and_missing_metrics(self):
