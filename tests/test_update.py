@@ -86,3 +86,10 @@ class PricingReleaseTests(unittest.TestCase):
         self.assertEqual(u.match_aa(row,[aa],{}),aa)
         self.assertIsNone(u.match_aa(row,[aa,dict(aa,slug='other')],{}))
         row['published_time']='invalid';self.assertEqual(u.release_metadata(row,None,[]),(None,None))
+
+    def test_name_match_keeps_versions_and_reasoning_distinct(self):
+        row=model('qwen3.6-max-preview');row['name']='Qwen3.6-Max-Preview'
+        aa={'id':'correct','slug':'qwen3-6-max','name':'Qwen3.6 Max Preview'}
+        self.assertEqual(u.match_aa(row,[aa,{'id':'wrong','slug':'qwen3-7-max','name':'Qwen3.7 Max Preview'}],{}),aa)
+        row['name']='Qwen3.6 Max Thinking'
+        self.assertIsNone(u.match_aa(row,[aa],{}))
