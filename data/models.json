@@ -99,6 +99,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -195,6 +199,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -281,6 +289,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -350,6 +364,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.16666666666666666
     },
     {
@@ -409,6 +429,11 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -495,6 +520,11 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
       "evidence_coverage": 0.5
     },
     {
@@ -580,6 +610,11 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
       "evidence_coverage": 0.5
     },
     {
@@ -655,6 +690,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -766,6 +807,9 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
       "evidence_coverage": 0.8333333333333334
     },
     {
@@ -861,6 +905,11 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
       },
       "evidence_coverage": 0.5
     },
@@ -1001,6 +1050,11 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
       "evidence_coverage": 0.5
     },
     {
@@ -1079,6 +1133,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -1177,6 +1237,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -1259,18 +1320,18 @@
           "input_range": "Default"
         }
       },
-      "release_date": "2026-08-01",
-      "release_date_source": "Bailian",
+      "release_date": "2026-07-31",
+      "release_date_source": "Artificial Analysis",
       "catalog_published_at": "2026-08-01 00:09:35",
       "scores": {
-        "capability": null,
-        "coding": null,
-        "agentic": null,
+        "capability": 34.3,
+        "coding": 69.1,
+        "agentic": 41.0,
         "comparable_scale": false,
-        "version": null
+        "version": 4.3
       },
       "speed": {
-        "tokens_per_second": null,
+        "tokens_per_second": 229.47,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1282,7 +1343,8 @@
         "structured-outputs"
       ],
       "sources": [
-        "Bailian"
+        "Bailian",
+        "Artificial Analysis"
       ],
       "provenance": {
         "catalog": {
@@ -1291,9 +1353,18 @@
           "model_id": "deepseek-v4-flash-0731",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
-        "benchmark": null
+        "benchmark": {
+          "url": "https://artificialanalysis.ai/data-api/docs",
+          "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+          "aa_id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+          "aa_slug": "deepseek-v4-flash",
+          "aa_name": "DeepSeek V4 Flash 0731 (Max)",
+          "match_method": "unique-evidence-alias",
+          "index_version": 4.3
+        }
       },
-      "evidence_coverage": 0.3333333333333333
+      "missing_reasons": {},
+      "evidence_coverage": 1.0
     },
     {
       "code": "deepseek-v4-pro",
@@ -1391,6 +1462,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -1473,18 +1545,18 @@
           "input_range": "Default"
         }
       },
-      "release_date": "2026-08-14",
-      "release_date_source": "Bailian",
+      "release_date": "2026-08-13",
+      "release_date_source": "Artificial Analysis",
       "catalog_published_at": "2026-08-14 12:06:20",
       "scores": {
-        "capability": null,
-        "coding": null,
-        "agentic": null,
+        "capability": 36.0,
+        "coding": 68.8,
+        "agentic": 41.3,
         "comparable_scale": false,
-        "version": null
+        "version": 4.3
       },
       "speed": {
-        "tokens_per_second": null,
+        "tokens_per_second": 100.93,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1496,7 +1568,8 @@
         "web-search"
       ],
       "sources": [
-        "Bailian"
+        "Bailian",
+        "Artificial Analysis"
       ],
       "provenance": {
         "catalog": {
@@ -1505,9 +1578,18 @@
           "model_id": "deepseek-v4-pro-0813",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
-        "benchmark": null
+        "benchmark": {
+          "url": "https://artificialanalysis.ai/data-api/docs",
+          "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+          "aa_id": "83173329-c09a-41f1-a028-a282a5f908d7",
+          "aa_slug": "deepseek-v4-pro",
+          "aa_name": "DeepSeek V4 Pro 0813 (Max)",
+          "match_method": "unique-evidence-alias",
+          "index_version": 4.3
+        }
       },
-      "evidence_coverage": 0.3333333333333333
+      "missing_reasons": {},
+      "evidence_coverage": 1.0
     },
     {
       "code": "deepseek-v4.1-flash",
@@ -1631,6 +1713,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -1706,6 +1792,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -1811,6 +1903,11 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
       "evidence_coverage": 0.5
     },
     {
@@ -1914,6 +2011,10 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.6666666666666666
     },
@@ -2034,6 +2135,10 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.6666666666666666
     },
@@ -2156,6 +2261,9 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.8333333333333334
     },
     {
@@ -2277,6 +2385,10 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.6666666666666666
     },
@@ -2429,6 +2541,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -2526,6 +2639,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -2585,11 +2699,11 @@
       "release_date_source": "Bailian",
       "catalog_published_at": "2026-07-09 10:50:34",
       "scores": {
-        "capability": null,
-        "coding": null,
-        "agentic": null,
+        "capability": 33.7,
+        "coding": 68.8,
+        "agentic": 38.4,
         "comparable_scale": false,
-        "version": null
+        "version": 4.3
       },
       "speed": {
         "tokens_per_second": null,
@@ -2604,7 +2718,8 @@
         "web-search"
       ],
       "sources": [
-        "Bailian"
+        "Bailian",
+        "Artificial Analysis"
       ],
       "provenance": {
         "catalog": {
@@ -2613,9 +2728,21 @@
           "model_id": "glm-5.2-fast-preview",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
-        "benchmark": null
+        "benchmark": {
+          "url": "https://artificialanalysis.ai/data-api/docs",
+          "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+          "aa_id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+          "aa_slug": "glm-5-2",
+          "aa_name": "GLM-5.2 (Max)",
+          "match_method": "provider-confirmed-base-reference",
+          "index_version": 4.3,
+          "reference_model": "glm-5.2"
+        }
       },
-      "evidence_coverage": 0.3333333333333333
+      "missing_reasons": {
+        "speed": "此模型是提速版本，基础模型的速度不能代表此版本；暂无对应测速数据。"
+      },
+      "evidence_coverage": 0.8333333333333334
     },
     {
       "code": "glm-5.3",
@@ -2712,6 +2839,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -2771,11 +2899,11 @@
       "release_date_source": "Bailian",
       "catalog_published_at": "2026-09-21 13:35:15",
       "scores": {
-        "capability": null,
-        "coding": null,
-        "agentic": null,
+        "capability": 44.8,
+        "coding": 74.8,
+        "agentic": 53.1,
         "comparable_scale": false,
-        "version": null
+        "version": 4.3
       },
       "speed": {
         "tokens_per_second": null,
@@ -2789,7 +2917,8 @@
         "structured-outputs"
       ],
       "sources": [
-        "Bailian"
+        "Bailian",
+        "Artificial Analysis"
       ],
       "provenance": {
         "catalog": {
@@ -2798,9 +2927,21 @@
           "model_id": "glm-5.3-prime",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
-        "benchmark": null
+        "benchmark": {
+          "url": "https://artificialanalysis.ai/data-api/docs",
+          "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+          "aa_id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+          "aa_slug": "glm-5-3",
+          "aa_name": "GLM-5.3 (Max)",
+          "match_method": "provider-confirmed-base-reference",
+          "index_version": 4.3,
+          "reference_model": "glm-5.3"
+        }
       },
-      "evidence_coverage": 0.3333333333333333
+      "missing_reasons": {
+        "speed": "此模型是提速版本，基础模型的速度不能代表此版本；暂无对应测速数据。"
+      },
+      "evidence_coverage": 0.8333333333333334
     },
     {
       "code": "kimi-k2-thinking",
@@ -2894,6 +3035,10 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.6666666666666666
     },
@@ -3005,6 +3150,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -3115,6 +3264,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -3228,6 +3378,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -3327,6 +3478,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -3402,6 +3554,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -3479,6 +3637,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -3555,6 +3719,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -3630,6 +3800,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -3730,6 +3906,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -4000,6 +4182,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -4120,6 +4308,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -4208,6 +4402,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -4293,6 +4493,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -4386,6 +4592,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -4461,6 +4673,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -4552,6 +4770,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -4627,6 +4851,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -4704,6 +4934,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -4779,6 +5015,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -4856,6 +5098,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -4931,6 +5179,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -5037,6 +5291,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -5114,6 +5374,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -5193,6 +5459,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -5271,6 +5543,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -5346,6 +5624,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -5811,6 +6095,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -5887,6 +6177,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -5962,6 +6258,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -6043,6 +6345,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -6145,6 +6453,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -6246,6 +6560,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -6414,6 +6734,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -6575,6 +6901,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -6744,6 +7076,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -6845,6 +7183,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -7099,6 +7443,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -7256,6 +7606,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -7364,6 +7718,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -7464,6 +7824,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -7553,6 +7919,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -7628,6 +7998,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -7729,6 +8105,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -7810,6 +8192,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -7885,6 +8273,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -7994,6 +8388,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -8101,6 +8501,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -8244,6 +8650,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -8385,6 +8795,10 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.6666666666666666
     },
@@ -8607,6 +9021,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -8743,6 +9163,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -8866,6 +9292,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -9086,6 +9513,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -9220,6 +9653,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -9358,6 +9797,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -9636,6 +10081,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -9755,6 +10204,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -9873,6 +10328,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -10020,6 +10481,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -10105,6 +10570,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -10186,9 +10655,12 @@
           "aa_id": "c8a79180-7d16-4474-8701-9a77c0baa56a",
           "aa_slug": "qwen3-next-80b-a3b-reasoning",
           "aa_name": "Qwen3 Next 80B A3B (Reasoning)",
-          "match_method": "explicit-aa-id",
+          "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.8333333333333334
     },
@@ -10300,6 +10772,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -10411,6 +10884,10 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.6666666666666666
     },
     {
@@ -10520,6 +10997,10 @@
           "match_method": "unique-normalized-slug",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.6666666666666666
     },
@@ -10631,6 +11112,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -10879,6 +11361,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -10999,6 +11487,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -11248,6 +11742,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -11367,6 +11867,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -11531,6 +12037,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -11622,6 +12134,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -11713,6 +12226,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -11900,6 +12414,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -12001,6 +12521,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -12136,9 +12662,13 @@
           "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
           "aa_slug": "qwen3-6-max",
           "aa_name": "Qwen3.6 Max Preview",
-          "match_method": "unique-normalized-name",
+          "match_method": "unique-evidence-alias",
           "index_version": 4.3
         }
+      },
+      "missing_reasons": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
       },
       "evidence_coverage": 0.6666666666666666
     },
@@ -12336,6 +12866,9 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
       "evidence_coverage": 0.8333333333333334
     },
     {
@@ -12437,6 +12970,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -12707,6 +13246,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -12891,6 +13436,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -13033,6 +13584,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -13113,6 +13665,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -13209,6 +13767,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -13313,6 +13877,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -13393,6 +13963,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -13604,6 +14180,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -13748,6 +14325,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -13861,6 +14444,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -13974,6 +14558,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -14075,11 +14660,11 @@
       "release_date_source": "Bailian",
       "catalog_published_at": "2026-08-25 20:16:04",
       "scores": {
-        "capability": null,
-        "coding": null,
-        "agentic": null,
+        "capability": 39.8,
+        "coding": 73.1,
+        "agentic": 53.6,
         "comparable_scale": false,
-        "version": null
+        "version": 4.3
       },
       "speed": {
         "tokens_per_second": null,
@@ -14096,7 +14681,8 @@
         "batch"
       ],
       "sources": [
-        "Bailian"
+        "Bailian",
+        "Artificial Analysis"
       ],
       "provenance": {
         "catalog": {
@@ -14105,9 +14691,21 @@
           "model_id": "qwen3.8-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
-        "benchmark": null
+        "benchmark": {
+          "url": "https://artificialanalysis.ai/data-api/docs",
+          "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+          "aa_id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+          "aa_slug": "qwen3-8-flash-next",
+          "aa_name": "Qwen3.8-Flash-Next",
+          "match_method": "same-version-variant-reference",
+          "index_version": 4.3,
+          "reference_model": "Qwen3.8-Flash-Next"
+        }
       },
-      "evidence_coverage": 0.3333333333333333
+      "missing_reasons": {
+        "speed": "采用同版本变体的测评参考，变体测速不能代表此模型；暂无对应测速数据。"
+      },
+      "evidence_coverage": 0.8333333333333334
     },
     {
       "code": "qwen3.8-max",
@@ -14249,6 +14847,7 @@
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -14358,10 +14957,11 @@
           "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
           "aa_slug": "qwen3-8-max",
           "aa_name": "Qwen3.8 Max (0902)",
-          "match_method": "unique-normalized-name",
+          "match_method": "unique-evidence-alias",
           "index_version": 4.3
         }
       },
+      "missing_reasons": {},
       "evidence_coverage": 1.0
     },
     {
@@ -14437,6 +15037,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     },
@@ -14521,6 +15127,12 @@
         },
         "benchmark": null
       },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
       "evidence_coverage": 0.3333333333333333
     },
     {
@@ -14603,6 +15215,12 @@
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": null
+      },
+      "missing_reasons": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
       },
       "evidence_coverage": 0.3333333333333333
     }

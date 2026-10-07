@@ -1,0 +1,2418 @@
+{
+  "models": 123,
+  "matched": 52,
+  "entries": [
+    {
+      "code": "MiniMax-M2.1",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "272ff333-442f-4169-a804-ac9177bc99d7",
+        "aa_slug": "minimax-m2-1",
+        "aa_name": "MiniMax-M2.1",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "MiniMax-M2.5",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "12adec16-19fe-4d92-aeff-5ef3eb7e780a",
+        "aa_slug": "minimax-m2-5",
+        "aa_name": "MiniMax-M2.5",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "Moonshot-Kimi-K2-Instruct",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "decision-model-preview",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "deepseek-r1-distill-qwen-1.5b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "444cdb1e-bab8-42cd-938c-b2d7a93e2da1",
+        "aa_slug": "deepseek-r1-distill-qwen-1-5b",
+        "aa_name": "DeepSeek R1 Distill Qwen 1.5B",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "deepseek-r1-distill-qwen-14b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "b26ff709-1773-4595-ae44-78e0a5bac29c",
+        "aa_slug": "deepseek-r1-distill-qwen-14b",
+        "aa_name": "DeepSeek R1 Distill Qwen 14B",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "deepseek-r1-distill-qwen-32b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "df95f83f-5ebb-466a-9d2d-b95efc8c012c",
+        "aa_slug": "deepseek-r1-distill-qwen-32b",
+        "aa_name": "DeepSeek R1 Distill Qwen 32B",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "deepseek-r1-distill-qwen-7b",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "444cdb1e-bab8-42cd-938c-b2d7a93e2da1",
+          "slug": "deepseek-r1-distill-qwen-1-5b",
+          "name": "DeepSeek R1 Distill Qwen 1.5B",
+          "similarity": 0.936
+        },
+        {
+          "aa_id": "b26ff709-1773-4595-ae44-78e0a5bac29c",
+          "slug": "deepseek-r1-distill-qwen-14b",
+          "name": "DeepSeek R1 Distill Qwen 14B",
+          "similarity": 0.936
+        },
+        {
+          "aa_id": "df95f83f-5ebb-466a-9d2d-b95efc8c012c",
+          "slug": "deepseek-r1-distill-qwen-32b",
+          "name": "DeepSeek R1 Distill Qwen 32B",
+          "similarity": 0.936
+        }
+      ]
+    },
+    {
+      "code": "deepseek-v3",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "43fc5506-c5ed-4dee-9b85-962bf7ae3986",
+        "aa_slug": "deepseek-v3",
+        "aa_name": "DeepSeek V3 (Dec '24)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "deepseek-v3.1",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "aa_slug": "deepseek-v3-1",
+        "aa_name": "DeepSeek V3.1 (Non-reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "deepseek-v3.2",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "6d9a176d-feb8-4dac-8872-afe32b31897f",
+        "aa_slug": "deepseek-v3-2",
+        "aa_name": "DeepSeek V3.2 (Non-reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "deepseek-v3.2-exp",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "6d9a176d-feb8-4dac-8872-afe32b31897f",
+          "slug": "deepseek-v3-2",
+          "name": "DeepSeek V3.2 (Non-reasoning)",
+          "similarity": 0.88
+        },
+        {
+          "aa_id": "2d19c2d1-062d-436e-b2c2-3d3ecad34acc",
+          "slug": "deepseek-v2",
+          "name": "DeepSeek-V2-Chat",
+          "similarity": 0.833
+        },
+        {
+          "aa_id": "43fc5506-c5ed-4dee-9b85-962bf7ae3986",
+          "slug": "deepseek-v3",
+          "name": "DeepSeek V3 (Dec '24)",
+          "similarity": 0.833
+        },
+        {
+          "aa_id": "bc4579d2-9c46-46c3-ace0-454039bf21bb",
+          "slug": "deepseek-v2-5",
+          "name": "DeepSeek-V2.5 (Dec '24)",
+          "similarity": 0.8
+        },
+        {
+          "aa_id": "8a24865b-90d9-4e2b-a2fd-6851c2e9d627",
+          "slug": "deepseek-v2-5-sep-2024",
+          "name": "DeepSeek-V2.5",
+          "similarity": 0.8
+        }
+      ]
+    },
+    {
+      "code": "deepseek-v4-flash",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "aa_slug": "deepseek-v4-flash",
+        "aa_name": "DeepSeek V4 Flash 0731 (Max)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "deepseek-v4-flash-0731",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "aa_slug": "deepseek-v4-flash",
+        "aa_name": "DeepSeek V4 Flash 0731 (Max)",
+        "match_method": "unique-evidence-alias",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "deepseek-v4-pro",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "83173329-c09a-41f1-a028-a282a5f908d7",
+        "aa_slug": "deepseek-v4-pro",
+        "aa_name": "DeepSeek V4 Pro 0813 (Max)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "deepseek-v4-pro-0813",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "83173329-c09a-41f1-a028-a282a5f908d7",
+        "aa_slug": "deepseek-v4-pro",
+        "aa_name": "DeepSeek V4 Pro 0813 (Max)",
+        "match_method": "unique-evidence-alias",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "deepseek-v4.1-flash",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "aa_slug": "deepseek-v4-1-flash",
+        "aa_name": "DeepSeek V4.1 Flash (Max)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "farui-plus",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "glm-4.5",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "1cf439b8-0cfd-47b2-9de2-9a2157e6762b",
+        "aa_slug": "glm-4.5",
+        "aa_name": "GLM-4.5 (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "glm-4.5-air",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "5d303dc9-c027-401f-9803-4e9aa3331007",
+        "aa_slug": "glm-4-5-air",
+        "aa_name": "GLM-4.5-Air",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "glm-4.6",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "946e7aab-db1c-4c3f-b0b3-7720d0cff187",
+        "aa_slug": "glm-4-6",
+        "aa_name": "GLM-4.6 (Non-reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "glm-4.7",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "6fc35842-0165-44cf-8570-c484a92b3d8c",
+        "aa_slug": "glm-4-7",
+        "aa_name": "GLM-4.7 (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "glm-5",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "40663ad2-b218-471e-bdd4-a1e0c2360e2b",
+        "aa_slug": "glm-5",
+        "aa_name": "GLM-5 (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "glm-5.1",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "aa_slug": "glm-5-1",
+        "aa_name": "GLM-5.1 (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "glm-5.2",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+        "aa_slug": "glm-5-2",
+        "aa_name": "GLM-5.2 (Max)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "glm-5.2-fast-preview",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+        "aa_slug": "glm-5-2",
+        "aa_name": "GLM-5.2 (Max)",
+        "match_method": "provider-confirmed-base-reference",
+        "index_version": 4.3,
+        "reference_model": "glm-5.2"
+      },
+      "missing_fields": {
+        "speed": "此模型是提速版本，基础模型的速度不能代表此版本；暂无对应测速数据。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "glm-5.3",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+        "aa_slug": "glm-5-3",
+        "aa_name": "GLM-5.3 (Max)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "glm-5.3-prime",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+        "aa_slug": "glm-5-3",
+        "aa_name": "GLM-5.3 (Max)",
+        "match_method": "provider-confirmed-base-reference",
+        "index_version": 4.3,
+        "reference_model": "glm-5.3"
+      },
+      "missing_fields": {
+        "speed": "此模型是提速版本，基础模型的速度不能代表此版本；暂无对应测速数据。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "kimi-k2-thinking",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "bddebfd3-0a8d-47f5-b722-bc4c2ca5a5dc",
+        "aa_slug": "kimi-k2-thinking",
+        "aa_name": "Kimi K2 Thinking",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "kimi-k2.5",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
+        "aa_slug": "kimi-k2-5",
+        "aa_name": "Kimi K2.5 (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "speed": "Artificial Analysis 已匹配该模型，但接口未提供输出速度。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "kimi-k2.6",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "0de67206-4d36-4d10-b8f6-cf37fa747a03",
+        "aa_slug": "kimi-k2-6",
+        "aa_name": "Kimi K2.6 (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "kimi-k2.7-code",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "8d0cb231-7303-452c-9923-a9620b948475",
+        "aa_slug": "kimi-k2-7-code",
+        "aa_name": "Kimi K2.7 Code",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "kimi-k3",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+        "aa_slug": "kimi-k3",
+        "aa_name": "Kimi K3 (Max)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen-coder-plus",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-coder-turbo",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-deep-research",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-deep-research-2025-12-15",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-doc-turbo",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "352f834f-a03c-4117-8a29-c3ccd8a568ce",
+          "slug": "qwen-turbo",
+          "name": "Qwen2.5 Turbo",
+          "similarity": 0.857
+        }
+      ]
+    },
+    {
+      "code": "qwen-flash",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-flash-2025-07-28",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-flash-character",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-flash-character-2026-02-26",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-long",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-long-2025-01-25",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-long-latest",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-math-plus",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-math-plus-0816",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-math-plus-0919",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-math-plus-latest",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-math-turbo",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "352f834f-a03c-4117-8a29-c3ccd8a568ce",
+          "slug": "qwen-turbo",
+          "name": "Qwen2.5 Turbo",
+          "similarity": 0.818
+        }
+      ]
+    },
+    {
+      "code": "qwen-max",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+          "slug": "qwen3-max",
+          "name": "Qwen3 Max",
+          "similarity": 0.933
+        },
+        {
+          "aa_id": "b9dc72c6-7bea-4936-a55a-4b0c835fc755",
+          "slug": "qwen-2-5-max",
+          "name": "Qwen2.5 Max",
+          "similarity": 0.875
+        },
+        {
+          "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+          "slug": "qwen3-6-max",
+          "name": "Qwen3.6 Max Preview",
+          "similarity": 0.875
+        },
+        {
+          "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
+          "slug": "qwen3-7-max",
+          "name": "Qwen3.7 Max",
+          "similarity": 0.875
+        },
+        {
+          "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+          "slug": "qwen3-8-max",
+          "name": "Qwen3.8 Max (0902)",
+          "similarity": 0.875
+        }
+      ]
+    },
+    {
+      "code": "qwen-mt-flash",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-mt-lite",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-mt-plus",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.8
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.8
+        }
+      ]
+    },
+    {
+      "code": "qwen-mt-turbo",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "352f834f-a03c-4117-8a29-c3ccd8a568ce",
+          "slug": "qwen-turbo",
+          "name": "Qwen2.5 Turbo",
+          "similarity": 0.9
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-0112",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-1220",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-2025-01-25",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-2025-04-28",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-2025-07-14",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-2025-07-28",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-2025-09-11",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-2025-12-01",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen-plus-character",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-plus-latest",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen-turbo",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "352f834f-a03c-4117-8a29-c3ccd8a568ce",
+        "aa_slug": "qwen-turbo",
+        "aa_name": "Qwen2.5 Turbo",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-14b",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "651ef7ae-9a8f-477e-9c8e-460aa156ba02",
+          "slug": "qwen3-5-4b",
+          "name": "Qwen3.5 4B (Reasoning)",
+          "similarity": 0.875
+        }
+      ]
+    },
+    {
+      "code": "qwen3-235b-a22b",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "46d8315e-1630-463f-ab62-84185fa0faab",
+          "slug": "qwen3-5-35b-a3b",
+          "name": "Qwen3.5 35B A3B (Reasoning)",
+          "similarity": 0.8
+        },
+        {
+          "aa_id": "8665ca00-c687-44c7-875c-22618cb31c4f",
+          "slug": "qwen3-6-35b-a3b",
+          "name": "Qwen3.6 35B A3B (Reasoning)",
+          "similarity": 0.8
+        }
+      ]
+    },
+    {
+      "code": "qwen3-235b-a22b-instruct-2507",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "aa_slug": "qwen3-235b-a22b-instruct-2507",
+        "aa_name": "Qwen3 235B A22B 2507 Instruct",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-235b-a22b-thinking-2507",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "bbe6d782-e630-48d5-b11c-3ce37f373f1e",
+          "slug": "qwen3-235b-a22b-instruct-reasoning",
+          "name": "Qwen3 235B A22B (Reasoning)",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "a803d3d0-d22e-49a0-ac2c-b9c6f1141065",
+          "slug": "qwen3-vl-235b-a22b-reasoning",
+          "name": "Qwen3 VL 235B A22B (Reasoning)",
+          "similarity": 0.957
+        },
+        {
+          "aa_id": "43573c57-2403-46fb-af4b-a93de9a0c3f5",
+          "slug": "qwen3-235b-a22b-instruct",
+          "name": "Qwen3 235B A22B (Non-reasoning)",
+          "similarity": 0.936
+        },
+        {
+          "aa_id": "f6ccbe1d-bd7e-484b-9795-18cc9f91552d",
+          "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+          "name": "Qwen3 235B A22B 2507 (Reasoning)",
+          "similarity": 0.917
+        },
+        {
+          "aa_id": "46d8315e-1630-463f-ab62-84185fa0faab",
+          "slug": "qwen3-5-35b-a3b",
+          "name": "Qwen3.5 35B A3B (Reasoning)",
+          "similarity": 0.884
+        }
+      ]
+    },
+    {
+      "code": "qwen3-30b-a3b",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "46d8315e-1630-463f-ab62-84185fa0faab",
+          "slug": "qwen3-5-35b-a3b",
+          "name": "Qwen3.5 35B A3B (Reasoning)",
+          "similarity": 0.87
+        },
+        {
+          "aa_id": "8665ca00-c687-44c7-875c-22618cb31c4f",
+          "slug": "qwen3-6-35b-a3b",
+          "name": "Qwen3.6 35B A3B (Reasoning)",
+          "similarity": 0.87
+        },
+        {
+          "aa_id": "7ec1065a-c90e-41e4-bd17-abb7042eed76",
+          "slug": "qwen3-30b-a3b-2507",
+          "name": "Qwen3 30B A3B 2507 Instruct",
+          "similarity": 0.846
+        }
+      ]
+    },
+    {
+      "code": "qwen3-30b-a3b-instruct-2507",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f3169f25-8c6f-48e4-ae87-0cf872dc0ec1",
+          "slug": "qwen3-30b-a3b-instruct",
+          "name": "Qwen3 30B A3B (Non-reasoning)",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "51d0b717-953d-4b44-af61-406c6b7dff39",
+          "slug": "qwen3-vl-30b-a3b-instruct",
+          "name": "Qwen3 VL 30B A3B Instruct",
+          "similarity": 0.95
+        },
+        {
+          "aa_id": "7ec1065a-c90e-41e4-bd17-abb7042eed76",
+          "slug": "qwen3-30b-a3b-2507",
+          "name": "Qwen3 30B A3B 2507 Instruct",
+          "similarity": 0.905
+        },
+        {
+          "aa_id": "0b226b82-1462-4860-bf1a-f8aed7024791",
+          "slug": "qwen3-omni-30b-a3b-instruct",
+          "name": "Qwen3 Omni 30B A3B Instruct",
+          "similarity": 0.905
+        },
+        {
+          "aa_id": "da9fe224-8af3-46d7-a8c4-6220779c3f35",
+          "slug": "qwen3-coder-30b-a3b-instruct",
+          "name": "Qwen3 Coder 30B A3B Instruct",
+          "similarity": 0.884
+        }
+      ]
+    },
+    {
+      "code": "qwen3-30b-a3b-thinking-2507",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "3e6cf518-a1f4-42d3-8fcf-827c9bd8e6d5",
+          "slug": "qwen3-30b-a3b-instruct-reasoning",
+          "name": "Qwen3 30B A3B (Reasoning)",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "ce3d286e-093d-413d-a81a-0270309f039e",
+          "slug": "qwen3-vl-30b-a3b-reasoning",
+          "name": "Qwen3 VL 30B A3B (Reasoning)",
+          "similarity": 0.952
+        },
+        {
+          "aa_id": "f3169f25-8c6f-48e4-ae87-0cf872dc0ec1",
+          "slug": "qwen3-30b-a3b-instruct",
+          "name": "Qwen3 30B A3B (Non-reasoning)",
+          "similarity": 0.93
+        },
+        {
+          "aa_id": "46d8315e-1630-463f-ab62-84185fa0faab",
+          "slug": "qwen3-5-35b-a3b",
+          "name": "Qwen3.5 35B A3B (Reasoning)",
+          "similarity": 0.927
+        },
+        {
+          "aa_id": "8665ca00-c687-44c7-875c-22618cb31c4f",
+          "slug": "qwen3-6-35b-a3b",
+          "name": "Qwen3.6 35B A3B (Reasoning)",
+          "similarity": 0.927
+        }
+      ]
+    },
+    {
+      "code": "qwen3-32b",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "5d4acc80-7a88-4e84-bfe7-99071b84e6a4",
+          "slug": "qwen3-5-2b",
+          "name": "Qwen3.5 2B (Reasoning)",
+          "similarity": 0.875
+        },
+        {
+          "aa_id": "169e47f5-3d4d-4ad4-8f8b-ab46f0c73f67",
+          "slug": "qwen3-5-27b",
+          "name": "Qwen3.5 27B (Reasoning)",
+          "similarity": 0.824
+        },
+        {
+          "aa_id": "8c29d66d-bf98-4ea3-8572-5409353ecc66",
+          "slug": "qwen3-6-27b",
+          "name": "Qwen3.6 27B (Reasoning)",
+          "similarity": 0.824
+        },
+        {
+          "aa_id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+          "slug": "qwen3-8-27b",
+          "name": "Qwen3.8 27B (Xhigh)",
+          "similarity": 0.824
+        }
+      ]
+    },
+    {
+      "code": "qwen3-8b",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "a6ea7ec0-0aca-4442-98fb-4296c6d18b31",
+          "slug": "qwen3-5-0-8b",
+          "name": "Qwen3.5 0.8B (Reasoning)",
+          "similarity": 0.875
+        },
+        {
+          "aa_id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+          "slug": "qwen3-8-27b",
+          "name": "Qwen3.8 27B (Xhigh)",
+          "similarity": 0.875
+        },
+        {
+          "aa_id": "5d4acc80-7a88-4e84-bfe7-99071b84e6a4",
+          "slug": "qwen3-5-2b",
+          "name": "Qwen3.5 2B (Reasoning)",
+          "similarity": 0.8
+        },
+        {
+          "aa_id": "651ef7ae-9a8f-477e-9c8e-460aa156ba02",
+          "slug": "qwen3-5-4b",
+          "name": "Qwen3.5 4B (Reasoning)",
+          "similarity": 0.8
+        },
+        {
+          "aa_id": "2d28a13a-096e-475a-beb8-26bbd1c7d51c",
+          "slug": "qwen3-5-9b",
+          "name": "Qwen3.5 9B (Reasoning)",
+          "similarity": 0.8
+        }
+      ]
+    },
+    {
+      "code": "qwen3-coder-30b-a3b-instruct",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "da9fe224-8af3-46d7-a8c4-6220779c3f35",
+        "aa_slug": "qwen3-coder-30b-a3b-instruct",
+        "aa_name": "Qwen3 Coder 30B A3B Instruct",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-coder-480b-a35b-instruct",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "093883ed-f5fc-443b-8e18-afbfb166699e",
+        "aa_slug": "qwen3-coder-480b-a35b-instruct",
+        "aa_name": "Qwen3 Coder 480B A35B Instruct",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-coder-flash",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-coder-flash-2025-07-28",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-coder-next",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "fc92f822-04b7-420d-9c07-a21af5e9aac7",
+        "aa_slug": "qwen3-coder-next",
+        "aa_name": "Qwen3 Coder Next",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3-coder-plus",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-coder-plus-2025-07-22",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-coder-plus-2025-09-23",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-max",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+        "aa_slug": "qwen3-max",
+        "aa_name": "Qwen3 Max",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-max-2025-09-23",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+          "slug": "qwen3-max",
+          "name": "Qwen3 Max",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+          "slug": "qwen3-6-max",
+          "name": "Qwen3.6 Max Preview",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
+          "slug": "qwen3-7-max",
+          "name": "Qwen3.7 Max",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+          "slug": "qwen3-8-max",
+          "name": "Qwen3.8 Max (0902)",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "5e5b4ce7-bc54-47b2-b911-21b9cad8394c",
+          "slug": "qwen3-8-max-0803",
+          "name": "Qwen3.8 Max",
+          "similarity": 0.941
+        }
+      ]
+    },
+    {
+      "code": "qwen3-max-2026-01-23",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+          "slug": "qwen3-max",
+          "name": "Qwen3 Max",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+          "slug": "qwen3-6-max",
+          "name": "Qwen3.6 Max Preview",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
+          "slug": "qwen3-7-max",
+          "name": "Qwen3.7 Max",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+          "slug": "qwen3-8-max",
+          "name": "Qwen3.8 Max (0902)",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "5e5b4ce7-bc54-47b2-b911-21b9cad8394c",
+          "slug": "qwen3-8-max-0803",
+          "name": "Qwen3.8 Max",
+          "similarity": 0.941
+        }
+      ]
+    },
+    {
+      "code": "qwen3-max-preview",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "5b2beb12-81a9-47a1-8a2a-d0a727185b50",
+        "aa_slug": "qwen3-max-preview",
+        "aa_name": "Qwen3 Max (Preview)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-next-80b-a3b-instruct",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "2698f6c6-e436-47ce-a583-dbc25596c571",
+        "aa_slug": "qwen3-next-80b-a3b-instruct",
+        "aa_name": "Qwen3 Next 80B A3B Instruct",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3-next-80b-a3b-thinking",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "c8a79180-7d16-4474-8701-9a77c0baa56a",
+        "aa_slug": "qwen3-next-80b-a3b-reasoning",
+        "aa_name": "Qwen3 Next 80B A3B (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.5-122b-a10b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "2236df45-0699-40d1-b5cc-69ee345d2257",
+        "aa_slug": "qwen3-5-122b-a10b",
+        "aa_name": "Qwen3.5 122B A10B (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.5-27b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "169e47f5-3d4d-4ad4-8f8b-ab46f0c73f67",
+        "aa_slug": "qwen3-5-27b",
+        "aa_name": "Qwen3.5 27B (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.5-35b-a3b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "46d8315e-1630-463f-ab62-84185fa0faab",
+        "aa_slug": "qwen3-5-35b-a3b",
+        "aa_name": "Qwen3.5 35B A3B (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.5-397b-a17b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "0e66bae9-41f1-42fc-9276-ce8cb6f72919",
+        "aa_slug": "qwen3-5-397b-a17b",
+        "aa_name": "Qwen3.5 397B A17B (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.5-flash",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "6f3534b1-1168-472e-b3e3-23ab521504f5",
+          "slug": "qwen3-5-omni-flash",
+          "name": "Qwen3.5 Omni Flash",
+          "similarity": 0.846
+        }
+      ]
+    },
+    {
+      "code": "qwen3.5-flash-2026-02-23",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "6f3534b1-1168-472e-b3e3-23ab521504f5",
+          "slug": "qwen3-5-omni-flash",
+          "name": "Qwen3.5 Omni Flash",
+          "similarity": 0.846
+        }
+      ]
+    },
+    {
+      "code": "qwen3.5-plus",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.9
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.9
+        },
+        {
+          "aa_id": "0179b427-93dc-415c-bb4c-f980ddf8d088",
+          "slug": "qwen3-5-omni-plus",
+          "name": "Qwen3.5 Omni Plus",
+          "similarity": 0.833
+        }
+      ]
+    },
+    {
+      "code": "qwen3.5-plus-2026-02-15",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.9
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.9
+        },
+        {
+          "aa_id": "0179b427-93dc-415c-bb4c-f980ddf8d088",
+          "slug": "qwen3-5-omni-plus",
+          "name": "Qwen3.5 Omni Plus",
+          "similarity": 0.833
+        }
+      ]
+    },
+    {
+      "code": "qwen3.5-plus-2026-04-20",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.9
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.9
+        },
+        {
+          "aa_id": "0179b427-93dc-415c-bb4c-f980ddf8d088",
+          "slug": "qwen3-5-omni-plus",
+          "name": "Qwen3.5 Omni Plus",
+          "similarity": 0.833
+        }
+      ]
+    },
+    {
+      "code": "qwen3.6-27b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "8c29d66d-bf98-4ea3-8572-5409353ecc66",
+        "aa_slug": "qwen3-6-27b",
+        "aa_name": "Qwen3.6 27B (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.6-35b-a3b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "8665ca00-c687-44c7-875c-22618cb31c4f",
+        "aa_slug": "qwen3-6-35b-a3b",
+        "aa_name": "Qwen3.6 35B A3B (Reasoning)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.6-flash",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.6-flash-2026-04-16",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.6-max-preview",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+        "aa_slug": "qwen3-6-max",
+        "aa_name": "Qwen3.6 Max Preview",
+        "match_method": "unique-evidence-alias",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "coding": "Artificial Analysis 已匹配该模型，但接口未提供此指标。",
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.6-plus",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+        "aa_slug": "qwen3-6-plus",
+        "aa_name": "Qwen3.6 Plus",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {
+        "agentic": "Artificial Analysis 已匹配该模型，但接口未提供此指标。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.6-plus-2026-04-02",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 0.9
+        }
+      ]
+    },
+    {
+      "code": "qwen3.7-flash",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.7-flash-2026-07-15",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.7-max",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
+        "aa_slug": "qwen3-7-max",
+        "aa_name": "Qwen3.7 Max",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.7-max-2026-05-17",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
+          "slug": "qwen3-7-max",
+          "name": "Qwen3.7 Max",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+          "slug": "qwen3-max",
+          "name": "Qwen3 Max",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+          "slug": "qwen3-6-max",
+          "name": "Qwen3.6 Max Preview",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+          "slug": "qwen3-8-max",
+          "name": "Qwen3.8 Max (0902)",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "5e5b4ce7-bc54-47b2-b911-21b9cad8394c",
+          "slug": "qwen3-8-max-0803",
+          "name": "Qwen3.8 Max",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen3.7-max-2026-05-20",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
+          "slug": "qwen3-7-max",
+          "name": "Qwen3.7 Max",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+          "slug": "qwen3-max",
+          "name": "Qwen3 Max",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+          "slug": "qwen3-6-max",
+          "name": "Qwen3.6 Max Preview",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+          "slug": "qwen3-8-max",
+          "name": "Qwen3.8 Max (0902)",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "5e5b4ce7-bc54-47b2-b911-21b9cad8394c",
+          "slug": "qwen3-8-max-0803",
+          "name": "Qwen3.8 Max",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen3.7-max-2026-06-08",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
+          "slug": "qwen3-7-max",
+          "name": "Qwen3.7 Max",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+          "slug": "qwen3-max",
+          "name": "Qwen3 Max",
+          "similarity": 0.941
+        },
+        {
+          "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+          "slug": "qwen3-6-max",
+          "name": "Qwen3.6 Max Preview",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+          "slug": "qwen3-8-max",
+          "name": "Qwen3.8 Max (0902)",
+          "similarity": 0.889
+        },
+        {
+          "aa_id": "5e5b4ce7-bc54-47b2-b911-21b9cad8394c",
+          "slug": "qwen3-8-max-0803",
+          "name": "Qwen3.8 Max",
+          "similarity": 0.889
+        }
+      ]
+    },
+    {
+      "code": "qwen3.7-max-preview",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "5b2beb12-81a9-47a1-8a2a-d0a727185b50",
+          "slug": "qwen3-max-preview",
+          "name": "Qwen3 Max (Preview)",
+          "similarity": 0.968
+        },
+        {
+          "aa_id": "6000692c-f9a6-47f8-a5c0-e0874ac488bb",
+          "slug": "qwen3-6-max",
+          "name": "Qwen3.6 Max Preview",
+          "similarity": 0.938
+        }
+      ]
+    },
+    {
+      "code": "qwen3.7-plus",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+        "aa_slug": "qwen3-7-plus",
+        "aa_name": "Qwen3.7 Plus",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.7-plus-2026-05-26",
+      "status": "review-required",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": [
+        {
+          "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+          "slug": "qwen3-7-plus",
+          "name": "Qwen3.7 Plus",
+          "similarity": 1.0
+        },
+        {
+          "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+          "slug": "qwen3-6-plus",
+          "name": "Qwen3.6 Plus",
+          "similarity": 0.9
+        }
+      ]
+    },
+    {
+      "code": "qwen3.8-2.4t-a95b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "8df710d3-9dae-4498-9b4e-9818238e6f31",
+        "aa_slug": "qwen3-8-2-4t-a95b",
+        "aa_name": "Qwen3.8 2.4T A95B",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.8-27b",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+        "aa_slug": "qwen3-8-27b",
+        "aa_name": "Qwen3.8 27B (Xhigh)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.8-flash",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+        "aa_slug": "qwen3-8-flash-next",
+        "aa_name": "Qwen3.8-Flash-Next",
+        "match_method": "same-version-variant-reference",
+        "index_version": 4.3,
+        "reference_model": "Qwen3.8-Flash-Next"
+      },
+      "missing_fields": {
+        "speed": "采用同版本变体的测评参考，变体测速不能代表此模型；暂无对应测速数据。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "qwen3.8-max",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+        "aa_slug": "qwen3-8-max",
+        "aa_name": "Qwen3.8 Max (0902)",
+        "match_method": "unique-normalized-slug",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "qwen3.8-max-0902",
+      "status": "matched",
+      "benchmark": {
+        "url": "https://artificialanalysis.ai/data-api/docs",
+        "fetched_at": "2026-10-07T03:17:41.131379+00:00",
+        "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+        "aa_slug": "qwen3-8-max",
+        "aa_name": "Qwen3.8 Max (0902)",
+        "match_method": "unique-evidence-alias",
+        "index_version": 4.3
+      },
+      "missing_fields": {},
+      "candidates": []
+    },
+    {
+      "code": "tongyi-intent-detect-v3",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "tongyi-xiaomi-analysis-flash",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    },
+    {
+      "code": "tongyi-xiaomi-analysis-pro",
+      "status": "no-confirmed-counterpart",
+      "benchmark": null,
+      "missing_fields": {
+        "capability": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "coding": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "agentic": "尚未匹配到对应的 Artificial Analysis 测评模型。",
+        "speed": "尚未匹配到对应的 Artificial Analysis 测速模型。"
+      },
+      "candidates": []
+    }
+  ]
+}

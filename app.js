@@ -28,12 +28,36 @@ const priceLines = (m,side) => {
   }
   return `<div class="price-values">${values.join('')}</div>`;
 };
-const billingDetails = m => `<details class="data-source billing"><summary>计费明细</summary>${m.pricing?.status==='incomplete'?'<p>百炼未提供完整输入、输出价格，不参与性价比计算。</p>':''}<p>价格单位沿用百炼原始响应；排序采用 10k 输入档位，分时模型采用高峰价。</p>${(m.pricing?.raw||[]).map(g=>`<p>${escapeHTML(g.range_name)}<br>${(g.prices||[]).map(p=>`${escapeHTML(p.price_name||p.type)}${p.time_band?' · '+escapeHTML(({peak:'高峰',offpeak:'低谷'})[p.time_band]||p.time_band):''}：${escapeHTML(p.price)} ${escapeHTML(p.price_unit)}`).join('<br>')}</p>`).join('')||'<p>百炼未提供价格列表。</p>'}</details>`;
+const missingReason = (m,field) => m.missing_reasons?.[field] || (m.provenance?.benchmark?'Artificial Analysis 已匹配该模型，但接口未提供此指标。':'尚未匹配到对应的 Artificial Analysis 测评模型。');
+const metricValue = (m,field,n) => {
+  if(n==null)return `<span class="missing" tabindex="0" title="${escapeHTML(missingReason(m,field))}">N/A</span>`;
+  const benchmark=m.provenance?.benchmark;
+  const note=benchmark?.reference_model?`参考模型 ${benchmark.reference_model} 的测评值，非此版本独立测评。`:benchmark?.aa_name?`Artificial Analysis 测评版本：${benchmark.aa_name}。实际效果受推理设置影响。`:'';
+  return note?`<span title="${escapeHTML(note)}">${fmt(n)}</span>`:fmt(n);
+};
 const detailPrices = m => `<div class="detail-price-columns"><div><div class="price-heading">输入 <small>¥/M tokens</small></div>${priceLines(m,'input')}</div><div><div class="price-heading">输出 <small>¥/M tokens</small></div>${priceLines(m,'output')}</div></div>`;
+const dateSource = (m,detail=false) => m.release_date ? (m.release_date_source==='Bailian'?'数据来源：阿里云百炼'+(detail?'':'（百炼上架日期）'):'数据来源：Artificial Analysis'+(detail?'':'（发布日期）')) : '数据来源：暂无日期记录';
+const dateValue = (m,detail=false) => `<span class="date-hint" tabindex="0">${escapeHTML(m.release_date||'未收录')}${detail&&m.release_date?`<small class="date-kind">${m.release_date_source==='Bailian'?'百炼上架日期':'发布日期'}</small>`:''}<span class="date-tooltip" role="tooltip">${escapeHTML(dateSource(m,detail))}</span></span>`;
 const modelDetails = m => {
   const benchmark=m.provenance?.benchmark;
-  const sources=`<nav class="popover-sources" aria-label="模型数据来源"><a href="https://bailian.console.aliyun.com/cn-beijing/model/market/detail/${encodeURIComponent(m.code)}" target="_blank" rel="noopener" title="模型介绍、上下文和价格">阿里云百炼 ↗</a>${benchmark?`<a href="https://artificialanalysis.ai/models/${encodeURIComponent(benchmark.aa_slug)}" target="_blank" rel="noopener" title="模型测评、参考速度和公开发布时间">Artificial Analysis ↗</a>`:''}</nav>`;
-  return `<strong>${escapeHTML(m.name)}</strong>${sources}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} · 复制</button>${detailPrices(m)}<dl><dt>上下文（K tokens）</dt><dd>${fmt(m.context_k)}</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt title="Artificial Analysis 跨供应商参考，非百炼实测">输出速度（tok/s）</dt><dd>${fmt(m.speed?.tokens_per_second)}</dd><dt>发布日期</dt><dd title="${m.release_date_source==='Bailian'?'百炼上架：'+escapeHTML(m.release_date||'未收录')+'；公开发布日期未收录':'公开发布日期'}">${escapeHTML(m.release_date_source==='Bailian'?'未收录':m.release_date||'未收录')}</dd></dl>${billingDetails(m)}`;
+  const sources=`<nav class="popover-sources" aria-label="模型数据来源"><a href="https://bailian.console.aliyun.com/cn-beijing/model/market/detail/${encodeURIComponent(m.code)}" target="_blank" rel="noopener" title="模型介绍、上下文和价格">阿里云百炼 ↗</a>${benchmark?`<a href="https://artificialanalysis.ai/models/${encodeURIComponent(benchmark.aa_slug)}" target="_blank" rel="noopener" title="模型测评、参考速度和公开发布时间">Artificial Analysis${benchmark.match_method!=='unique-normalized-slug'?`<span class="benchmark-reference">（${escapeHTML(benchmark.aa_name||benchmark.aa_slug)}${benchmark.match_method==='same-version-variant-reference'?'，替代参考':''}）</span>`:''} ↗</a>`:''}</nav>`;
+  return `<strong>${escapeHTML(m.name)}</strong>${sources}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} · 复制</button>${detailPrices(m)}<dl><dt>上下文（K tokens）</dt><dd>${fmt(m.context_k)}</dd><dt>综合能力 / Coding / Agentic</dt><dd>${metricValue(m,'capability',m.scores?.capability)} / ${metricValue(m,'coding',m.scores?.coding)} / ${metricValue(m,'agentic',m.scores?.agentic)}</dd><dt title="Artificial Analysis 跨供应商参考，非百炼实测">输出速度（tok/s）</dt><dd>${metricValue(m,'speed',m.speed?.tokens_per_second)}</dd><dt>日期</dt><dd>${dateValue(m,true)}</dd></dl>`;
+};
+const rankedModels = (pool,metric) => {
+  const sorted=pool.map(m=>({m,value:metric(m)})).filter(x=>typeof x.value==='number'&&Number.isFinite(x.value)).sort((a,b)=>b.value-a.value||a.m.code.localeCompare(b.m.code));
+  const seen=new Set();
+  return sorted.filter(({m})=>{const id=m.provenance?.benchmark?.aa_id||m.code;if(seen.has(id))return false;seen.add(id);return true;});
+};
+const releasedWithin = (model,months,now=new Date()) => {
+  if(!months)return true;
+  const date=model.release_date;
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(date||''))return false;
+  const today=new Date(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()));
+  const cutoff=new Date(Date.UTC(now.getFullYear(),now.getMonth()-months,1));
+  const lastDay=new Date(Date.UTC(cutoff.getUTCFullYear(),cutoff.getUTCMonth()+1,0)).getUTCDate();
+  cutoff.setUTCDate(Math.min(now.getDate(),lastDay));
+  const released=new Date(date+'T00:00:00Z');
+  return Number.isFinite(released.getTime())&&released.toISOString().slice(0,10)===date&&released>=cutoff&&released<=today;
 };
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
 const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };
@@ -47,7 +71,7 @@ const complete = snapshot => {
 };
 async function loadSnapshot(){
   const key='model-select:last-good:v2';
-  const get=async path=>{const r=await fetch(path,{signal:AbortSignal.timeout(4000)});if(!r.ok)throw Error('Unavailable');return r.json();};
+  const get=async path=>{const r=await fetch(path,{cache:'no-store',signal:AbortSignal.timeout(4000)});if(!r.ok)throw Error('Unavailable');return r.json();};
   if(new URLSearchParams(location.search).get('demo')==='1')return window.MODEL_SELECT_DEMO;
   try{
     const [data,modelsDoc]=await Promise.all([get('data/recommendations.json'),get('data/models.json')]);
@@ -84,16 +108,15 @@ async function boot(){
   $('#evidenceNote').innerHTML = `<div class="source-platforms"><a href="https://bailian.aliyun.com/" target="_blank" rel="noopener" aria-describedby="bailianSourceTip">阿里云百炼<span role="tooltip" id="bailianSourceTip" class="source-tooltip">模型目录、模型代码、上下文、功能支持、输入输出价格，以及未匹配 AA 时的百炼上架日期。</span></a><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" aria-describedby="aaSourceTip">Artificial Analysis<span role="tooltip" id="aaSourceTip" class="source-tooltip">综合能力、Coding、Agentic 指标、跨供应商输出速度和公开发布时间。</span></a></div>${mode==='demo'?'<small>当前为演示数据</small>':mode==='cached'?'<small>最近有效快照</small>':''}`;
 
   let activeTool='claude';
-  const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'astra',label:'Astra',positioning:'高难度分析、复杂 Agent 任务',candidates:data.roles.fable.candidates},{key:'sol',label:'Sol',positioning:'复杂编程与日常主力',candidates:data.roles.opus.candidates},{key:'terra',label:'Terra',positioning:'能力与成本均衡',candidates:data.roles.sonnet.candidates},{key:'luna',label:'Luna',positioning:'明确的小任务、快速响应',candidates:data.roles.haiku.candidates}]};
-  if(mode!=='demo'&&data.tier_method)$('#toggleRanking').title=data.tier_method;
+  const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key,...data.roles[key]})),codex:['astra','sol','terra','luna'].map(key=>({key,label:key[0].toUpperCase()+key.slice(1),...(data.codex_roles?.[key]||{candidates:[],positioning:'等待官方参考测评',empty_reason:'等待官方参考测评更新'})}))};
   const valid = n => typeof n === 'number' && Number.isFinite(n);
   // Preserve the original AA Intelligence Index; do not average different indices.
   const ability = m => m.scores?.capability ?? null;
   const cost = m => { const p=m.pricing?.beijing; return valid(p?.input)&&valid(p?.output) ? p.input*.01+p.output*.002 : null; };
   const entry = (m, value, rank) => `<button class="model-trigger" data-model="${escapeHTML(m.code)}" data-status="${valid(value)?'排序值 '+fmt(value):'数据快照'}" aria-describedby="modelPopover">${rank?`<span class="rank-number">${rank}</span>`:''}${escapeHTML(m.name)}</button>`;
   const ranking = (pool, metric) => {
-    const ranked=pool.map(m=>({m,value:metric(m)})).filter(x=>valid(x.value)).sort((a,b)=>b.value-a.value || a.m.code.localeCompare(b.m.code));
-    if(!ranked.length)return '<span class="muted">暂无可靠指标</span>';
+    const ranked=rankedModels(pool,metric);
+    if(!ranked.length)return '<span class="muted">暂无符合条件的候选</span>';
     return ranked.slice(0,3).map(x=>entry(x.m,x.value,1+ranked.filter(y=>y.value>x.value).length)).join('');
   };
   const metrics={ability:ability,speed:m=>m.speed?.tokens_per_second,value:m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;}};
@@ -112,7 +135,7 @@ async function boot(){
     const next=profiles[activeTool].map(role=>{
       const pool=role.candidates.map(c=>models[c]).filter(Boolean);
       const m=pool.filter(m=>valid(metric(m))).sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code))[0];
-      if(!m)return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">暂无可靠推荐</div><p class="muted">等待指标核实</p></article>`;
+      if(!m)return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">暂无合适推荐</div><p class="muted">${escapeHTML(role.positioning||"")}</p></article>`;
       return `<article class="summary-card"><div class="role">${role.label}</div><button class="pick summary-model" data-model="${escapeHTML(m.code)}" aria-label="查看 ${escapeHTML(m.name)} 详情并定位模型">${escapeHTML(m.name)}</button><button class="code copy" data-copy="${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></article>`;
     });
     if(animateChanges&&previous.length===next.length){
@@ -190,23 +213,30 @@ async function boot(){
   document.addEventListener('click',e=>{if(!e.target.closest('[data-model]')&&!popover.contains(e.target))close();});
   window.addEventListener('resize',close); window.addEventListener('scroll',close,{passive:true});
 
-  let tableSort=null, sortDirection=-1;
+  let tableSort='capability', sortDirection=-1, releaseMonths=0;
   const sortValues={name:m=>m.name,release:m=>m.release_date,capability:m=>m.scores?.capability,coding:m=>m.scores?.coding,agentic:m=>m.scores?.agentic,speed:m=>m.speed?.tokens_per_second,input:m=>m.pricing?.beijing?.input,output:m=>m.pricing?.beijing?.output,context:m=>m.context_k,evidence:m=>m.evidence_coverage};
   const renderCards = q => {
     const needle=q.trim().toLowerCase();
-    const filtered=modelsDoc.models.filter(m=>!needle || `${escapeHTML(m.name)} ${escapeHTML(m.code)}`.toLowerCase().includes(needle));
+    const filtered=modelsDoc.models.filter(m=>releasedWithin(m,releaseMonths)&&(!needle || `${m.name} ${m.code}`.toLowerCase().includes(needle)));
     if(tableSort)filtered.sort((a,b)=>{const x=sortValues[tableSort](a),y=sortValues[tableSort](b);if(x==null)return y==null?0:1;if(y==null)return -1;return sortDirection*(typeof x==='string'?x.localeCompare(y):(x-y));});
     const cell = (n,format=fmt) => `<td class="numeric ${n==null?'missing':''}">${format(n)}</td>`;
     $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><button class="model-name table-model" data-model="${escapeHTML(m.code)}" aria-label="查看 ${escapeHTML(m.name)} 详情">${escapeHTML(m.name)}</button><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}<td class="numeric">${priceLines(m,'input')}</td><td class="numeric">${priceLines(m,'output')}</td>${cell(m.context_k)}<td class="numeric ${m.release_date?'':'missing'}" title="${m.release_date_source==='Bailian'?'数据来源：阿里云百炼（上架日期）':'数据来源：Artificial Analysis（公开发布日期）'}">${escapeHTML(m.release_date||'未收录')}</td><td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><button class="model-name table-model" data-model="${escapeHTML(m.code)}" aria-label="查看 ${escapeHTML(m.name)} 详情">${escapeHTML(m.name)}</button><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${['capability','coding','agentic','speed'].map(field=>`<td class="numeric">${metricValue(m,field,field==='speed'?m.speed?.tokens_per_second:m.scores?.[field])}</td>`).join('')}<td class="numeric">${priceLines(m,'input')}</td><td class="numeric">${priceLines(m,'output')}</td>${cell(m.context_k)}<td class="numeric ${m.release_date?'':'missing'}">${dateValue(m)}</td><td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="10">没有匹配的模型</td></tr>';
     bindModels();
     reveal('#modelCards tr');
     $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;
     document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
+  const defaultSort=$('[data-sort="capability"]');
+  defaultSort.parentElement.setAttribute('aria-sort','descending');defaultSort.querySelector('span').textContent=' ↓';
   renderCards('');
+  document.querySelectorAll('[data-months]').forEach(button=>button.onclick=()=>{
+    releaseMonths=Number(button.dataset.months);
+    document.querySelectorAll('[data-months]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+    close();renderCards($('#search').value);
+  });
   document.querySelectorAll('[data-sort]').forEach(button=>button.onclick=()=>{
     sortDirection=tableSort===button.dataset.sort?-sortDirection:(['name','input','output'].includes(button.dataset.sort)?1:-1);tableSort=button.dataset.sort;
     document.querySelectorAll('[data-sort]').forEach(b=>{const active=b===button;b.parentElement.setAttribute('aria-sort',active?(sortDirection===1?'ascending':'descending'):'none');b.querySelector('span').textContent=active?(sortDirection===1?' ↑':' ↓'):'';});renderCards($('#search').value);

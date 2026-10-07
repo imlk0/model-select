@@ -28,20 +28,20 @@ assert.equal(priceFormat(0.001),'0.001');
 assert.equal(priceFormat(0),'0');
 assert.equal(priceFormat(null),'N/A');
 console.log('Price precision passed');
-const priceHelpers = new Function(app.slice(app.indexOf('const escapeHTML='),app.indexOf('const toast ='))+'return {priceLines,billingDetails};')();
+const priceHelpers = new Function(app.slice(app.indexOf('const escapeHTML='),app.indexOf('const toast ='))+'return {priceLines,dateValue};')();
 assert.match(priceHelpers.priceLines({pricing:{quotes:[{mode:'thinking',time_band:'standard',input:0,output:null}]}},'input'),/0.*思考/);
 assert.match(priceHelpers.priceLines({pricing:{quotes:[],raw:[]}},'output'),/未提供/);
-assert.match(priceHelpers.billingDetails({pricing:{raw:[{range_name:'<unsafe>',prices:[]}]}}),/&lt;unsafe&gt;/);
-console.log('Price variants and escaped billing details passed');
+assert.match(priceHelpers.priceLines({pricing:{quotes:[{input:1,mode:'standard',time_band:'peak'}]}},'input'),/1<small>高峰/);
+console.log('Price variants passed');
 
 const details = new Function(app.slice(app.indexOf('const escapeHTML='),app.indexOf('const toast ='))+'return modelDetails;')();
 const card = details({name:'Example',code:'example',context_k:32.8,scores:{},speed:{},release_date:'2025-01-20',release_date_source:'Artificial Analysis',provenance:{benchmark:{aa_slug:'example'}}});
-assert.ok(card.indexOf('Artificial Analysis ↗') < card.indexOf('<dl>'));
+assert.ok(card.indexOf('Artificial Analysis') < card.indexOf('<dl>'));
 assert.match(card, /上下文（K tokens）<\/dt><dd>32.8<\/dd>/);
-assert.match(card, /输出速度（tok\/s）<\/dt><dd>N\/A<\/dd>/);
-assert.match(card, /<dt>发布日期<\/dt>/);
+assert.match(card, /输出速度（tok\/s）<\/dt><dd><span class="missing"/);
+assert.match(card, /<dt>日期<\/dt>/);
 assert.doesNotMatch(card, /公开发布时间 · AA|华北2|目录核验|百炼模型目录/);
-assert.match(details({name:'Other',code:'other',release_date:'2025-01-01',release_date_source:'Bailian'}), /百炼上架：2025-01-01；公开发布日期未收录">未收录/);
+assert.match(details({name:'Other',code:'other',release_date:'2025-01-01',release_date_source:'Bailian'}), /2025-01-01<small class="date-kind">百炼上架日期/);
 const prices=details({name:'Timed',code:'timed',pricing:{quotes:[{time_band:'peak',input:9,output:27},{time_band:'offpeak',input:4.5,output:13.5}]}});
 assert.match(prices, /9<small>高峰/);
 assert.match(prices, /price-secondary[^>]*>4.5<small>低谷/);
@@ -56,6 +56,49 @@ assert.match(cacheVariants,/0<small>读缓存/);
 assert.match(cacheVariants,/1<small>写缓存/);
 assert.doesNotMatch(cacheVariants,/99/);
 
-assert.ok(app.includes('数据来源：阿里云百炼（上架日期）'));
-assert.ok(app.includes('数据来源：Artificial Analysis（公开发布日期）'));
+assert.match(priceHelpers.dateValue({release_date:'2026-09-21',release_date_source:'Bailian'}),/数据来源：阿里云百炼（百炼上架日期）/);
+assert.match(priceHelpers.dateValue({release_date:'2026-09-21',release_date_source:'Artificial Analysis'}),/数据来源：Artificial Analysis（发布日期）/);
 assert.ok(!app.includes('<small class="date-source">百炼上架</small>'));
+
+assert.match(details({name:'Matched',code:'matched',provenance:{benchmark:{aa_slug:'matched'}},scores:{}}),/title="Artificial Analysis 已匹配该模型，但接口未提供此指标。">N\/A/);
+assert.match(details({name:'Unmatched',code:'unmatched',scores:{}}),/title="尚未匹配到对应的 Artificial Analysis 测评模型。">N\/A/);
+
+assert.doesNotMatch(card, /计费明细|<details/);
+
+const rankModels = new Function(app.slice(app.indexOf('const rankedModels ='),app.indexOf('const toast ='))+'return rankedModels;')();
+const candidates=[{code:'base',score:3,provenance:{benchmark:{aa_id:'same'}}},{code:'fast',score:4,provenance:{benchmark:{aa_id:'same'}}},{code:'different',score:2,provenance:{benchmark:{aa_id:'other'}}},{code:'missing',score:null}];
+assert.deepEqual(rankModels(candidates,m=>m.score).map(x=>x.m.code),['fast','different']);
+console.log('Ranking deduplicates benchmark identities and excludes missing values');
+
+const metric = new Function(app.slice(app.indexOf('const escapeHTML='),app.indexOf('const toast ='))+'return metricValue;')();
+assert.match(metric({provenance:{benchmark:{aa_name:'Example (Max)'}}},'capability',40),/测评版本：Example \(Max\)/);
+assert.match(metric({provenance:{benchmark:{reference_model:'base'}}},'coding',70),/非此版本独立测评/);
+
+const releaseFilter = new Function(app.slice(app.indexOf('const releasedWithin ='),app.indexOf('const toast ='))+'return releasedWithin;')();
+const filterNow = new Date(2026,9,7);
+assert.equal(releaseFilter({release_date:'2026-09-07'},1,filterNow),true);
+assert.equal(releaseFilter({release_date:'2026-09-06'},1,filterNow),false);
+assert.equal(releaseFilter({release_date:'2026-04-07'},6,filterNow),true);
+assert.equal(releaseFilter({release_date:'2026-04-06'},6,filterNow),false);
+assert.equal(releaseFilter({release_date:'2026-07-07'},3,filterNow),true);
+assert.equal(releaseFilter({release_date:'2026-10-08'},1,filterNow),false);
+assert.equal(releaseFilter({},1,filterNow),false);
+assert.equal(releaseFilter({},0,filterNow),true);
+assert.equal(releaseFilter({release_date:'2026-02-30'},1,new Date(2026,2,31)),false);
+assert.equal(releaseFilter({release_date:'2026-02-28'},1,new Date(2026,2,31)),true);
+assert.match(app,/let tableSort='capability', sortDirection=-1/);
+console.log('Release windows include boundaries, clamp month ends, and reject unknown/future dates');
+
+const dateHelpers = new Function(app.slice(app.indexOf('const escapeHTML='),app.indexOf('const toast ='))+'return {dateValue};')();
+assert.match(dateHelpers.dateValue({release_date:'2026-08-25',release_date_source:'Bailian'}),/2026-08-25.*role="tooltip">数据来源：阿里云百炼/);
+assert.match(dateHelpers.dateValue({}),/未收录.*暂无日期记录/);
+assert.match(details({code:'proxy',name:'Proxy',provenance:{benchmark:{aa_slug:'base-next',aa_name:'Base Next',match_method:'same-version-variant-reference'}}}),/（Base Next，替代参考）/);
+console.log('Date tooltips and benchmark reference labels passed');
+
+assert.match(details({code:'prime',name:'Prime',provenance:{benchmark:{aa_slug:'base',aa_name:'GLM-5.3 (Max)',match_method:'provider-confirmed-base-reference'}}}), /Artificial Analysis<span class="benchmark-reference">（GLM-5.3 \(Max\)）<\/span> ↗<\/a>/);
+
+assert.match(dateHelpers.dateValue({release_date:'2026-09-21',release_date_source:'Bailian'},true),/role="tooltip">数据来源：阿里云百炼<\/span>/);
+assert.match(dateHelpers.dateValue({release_date:'2026-09-21',release_date_source:'Artificial Analysis'},true),/role="tooltip">数据来源：Artificial Analysis<\/span>/);
+
+const scoredDetails=details({code:'scored',name:'Scored',scores:{capability:45.4,coding:76.2,agentic:56}});
+assert.match(scoredDetails,/<dt>综合能力 \/ Coding \/ Agentic<\/dt><dd>45.4 \/ 76.2 \/ 56<\/dd>/);
