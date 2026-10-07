@@ -55,3 +55,7 @@ const cacheVariants=priceHelpers.priceLines({pricing:{quotes:[{input:2,output:3}
 assert.match(cacheVariants,/0<small>读缓存/);
 assert.match(cacheVariants,/1<small>写缓存/);
 assert.doesNotMatch(cacheVariants,/99/);
+
+assert.ok(app.includes('数据来源：阿里云百炼（上架日期）'));
+assert.ok(app.includes('数据来源：Artificial Analysis（公开发布日期）'));
+assert.ok(!app.includes('<small class="date-source">百炼上架</small>'));
