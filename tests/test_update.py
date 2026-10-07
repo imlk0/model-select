@@ -1,5 +1,8 @@
 import importlib.util
 import unittest
+import tempfile
+import pathlib
+import json
 from unittest.mock import patch
 spec=importlib.util.spec_from_file_location('updater','scripts/update.py');u=importlib.util.module_from_spec(spec);spec.loader.exec_module(u)
 
@@ -29,6 +32,20 @@ class DataTests(unittest.TestCase):
         self.assertEqual(result[0]['scores']['capability'],42);self.assertIsNone(result[0]['scores']['agentic']);self.assertEqual(result[0]['context_k'],32.768);self.assertIsNone(result[1]['provenance']['benchmark'])
     def test_ambiguous_slug_not_matched(self):
         self.assertIsNone(u.match_aa(model(),[{'slug':'new-model'},{'slug':'new-model'}],{}))
+    def test_failure_preserves_published_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=pathlib.Path(directory);(root/'data').mkdir();target=root/'data/models.json';target.write_text('{"existing":true}')
+            with patch.object(u,'ROOT',root),patch.dict(u.os.environ,{'DASHSCOPE_API_KEY':'test'},clear=True),patch.object(u,'fetch_catalog',side_effect=ValueError('bad payload')),patch('builtins.print'):
+                self.assertEqual(u.main(),1)
+            self.assertEqual(json.loads(target.read_text()),{'existing':True})
+            self.assertEqual(json.loads((root/'data/update-status.json').read_text())['status'],'failed')
+    def test_partial_catalog_published_without_demo_metrics(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=pathlib.Path(directory);(root/'config').mkdir();(root/'config/model-mappings.json').write_text('{}')
+            with patch.object(u,'ROOT',root),patch.dict(u.os.environ,{'DASHSCOPE_API_KEY':'test'},clear=True),patch.object(u,'fetch_catalog',return_value=([model()],[])),patch('builtins.print'):
+                self.assertEqual(u.main(),1)
+            doc=json.loads((root/'data/models.json').read_text());self.assertTrue(doc['verified_catalog']);self.assertIsNone(doc['models'][0]['scores']['capability'])
+            self.assertEqual(json.loads((root/'data/update-status.json').read_text())['status'],'partial')
     def test_no_benchmark_no_rank(self):
         models=u.build_models([model()],[],None,{},'now');roles=u.recommendations(models);self.assertTrue(all(not r['candidates'] for r in roles.values()))
 if __name__=='__main__':unittest.main()
