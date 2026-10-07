@@ -76,4 +76,12 @@ class PricingReleaseTests(unittest.TestCase):
         self.assertEqual(u.public_release_date({'release_date':'2024-02-29'}),'2024-02-29')
         for value in ['2025-02-29','2026-01-01T00:00:00Z',None]:self.assertIsNone(u.public_release_date({'release_date':value}))
         row=model();row['published_time']='2024-01-01'
-        self.assertIsNone(u.build_models([row],[],None,{},'now')[0]['release_date'])
+        self.assertEqual(u.build_models([row],[],None,{},'now')[0]['release_date_source'],'Bailian')
+
+    def test_release_name_match_is_unique_and_does_not_change_benchmarks(self):
+        row=model();row['published_time']='2024-03-01 12:00:00'
+        aa={'name':'New','slug':'different','release_date':'2024-02-01'}
+        self.assertEqual(u.release_metadata(row,None,[aa]),('2024-02-01','Artificial Analysis'))
+        self.assertEqual(u.release_metadata(row,None,[aa,dict(aa,slug='other')]),('2024-03-01','Bailian'))
+        self.assertIsNone(u.match_aa(row,[aa],{}))
+        row['published_time']='invalid';self.assertEqual(u.release_metadata(row,None,[]),(None,None))

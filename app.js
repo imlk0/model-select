@@ -62,11 +62,11 @@ async function boot(){
   if(mode!=='demo'&&modelsDoc.models.some(m=>m.provenance?.benchmark)){const credit=document.createElement('a');credit.href='https://artificialanalysis.ai/';credit.textContent='评测：Artificial Analysis ↗';credit.target='_blank';credit.rel='noopener';$('footer').append(credit);}
   const models = Object.fromEntries(modelsDoc.models.map(m=>[m.code,m]));
   $('#updatedAt').textContent = new Date(data.updated_at).toLocaleString('zh-CN',{hour12:false});
-  $('#evidenceNote').innerHTML = `<div class="source-platforms"><a href="https://bailian.aliyun.com/" target="_blank" rel="noopener" title="采用百炼模型目录、模型代码、上下文、功能支持与输入输出价格。">阿里云百炼</a><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" title="采用 Intelligence、Coding、Agentic 指标、跨供应商输出速度与公开发布时间。">Artificial Analysis</a></div>${mode==='demo'?'<small>当前为演示数据</small>':mode==='cached'?'<small>最近有效快照</small>':''}`;
+  $('#evidenceNote').innerHTML = `<div class="source-platforms"><a href="https://bailian.aliyun.com/" target="_blank" rel="noopener" aria-describedby="bailianSourceTip">阿里云百炼<span role="tooltip" id="bailianSourceTip" class="source-tooltip">模型目录、模型代码、上下文、功能支持、输入输出价格，以及未匹配 AA 时的百炼上架日期。</span></a><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" aria-describedby="aaSourceTip">Artificial Analysis<span role="tooltip" id="aaSourceTip" class="source-tooltip">综合能力、Coding、Agentic 指标、跨供应商输出速度和公开发布时间。</span></a></div>${mode==='demo'?'<small>当前为演示数据</small>':mode==='cached'?'<small>最近有效快照</small>':''}`;
 
   let activeTool='claude';
   const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'astra',label:'Astra',positioning:'高难度分析、复杂 Agent 任务',candidates:data.roles.fable.candidates},{key:'sol',label:'Sol',positioning:'复杂编程与日常主力',candidates:data.roles.opus.candidates},{key:'terra',label:'Terra',positioning:'能力与成本均衡',candidates:data.roles.sonnet.candidates},{key:'luna',label:'Luna',positioning:'明确的小任务、快速响应',candidates:data.roles.haiku.candidates}]};
-  if(mode!=='demo'&&data.tier_method){const note=document.createElement('p');note.className='table-note';note.textContent=data.tier_method;$('.recommendations').append(note);}
+  if(mode!=='demo'&&data.tier_method)$('#toggleRanking').title=data.tier_method;
   const valid = n => typeof n === 'number' && Number.isFinite(n);
   // Preserve the original AA Intelligence Index; do not average different indices.
   const ability = m => m.scores?.capability ?? null;
@@ -94,7 +94,7 @@ async function boot(){
       const pool=role.candidates.map(c=>models[c]).filter(Boolean);
       const m=pool.filter(m=>valid(metric(m))).sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code))[0];
       if(!m)return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">暂无可靠推荐</div><p class="muted">等待指标核实</p></article>`;
-      return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">${escapeHTML(m.name)}</div><button class="code copy" data-copy="${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></article>`;
+      return `<article class="summary-card"><div class="role">${role.label}</div><button class="pick summary-model" data-model="${escapeHTML(m.code)}" aria-label="查看 ${escapeHTML(m.name)} 详情并定位模型">${escapeHTML(m.name)}</button><button class="code copy" data-copy="${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></article>`;
     });
     if(animateChanges&&previous.length===next.length){
       next.forEach((html,i)=>{const template=document.createElement('template');template.innerHTML=html;const fresh=template.content.firstElementChild,old=previous[i];
@@ -107,7 +107,7 @@ async function boot(){
     $('#summaryGrid').querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));
   };
   renderSummary();
-  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary(true);});
+  document.querySelectorAll('[data-metric]').forEach(el=>el.onclick=()=>{selectedMetric=el.dataset.metric;document.querySelectorAll('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button===el)));renderSummary(true);bindModels();});
   let transition=null;
   $('#toggleRanking').onclick=()=>{
     const button=$('#toggleRanking'), expanded=button.getAttribute('aria-expanded')!=='true';
@@ -138,7 +138,7 @@ async function boot(){
   const close=()=>{popover.hidden=true;active=null;};
   const show=el=>{
     clearTimeout(closeTimer); active=el; const m=models[el.dataset.model],p=m.pricing?.beijing;
-    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${escapeHTML(el.dataset.status||'百炼模型目录')}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd class="popover-prices"><div><small>输入 ¥/M</small>${priceLines(m,'input')}</div><div><small>输出 ¥/M</small>${priceLines(m,'output')}</div></dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd><dt>公开发布时间 · AA</dt><dd>${escapeHTML(m.release_date||'未收录')}</dd></dl>${billingDetails(m)}<p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
+    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${escapeHTML(el.dataset.status||'百炼模型目录')}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd class="popover-prices"><div><small>输入 ¥/M</small>${priceLines(m,'input')}</div><div><small>输出 ¥/M</small>${priceLines(m,'output')}</div></dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd><dt>${m.release_date_source==='Bailian'?'百炼上架日期（公开发布时间未收录）':'公开发布时间 · AA'}</dt><dd>${escapeHTML(m.release_date||'未收录')}</dd></dl>${billingDetails(m)}<p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
     const evidence=m.provenance;
     if(evidence){
       popover.insertAdjacentHTML('beforeend',`<div class="popover-sources"><a href="https://bailian.console.aliyun.com/cn-beijing/model/market/detail/${encodeURIComponent(m.code)}" target="_blank" rel="noopener">百炼模型介绍 ↗</a>${evidence.benchmark?`<a href="https://artificialanalysis.ai/models/${encodeURIComponent(evidence.benchmark.aa_slug)}" target="_blank" rel="noopener">AA 模型测评 ↗</a>`:'<span class="muted">AA 尚未匹配</span>'}<p class="muted">目录核验：${escapeHTML(new Date(evidence.catalog.fetched_at).toLocaleString('zh-CN'))}${evidence.benchmark?' · AA Index v'+escapeHTML(evidence.benchmark.index_version):''}</p></div>`);
@@ -148,7 +148,7 @@ async function boot(){
     popover.hidden=false;
     if(wasHidden&&motionAllowed()){popover.getAnimations().forEach(a=>a.cancel());popover.animate([{opacity:0,transform:'translateY(4px)'},{opacity:1,transform:'translateY(0)'}],{duration:150,easing:'ease-out'});}
     const r=el.getBoundingClientRect(),h=popover.offsetHeight,w=popover.offsetWidth;
-    const cell=el.closest('td').getBoundingClientRect();
+    const cell=(el.closest('td')||el.closest('.summary-card')).getBoundingClientRect();
     const right=cell.right+10,left=cell.left-w-10;
     const side=right+w<=window.innerWidth-8?right:left>=8?left:Math.max(8,window.innerWidth-w-8);
     popover.style.left=side+'px';
@@ -184,7 +184,7 @@ async function boot(){
     const cell = (n,format=fmt) => `<td class="numeric ${n==null?'missing':''}">${format(n)}</td>`;
     $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><button class="model-name table-model" data-model="${escapeHTML(m.code)}" aria-label="查看 ${escapeHTML(m.name)} 详情">${escapeHTML(m.name)}</button><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}<td class="numeric">${priceLines(m,'input')}</td><td class="numeric">${priceLines(m,'output')}</td>${cell(m.context_k)}<td class="numeric ${m.release_date?'':'missing'}" title="公开发布时间 · Artificial Analysis">${escapeHTML(m.release_date||'未收录')}</td><td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><button class="model-name table-model" data-model="${escapeHTML(m.code)}" aria-label="查看 ${escapeHTML(m.name)} 详情">${escapeHTML(m.name)}</button><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}<td class="numeric">${priceLines(m,'input')}</td><td class="numeric">${priceLines(m,'output')}</td>${cell(m.context_k)}<td class="numeric ${m.release_date?'':'missing'}" title="${m.release_date_source==='Bailian'?'百炼上架日期，非公开首发日期':'公开发布时间 · Artificial Analysis'}">${escapeHTML(m.release_date||'未收录')}${m.release_date_source==='Bailian'?'<small class="date-source">百炼上架</small>':''}</td><td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="10">没有匹配的模型</td></tr>';
     bindModels();
     reveal('#modelCards tr');

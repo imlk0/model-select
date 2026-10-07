@@ -86,8 +86,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "MiniMax-M2.1",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "MiniMax-M2.1"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -182,8 +181,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "MiniMax-M2.5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "MiniMax-M2.5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -250,8 +248,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-16",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-16 22:56:31",
       "scores": {
         "capability": null,
@@ -276,8 +274,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "Moonshot-Kimi-K2-Instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "Moonshot-Kimi-K2-Instruct"
         },
         "benchmark": null
       },
@@ -322,8 +319,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-09-24",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-09-24 15:24:10",
       "scores": {
         "capability": null,
@@ -345,8 +342,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "decision-model-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "decision-model-preview"
         },
         "benchmark": null
       },
@@ -397,8 +393,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-r1-distill-qwen-1.5b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-1.5b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -482,8 +477,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-r1-distill-qwen-14b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-14b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -567,8 +561,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-r1-distill-qwen-32b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-32b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -628,8 +621,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-02-05",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-02-05 19:57:01",
       "scores": {
         "capability": null,
@@ -651,8 +644,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-r1-distill-qwen-7b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-7b"
         },
         "benchmark": null
       },
@@ -753,8 +745,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -849,8 +840,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v3.1",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3.1"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -988,8 +978,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v3.2",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3.2"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1049,8 +1038,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-09-30",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-09-30 22:44:03",
       "scores": {
         "capability": null,
@@ -1075,8 +1064,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v3.2-exp",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3.2-exp"
         },
         "benchmark": null
       },
@@ -1164,8 +1152,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v4-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-flash"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1259,8 +1246,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-08-01",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-08-01 00:09:35",
       "scores": {
         "capability": null,
@@ -1288,8 +1275,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v4-flash-0731",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-flash-0731"
         },
         "benchmark": null
       },
@@ -1378,8 +1364,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v4-pro",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-pro"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1473,8 +1458,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-08-14",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-08-14 12:06:20",
       "scores": {
         "capability": null,
@@ -1502,8 +1487,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v4-pro-0813",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-pro-0813"
         },
         "benchmark": null
       },
@@ -1618,8 +1602,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "deepseek-v4.1-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4.1-flash"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1679,8 +1662,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-05-14",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-05-14 21:32:40",
       "scores": {
         "capability": null,
@@ -1702,8 +1685,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "farui-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "farui-plus"
         },
         "benchmark": null
       },
@@ -1798,8 +1780,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-4.5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1902,8 +1883,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-4.5-air",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.5-air"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2022,8 +2002,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-4.6",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.6"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2143,8 +2122,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-4.7",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.7"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2265,8 +2243,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2416,8 +2393,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-5.1",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.1"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2513,8 +2489,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-5.2",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.2"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2581,8 +2556,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-07-09",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-07-09 10:50:34",
       "scores": {
         "capability": null,
@@ -2610,8 +2585,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-5.2-fast-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.2-fast-preview"
         },
         "benchmark": null
       },
@@ -2699,8 +2673,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-5.3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.3"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2767,8 +2740,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-09-21",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-09-21 13:35:15",
       "scores": {
         "capability": null,
@@ -2795,8 +2768,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "glm-5.3-prime",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.3-prime"
         },
         "benchmark": null
       },
@@ -2882,8 +2854,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "kimi-k2-thinking",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2-thinking"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2992,8 +2963,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "kimi-k2.5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2.5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -3102,8 +3072,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "kimi-k2.6",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2.6"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -3215,8 +3184,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "kimi-k2.7-code",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2.7-code"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -3314,8 +3282,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "kimi-k3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k3"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -3375,8 +3342,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-11-12",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-11-12 00:00:00",
       "scores": {
         "capability": null,
@@ -3398,8 +3365,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-coder-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-coder-plus"
         },
         "benchmark": null
       },
@@ -3451,8 +3417,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-09-19",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
@@ -3474,8 +3440,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-coder-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-coder-turbo"
         },
         "benchmark": null
       },
@@ -3527,8 +3492,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-08-22",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-08-22 22:05:23",
       "scores": {
         "capability": null,
@@ -3550,8 +3515,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-deep-research",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-deep-research"
         },
         "benchmark": null
       },
@@ -3603,8 +3567,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-03-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-03-23 09:47:02",
       "scores": {
         "capability": null,
@@ -3626,8 +3590,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-deep-research-2025-12-15",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-deep-research-2025-12-15"
         },
         "benchmark": null
       },
@@ -3700,8 +3663,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-23 21:21:02",
       "scores": {
         "capability": null,
@@ -3726,8 +3689,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-doc-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-doc-turbo"
         },
         "benchmark": null
       },
@@ -3964,8 +3926,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-08-05",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
@@ -3995,8 +3957,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash"
         },
         "benchmark": null
       },
@@ -4086,8 +4047,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-08-05",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
@@ -4115,8 +4076,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-flash-2025-07-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash-2025-07-28"
         },
         "benchmark": null
       },
@@ -4175,8 +4135,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-01-13",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-01-13 12:04:02",
       "scores": {
         "capability": null,
@@ -4203,8 +4163,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-flash-character",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash-character"
         },
         "benchmark": null
       },
@@ -4263,8 +4222,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-02-28",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-02-28 16:29:42",
       "scores": {
         "capability": null,
@@ -4289,8 +4248,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-flash-character-2026-02-26",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash-character-2026-02-26"
         },
         "benchmark": null
       },
@@ -4356,8 +4314,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-05-20",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-05-20 22:57:26",
       "scores": {
         "capability": null,
@@ -4381,8 +4339,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-long",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-long"
         },
         "benchmark": null
       },
@@ -4434,8 +4391,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-03-19",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-03-19 10:43:44",
       "scores": {
         "capability": null,
@@ -4457,8 +4414,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-long-2025-01-25",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-long-2025-01-25"
         },
         "benchmark": null
       },
@@ -4524,8 +4480,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-03-19",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-03-19 10:45:13",
       "scores": {
         "capability": null,
@@ -4547,8 +4503,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-long-latest",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-long-latest"
         },
         "benchmark": null
       },
@@ -4600,8 +4555,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-09-13",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-09-13 00:00:06",
       "scores": {
         "capability": null,
@@ -4623,8 +4578,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-math-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus"
         },
         "benchmark": null
       },
@@ -4676,8 +4630,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-09-13",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-09-13 00:00:06",
       "scores": {
         "capability": null,
@@ -4699,8 +4653,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-math-plus-0816",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus-0816"
         },
         "benchmark": null
       },
@@ -4752,8 +4705,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-09-19",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
@@ -4775,8 +4728,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-math-plus-0919",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus-0919"
         },
         "benchmark": null
       },
@@ -4828,8 +4780,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-09-19",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
@@ -4851,8 +4803,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-math-plus-latest",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus-latest"
         },
         "benchmark": null
       },
@@ -4904,8 +4855,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-09-19",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
@@ -4927,8 +4878,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-math-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-turbo"
         },
         "benchmark": null
       },
@@ -5001,8 +4951,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-10-15",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-10-15 13:39:20",
       "scores": {
         "capability": null,
@@ -5032,8 +4982,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-max"
         },
         "benchmark": null
       },
@@ -5085,8 +5034,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-11-06",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-11-06 16:07:15",
       "scores": {
         "capability": null,
@@ -5110,8 +5059,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-mt-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-flash"
         },
         "benchmark": null
       },
@@ -5163,8 +5111,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-11-19",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-11-19 19:49:54",
       "scores": {
         "capability": null,
@@ -5188,8 +5136,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-mt-lite",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-lite"
         },
         "benchmark": null
       },
@@ -5241,8 +5188,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-22",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-22 14:16:44",
       "scores": {
         "capability": null,
@@ -5266,8 +5213,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-mt-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-plus"
         },
         "benchmark": null
       },
@@ -5319,8 +5265,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-22",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-22 14:16:54",
       "scores": {
         "capability": null,
@@ -5342,8 +5288,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-mt-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-turbo"
         },
         "benchmark": null
       },
@@ -5775,8 +5720,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-06-24",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-06-24 00:00:00",
       "scores": {
         "capability": null,
@@ -5806,8 +5751,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus"
         },
         "benchmark": null
       },
@@ -5859,8 +5803,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-01-15",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-01-15 19:28:32",
       "scores": {
         "capability": null,
@@ -5882,8 +5826,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-0112",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-0112"
         },
         "benchmark": null
       },
@@ -5935,8 +5878,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-12-26",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-12-26 20:24:51",
       "scores": {
         "capability": null,
@@ -5958,8 +5901,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-1220",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-1220"
         },
         "benchmark": null
       },
@@ -6011,8 +5953,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-02-03",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-02-03 18:32:17",
       "scores": {
         "capability": null,
@@ -6039,8 +5981,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-2025-01-25",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-01-25"
         },
         "benchmark": null
       },
@@ -6112,8 +6053,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-04-29",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-04-29 06:46:35",
       "scores": {
         "capability": null,
@@ -6140,8 +6081,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-2025-04-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-04-28"
         },
         "benchmark": null
       },
@@ -6213,8 +6153,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-16",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-16 14:53:53",
       "scores": {
         "capability": null,
@@ -6242,8 +6182,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-2025-07-14",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-07-14"
         },
         "benchmark": null
       },
@@ -6381,8 +6320,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-30",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-30 16:20:34",
       "scores": {
         "capability": null,
@@ -6409,8 +6348,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-2025-07-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-07-28"
         },
         "benchmark": null
       },
@@ -6548,8 +6486,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-09-11",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-09-11 20:51:27",
       "scores": {
         "capability": null,
@@ -6571,8 +6509,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-2025-09-11",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-09-11"
         },
         "benchmark": null
       },
@@ -6710,8 +6647,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-12-01",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-12-01 10:32:00",
       "scores": {
         "capability": null,
@@ -6739,8 +6676,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-2025-12-01",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-12-01"
         },
         "benchmark": null
       },
@@ -6813,8 +6749,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-03-20",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-03-20 17:16:40",
       "scores": {
         "capability": null,
@@ -6841,8 +6777,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-character",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-character"
         },
         "benchmark": null
       },
@@ -7064,8 +6999,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-31",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-31 00:00:00",
       "scores": {
         "capability": null,
@@ -7094,8 +7029,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-plus-latest",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-latest"
         },
         "benchmark": null
       },
@@ -7243,8 +7177,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-turbo"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -7331,8 +7264,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-04-28",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-04-28 15:37:07",
       "scores": {
         "capability": null,
@@ -7359,8 +7292,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-14b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-14b"
         },
         "benchmark": null
       },
@@ -7432,8 +7364,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-04-29",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
@@ -7459,8 +7391,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-235b-a22b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-235b-a22b"
         },
         "benchmark": null
       },
@@ -7540,8 +7471,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-235b-a22b-instruct-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-235b-a22b-instruct-2507"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -7601,8 +7531,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-25",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-25 18:04:54",
       "scores": {
         "capability": null,
@@ -7624,8 +7554,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-235b-a22b-thinking-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-235b-a22b-thinking-2507"
         },
         "benchmark": null
       },
@@ -7697,8 +7626,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-04-29",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
@@ -7724,8 +7653,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-30b-a3b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-30b-a3b"
         },
         "benchmark": null
       },
@@ -7777,8 +7705,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-29",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-29 22:20:27",
       "scores": {
         "capability": null,
@@ -7805,8 +7733,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-30b-a3b-instruct-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-30b-a3b-instruct-2507"
         },
         "benchmark": null
       },
@@ -7858,8 +7785,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-30",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-30 16:38:09",
       "scores": {
         "capability": null,
@@ -7881,8 +7808,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-30b-a3b-thinking-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-30b-a3b-thinking-2507"
         },
         "benchmark": null
       },
@@ -7961,8 +7887,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-04-29",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
@@ -7989,8 +7915,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-32b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-32b"
         },
         "benchmark": null
       },
@@ -8069,8 +7994,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-04-29",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
@@ -8097,8 +8022,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-8b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-8b"
         },
         "benchmark": null
       },
@@ -8231,8 +8155,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-30b-a3b-instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-30b-a3b-instruct"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8373,8 +8296,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-480b-a35b-instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-480b-a35b-instruct"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8575,8 +8497,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-08-05",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
@@ -8602,8 +8524,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-flash"
         },
         "benchmark": null
       },
@@ -8712,8 +8633,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-08-05",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
@@ -8738,8 +8659,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-flash-2025-07-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-flash-2025-07-28"
         },
         "benchmark": null
       },
@@ -8853,8 +8773,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-next",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-next"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -9055,8 +8974,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-22",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-22 21:29:17",
       "scores": {
         "capability": null,
@@ -9081,8 +9000,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-plus"
         },
         "benchmark": null
       },
@@ -9191,8 +9109,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-07-22",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-07-22 21:29:25",
       "scores": {
         "capability": null,
@@ -9216,8 +9134,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-plus-2025-07-22",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-plus-2025-07-22"
         },
         "benchmark": null
       },
@@ -9326,8 +9243,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-09-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-09-23 18:51:54",
       "scores": {
         "capability": null,
@@ -9354,8 +9271,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-coder-plus-2025-09-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-plus-2025-09-23"
         },
         "benchmark": null
       },
@@ -9623,8 +9539,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -9722,8 +9637,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-09-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-09-23 19:23:03",
       "scores": {
         "capability": null,
@@ -9750,8 +9665,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-max-2025-09-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max-2025-09-23"
         },
         "benchmark": null
       },
@@ -9841,8 +9755,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-01-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-01-23 14:09:45",
       "scores": {
         "capability": null,
@@ -9869,8 +9783,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-max-2026-01-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max-2026-01-23"
         },
         "benchmark": null
       },
@@ -10007,8 +9920,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-max-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max-preview"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10092,8 +10004,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-next-80b-a3b-instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-next-80b-a3b-instruct"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10153,8 +10064,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2025-09-11",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2025-09-11 17:09:19",
       "scores": {
         "capability": null,
@@ -10176,8 +10087,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3-next-80b-a3b-thinking",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-next-80b-a3b-thinking"
         },
         "benchmark": null
       },
@@ -10278,8 +10188,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-122b-a10b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-122b-a10b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10389,8 +10298,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-27b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-27b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10499,8 +10407,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-35b-a3b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-35b-a3b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10609,8 +10516,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-397b-a17b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-397b-a17b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10834,8 +10740,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-02-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-02-23 11:28:01",
       "scores": {
         "capability": null,
@@ -10865,8 +10771,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-flash"
         },
         "benchmark": null
       },
@@ -10956,8 +10861,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-02-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-02-23 11:27:50",
       "scores": {
         "capability": null,
@@ -10986,8 +10891,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-flash-2026-02-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-flash-2026-02-23"
         },
         "benchmark": null
       },
@@ -11203,8 +11107,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-02-15",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-02-15 17:15:31",
       "scores": {
         "capability": null,
@@ -11234,8 +11138,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-plus"
         },
         "benchmark": null
       },
@@ -11325,8 +11228,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-02-15",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-02-15 17:17:16",
       "scores": {
         "capability": null,
@@ -11354,8 +11257,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-plus-2026-02-15",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-plus-2026-02-15"
         },
         "benchmark": null
       },
@@ -11487,8 +11389,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-04-23",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-04-23 10:01:59",
       "scores": {
         "capability": null,
@@ -11517,8 +11419,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.5-plus-2026-04-20",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-plus-2026-04-20"
         },
         "benchmark": null
       },
@@ -11600,8 +11501,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.6-27b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-27b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -11691,8 +11591,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.6-35b-a3b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-35b-a3b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -11855,8 +11754,8 @@
           "input_range": "输入<=256k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-04-16",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-04-16 22:02:00",
       "scores": {
         "capability": null,
@@ -11886,8 +11785,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.6-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-flash"
         },
         "benchmark": null
       },
@@ -11958,8 +11856,8 @@
           "input_range": "输入<=256k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-04-16",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-04-16 22:01:52",
       "scores": {
         "capability": null,
@@ -11988,8 +11886,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.6-flash-2026-04-16",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-flash-2026-04-16"
         },
         "benchmark": null
       },
@@ -12088,8 +11985,8 @@
           "input_range": "输入<=128k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-04-20",
+      "release_date_source": "Artificial Analysis",
       "catalog_published_at": "2026-04-20 15:44:55",
       "scores": {
         "capability": null,
@@ -12117,8 +12014,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.6-max-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-max-preview"
         },
         "benchmark": null
       },
@@ -12305,8 +12201,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.6-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-plus"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -12385,8 +12280,8 @@
           "input_range": "输入<=256k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-04-01",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-04-01 19:56:11",
       "scores": {
         "capability": null,
@@ -12415,8 +12310,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.6-plus-2026-04-02",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-plus-2026-04-02"
         },
         "benchmark": null
       },
@@ -12653,8 +12547,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-07-21",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-07-21 01:02:37",
       "scores": {
         "capability": null,
@@ -12684,8 +12578,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-flash"
         },
         "benchmark": null
       },
@@ -12838,8 +12731,8 @@
           "input_range": "输入<=32k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-07-21",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-07-21 01:05:36",
       "scores": {
         "capability": null,
@@ -12868,8 +12761,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-flash-2026-07-15",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-flash-2026-07-15"
         },
         "benchmark": null
       },
@@ -13002,8 +12894,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -13063,8 +12954,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-05-20",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-05-20 00:00:00",
       "scores": {
         "capability": null,
@@ -13091,8 +12982,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-max-2026-05-17",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-2026-05-17"
         },
         "benchmark": null
       },
@@ -13158,8 +13048,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-05-21",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-05-21 14:37:20",
       "scores": {
         "capability": null,
@@ -13187,8 +13077,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-max-2026-05-20",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-2026-05-20"
         },
         "benchmark": null
       },
@@ -13261,8 +13150,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-06-09",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-06-09 22:20:36",
       "scores": {
         "capability": null,
@@ -13290,8 +13179,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-max-2026-06-08",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-2026-06-08"
         },
         "benchmark": null
       },
@@ -13343,8 +13231,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-05-20",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-05-20 00:00:00",
       "scores": {
         "capability": null,
@@ -13371,8 +13259,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-max-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-preview"
         },
         "benchmark": null
       },
@@ -13573,8 +13460,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-plus"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -13695,8 +13581,8 @@
           "input_range": "输入<=256k"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-06-01",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-06-01 21:45:59",
       "scores": {
         "capability": null,
@@ -13725,8 +13611,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.7-plus-2026-05-26",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-plus-2026-05-26"
         },
         "benchmark": null
       },
@@ -13830,8 +13715,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.8-2.4t-a95b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-2.4t-a95b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -13943,8 +13827,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.8-27b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-27b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -14053,8 +13936,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-08-25",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-08-25 20:16:04",
       "scores": {
         "capability": null,
@@ -14084,8 +13967,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.8-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-flash"
         },
         "benchmark": null
       },
@@ -14218,8 +14100,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.8-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-max"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -14300,8 +14181,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-09-02",
+      "release_date_source": "Artificial Analysis",
       "catalog_published_at": "2026-09-01 17:00:33",
       "scores": {
         "capability": null,
@@ -14330,8 +14211,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "qwen3.8-max-0902",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-max-0902"
         },
         "benchmark": null
       },
@@ -14383,8 +14263,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2024-12-12",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2024-12-12 19:33:25",
       "scores": {
         "capability": null,
@@ -14406,8 +14286,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "tongyi-intent-detect-v3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "tongyi-intent-detect-v3"
         },
         "benchmark": null
       },
@@ -14466,8 +14345,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-01-09",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-01-09 11:23:03",
       "scores": {
         "capability": null,
@@ -14489,8 +14368,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "tongyi-xiaomi-analysis-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "tongyi-xiaomi-analysis-flash"
         },
         "benchmark": null
       },
@@ -14549,8 +14427,8 @@
           "input_range": "Default"
         }
       },
-      "release_date": null,
-      "release_date_source": null,
+      "release_date": "2026-01-09",
+      "release_date_source": "Bailian",
       "catalog_published_at": "2026-01-09 11:31:49",
       "scores": {
         "capability": null,
@@ -14572,8 +14450,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T03:03:25.553241+00:00",
-          "model_id": "tongyi-xiaomi-analysis-pro",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "tongyi-xiaomi-analysis-pro"
         },
         "benchmark": null
       },
