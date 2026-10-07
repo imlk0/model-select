@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T01:49:57.755692+00:00",
+  "updated_at": "2026-10-07T01:52:13.490305+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -10,23 +10,59 @@
   "roles": {
     "fable": {
       "positioning": "能力前 25% · 高难度任务",
-      "candidates": [],
-      "best": null
+      "candidates": [
+        "qwen3.8-max",
+        "glm-5.3",
+        "kimi-k3",
+        "qwen3.8-2.4t-a95b",
+        "deepseek-v4.1-flash",
+        "deepseek-v4-pro",
+        "deepseek-v4-flash",
+        "glm-5.2"
+      ],
+      "best": "qwen3.8-max"
     },
     "opus": {
       "positioning": "能力 25–50% · 复杂编程",
-      "candidates": [],
-      "best": null
+      "candidates": [
+        "qwen3.8-27b",
+        "qwen3.7-max",
+        "glm-5",
+        "kimi-k2.6",
+        "qwen3.6-plus",
+        "glm-5.1",
+        "kimi-k2.7-code",
+        "qwen3.7-plus"
+      ],
+      "best": "qwen3.8-27b"
     },
     "sonnet": {
       "positioning": "能力 50–75% · 日常开发",
-      "candidates": [],
-      "best": null
+      "candidates": [
+        "kimi-k2.5",
+        "qwen3.5-27b",
+        "MiniMax-M2.5",
+        "glm-4.7",
+        "kimi-k2-thinking",
+        "qwen3.6-27b",
+        "MiniMax-M2.1",
+        "qwen3.5-35b-a3b"
+      ],
+      "best": "kimi-k2.5"
     },
     "haiku": {
       "positioning": "能力后 25% · 轻量任务",
-      "candidates": [],
-      "best": null
+      "candidates": [
+        "qwen3.5-397b-a17b",
+        "qwen3.6-35b-a3b",
+        "deepseek-v3.2",
+        "qwen3-max",
+        "qwen3.5-122b-a10b",
+        "deepseek-v3.1",
+        "qwen3-235b-a22b-instruct-2507",
+        "deepseek-v3"
+      ],
+      "best": "qwen3.5-397b-a17b"
     }
   }
 }
