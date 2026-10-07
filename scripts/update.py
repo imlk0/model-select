@@ -130,6 +130,9 @@ def match_aa(row, aa_rows, mappings):
         # Strict spelling normalization only, never remove versions/effort/suffixes.
         codes = {normalize_name(row['model']), normalize_name(row.get('equivalent_snapshot') or row['model'])}
         matches = [r for r in aa_rows if normalize_name(r.get('slug')) in codes]
+        if not matches:
+            names = codes | {normalize_name(row.get('name'))}
+            matches = [r for r in aa_rows if normalize_name(r.get('name')) in names]
     return matches[0] if len(matches) == 1 else None
 
 def build_models(rows, aa_rows, version, mappings, timestamp):
@@ -148,7 +151,7 @@ def build_models(rows, aa_rows, version, mappings, timestamp):
         price = pricing['beijing']
         speed = number(((matched or {}).get('performance') or {}).get('median_output_tokens_per_second'))
         release_date, release_source = release_metadata(row, matched, aa_rows)
-        model = {'code':code,'name':row.get('name') or code,'context_k':context/1000 if context is not None else None,'pricing':pricing,'release_date':release_date,'release_date_source':release_source,'catalog_published_at':row.get('published_time'),'scores':scores,'speed':{'tokens_per_second':speed,'scope':'AA 跨供应商中位数，非百炼实测速率','prompt_type':'free-endpoint-default'},'features':row.get('features') or [],'sources':['Bailian']+(['Artificial Analysis'] if matched else []),'provenance':{'catalog':{'url':BAILIAN_DOC,'fetched_at':timestamp,'model_id':code},'benchmark':{'url':AA_DOC,'fetched_at':timestamp,'aa_id':matched.get('id'),'aa_slug':matched.get('slug'),'aa_name':matched.get('name'),'match_method':'explicit-aa-id' if code in mappings else 'unique-normalized-slug','index_version':version} if matched else None}}
+        model = {'code':code,'name':row.get('name') or code,'context_k':context/1000 if context is not None else None,'pricing':pricing,'release_date':release_date,'release_date_source':release_source,'catalog_published_at':row.get('published_time'),'scores':scores,'speed':{'tokens_per_second':speed,'scope':'AA 跨供应商中位数，非百炼实测速率','prompt_type':'free-endpoint-default'},'features':row.get('features') or [],'sources':['Bailian']+(['Artificial Analysis'] if matched else []),'provenance':{'catalog':{'url':BAILIAN_DOC,'fetched_at':timestamp,'model_id':code},'benchmark':{'url':AA_DOC,'fetched_at':timestamp,'aa_id':matched.get('id'),'aa_slug':matched.get('slug'),'aa_name':matched.get('name'),'match_method':'explicit-aa-id' if code in mappings else ('unique-normalized-slug' if normalize_name(matched.get('slug')) in {normalize_name(code),normalize_name(row.get('equivalent_snapshot') or code)} else 'unique-normalized-name'),'index_version':version} if matched else None}}
         checks = [context is not None,price['input'] is not None and price['output'] is not None,*[v is not None for k,v in scores.items() if k in ('capability','coding','agentic')],speed is not None]
         model['evidence_coverage'] = sum(checks)/len(checks)
         models.append(model)

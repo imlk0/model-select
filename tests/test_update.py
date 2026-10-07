@@ -83,5 +83,6 @@ class PricingReleaseTests(unittest.TestCase):
         aa={'name':'New','slug':'different','release_date':'2024-02-01'}
         self.assertEqual(u.release_metadata(row,None,[aa]),('2024-02-01','Artificial Analysis'))
         self.assertEqual(u.release_metadata(row,None,[aa,dict(aa,slug='other')]),('2024-03-01','Bailian'))
-        self.assertIsNone(u.match_aa(row,[aa],{}))
+        self.assertEqual(u.match_aa(row,[aa],{}),aa)
+        self.assertIsNone(u.match_aa(row,[aa,dict(aa,slug='other')],{}))
         row['published_time']='invalid';self.assertEqual(u.release_metadata(row,None,[]),(None,None))

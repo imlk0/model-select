@@ -1,1 +1,7 @@
-{}
+{
+  "qwen3-next-80b-a3b-thinking": {
+    "aa_id": "c8a79180-7d16-4474-8701-9a77c0baa56a",
+    "source_url": "https://qwen.ai/blog?id=qwen3-next",
+    "aa_url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-reasoning"
+  }
+}
