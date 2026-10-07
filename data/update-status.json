@@ -1,7 +1,18 @@
 {
-  "status": "failed",
+  "status": "updated",
+  "attempted_at": "2026-10-07T03:17:41.470218+00:00",
   "execution": "github-actions",
-  "attempted_at": "2026-10-07T03:14:46.255498+00:00",
-  "reason": "CI stopped before data collection",
-  "run_url": "https://github.com/imlk0/model-select/actions/runs/37565836705"
+  "run_url": "https://github.com/imlk0/model-select/actions/runs/37566063288",
+  "reason": "Published dynamic provider catalog",
+  "models": 123,
+  "benchmark_matches": 47,
+  "aa_status": "success",
+  "aa_error": null,
+  "catalog_endpoint": "https://dashscope.aliyuncs.com/api/v1/models",
+  "field_counts": {
+    "capability": 47,
+    "coding": 24,
+    "agentic": 20
+  },
+  "speed_count": 39
 }
