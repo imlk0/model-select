@@ -8,6 +8,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+import urllib.error
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -135,10 +136,25 @@ def dump(path, data):
     temp = path.with_suffix('.tmp')
     temp.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');temp.replace(path)
 
+def error_details(exc):
+    details = {'type':type(exc).__name__}
+    if isinstance(exc, urllib.error.HTTPError):
+        details['http_status'] = exc.code
+        try:
+            payload = json.loads(exc.read(8192))
+            code = payload.get('code') or (payload.get('error') or {}).get('code')
+            if isinstance(code,str) and re.fullmatch(r'[A-Za-z0-9_.-]{1,100}',code): details['provider_code'] = code
+        except (ValueError, AttributeError, OSError): pass
+    if isinstance(exc, ValueError): details['validation'] = str(exc)
+    cause = exc.__cause__ or exc.__context__
+    if cause and cause is not exc: details['cause'] = {'type':type(cause).__name__}
+    return details
+
 def report(status, reason, **extra):
     info = {'status':status,'attempted_at':datetime.now(timezone.utc).isoformat(),'execution': 'github-actions' if os.getenv('GITHUB_ACTIONS') else 'local','run_url': ('https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']) if os.getenv('GITHUB_RUN_ID') else None,'reason':reason,**extra}
     dump(ROOT/'data/update-status.json', info)
-    print(json.dumps(info,ensure_ascii=False))
+    print(('PASS' if status=='updated' else 'FAIL')+'\tdata-update\t'+status)
+    print(json.dumps(info,ensure_ascii=False),file=sys.stderr)
     if os.getenv('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as stream:
             stream.write('## Data update\n\n'+json.dumps(info,ensure_ascii=False,indent=2)+'\n')
@@ -153,11 +169,12 @@ def main():
     try:
         rows, raw_catalog = fetch_catalog(endpoint,key)
         aa_rows, raw_aa, version = [], [], None
-        aa_state = 'missing-key'
+        aa_state = 'missing-key'; aa_error = None
         if os.getenv('ARTIFICIAL_ANALYSIS_API_KEY'):
             try:
                 aa_rows,raw_aa,version = fetch_aa(os.environ['ARTIFICIAL_ANALYSIS_API_KEY']);aa_state='success'
-            except Exception as exc: aa_state='failed:'+type(exc).__name__
+            except Exception as exc:
+                aa_state='failed'; aa_error=error_details(exc)
         mappings = json.loads((ROOT/'config/model-mappings.json').read_text())
         timestamp = datetime.now(timezone.utc).isoformat()
         models = build_models(rows,aa_rows,version,mappings,timestamp)
@@ -170,9 +187,9 @@ def main():
         if raw_aa: dump(ROOT/'data/raw/artificial-analysis.json',{'fetched_at':timestamp,'pages':raw_aa})
         dump(ROOT/'data/models.json',doc);dump(ROOT/'data/recommendations.json',rec)
         coverage = sum(m['provenance']['benchmark'] is not None for m in models)
-        report('updated' if aa_state=='success' else 'partial','Published dynamic provider catalog',models=len(models),benchmark_matches=coverage,aa_status=aa_state,catalog_endpoint=endpoint,field_counts={field:sum(m['scores'][field] is not None for m in models) for field in ('capability','coding','agentic')},speed_count=sum(m['speed']['tokens_per_second'] is not None for m in models))
+        report('updated' if aa_state=='success' else 'partial','Published dynamic provider catalog',models=len(models),benchmark_matches=coverage,aa_status=aa_state,aa_error=aa_error,catalog_endpoint=endpoint,field_counts={field:sum(m['scores'][field] is not None for m in models) for field in ('capability','coding','agentic')},speed_count=sum(m['speed']['tokens_per_second'] is not None for m in models))
         return 0 if aa_state=='success' else 1
     except Exception as exc:
-        report('failed','Published snapshot retained: '+type(exc).__name__);return 1
+        report('failed','Published snapshot retained',error=error_details(exc));return 1
 
 if __name__ == '__main__': sys.exit(main())
