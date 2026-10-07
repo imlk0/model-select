@@ -8,6 +8,14 @@ const $ = s => document.querySelector(s);
 const escapeHTML=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 const fmt = n => (n === null || n === undefined) ? 'N/A' : Number(n).toFixed(Number(n)%1?1:0);
 const fmtPrice = n => n==null?'N/A':Number(n).toLocaleString('zh-CN',{useGrouping:false,maximumFractionDigits:20});
+const priceLabel = q => [q.mode==='thinking'?'思考':'',({peak:'高峰',offpeak:'低谷'})[q.time_band]||''].filter(Boolean).join(' · ');
+const priceLines = (m,side) => {
+  const quotes=m.pricing?.quotes;
+  if(!quotes)return fmtPrice(m.pricing?.beijing?.[side]);
+  if(!quotes.length)return '<span class="missing">'+(m.pricing?.raw?.length?'未识别':'未提供')+'</span>';
+  return quotes.map(q=>`<div class="price-line">${q[side]==null?'<span class="missing">未提供</span>':fmtPrice(q[side])}${priceLabel(q)||quotes.length>1?`<small>${escapeHTML(priceLabel(q)||'普通')}</small>`:''}</div>`).join('');
+};
+const billingDetails = m => `<details class="data-source billing"><summary>计费明细</summary>${m.pricing?.status==='incomplete'?'<p>百炼未提供完整输入、输出价格，不参与性价比计算。</p>':''}<p>价格单位沿用百炼原始响应；排序采用 10k 输入档位，分时模型采用高峰价。</p>${(m.pricing?.raw||[]).map(g=>`<p>${escapeHTML(g.range_name)}<br>${(g.prices||[]).map(p=>`${escapeHTML(p.price_name||p.type)}${p.time_band?' · '+escapeHTML(({peak:'高峰',offpeak:'低谷'})[p.time_band]||p.time_band):''}：${escapeHTML(p.price)} ${escapeHTML(p.price_unit)}`).join('<br>')}</p>`).join('')||'<p>百炼未提供价格列表。</p>'}</details>`;
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
 const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };
 const modelLabel = m => `${escapeHTML(m.name)} (${escapeHTML(m.code)})`;
@@ -130,9 +138,11 @@ async function boot(){
   const close=()=>{popover.hidden=true;active=null;};
   const show=el=>{
     clearTimeout(closeTimer); active=el; const m=models[el.dataset.model],p=m.pricing?.beijing;
-    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd>¥${fmtPrice(p?.input)} / ¥${fmtPrice(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
+    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${escapeHTML(el.dataset.status||'百炼模型目录')}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd>输入 ${priceLines(m,'input')} / 输出 ${priceLines(m,'output')} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd><dt>公开发布时间 · AA</dt><dd>${escapeHTML(m.release_date||'未收录')}</dd></dl>${billingDetails(m)}<p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
     const evidence=m.provenance;
-    if(evidence){const note=document.createElement('p');note.className='muted';note.textContent='目录核验：'+evidence.catalog.fetched_at+' · benchmark：'+(evidence.benchmark?'AA v'+evidence.benchmark.index_version:'未匹配');popover.append(note);}
+    if(evidence){
+      popover.insertAdjacentHTML('beforeend',`<div class="popover-sources"><a href="https://bailian.console.aliyun.com/cn-beijing/model/market/detail/${encodeURIComponent(m.code)}" target="_blank" rel="noopener">百炼模型介绍 ↗</a>${evidence.benchmark?`<a href="https://artificialanalysis.ai/models/${encodeURIComponent(evidence.benchmark.aa_slug)}" target="_blank" rel="noopener">AA 模型测评 ↗</a>`:'<span class="muted">AA 尚未匹配</span>'}<p class="muted">目录核验：${escapeHTML(new Date(evidence.catalog.fetched_at).toLocaleString('zh-CN'))}${evidence.benchmark?' · AA Index v'+escapeHTML(evidence.benchmark.index_version):''}</p></div>`);
+    }
     popover.querySelector('[data-copy]').onclick=()=>copy(m.code);
     const wasHidden=popover.hidden;
     popover.hidden=false;
@@ -146,6 +156,7 @@ async function boot(){
   };
   const bindModels=()=>document.querySelectorAll('[data-model]').forEach(el=>{
     el.onmouseenter=()=>show(el); el.onfocus=()=>show(el); el.onclick=()=>{
+      if(el.classList.contains('table-model')){show(el);return;}
       clearTimeout(closeTimer); close();
       $('#search').value=''; renderCards('');
       const row=document.getElementById('model-'+encodeURIComponent(el.dataset.model));
@@ -165,7 +176,7 @@ async function boot(){
   window.addEventListener('resize',close); window.addEventListener('scroll',close,{passive:true});
 
   let tableSort=null, sortDirection=-1;
-  const sortValues={name:m=>m.name,capability:m=>m.scores?.capability,coding:m=>m.scores?.coding,agentic:m=>m.scores?.agentic,speed:m=>m.speed?.tokens_per_second,input:m=>m.pricing?.beijing?.input,output:m=>m.pricing?.beijing?.output,context:m=>m.context_k,evidence:m=>m.evidence_coverage};
+  const sortValues={name:m=>m.name,release:m=>m.release_date,capability:m=>m.scores?.capability,coding:m=>m.scores?.coding,agentic:m=>m.scores?.agentic,speed:m=>m.speed?.tokens_per_second,input:m=>m.pricing?.beijing?.input,output:m=>m.pricing?.beijing?.output,context:m=>m.context_k,evidence:m=>m.evidence_coverage};
   const renderCards = q => {
     const needle=q.trim().toLowerCase();
     const filtered=modelsDoc.models.filter(m=>!needle || `${escapeHTML(m.name)} ${escapeHTML(m.code)}`.toLowerCase().includes(needle));
@@ -173,8 +184,9 @@ async function boot(){
     const cell = (n,format=fmt) => `<td class="numeric ${n==null?'missing':''}">${format(n)}</td>`;
     $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${escapeHTML(m.name)}</div>${m.provenance?`<details class="data-source"><summary>来源</summary><p><a href="https://help.aliyun.com/zh/model-studio/list-models" target="_blank" rel="noopener">百炼模型目录 ↗</a><br>${escapeHTML(m.provenance.catalog.fetched_at)}</p>${m.provenance.benchmark?`<p><a href="https://artificialanalysis.ai/models/${encodeURIComponent(m.provenance.benchmark.aa_slug)}" target="_blank" rel="noopener">AA 模型测评 ↗</a><br>Index v${escapeHTML(m.provenance.benchmark.index_version)}<br>${escapeHTML(m.provenance.benchmark.fetched_at)}</p>`:'<p>benchmark 尚未匹配</p>'}<p>速度为 AA 跨供应商参考，非百炼实测。</p>${m.pricing?.raw?.length&&m.pricing.beijing.input==null?'<p>计费结构未能可靠解析，未参与性价比排序。</p>':''}</details>`:''}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input,fmtPrice)}${cell(p.output,fmtPrice)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
-    }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
+      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><button class="model-name table-model" data-model="${escapeHTML(m.code)}" aria-label="查看 ${escapeHTML(m.name)} 详情">${escapeHTML(m.name)}</button><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}<td class="numeric">${priceLines(m,'input')}</td><td class="numeric">${priceLines(m,'output')}</td>${cell(m.context_k)}<td class="numeric ${m.release_date?'':'missing'}" title="公开发布时间 · Artificial Analysis">${escapeHTML(m.release_date||'未收录')}</td><td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+    }).join('') || '<tr><td colspan="10">没有匹配的模型</td></tr>';
+    bindModels();
     reveal('#modelCards tr');
     $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;
     document.querySelectorAll('[data-copy]').forEach(el=>el.onclick=()=>copy(el.dataset.copy));

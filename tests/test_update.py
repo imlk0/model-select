@@ -52,3 +52,28 @@ class DataTests(unittest.TestCase):
     def test_no_benchmark_no_rank(self):
         models=u.build_models([model()],[],None,{},'now');roles=u.recommendations(models);self.assertTrue(all(not r['candidates'] for r in roles.values()))
 if __name__=='__main__':unittest.main()
+
+class PricingReleaseTests(unittest.TestCase):
+    def test_time_bands_remain_separate(self):
+        row=model();items=row['prices'][0]['prices'];row['prices'][0]['prices']=[dict(p,time_band=band,price=str(value)) for band,value in [('offpeak',0.5),('peak',2)] for p in items]
+        result=u.parse_pricing(row)
+        self.assertEqual(result['beijing'],{'input':2,'output':2})
+        self.assertEqual([q['time_band'] for q in result['quotes']],['peak','offpeak'])
+    def test_thinking_and_missing_zero(self):
+        row=model()
+        for p in row['prices'][0]['prices']:p['type']='thinking_'+p['type']
+        self.assertEqual(u.parse_pricing(row)['comparison']['mode'],'thinking')
+        row['prices'][0]['prices']=[{'type':'input_token','price':0,'price_unit':'每百万tokens'}]
+        self.assertEqual(u.simple_prices(row),{'input':0,'output':None})
+        self.assertEqual(u.parse_pricing(row)['status'],'incomplete')
+        row['prices']=[];self.assertEqual(u.parse_pricing(row)['status'],'not-provided')
+    def test_duplicate_unknown_band_and_invalid_date(self):
+        row=model();row['prices'][0]['prices']*=2
+        self.assertIsNone(u.simple_prices(row)['input'])
+        row=model()
+        for p in row['prices'][0]['prices']:p['time_band']='unknown'
+        self.assertIsNone(u.simple_prices(row)['input'])
+        self.assertEqual(u.public_release_date({'release_date':'2024-02-29'}),'2024-02-29')
+        for value in ['2025-02-29','2026-01-01T00:00:00Z',None]:self.assertIsNone(u.public_release_date({'release_date':value}))
+        row=model();row['published_time']='2024-01-01'
+        self.assertIsNone(u.build_models([row],[],None,{},'now')[0]['release_date'])

@@ -28,3 +28,8 @@ assert.equal(priceFormat(0.001),'0.001');
 assert.equal(priceFormat(0),'0');
 assert.equal(priceFormat(null),'N/A');
 console.log('Price precision passed');
+const priceHelpers = new Function(app.slice(app.indexOf('const escapeHTML='),app.indexOf('const toast ='))+'return {priceLines,billingDetails};')();
+assert.match(priceHelpers.priceLines({pricing:{quotes:[{mode:'thinking',time_band:'standard',input:0,output:null}]}},'input'),/0.*思考/);
+assert.match(priceHelpers.priceLines({pricing:{quotes:[],raw:[]}},'output'),/未提供/);
+assert.match(priceHelpers.billingDetails({pricing:{raw:[{range_name:'<unsafe>',prices:[]}]}}),/&lt;unsafe&gt;/);
+console.log('Price variants and escaped billing details passed');

@@ -43,8 +43,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.1,
+            "output": 8.4
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-12-23",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-01-23 15:47:49",
       "scores": {
         "capability": 20.9,
         "coding": null,
@@ -69,8 +86,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "MiniMax-M2.1",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "MiniMax-M2.1"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -121,8 +137,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.1,
+            "output": 8.4
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-02-12",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-02-24 23:07:02",
       "scores": {
         "capability": 22.8,
         "coding": null,
@@ -148,8 +181,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "MiniMax-M2.5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "MiniMax-M2.5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -200,8 +232,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 16.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-16 22:56:31",
       "scores": {
         "capability": null,
         "coding": null,
@@ -225,8 +274,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "Moonshot-Kimi-K2-Instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "Moonshot-Kimi-K2-Instruct"
         },
         "benchmark": null
       },
@@ -255,8 +303,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.0,
+            "output": null
+          }
+        ],
+        "status": "incomplete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-09-24 15:24:10",
       "scores": {
         "capability": null,
         "coding": null,
@@ -277,8 +342,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "decision-model-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "decision-model-preview"
         },
         "benchmark": null
       },
@@ -294,8 +358,18 @@
           "output": null
         },
         "raw": [],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [],
+        "status": "not-provided",
+        "comparison": {
+          "mode": null,
+          "time_band": null,
+          "input_range": null
+        }
       },
+      "release_date": "2025-01-20",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-02-05 19:57:01",
       "scores": {
         "capability": 5.5,
         "coding": null,
@@ -319,8 +393,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-r1-distill-qwen-1.5b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-1.5b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -364,8 +437,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 3.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-01-20",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-02-05 19:57:01",
       "scores": {
         "capability": 7.8,
         "coding": null,
@@ -387,8 +477,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-r1-distill-qwen-14b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-14b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -432,8 +521,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 6.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-01-20",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-02-05 19:57:01",
       "scores": {
         "capability": 8.4,
         "coding": null,
@@ -455,8 +561,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-r1-distill-qwen-32b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-32b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -500,8 +605,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.5,
+            "output": 1.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-02-05 19:57:01",
       "scores": {
         "capability": null,
         "coding": null,
@@ -522,8 +644,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-r1-distill-qwen-7b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-r1-distill-qwen-7b"
         },
         "benchmark": null
       },
@@ -580,8 +701,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2024-12-26",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-01-27 20:45:18",
       "scores": {
         "capability": 8.5,
         "coding": 23.0,
@@ -607,8 +745,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -659,8 +796,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-08-21",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-08-23 00:31:50",
       "scores": {
         "capability": 13.7,
         "coding": null,
@@ -686,8 +840,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v3.1",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3.1"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -780,8 +933,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 3.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-12-01",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-12-02 14:56:41",
       "scores": {
         "capability": 16.0,
         "coding": null,
@@ -808,8 +978,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v3.2",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3.2"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -853,8 +1022,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 3.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-09-30 22:44:03",
       "scores": {
         "capability": null,
         "coding": null,
@@ -878,8 +1064,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v3.2-exp",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v3.2-exp"
         },
         "benchmark": null
       },
@@ -922,8 +1107,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-07-31",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-04-24 15:51:16",
       "scores": {
         "capability": 34.3,
         "coding": 69.1,
@@ -950,8 +1152,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v4-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-flash"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -971,8 +1172,8 @@
       "context_k": 1000.0,
       "pricing": {
         "beijing": {
-          "input": null,
-          "output": null
+          "input": 3.0,
+          "output": 9.0
         },
         "raw": [
           {
@@ -1023,8 +1224,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "peak",
+            "input": 3.0,
+            "output": 9.0
+          },
+          {
+            "mode": "standard",
+            "time_band": "offpeak",
+            "input": 1.5,
+            "output": 4.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "peak",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-08-01 00:09:35",
       "scores": {
         "capability": null,
         "coding": null,
@@ -1051,12 +1275,11 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v4-flash-0731",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-flash-0731"
         },
         "benchmark": null
       },
-      "evidence_coverage": 0.16666666666666666
+      "evidence_coverage": 0.3333333333333333
     },
     {
       "code": "deepseek-v4-pro",
@@ -1095,8 +1318,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 24.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-08-13",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-04-24 15:51:09",
       "scores": {
         "capability": 36.0,
         "coding": 68.8,
@@ -1124,8 +1364,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v4-pro",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-pro"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1145,8 +1384,8 @@
       "context_k": 1000.0,
       "pricing": {
         "beijing": {
-          "input": null,
-          "output": null
+          "input": 9.0,
+          "output": 27.0
         },
         "raw": [
           {
@@ -1197,8 +1436,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "peak",
+            "input": 9.0,
+            "output": 27.0
+          },
+          {
+            "mode": "standard",
+            "time_band": "offpeak",
+            "input": 4.5,
+            "output": 13.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "peak",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-08-14 12:06:20",
       "scores": {
         "capability": null,
         "coding": null,
@@ -1225,12 +1487,11 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v4-pro-0813",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4-pro-0813"
         },
         "benchmark": null
       },
-      "evidence_coverage": 0.16666666666666666
+      "evidence_coverage": 0.3333333333333333
     },
     {
       "code": "deepseek-v4.1-flash",
@@ -1238,8 +1499,8 @@
       "context_k": 1000.0,
       "pricing": {
         "beijing": {
-          "input": null,
-          "output": null
+          "input": 2.0,
+          "output": 8.0
         },
         "raw": [
           {
@@ -1290,8 +1551,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "peak",
+            "input": 2.0,
+            "output": 8.0
+          },
+          {
+            "mode": "standard",
+            "time_band": "offpeak",
+            "input": 1.0,
+            "output": 4.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "peak",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-09-10",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-09-13 00:13:01",
       "scores": {
         "capability": 39.5,
         "coding": null,
@@ -1318,8 +1602,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "deepseek-v4.1-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "deepseek-v4.1-flash"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1331,7 +1614,7 @@
           "index_version": 4.3
         }
       },
-      "evidence_coverage": 0.5
+      "evidence_coverage": 0.6666666666666666
     },
     {
       "code": "farui-plus",
@@ -1363,8 +1646,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 20.0,
+            "output": 20.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-05-14 21:32:40",
       "scores": {
         "capability": null,
         "coding": null,
@@ -1385,8 +1685,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "farui-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "farui-plus"
         },
         "benchmark": null
       },
@@ -1441,8 +1740,25 @@
             "range_name": "32k<输入<=128k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 3.0,
+            "output": 14.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-07-28",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-08-06 19:38:01",
       "scores": {
         "capability": 12.8,
         "coding": null,
@@ -1464,8 +1780,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-4.5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1528,8 +1843,25 @@
             "range_name": "32k<输入<=128k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 6.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-07-28",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-08-06 20:02:34",
       "scores": {
         "capability": 11.1,
         "coding": null,
@@ -1551,8 +1883,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-4.5-air",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.5-air"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1629,8 +1960,25 @@
             "range_name": "32k<输入<=200k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 3.0,
+            "output": 14.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-09-30",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-10-21 14:26:06",
       "scores": {
         "capability": 14.9,
         "coding": null,
@@ -1654,8 +2002,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-4.6",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.6"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1732,8 +2079,25 @@
             "range_name": "32k<输入<=200k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 3.0,
+            "output": 14.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-12-22",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-12-25 14:06:48",
       "scores": {
         "capability": 22.2,
         "coding": 45.3,
@@ -1758,8 +2122,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-4.7",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-4.7"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1836,8 +2199,25 @@
             "range_name": "32k<输入<=200k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 18.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2026-02-11",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-02-18 12:44:16",
       "scores": {
         "capability": 27.9,
         "coding": null,
@@ -1863,8 +2243,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -1969,8 +2348,25 @@
             "range_name": "32k<输入<=200k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 6.0,
+            "output": 24.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2026-04-07",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-04-14 19:34:59",
       "scores": {
         "capability": 26.1,
         "coding": 55.8,
@@ -1997,8 +2393,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-5.1",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.1"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2049,8 +2444,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 8.0,
+            "output": 28.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-06-16",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-06-16 16:16:52",
       "scores": {
         "capability": 33.7,
         "coding": 68.8,
@@ -2077,8 +2489,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-5.2",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.2"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2129,8 +2540,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 16.0,
+            "output": 56.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-07-09 10:50:34",
       "scores": {
         "capability": null,
         "coding": null,
@@ -2157,8 +2585,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-5.2-fast-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.2-fast-preview"
         },
         "benchmark": null
       },
@@ -2201,8 +2628,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 8.0,
+            "output": 28.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-08-18",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-09-15 17:45:03",
       "scores": {
         "capability": 44.8,
         "coding": 74.8,
@@ -2229,8 +2673,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-5.3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.3"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2281,8 +2724,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 16.0,
+            "output": 56.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-09-21 13:35:15",
       "scores": {
         "capability": null,
         "coding": null,
@@ -2308,8 +2768,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "glm-5.3-prime",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "glm-5.3-prime"
         },
         "benchmark": null
       },
@@ -2352,8 +2811,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 16.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-11-06",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-11-10 15:24:34",
       "scores": {
         "capability": 22.0,
         "coding": null,
@@ -2378,8 +2854,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "kimi-k2-thinking",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2-thinking"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2444,8 +2919,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 21.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-01-27",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-01-30 09:49:03",
       "scores": {
         "capability": 23.5,
         "coding": 46.8,
@@ -2471,8 +2963,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "kimi-k2.5",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2.5"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2537,8 +3028,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 6.5,
+            "output": 27.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-04-20",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-04-21 17:55:34",
       "scores": {
         "capability": 27.0,
         "coding": 61.8,
@@ -2564,8 +3072,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "kimi-k2.6",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2.6"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2630,8 +3137,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 6.5,
+            "output": 27.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-06-12",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-06-15 00:59:14",
       "scores": {
         "capability": 25.8,
         "coding": 60.8,
@@ -2660,8 +3184,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "kimi-k2.7-code",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k2.7-code"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2712,8 +3235,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 20.0,
+            "output": 100.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-07-16",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-08-19 16:51:08",
       "scores": {
         "capability": 43.6,
         "coding": 76.2,
@@ -2742,8 +3282,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "kimi-k3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "kimi-k3"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -2787,8 +3326,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 3.5,
+            "output": 7.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-11-12 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -2809,8 +3365,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-coder-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-coder-plus"
         },
         "benchmark": null
       },
@@ -2846,8 +3401,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 6.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -2868,8 +3440,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-coder-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-coder-turbo"
         },
         "benchmark": null
       },
@@ -2905,8 +3476,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 54.0,
+            "output": 163.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-08-22 22:05:23",
       "scores": {
         "capability": null,
         "coding": null,
@@ -2927,8 +3515,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-deep-research",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-deep-research"
         },
         "benchmark": null
       },
@@ -2964,8 +3551,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 79.0,
+            "output": 236.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-03-23 09:47:02",
       "scores": {
         "capability": null,
         "coding": null,
@@ -2986,8 +3590,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-deep-research-2025-12-15",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-deep-research-2025-12-15"
         },
         "benchmark": null
       },
@@ -3044,8 +3647,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.6,
+            "output": 1.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-23 21:21:02",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3069,8 +3689,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-doc-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-doc-turbo"
         },
         "benchmark": null
       },
@@ -3291,8 +3910,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.15,
+            "output": 1.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3321,8 +3957,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash"
         },
         "benchmark": null
       },
@@ -3396,8 +4031,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.15,
+            "output": 1.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3424,8 +4076,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-flash-2025-07-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash-2025-07-28"
         },
         "benchmark": null
       },
@@ -3468,8 +4119,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.25,
+            "output": 1.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-01-13 12:04:02",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3495,8 +4163,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-flash-character",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash-character"
         },
         "benchmark": null
       },
@@ -3539,8 +4206,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.18,
+            "output": 1.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-02-28 16:29:42",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3564,8 +4248,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-flash-character-2026-02-26",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-flash-character-2026-02-26"
         },
         "benchmark": null
       },
@@ -3615,8 +4298,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.5,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-05-20 22:57:26",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3639,8 +4339,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-long",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-long"
         },
         "benchmark": null
       },
@@ -3676,8 +4375,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.5,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-03-19 10:43:44",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3698,8 +4414,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-long-2025-01-25",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-long-2025-01-25"
         },
         "benchmark": null
       },
@@ -3749,8 +4464,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.5,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-03-19 10:45:13",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3771,8 +4503,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-long-latest",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-long-latest"
         },
         "benchmark": null
       },
@@ -3808,8 +4539,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-09-13 00:00:06",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3830,8 +4578,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-math-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus"
         },
         "benchmark": null
       },
@@ -3867,8 +4614,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-09-13 00:00:06",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3889,8 +4653,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-math-plus-0816",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus-0816"
         },
         "benchmark": null
       },
@@ -3926,8 +4689,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -3948,8 +4728,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-math-plus-0919",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus-0919"
         },
         "benchmark": null
       },
@@ -3985,8 +4764,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4007,8 +4803,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-math-plus-latest",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-plus-latest"
         },
         "benchmark": null
       },
@@ -4044,8 +4839,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 6.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-09-19 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4066,8 +4878,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-math-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-math-turbo"
         },
         "benchmark": null
       },
@@ -4124,8 +4935,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.4,
+            "output": 9.6
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-10-15 13:39:20",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4154,8 +4982,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-max"
         },
         "benchmark": null
       },
@@ -4191,8 +5018,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.7,
+            "output": 1.95
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-11-06 16:07:15",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4215,8 +5059,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-mt-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-flash"
         },
         "benchmark": null
       },
@@ -4252,8 +5095,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.6,
+            "output": 1.6
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-11-19 19:49:54",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4276,8 +5136,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-mt-lite",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-lite"
         },
         "benchmark": null
       },
@@ -4313,8 +5172,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.8,
+            "output": 5.4
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-22 14:16:44",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4337,8 +5213,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-mt-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-plus"
         },
         "benchmark": null
       },
@@ -4374,8 +5249,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.7,
+            "output": 1.95
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-22 14:16:54",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4396,8 +5288,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-mt-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-mt-turbo"
         },
         "benchmark": null
       },
@@ -4807,8 +5698,31 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-06-24 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4837,8 +5751,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus"
         },
         "benchmark": null
       },
@@ -4874,8 +5787,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-01-15 19:28:32",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4896,8 +5826,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-0112",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-0112"
         },
         "benchmark": null
       },
@@ -4933,8 +5862,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-12-26 20:24:51",
       "scores": {
         "capability": null,
         "coding": null,
@@ -4955,8 +5901,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-1220",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-1220"
         },
         "benchmark": null
       },
@@ -4992,8 +5937,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-02-03 18:32:17",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5019,8 +5981,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-2025-01-25",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-01-25"
         },
         "benchmark": null
       },
@@ -5070,8 +6031,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-04-29 06:46:35",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5097,8 +6081,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-2025-04-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-04-28"
         },
         "benchmark": null
       },
@@ -5148,8 +6131,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-16 14:53:53",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5176,8 +6182,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-2025-07-14",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-07-14"
         },
         "benchmark": null
       },
@@ -5293,8 +6298,31 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-30 16:20:34",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5320,8 +6348,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-2025-07-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-07-28"
         },
         "benchmark": null
       },
@@ -5437,8 +6464,31 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-09-11 20:51:27",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5459,8 +6509,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-2025-09-11",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-09-11"
         },
         "benchmark": null
       },
@@ -5576,8 +6625,31 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-12-01 10:32:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5604,8 +6676,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-2025-12-01",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-2025-12-01"
         },
         "benchmark": null
       },
@@ -5662,8 +6733,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-03-20 17:16:40",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5689,8 +6777,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-character",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-character"
         },
         "benchmark": null
       },
@@ -5890,8 +6977,31 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-31 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -5919,8 +7029,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-plus-latest",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-plus-latest"
         },
         "benchmark": null
       },
@@ -6019,8 +7128,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.3,
+            "output": 0.6
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.3,
+            "output": 3.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2024-11-18",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-06-24 00:00:00",
       "scores": {
         "capability": 6.4,
         "coding": null,
@@ -6045,8 +7177,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen-turbo",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen-turbo"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -6111,8 +7242,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 4.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 10.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-04-28 15:37:07",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6138,8 +7292,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-14b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-14b"
         },
         "benchmark": null
       },
@@ -6189,8 +7342,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 8.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 20.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6215,8 +7391,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-235b-a22b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-235b-a22b"
         },
         "benchmark": null
       },
@@ -6252,8 +7427,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-07-21",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-07-22 21:30:21",
       "scores": {
         "capability": 12.0,
         "coding": null,
@@ -6279,8 +7471,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-235b-a22b-instruct-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-235b-a22b-instruct-2507"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -6300,8 +7491,8 @@
       "context_k": 131.072,
       "pricing": {
         "beijing": {
-          "input": null,
-          "output": null
+          "input": 2.0,
+          "output": 20.0
         },
         "raw": [
           {
@@ -6324,8 +7515,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 20.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "thinking",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-25 18:04:54",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6346,12 +7554,11 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-235b-a22b-thinking-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-235b-a22b-thinking-2507"
         },
         "benchmark": null
       },
-      "evidence_coverage": 0.16666666666666666
+      "evidence_coverage": 0.3333333333333333
     },
     {
       "code": "qwen3-30b-a3b",
@@ -6397,8 +7604,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.75,
+            "output": 3.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.75,
+            "output": 7.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6423,8 +7653,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-30b-a3b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-30b-a3b"
         },
         "benchmark": null
       },
@@ -6460,8 +7689,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.75,
+            "output": 3.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-29 22:20:27",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6487,8 +7733,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-30b-a3b-instruct-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-30b-a3b-instruct-2507"
         },
         "benchmark": null
       },
@@ -6500,8 +7745,8 @@
       "context_k": 81.92,
       "pricing": {
         "beijing": {
-          "input": null,
-          "output": null
+          "input": 0.75,
+          "output": 7.5
         },
         "raw": [
           {
@@ -6524,8 +7769,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.75,
+            "output": 7.5
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "thinking",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-30 16:38:09",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6546,12 +7808,11 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-30b-a3b-thinking-2507",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-30b-a3b-thinking-2507"
         },
         "benchmark": null
       },
-      "evidence_coverage": 0.16666666666666666
+      "evidence_coverage": 0.3333333333333333
     },
     {
       "code": "qwen3-32b",
@@ -6604,8 +7865,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 8.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 20.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6631,8 +7915,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-32b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-32b"
         },
         "benchmark": null
       },
@@ -6689,8 +7972,31 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.5,
+            "output": 2.0
+          },
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 0.5,
+            "output": 5.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-04-29 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -6716,8 +8022,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-8b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-8b"
         },
         "benchmark": null
       },
@@ -6810,8 +8115,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.5,
+            "output": 6.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-07-31",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-07-31 20:44:56",
       "scores": {
         "capability": 9.6,
         "coding": null,
@@ -6833,8 +8155,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-30b-a3b-instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-30b-a3b-instruct"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -6935,8 +8256,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 6.0,
+            "output": 24.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-07-22",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-07-22 21:29:39",
       "scores": {
         "capability": 11.9,
         "coding": null,
@@ -6958,8 +8296,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-480b-a35b-instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-480b-a35b-instruct"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -7144,8 +8481,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 4.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -7170,8 +8524,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-flash"
         },
         "benchmark": null
       },
@@ -7264,8 +8617,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 4.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-08-05 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -7289,8 +8659,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-flash-2025-07-28",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-flash-2025-07-28"
         },
         "benchmark": null
       },
@@ -7364,8 +8733,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 4.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2026-02-03",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-02-19 22:38:44",
       "scores": {
         "capability": 9.2,
         "coding": 36.2,
@@ -7387,8 +8773,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-next",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-next"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -7573,8 +8958,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 16.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-22 21:29:17",
       "scores": {
         "capability": null,
         "coding": null,
@@ -7598,8 +9000,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-plus"
         },
         "benchmark": null
       },
@@ -7692,8 +9093,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 16.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-07-22 21:29:25",
       "scores": {
         "capability": null,
         "coding": null,
@@ -7716,8 +9134,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-plus-2025-07-22",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-plus-2025-07-22"
         },
         "benchmark": null
       },
@@ -7810,8 +9227,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 4.0,
+            "output": 16.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-09-23 18:51:54",
       "scores": {
         "capability": null,
         "coding": null,
@@ -7837,8 +9271,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-coder-plus-2025-09-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-coder-plus-2025-09-23"
         },
         "benchmark": null
       },
@@ -8059,8 +9492,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.5,
+            "output": 10.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-09-23",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-09-23 19:23:19",
       "scores": {
         "capability": 15.6,
         "coding": null,
@@ -8089,8 +9539,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8172,8 +9621,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 6.0,
+            "output": 24.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-09-23 19:23:03",
       "scores": {
         "capability": null,
         "coding": null,
@@ -8199,8 +9665,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-max-2025-09-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max-2025-09-23"
         },
         "benchmark": null
       },
@@ -8274,8 +9739,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.5,
+            "output": 10.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-01-23 14:09:45",
       "scores": {
         "capability": null,
         "coding": null,
@@ -8301,8 +9783,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-max-2026-01-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max-2026-01-23"
         },
         "benchmark": null
       },
@@ -8397,8 +9878,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 6.0,
+            "output": 24.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": "2025-09-05",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-09-05 20:43:22",
       "scores": {
         "capability": 12.6,
         "coding": null,
@@ -8422,8 +9920,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-max-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-max-preview"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8467,8 +9964,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 4.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2025-09-11",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2025-09-11 22:09:35",
       "scores": {
         "capability": 9.6,
         "coding": null,
@@ -8490,8 +10004,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-next-80b-a3b-instruct",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-next-80b-a3b-instruct"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8511,8 +10024,8 @@
       "context_k": 131.072,
       "pricing": {
         "beijing": {
-          "input": null,
-          "output": null
+          "input": 1.0,
+          "output": 10.0
         },
         "raw": [
           {
@@ -8535,8 +10048,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "thinking",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 10.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "thinking",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2025-09-11 17:09:19",
       "scores": {
         "capability": null,
         "coding": null,
@@ -8557,12 +10087,11 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3-next-80b-a3b-thinking",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3-next-80b-a3b-thinking"
         },
         "benchmark": null
       },
-      "evidence_coverage": 0.16666666666666666
+      "evidence_coverage": 0.3333333333333333
     },
     {
       "code": "qwen3.5-122b-a10b",
@@ -8613,8 +10142,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 6.4
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": "2026-02-24",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-02-23 11:28:11",
       "scores": {
         "capability": 15.6,
         "coding": 45.7,
@@ -8642,8 +10188,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-122b-a10b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-122b-a10b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8706,8 +10251,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.6,
+            "output": 4.8
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": "2026-02-24",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-02-23 11:42:27",
       "scores": {
         "capability": 22.9,
         "coding": null,
@@ -8736,8 +10298,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-27b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-27b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8800,8 +10361,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.4,
+            "output": 3.2
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": "2026-02-24",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-02-23 11:27:40",
       "scores": {
         "capability": 19.3,
         "coding": null,
@@ -8829,8 +10407,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-35b-a3b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-35b-a3b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -8893,8 +10470,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.2,
+            "output": 7.2
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": "2026-02-16",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-02-15 17:18:22",
       "scores": {
         "capability": 18.4,
         "coding": 48.2,
@@ -8922,8 +10516,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-397b-a17b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-397b-a17b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -9131,8 +10724,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.2,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-02-23 11:28:01",
       "scores": {
         "capability": null,
         "coding": null,
@@ -9161,8 +10771,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-flash"
         },
         "benchmark": null
       },
@@ -9236,8 +10845,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.2,
+            "output": 2.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-02-23 11:27:50",
       "scores": {
         "capability": null,
         "coding": null,
@@ -9265,8 +10891,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-flash-2026-02-23",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-flash-2026-02-23"
         },
         "benchmark": null
       },
@@ -9466,8 +11091,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 4.8
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-02-15 17:15:31",
       "scores": {
         "capability": null,
         "coding": null,
@@ -9496,8 +11138,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-plus"
         },
         "benchmark": null
       },
@@ -9571,8 +11212,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 4.8
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-02-15 17:17:16",
       "scores": {
         "capability": null,
         "coding": null,
@@ -9599,8 +11257,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-plus-2026-02-15",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-plus-2026-02-15"
         },
         "benchmark": null
       },
@@ -9716,8 +11373,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 4.8
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-04-23 10:01:59",
       "scores": {
         "capability": null,
         "coding": null,
@@ -9745,8 +11419,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.5-plus-2026-04-20",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.5-plus-2026-04-20"
         },
         "benchmark": null
       },
@@ -9782,8 +11455,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 3.0,
+            "output": 18.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-04-22",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-04-22 20:50:52",
       "scores": {
         "capability": 21.4,
         "coding": 53.7,
@@ -9811,8 +11501,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.6-27b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-27b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -9856,8 +11545,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.8,
+            "output": 10.8
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-04-16",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-04-16 22:01:43",
       "scores": {
         "capability": 18.2,
         "coding": 41.9,
@@ -9885,8 +11591,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.6-35b-a3b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-35b-a3b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10033,8 +11738,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.2,
+            "output": 7.2
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=256k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-04-16 22:02:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -10063,8 +11785,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.6-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-flash"
         },
         "benchmark": null
       },
@@ -10119,8 +11840,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.2,
+            "output": 7.2
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=256k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-04-16 22:01:52",
       "scores": {
         "capability": null,
         "coding": null,
@@ -10148,8 +11886,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.6-flash-2026-04-16",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-flash-2026-04-16"
         },
         "benchmark": null
       },
@@ -10232,8 +11969,25 @@
             "range_name": "128k<输入<=256k"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 9.0,
+            "output": 54.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=128k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-04-20 15:44:55",
       "scores": {
         "capability": null,
         "coding": null,
@@ -10260,8 +12014,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.6-max-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-max-preview"
         },
         "benchmark": null
       },
@@ -10400,8 +12153,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=256k"
+        }
       },
+      "release_date": "2026-04-02",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-04-01 19:55:34",
       "scores": {
         "capability": 27.0,
         "coding": 54.5,
@@ -10431,8 +12201,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.6-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-plus"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -10495,8 +12264,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=256k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-04-01 19:56:11",
       "scores": {
         "capability": null,
         "coding": null,
@@ -10524,8 +12310,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.6-plus-2026-04-02",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.6-plus-2026-04-02"
         },
         "benchmark": null
       },
@@ -10746,8 +12531,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.2,
+            "output": 0.8
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-07-21 01:02:37",
       "scores": {
         "capability": null,
         "coding": null,
@@ -10776,8 +12578,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-flash"
         },
         "benchmark": null
       },
@@ -10914,8 +12715,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.2,
+            "output": 0.8
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=32k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-07-21 01:05:36",
       "scores": {
         "capability": null,
         "coding": null,
@@ -10943,8 +12761,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-flash-2026-07-15",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-flash-2026-07-15"
         },
         "benchmark": null
       },
@@ -11029,8 +12846,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-05-19",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-05-21 14:37:11",
       "scores": {
         "capability": 29.5,
         "coding": 66.0,
@@ -11060,8 +12894,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -11105,8 +12938,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-05-20 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -11132,8 +12982,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-max-2026-05-17",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-2026-05-17"
         },
         "benchmark": null
       },
@@ -11183,8 +13032,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-05-21 14:37:20",
       "scores": {
         "capability": null,
         "coding": null,
@@ -11211,8 +13077,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-max-2026-05-20",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-2026-05-20"
         },
         "benchmark": null
       },
@@ -11269,8 +13134,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-06-09 22:20:36",
       "scores": {
         "capability": null,
         "coding": null,
@@ -11297,8 +13179,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-max-2026-06-08",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-2026-06-08"
         },
         "benchmark": null
       },
@@ -11334,8 +13215,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-05-20 00:00:00",
       "scores": {
         "capability": null,
         "coding": null,
@@ -11361,8 +13259,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-max-preview",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-max-preview"
         },
         "benchmark": null
       },
@@ -11515,8 +13412,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=256k"
+        }
       },
+      "release_date": "2026-06-01",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-06-01 20:46:50",
       "scores": {
         "capability": 25.2,
         "coding": 55.9,
@@ -11546,8 +13460,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-plus",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-plus"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -11652,8 +13565,25 @@
             "range_name": "256k<输入<=1m"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 2.0,
+            "output": 8.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "输入<=256k"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-06-01 21:45:59",
       "scores": {
         "capability": null,
         "coding": null,
@@ -11681,8 +13611,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.7-plus-2026-05-26",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.7-plus-2026-05-26"
         },
         "benchmark": null
       },
@@ -11739,8 +13668,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-08-12",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-08-12 12:37:04",
       "scores": {
         "capability": 39.9,
         "coding": 71.9,
@@ -11769,8 +13715,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.8-2.4t-a95b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-2.4t-a95b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -11835,8 +13780,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 3.0,
+            "output": 12.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-08-14",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-08-17 14:08:23",
       "scores": {
         "capability": 33.7,
         "coding": 68.1,
@@ -11865,8 +13827,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.8-27b",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-27b"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -11959,8 +13920,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.8,
+            "output": 2.7
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-08-25 20:16:04",
       "scores": {
         "capability": null,
         "coding": null,
@@ -11989,8 +13967,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.8-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-flash"
         },
         "benchmark": null
       },
@@ -12075,8 +14052,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": "2026-09-02",
+      "release_date_source": "Artificial Analysis",
+      "catalog_published_at": "2026-08-02 12:14:32",
       "scores": {
         "capability": 45.4,
         "coding": 76.2,
@@ -12106,8 +14100,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.8-max",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-max"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
@@ -12172,8 +14165,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 12.0,
+            "output": 36.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-09-01 17:00:33",
       "scores": {
         "capability": null,
         "coding": null,
@@ -12201,8 +14211,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "qwen3.8-max-0902",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "qwen3.8-max-0902"
         },
         "benchmark": null
       },
@@ -12238,8 +14247,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.4,
+            "output": 1.0
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2024-12-12 19:33:25",
       "scores": {
         "capability": null,
         "coding": null,
@@ -12260,8 +14286,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "tongyi-intent-detect-v3",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "tongyi-intent-detect-v3"
         },
         "benchmark": null
       },
@@ -12304,8 +14329,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 0.2,
+            "output": 0.4
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-01-09 11:23:03",
       "scores": {
         "capability": null,
         "coding": null,
@@ -12326,8 +14368,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "tongyi-xiaomi-analysis-flash",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "tongyi-xiaomi-analysis-flash"
         },
         "benchmark": null
       },
@@ -12370,8 +14411,25 @@
             "range_name": "Default"
           }
         ],
-        "input_tokens_basis": 10000
+        "input_tokens_basis": 10000,
+        "quotes": [
+          {
+            "mode": "standard",
+            "time_band": "standard",
+            "input": 1.0,
+            "output": 2.7
+          }
+        ],
+        "status": "complete",
+        "comparison": {
+          "mode": "standard",
+          "time_band": "standard",
+          "input_range": "Default"
+        }
       },
+      "release_date": null,
+      "release_date_source": null,
+      "catalog_published_at": "2026-01-09 11:31:49",
       "scores": {
         "capability": null,
         "coding": null,
@@ -12392,8 +14450,7 @@
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
           "fetched_at": "2026-10-07T01:54:20.858505+00:00",
-          "model_id": "tongyi-xiaomi-analysis-pro",
-          "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
+          "model_id": "tongyi-xiaomi-analysis-pro"
         },
         "benchmark": null
       },
