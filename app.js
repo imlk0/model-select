@@ -16,6 +16,11 @@ const priceLines = (m,side) => {
   return quotes.map(q=>`<div class="price-line">${q[side]==null?'<span class="missing">未提供</span>':fmtPrice(q[side])}${priceLabel(q)||quotes.length>1?`<small>${escapeHTML(priceLabel(q)||'普通')}</small>`:''}</div>`).join('');
 };
 const billingDetails = m => `<details class="data-source billing"><summary>计费明细</summary>${m.pricing?.status==='incomplete'?'<p>百炼未提供完整输入、输出价格，不参与性价比计算。</p>':''}<p>价格单位沿用百炼原始响应；排序采用 10k 输入档位，分时模型采用高峰价。</p>${(m.pricing?.raw||[]).map(g=>`<p>${escapeHTML(g.range_name)}<br>${(g.prices||[]).map(p=>`${escapeHTML(p.price_name||p.type)}${p.time_band?' · '+escapeHTML(({peak:'高峰',offpeak:'低谷'})[p.time_band]||p.time_band):''}：${escapeHTML(p.price)} ${escapeHTML(p.price_unit)}`).join('<br>')}</p>`).join('')||'<p>百炼未提供价格列表。</p>'}</details>`;
+const modelDetails = m => {
+  const benchmark=m.provenance?.benchmark;
+  const sources=`<nav class="popover-sources" aria-label="模型数据来源"><a href="https://bailian.console.aliyun.com/cn-beijing/model/market/detail/${encodeURIComponent(m.code)}" target="_blank" rel="noopener" title="模型介绍、上下文和价格">阿里云百炼 ↗</a>${benchmark?`<a href="https://artificialanalysis.ai/models/${encodeURIComponent(benchmark.aa_slug)}" target="_blank" rel="noopener" title="模型测评、参考速度和公开发布时间">Artificial Analysis ↗</a>`:''}</nav>`;
+  return `<strong>${escapeHTML(m.name)}</strong>${sources}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} · 复制</button><dl><dt>价格（¥ / 百万 tokens · 10k 输入档位）</dt><dd class="popover-prices"><div><small>输入</small>${priceLines(m,'input')}</div><div><small>输出</small>${priceLines(m,'output')}</div></dd><dt>上下文（K tokens）</dt><dd>${fmt(m.context_k)}</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt title="Artificial Analysis 跨供应商参考，非百炼实测">输出速度（tok/s）</dt><dd>${fmt(m.speed?.tokens_per_second)}</dd><dt>${m.release_date_source==='Bailian'?'百炼上架日期':'公开发布时间'}</dt><dd>${escapeHTML(m.release_date||'未收录')}</dd></dl>${billingDetails(m)}`;
+};
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
 const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };
 const modelLabel = m => `${escapeHTML(m.name)} (${escapeHTML(m.code)})`;
@@ -137,12 +142,8 @@ async function boot(){
   let active=null,closeTimer;
   const close=()=>{popover.hidden=true;active=null;};
   const show=el=>{
-    clearTimeout(closeTimer); active=el; const m=models[el.dataset.model],p=m.pricing?.beijing;
-    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${escapeHTML(el.dataset.status||'百炼模型目录')}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd class="popover-prices"><div><small>输入 ¥/M</small>${priceLines(m,'input')}</div><div><small>输出 ¥/M</small>${priceLines(m,'output')}</div></dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd><dt>${m.release_date_source==='Bailian'?'百炼上架日期（公开发布时间未收录）':'公开发布时间 · AA'}</dt><dd>${escapeHTML(m.release_date||'未收录')}</dd></dl>${billingDetails(m)}<p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
-    const evidence=m.provenance;
-    if(evidence){
-      popover.insertAdjacentHTML('beforeend',`<div class="popover-sources"><a href="https://bailian.console.aliyun.com/cn-beijing/model/market/detail/${encodeURIComponent(m.code)}" target="_blank" rel="noopener">百炼模型介绍 ↗</a>${evidence.benchmark?`<a href="https://artificialanalysis.ai/models/${encodeURIComponent(evidence.benchmark.aa_slug)}" target="_blank" rel="noopener">AA 模型测评 ↗</a>`:'<span class="muted">AA 尚未匹配</span>'}<p class="muted">目录核验：${escapeHTML(new Date(evidence.catalog.fetched_at).toLocaleString('zh-CN'))}${evidence.benchmark?' · AA Index v'+escapeHTML(evidence.benchmark.index_version):''}</p></div>`);
-    }
+    clearTimeout(closeTimer); active=el; const m=models[el.dataset.model];
+    popover.innerHTML=modelDetails(m);
     popover.querySelector('[data-copy]').onclick=()=>copy(m.code);
     const wasHidden=popover.hidden;
     popover.hidden=false;

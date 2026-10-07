@@ -33,3 +33,13 @@ assert.match(priceHelpers.priceLines({pricing:{quotes:[{mode:'thinking',time_ban
 assert.match(priceHelpers.priceLines({pricing:{quotes:[],raw:[]}},'output'),/未提供/);
 assert.match(priceHelpers.billingDetails({pricing:{raw:[{range_name:'<unsafe>',prices:[]}]}}),/&lt;unsafe&gt;/);
 console.log('Price variants and escaped billing details passed');
+
+const details = new Function(app.slice(app.indexOf('const escapeHTML='),app.indexOf('const toast ='))+'return modelDetails;')();
+const card = details({name:'Example',code:'example',context_k:32.8,scores:{},speed:{},release_date:'2025-01-20',release_date_source:'Artificial Analysis',provenance:{benchmark:{aa_slug:'example'}}});
+assert.ok(card.indexOf('Artificial Analysis ↗') < card.indexOf('<dl>'));
+assert.match(card, /上下文（K tokens）<\/dt><dd>32.8<\/dd>/);
+assert.match(card, /输出速度（tok\/s）<\/dt><dd>N\/A<\/dd>/);
+assert.match(card, /<dt>公开发布时间<\/dt>/);
+assert.doesNotMatch(card, /公开发布时间 · AA|华北2|目录核验|百炼模型目录/);
+assert.match(details({name:'Other',code:'other',release_date_source:'Bailian'}), /<dt>百炼上架日期<\/dt>/);
+console.log('Compact shared model details passed');
