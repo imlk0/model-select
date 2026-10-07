@@ -6,7 +6,7 @@
 
 更新入口为 `scripts/update.py`，CI 每天北京时间 02:17 运行，也可手动触发。凭据只能放在 Actions secrets。真实目录缺失时更新必须失败，不允许演示数据进入采集输出。
 
-验证：`python3 -m unittest discover -s tests -v`，以及 `node --check app.js`。
+验证：`python3 -m unittest discover -s tests -v`，`node tests/test_data_status.cjs`，以及 `node --check app.js`。
 
 站点从 main 根目录发布：[model-select](https://github.com/imlk0/model-select) / [网站](https://blog.imlk.top/model-select/)。
 

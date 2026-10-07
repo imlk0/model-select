@@ -14,7 +14,10 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate data adapters
-        run: python -m unittest discover -s tests -v
+        run: |
+          python -m unittest discover -s tests -v
+          node tests/test_data_status.cjs
+          node --check app.js
       - name: Update benchmarks and rankings
         id: collect
         env:
@@ -23,13 +26,18 @@ jobs:
           ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
         run: python scripts/update.py
       - name: Record interrupted update
-        if: always() && steps.collect.outcome != 'success' && steps.collect.outcome != 'failure'
+        if: always() && steps.collect.outcome != 'success'
         run: |
           python - <<'PYCODE'
           import json, os, pathlib
           from datetime import datetime, timezone
           path = pathlib.Path('data/update-status.json')
           path.parent.mkdir(exist_ok=True)
+          run_url = f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+          if path.exists():
+              try:
+                  if json.loads(path.read_text()).get('run_url') == run_url: raise SystemExit(0)
+              except (ValueError, OSError): pass
           path.write_text(json.dumps({'status':'failed', 'execution':'github-actions', 'attempted_at':datetime.now(timezone.utc).isoformat(), 'reason':'CI stopped before data collection', 'run_url':f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"}, indent=2)+'\n')
           PYCODE
       - name: Commit changed data
@@ -38,5 +46,5 @@ jobs:
           git config user.name "model-select-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "chore: refresh model recommendations"
+          git diff --cached --quiet || git commit --no-gpg-sign -m "chore: refresh model recommendations" -m "Assisted-by: Codex:GPT-6"
           git push

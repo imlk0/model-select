@@ -13,7 +13,7 @@ const modelLabel = m => `${escapeHTML(m.name)} (${escapeHTML(m.code)})`;
 
 const complete = snapshot => {
   const doc=snapshot?.modelsDoc,roles=snapshot?.data?.roles;
-  if(doc?.schema_version!==2||doc.verified_catalog!==true||!doc.models?.length||!roles)return false;
+  if(doc?.schema_version!==2||doc.updated_at!==snapshot?.data?.updated_at||doc.verified_catalog!==true||!doc.models?.length||!roles)return false;
   const codes=new Set(doc.models.map(m=>m.code));
   return codes.size===doc.models.length&&doc.models.every(m=>m.name&&m.code&&m.provenance?.catalog?.fetched_at&&m.provenance?.catalog?.model_id===m.code)&&['fable','opus','sonnet','haiku'].every(r=>Array.isArray(roles[r]?.candidates)&&roles[r].candidates.every(c=>codes.has(c)));
 };
@@ -50,6 +50,7 @@ async function boot(){
     warning.hidden=false;warning.textContent='暂时无法确认 CI 更新状态，请核对数据快照时间。';
   }
 
+  if(mode!=='demo'&&modelsDoc.models.some(m=>m.provenance?.benchmark)){const credit=document.createElement('a');credit.href='https://artificialanalysis.ai/';credit.textContent='评测：Artificial Analysis ↗';credit.target='_blank';credit.rel='noopener';$('footer').append(credit);}
   const models = Object.fromEntries(modelsDoc.models.map(m=>[m.code,m]));
   $('#updatedAt').textContent = new Date(data.updated_at).toLocaleString('zh-CN',{hour12:false});
   $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;

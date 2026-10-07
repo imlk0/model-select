@@ -40,6 +40,6 @@ benchmark：Actions secret `ARTIFICIAL_ANALYSIS_API_KEY`。使用 AA 免费接�
 
 ## 当前验收状态
 
-旧域名目录已完成真实采集验证，动态模型、价格和上下文均来自接口响应。AA 采集尚未通过验收，相关指标保持空值，不生成评测排名。测试 fixture 与文档示例不进入发布数据。网页顶部显示 CI 部分更新或失败提示，超过 48 小时未收到成功记录时显示逾期提示。
+旧域名目录已完成真实采集验证，动态模型、价格和上下文均来自接口响应。AA 已完成真实分页采集与模型匹配验证。未匹配的模型、上游未测量的指标保持空值，不参与相应排名。测试 fixture 与文档示例不进入发布数据。网页顶部显示 CI 部分更新或失败提示，超过 48 小时未收到成功记录时显示逾期提示。
 
 官方文档：[百炼模型目录](https://help.aliyun.com/zh/model-studio/list-models)、[AA Data API](https://artificialanalysis.ai/data-api/docs)。
