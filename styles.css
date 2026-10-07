@@ -66,3 +66,5 @@
 .price-line{white-space:nowrap}.price-line small{display:block;color:var(--muted);font-size:11px;line-height:1.5}.billing{margin-top:8px}.billing p{white-space:normal;max-width:320px}
 
 .table-model{display:block;background:none;border:0;color:var(--text);padding:0;text-align:left;font:600 13px/1.6 system-ui;cursor:pointer}.table-model:hover{color:var(--accent)}.model-popover{max-height:calc(100dvh - 16px);overflow:auto}.popover-sources{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 14px}.popover-sources p{width:100%}
+
+.source-platforms{display:flex;flex-wrap:wrap;gap:6px 16px;font:12px/1.6 system-ui}.source-platforms a{border-bottom:1px dotted var(--muted)}.source-platforms a:hover{color:var(--accent);border-color:var(--accent)}.metadata #evidenceNote{max-width:280px}.popover-prices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.popover-prices>div>small{color:var(--muted);font:10px system-ui}.popover-prices .price-line{display:flex;align-items:baseline;gap:8px}.popover-prices .price-line small{display:inline}
