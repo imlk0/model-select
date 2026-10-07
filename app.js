@@ -32,14 +32,23 @@ async function loadSnapshot(){
 async function boot(){
   const {data,modelsDoc,mode}=await loadSnapshot();
   $('#demoWarning').hidden=mode!=='demo';
+  const warning=$('#updateWarning');
   try {
-    const response=await fetch('data/update-status.json',{signal:AbortSignal.timeout(4000)});
+    const response=await fetch('data/update-status.json',{cache:'no-store',signal:AbortSignal.timeout(4000)});
     const status=response.ok?await response.json():null;
-    if(mode!=='demo'&&status?.execution==='github-actions'&&status.status!=='updated'){
-      const warning=$('#updateWarning');warning.hidden=false;
-      warning.textContent=status.status==='partial'?'评测采集未完成：当前仅展示已核实的目录和指标。':'最近采集未成功：当前展示上次有效快照，请核对快照时间。';
+    const notice=window.modelUpdateNotice(status,mode);
+    if(notice){
+      warning.hidden=false;
+      const title=document.createElement('strong');title.textContent=notice.title;
+      const detail=document.createElement('span');detail.textContent=notice.detail;
+      warning.replaceChildren(title,detail);
+      if(status?.run_url?.startsWith('https://github.com/imlk0/model-select/actions/runs/')){
+        const link=document.createElement('a');link.href=status.run_url;link.textContent='查看更新记录 ↗';link.target='_blank';link.rel='noopener';warning.append(link);
+      }
     }
-  }catch{}
+  }catch{
+    warning.hidden=false;warning.textContent='暂时无法确认 CI 更新状态，请核对数据快照时间。';
+  }
 
   const models = Object.fromEntries(modelsDoc.models.map(m=>[m.code,m]));
   $('#updatedAt').textContent = new Date(data.updated_at).toLocaleString('zh-CN',{hour12:false});

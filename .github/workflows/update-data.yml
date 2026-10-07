@@ -16,11 +16,22 @@ jobs:
       - name: Validate data adapters
         run: python -m unittest discover -s tests -v
       - name: Update benchmarks and rankings
+        id: collect
         env:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
           BAILIAN_MODELS_ENDPOINT: ${{ vars.BAILIAN_MODELS_ENDPOINT }}
           ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
         run: python scripts/update.py
+      - name: Record interrupted update
+        if: always() && steps.collect.outcome != 'success' && steps.collect.outcome != 'failure'
+        run: |
+          python - <<'PYCODE'
+          import json, os, pathlib
+          from datetime import datetime, timezone
+          path = pathlib.Path('data/update-status.json')
+          path.parent.mkdir(exist_ok=True)
+          path.write_text(json.dumps({'status':'failed', 'execution':'github-actions', 'attempted_at':datetime.now(timezone.utc).isoformat(), 'reason':'CI stopped before data collection', 'run_url':f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"}, indent=2)+'\n')
+          PYCODE
       - name: Commit changed data
         if: always()
         run: |
