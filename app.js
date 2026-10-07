@@ -7,6 +7,7 @@ themeButton.onclick=()=>{const modes=['system','light','dark'],current=document.
 const $ = s => document.querySelector(s);
 const escapeHTML=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 const fmt = n => (n === null || n === undefined) ? 'N/A' : Number(n).toFixed(Number(n)%1?1:0);
+const fmtPrice = n => n==null?'N/A':Number(n).toLocaleString('zh-CN',{useGrouping:false,maximumFractionDigits:20});
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
 const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };
 const modelLabel = m => `${escapeHTML(m.name)} (${escapeHTML(m.code)})`;
@@ -129,7 +130,7 @@ async function boot(){
   const close=()=>{popover.hidden=true;active=null;};
   const show=el=>{
     clearTimeout(closeTimer); active=el; const m=models[el.dataset.model],p=m.pricing?.beijing;
-    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd>¥${fmt(p?.input)} / ¥${fmt(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
+    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd>¥${fmtPrice(p?.input)} / ¥${fmtPrice(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
     const evidence=m.provenance;
     if(evidence){const note=document.createElement('p');note.className='muted';note.textContent='目录核验：'+evidence.catalog.fetched_at+' · benchmark：'+(evidence.benchmark?'AA v'+evidence.benchmark.index_version:'未匹配');popover.append(note);}
     popover.querySelector('[data-copy]').onclick=()=>copy(m.code);
@@ -169,10 +170,10 @@ async function boot(){
     const needle=q.trim().toLowerCase();
     const filtered=modelsDoc.models.filter(m=>!needle || `${escapeHTML(m.name)} ${escapeHTML(m.code)}`.toLowerCase().includes(needle));
     if(tableSort)filtered.sort((a,b)=>{const x=sortValues[tableSort](a),y=sortValues[tableSort](b);if(x==null)return y==null?0:1;if(y==null)return -1;return sortDirection*(typeof x==='string'?x.localeCompare(y):(x-y));});
-    const cell = n => `<td class="numeric ${n==null?'missing':''}">${fmt(n)}</td>`;
+    const cell = (n,format=fmt) => `<td class="numeric ${n==null?'missing':''}">${format(n)}</td>`;
     $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${escapeHTML(m.name)}</div>${m.provenance?`<details class="data-source"><summary>来源</summary><p><a href="https://help.aliyun.com/zh/model-studio/list-models" target="_blank" rel="noopener">百炼模型目录 ↗</a><br>${escapeHTML(m.provenance.catalog.fetched_at)}</p>${m.provenance.benchmark?`<p><a href="https://artificialanalysis.ai/models/${encodeURIComponent(m.provenance.benchmark.aa_slug)}" target="_blank" rel="noopener">AA 模型测评 ↗</a><br>Index v${escapeHTML(m.provenance.benchmark.index_version)}<br>${escapeHTML(m.provenance.benchmark.fetched_at)}</p>`:'<p>benchmark 尚未匹配</p>'}<p>速度为 AA 跨供应商参考，非百炼实测。</p>${m.pricing?.raw?.length&&m.pricing.beijing.input==null?'<p>计费结构未能可靠解析，未参与性价比排序。</p>':''}</details>`:''}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${escapeHTML(m.name)}</div>${m.provenance?`<details class="data-source"><summary>来源</summary><p><a href="https://help.aliyun.com/zh/model-studio/list-models" target="_blank" rel="noopener">百炼模型目录 ↗</a><br>${escapeHTML(m.provenance.catalog.fetched_at)}</p>${m.provenance.benchmark?`<p><a href="https://artificialanalysis.ai/models/${encodeURIComponent(m.provenance.benchmark.aa_slug)}" target="_blank" rel="noopener">AA 模型测评 ↗</a><br>Index v${escapeHTML(m.provenance.benchmark.index_version)}<br>${escapeHTML(m.provenance.benchmark.fetched_at)}</p>`:'<p>benchmark 尚未匹配</p>'}<p>速度为 AA 跨供应商参考，非百炼实测。</p>${m.pricing?.raw?.length&&m.pricing.beijing.input==null?'<p>计费结构未能可靠解析，未参与性价比排序。</p>':''}</details>`:''}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input,fmtPrice)}${cell(p.output,fmtPrice)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
     reveal('#modelCards tr');
     $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;

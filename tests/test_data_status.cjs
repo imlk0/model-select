@@ -21,3 +21,10 @@ assert.equal(validSnapshot(snapshot), true);
 assert.equal(validSnapshot({...snapshot,data:{...snapshot.data,updated_at:'older'}}),false);
 assert.equal(validSnapshot({...snapshot,modelsDoc:{...snapshot.modelsDoc,models:[model,model]}}),false);
 console.log('Snapshot consistency passed');
+
+const priceFormat = new Function(app.slice(app.indexOf('const fmtPrice ='),app.indexOf('const toast ='))+'return fmtPrice;')();
+assert.equal(priceFormat(0.15),'0.15');
+assert.equal(priceFormat(0.001),'0.001');
+assert.equal(priceFormat(0),'0');
+assert.equal(priceFormat(null),'N/A');
+console.log('Price precision passed');
