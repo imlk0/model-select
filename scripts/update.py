@@ -1,144 +1,178 @@
 #!/usr/bin/env python3
-"""Daily deterministic updater.
-
-- Reads Bailian facts from data/models.json (safe seed / cache).
-- Optionally enriches model benchmark + speed fields from Artificial Analysis Free API.
-- Recomputes Claude Code role rankings from config/scoring.json.
-- Never invents missing facts; missing metrics reduce evidence coverage.
-
-Environment:
-  ARTIFICIAL_ANALYSIS_API_KEY=...
-
-The AA API uses stable IDs, but model naming differs from Bailian codes. Keep ALIASES explicit.
-"""
-from __future__ import annotations
-import json, math, os, pathlib, urllib.request
+"""Fetch dynamic Bailian catalog and AA benchmarks; publish only traced facts."""
+import json
+import math
+import os
+import pathlib
+import re
+import sys
+import urllib.parse
+import urllib.request
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-MODELS_PATH = ROOT / "data/models.json"
-OUT_PATH = ROOT / "data/recommendations.json"
-SCORING_PATH = ROOT / "config/scoring.json"
+DEFAULT_CATALOG_URL = 'https://dashscope.aliyuncs.com/api/v1/models'
+AA_URL = 'https://artificialanalysis.ai/api/v2/language/models/free'
+BAILIAN_DOC = 'https://help.aliyun.com/zh/model-studio/list-models'
+AA_DOC = 'https://artificialanalysis.ai/data-api/docs'
 
-ALIASES = {
-    "qwen3.8-max-0902": ["Qwen3.8 Max", "Qwen 3.8 Max"],
-    "glm-5.3": ["GLM-5.3", "GLM 5.3"],
-    "deepseek-v4.1-flash": ["DeepSeek-V4.1-Flash", "DeepSeek V4.1 Flash"],
-    "qwen3.8-flash": ["Qwen3.8 Flash", "Qwen 3.8 Flash"],
-    "qwen3.7-plus": ["Qwen3.7 Plus", "Qwen 3.7 Plus"],
-    "qwen3.7-flash": ["Qwen3.7 Flash", "Qwen 3.7 Flash"],
-    "kimi-k3": ["Kimi-K3", "Kimi K3"],
-    "ZHIPU/GLM-5.3-FlashX": ["GLM-5.3-FlashX", "GLM 5.3 FlashX"],
-}
+def number(value):
+    if isinstance(value, bool): return None
+    try: result = float(value)
+    except (TypeError, ValueError): return None
+    return result if math.isfinite(result) and result >= 0 else None
 
-def load(path): return json.loads(path.read_text())
-def dump(path,obj): path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+"\n")
+def get(url, headers, params):
+    request = urllib.request.Request(url+'?'+urllib.parse.urlencode(params, doseq=True), headers={**headers, 'accept':'application/json', 'user-agent':'model-select/0.2'})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)
 
-def fetch_aa():
-    key=os.getenv("ARTIFICIAL_ANALYSIS_API_KEY")
-    if not key: return []
-    req=urllib.request.Request("https://artificialanalysis.ai/api/v2/language/models",headers={"x-api-key":key,"accept":"application/json","user-agent":"cc-model-router/0.1"})
-    with urllib.request.urlopen(req,timeout=30) as r:
-        payload=json.load(r)
-    if isinstance(payload,list): return payload
-    return payload.get("data") or payload.get("models") or []
+def fetch_catalog(endpoint, key):
+    rows, pages = [], []
+    for page in range(1, 1001):
+        payload = get(endpoint, {'Authorization':'Bearer '+key}, {'page_no':page, 'page_size':100, 'capabilities':'TG', 'inference_providers':'aliyun-bailian', 'service_site':'asia-pacific-china'})
+        if payload.get('success') is not True: raise ValueError('Bailian response not successful')
+        output = payload.get('output', {})
+        batch, total = output.get('models'), output.get('total')
+        if not isinstance(batch, list) or not isinstance(total, int): raise ValueError('Bailian schema changed')
+        pages.append(payload); rows.extend(batch)
+        if len(rows) >= total: break
+        if not batch: raise ValueError('Bailian pagination incomplete')
+    else: raise ValueError('Bailian pagination limit')
+    if not rows: raise ValueError('Empty Bailian catalog')
+    return rows, pages
 
-def pick(obj, *paths):
-    for path in paths:
-        cur=obj
-        ok=True
-        for k in path.split('.'):
-            if not isinstance(cur,dict) or k not in cur: ok=False; break
-            cur=cur[k]
-        if ok and isinstance(cur,(int,float)): return float(cur)
-    return None
+def fetch_aa(key):
+    rows, pages, version = [], [], None
+    for page in range(1, 1001):
+        payload = get(AA_URL, {'x-api-key':key}, {'page':page, 'page_size':200, 'prompt_type':'long'})
+        batch, pagination = payload.get('data'), payload.get('pagination')
+        if not isinstance(batch, list) or not isinstance(pagination, dict): raise ValueError('AA schema changed')
+        current = payload.get('intelligence_index_version')
+        if current is None or (version is not None and current != version): raise ValueError('Missing or inconsistent AA version')
+        version = current; pages.append(payload); rows.extend(batch)
+        if pagination.get('has_more') is False: break
+        if pagination.get('has_more') is not True or not batch: raise ValueError('AA pagination incomplete')
+    else: raise ValueError('AA pagination limit')
+    return rows, pages, version
 
-def enrich(models, aa_rows):
-    for m in models:
-        names={x.lower() for x in ALIASES.get(m["code"],[m["name"]])}
-        row=next((r for r in aa_rows if str(r.get("name","")).lower() in names),None)
-        if not row: continue
-        ev=row.get("evaluations") or {}
-        m["scores"]["capability"] = pick(row,"intelligence_index","evaluations.intelligence_index")
-        m["scores"]["coding"] = pick(row,"coding_index","evaluations.coding_index","evaluations.livecodebench")
-        m["scores"]["agentic"] = pick(row,"agentic_index","evaluations.agentic_index","evaluations.terminal_bench")
-        m["speed"]["tokens_per_second"] = pick(row,"median_output_tokens_per_second")
-        m["sources"] = sorted(set(m.get("sources",[])+["Artificial Analysis"]))
-    return models
+def input_range_matches(label, tokens=10000):
+    # Recognize documented input-token ranges only; reject unknown billing rules.
+    label = label.replace(' ', '').lower()
+    if label == 'default': return True
+    if not re.fullmatch(r'(?:[0-9.]+k?(?:<|<=))?input(?:<|<=)[0-9.]+k?', label): return False
+    def value(text): return float(text[:-1])*1000 if text.endswith('k') else float(text)
+    left, right = label.split('input')
+    if left:
+        match = re.fullmatch(r'([0-9.]+k?)(<=|<)',left)
+        low = value(match[1])
+        if not (low <= tokens if match[2]=='<=' else low < tokens): return False
+    match = re.fullmatch(r'(<=|<)([0-9.]+k?)',right)
+    high = value(match[2])
+    return tokens <= high if match[1]=='<=' else tokens < high
 
-def normalize(vals):
-    present=[v for v in vals if isinstance(v,(int,float))]
-    if not present: return [None]*len(vals)
-    lo,hi=min(present),max(present)
-    if hi==lo: return [50 if v is not None else None for v in vals]
-    return [None if v is None else 100*(v-lo)/(hi-lo) for v in vals]
+def simple_prices(row):
+    groups = row.get('prices') or []
+    selected = [g for g in groups if input_range_matches(g.get('range_name',''))]
+    result = {'input':None, 'output':None}
+    if len(selected) != 1: return result
+    seen = set()
+    for item in selected[0].get('prices', []):
+        key = {'input_token':'input', 'output_token':'output'}.get(item.get('type'))
+        if key and item.get('price_unit') in ('每百万tokens', '每百万Token'):
+            if key in seen: return {'input':None,'output':None}
+            seen.add(key); result[key] = number(item.get('price'))
+    return result
 
-def compute(models,cfg):
-    n=len(models)
-    fields={
-      "capability":[m["scores"].get("capability") for m in models],
-      "coding":[m["scores"].get("coding") for m in models],
-      "agentic":[m["scores"].get("agentic") for m in models],
-      "speed":[m["speed"].get("tokens_per_second") for m in models],
-      "context":[m.get("context_k") for m in models],
-    }
-    norm={k:normalize(v) for k,v in fields.items()}
-    standard=cfg["standard_task"]
-    costs=[]
-    for m in models:
-        p=(m.get("pricing") or {}).get("beijing") or {}
-        if p.get("input") is None or p.get("output") is None: costs.append(None)
-        else: costs.append(p["input"]*standard["input_tokens"]/1e6 + p["output"]*standard["output_tokens"]/1e6)
-    inv=[None if c in (None,0) else 1/c for c in costs]
-    norm["value"]=normalize(inv)
+def normalize_name(value):
+    return re.sub(r'[^a-z0-9]', '', str(value).lower())
 
-    # evidence coverage: pricing + context + available benchmark/speed metrics
-    for i,m in enumerate(models):
-        checks=[costs[i] is not None, fields["context"][i] is not None, fields["capability"][i] is not None, fields["coding"][i] is not None, fields["agentic"][i] is not None, fields["speed"][i] is not None]
-        m["evidence_coverage"]=sum(checks)/len(checks)
+def match_aa(row, aa_rows, mappings):
+    explicit = mappings.get(row['model'])
+    if explicit:
+        matches = [r for r in aa_rows if r.get('id') == explicit.get('aa_id')]
+    else:
+        # Strict spelling normalization only, never remove versions/effort/suffixes.
+        codes = {normalize_name(row['model']), normalize_name(row.get('equivalent_snapshot') or row['model'])}
+        matches = [r for r in aa_rows if normalize_name(r.get('slug')) in codes]
+    return matches[0] if len(matches) == 1 else None
 
-    roles={}
-    for role,weights in cfg["profiles"].items():
-        scored=[]
-        for i,m in enumerate(models):
-            if m["evidence_coverage"] < cfg["minimum_evidence_coverage"]: continue
-            total=0; used=0
-            for metric,w in weights.items():
-                v=norm.get(metric,[None]*n)[i]
-                if v is not None: total += v*w; used += w
-            if used: scored.append((total/used,m))
-        scored.sort(key=lambda x:x[0],reverse=True)
-        if not scored: continue
-        candidates=[m["code"] for _,m in scored[:4]]
-        best=scored[0][1]["code"]
-        speed_rank=sorted(scored,key=lambda x:(x[1]["speed"].get("tokens_per_second") or -1),reverse=True)
-        fastest=speed_rank[0][1]["code"]
-        value_rank=sorted(scored,key=lambda x:(norm["value"][models.index(x[1])] if norm["value"][models.index(x[1])] is not None else -1),reverse=True)
-        best_value=value_rank[0][1]["code"]
-        positioning={"fable":"极限能力、长程 Agent、复杂 Coding","opus":"高端推理、Coding、Agent 重型任务","sonnet":"日常主力，能力 / 延迟 / 成本均衡","haiku":"快速、便宜、高并发、Subagent"}[role]
-        roles[role]={"positioning":positioning,"candidates":candidates,"best":best,"fastest":fastest,"best_value":best_value,"confidence":round(sum(m["evidence_coverage"] for _,m in scored[:3])/min(3,len(scored)),2)}
+def build_models(rows, aa_rows, version, mappings, timestamp):
+    models = []
+    for row in rows:
+        code = row.get('model')
+        if not code or row.get('inference_provider') not in (None, 'aliyun-bailian'): continue
+        if 'Text' not in (row.get('inference_metadata') or {}).get('response_modality', []): continue
+        matched = match_aa(row, aa_rows, mappings)
+        ev = (matched or {}).get('evaluations') or {}
+        scores = {k:number(ev.get('artificial_analysis_'+v+'_index')) for k,v in [('capability','intelligence'),('coding','coding'),('agentic','agentic')]}
+        # Display indices independently. No assertion that their arithmetic mean is meaningful.
+        scores.update(comparable_scale=False, version=version if matched else None)
+        context = number((row.get('model_info') or {}).get('context_window'))
+        price = simple_prices(row)
+        speed = number(((matched or {}).get('performance') or {}).get('median_output_tokens_per_second'))
+        model = {'code':code,'name':row.get('name') or code,'context_k':context/1000 if context is not None else None,'pricing':{'beijing':price,'raw':row.get('prices') or [],'input_tokens_basis':10000},'scores':scores,'speed':{'tokens_per_second':speed,'scope':'AA 跨供应商中位数，非百炼实测速率','prompt_type':'long'},'features':row.get('features') or [],'sources':['Bailian']+(['Artificial Analysis'] if matched else []),'provenance':{'catalog':{'url':BAILIAN_DOC,'fetched_at':timestamp,'model_id':code},'benchmark':{'url':AA_DOC,'fetched_at':timestamp,'aa_id':matched.get('id'),'aa_slug':matched.get('slug'),'aa_name':matched.get('name'),'match_method':'explicit-aa-id' if code in mappings else 'unique-normalized-slug','index_version':version} if matched else None}}
+        checks = [context is not None,price['input'] is not None and price['output'] is not None,*[v is not None for k,v in scores.items() if k in ('capability','coding','agentic')],speed is not None]
+        model['evidence_coverage'] = sum(checks)/len(checks)
+        models.append(model)
+    unique = {m['code']:m for m in models}
+    if len(unique) != len(models): raise ValueError('Duplicate provider model IDs')
+    return sorted(models, key=lambda m:m['code'])
+
+def recommendations(models):
+    # Operational tiers use capability quartiles, not equivalence to official models.
+    eligible = [m for m in models if 'function-calling' in m['features'] and m['scores']['capability'] is not None]
+    eligible.sort(key=lambda m:(-m['scores']['capability'],m['code']))
+    descriptions = {'fable':'能力前 25% · 高难度任务','opus':'能力 25–50% · 复杂编程','sonnet':'能力 50–75% · 日常开发','haiku':'能力后 25% · 轻量任务'}
+    roles = {}
+    for i,key in enumerate(descriptions):
+        pool = [m for rank,m in enumerate(eligible) if rank*4//len(eligible) == i]
+        roles[key] = {'positioning':descriptions[key],'candidates':[m['code'] for m in pool],'best':pool[0]['code'] if pool else None}
     return roles
 
-def main():
-    doc=load(MODELS_PATH); cfg=load(SCORING_PATH)
-    try:
-        aa=fetch_aa()
-    except Exception as exc:
-        print(f"Retaining published snapshot: API unavailable ({type(exc).__name__})")
-        return
-    if not aa:
-        print("Retaining published snapshot: no API data")
-        return
-    doc["models"]=enrich(doc["models"],aa)
-    roles=compute(doc["models"],cfg)
-    # Publish only a complete snapshot. Do not refresh timestamps on failed updates.
-    required=("capability","coding","agentic")
-    if len(roles)<4 or any(any(m["scores"].get(k) is None for k in required) or m["speed"].get("tokens_per_second") is None or m["scores"].get("comparable_scale") is not True for m in doc["models"]):
-        print("Retaining published snapshot: incomplete or incomparable metrics")
-        return
-    out={"updated_at":datetime.now(timezone.utc).isoformat(),"region":doc["region"],"scoring_version":cfg["version"],"roles":roles}
-    dump(MODELS_PATH,doc)
-    dump(OUT_PATH,out)
-    print(f"updated {OUT_PATH}; AA rows={len(aa)}; roles={len(roles)}")
+def dump(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temp = path.with_suffix('.tmp')
+    temp.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');temp.replace(path)
 
-if __name__=="__main__": main()
+def report(status, reason, **extra):
+    info = {'status':status,'attempted_at':datetime.now(timezone.utc).isoformat(),'execution': 'github-actions' if os.getenv('GITHUB_ACTIONS') else 'local','run_url': ('https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']) if os.getenv('GITHUB_RUN_ID') else None,'reason':reason,**extra}
+    dump(ROOT/'data/update-status.json', info)
+    print(json.dumps(info,ensure_ascii=False))
+    if os.getenv('GITHUB_STEP_SUMMARY'):
+        with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as stream:
+            stream.write('## Data update\n\n'+json.dumps(info,ensure_ascii=False,indent=2)+'\n')
+
+def main():
+    key, endpoint = os.getenv('DASHSCOPE_API_KEY'), os.getenv('BAILIAN_MODELS_ENDPOINT') or DEFAULT_CATALOG_URL
+    if not key:
+        report('blocked','Missing DASHSCOPE_API_KEY');return 1
+    parsed = urllib.parse.urlparse(endpoint)
+    if parsed.scheme != 'https' or not parsed.hostname or not (parsed.hostname == 'dashscope.aliyuncs.com' or parsed.hostname.endswith('.cn-beijing.maas.aliyuncs.com')) or parsed.path != '/api/v1/models' or parsed.query or parsed.username or parsed.password or parsed.port not in (None,443):
+        report('failed','Expected legacy DashScope or Beijing workspace HTTPS model-list endpoint');return 1
+    try:
+        rows, raw_catalog = fetch_catalog(endpoint,key)
+        aa_rows, raw_aa, version = [], [], None
+        aa_state = 'missing-key'
+        if os.getenv('ARTIFICIAL_ANALYSIS_API_KEY'):
+            try:
+                aa_rows,raw_aa,version = fetch_aa(os.environ['ARTIFICIAL_ANALYSIS_API_KEY']);aa_state='success'
+            except Exception as exc: aa_state='failed:'+type(exc).__name__
+        mappings = json.loads((ROOT/'config/model-mappings.json').read_text())
+        timestamp = datetime.now(timezone.utc).isoformat()
+        models = build_models(rows,aa_rows,version,mappings,timestamp)
+        for model in models: model['provenance']['catalog']['endpoint'] = endpoint
+        if not models: raise ValueError('No supported text models')
+        doc = {'schema_version':2,'verified_catalog':True,'updated_at':timestamp,'region':'华北2（北京）','currency':'CNY','price_unit':'per 1M tokens','models':models}
+        rec = {'updated_at':timestamp,'region':doc['region'],'schema_version':2,'standard_task':{'input_tokens':10000,'output_tokens':2000},'tier_method':'工具调用模型按 AA 综合能力四分位分组；非官方模型等效关系','roles':recommendations(models)}
+        # Raw catalog/benchmarks are public model facts. Never save request headers or keys.
+        dump(ROOT/'data/raw/bailian.json',{'fetched_at':timestamp,'pages':raw_catalog})
+        if raw_aa: dump(ROOT/'data/raw/artificial-analysis.json',{'fetched_at':timestamp,'pages':raw_aa})
+        dump(ROOT/'data/models.json',doc);dump(ROOT/'data/recommendations.json',rec)
+        coverage = sum(m['provenance']['benchmark'] is not None for m in models)
+        report('updated' if aa_state=='success' else 'partial','Published dynamic provider catalog',models=len(models),benchmark_matches=coverage,aa_status=aa_state,catalog_endpoint=endpoint,field_counts={field:sum(m['scores'][field] is not None for m in models) for field in ('capability','coding','agentic')},speed_count=sum(m['speed']['tokens_per_second'] is not None for m in models))
+        return 0 if aa_state=='success' else 1
+    except Exception as exc:
+        report('failed','Published snapshot retained: '+type(exc).__name__);return 1
+
+if __name__ == '__main__': sys.exit(main())

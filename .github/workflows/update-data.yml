@@ -13,14 +13,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Validate data adapters
+        run: python -m unittest discover -s tests -v
       - name: Update benchmarks and rankings
         env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          BAILIAN_MODELS_ENDPOINT: ${{ vars.BAILIAN_MODELS_ENDPOINT }}
           ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
         run: python scripts/update.py
       - name: Commit changed data
+        if: always()
         run: |
-          git config user.name "cc-model-router-bot"
+          git config user.name "model-select-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/*.json
+          git add data/
           git diff --cached --quiet || git commit -m "chore: refresh model recommendations"
           git push

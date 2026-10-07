@@ -14,12 +14,12 @@
 
 ## 数据状态
 
-目前页面默认展示**演示数据**，用于打磨选择流程和界面，数值与排名不代表真实测评结果。接入完整数据后，再作为实际选择参考。
+目前页面默认展示**演示数据**，用于打磨选择流程和界面，数值与排名不代表真实测评结果。采集器已支持动态目录、价格、上下文与 AA 指标；需要配置采集密钥并完成真实接口验收，详见数据来源文档。
 
-能力排序使用可比较的 Coding / Agentic 均值；速度看输出 tok/s；性价比按固定输入、输出用量的成本比较。Claude Code 和 Codex 均在各档候选中排序。GPT 档位用于任务定位，不代表模型能力已达到对应 GPT 水平。
+能力排序使用 AA Intelligence Index；速度看输出 tok/s；性价比按固定输入、输出用量的成本比较。Claude Code 和 Codex 均在各档候选中排序。GPT 档位用于任务定位，不代表模型能力已达到对应 GPT 水平。
 
 ---
 
-[维护与部署](docs/maintenance.md) · [评分配置](config/scoring.json)
+[维护与部署](docs/maintenance.md) · [数据来源与可靠性](docs/data-sources.md)
 
 GPT 档位名称与定位参考 [OpenAI 官方模型目录](https://developers.openai.com/api/docs/models/all)；Terra 对应 GPT-5.6，其他档位采用当前主推版本。

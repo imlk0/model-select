@@ -60,3 +60,5 @@
 @media(max-width:600px){.masthead-actions{gap:14px}.theme-toggle{font-size:10px;min-height:44px}}
 
 .theme-toggle{width:40px;height:40px;padding:10px;display:inline-flex;align-items:center;justify-content:center}.theme-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.theme-toggle:hover{background:var(--surface)}
+
+.data-source{font-size:10px;color:var(--muted);margin:3px 0 6px}.data-source summary{cursor:pointer;width:fit-content}.data-source p{margin:5px 0;overflow-wrap:anywhere}.data-source a{color:var(--accent)}

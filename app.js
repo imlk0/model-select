@@ -5,19 +5,20 @@ const updateThemeLabel=()=>{const mode=document.documentElement.dataset.theme||'
 updateThemeLabel();
 themeButton.onclick=()=>{const modes=['system','light','dark'],current=document.documentElement.dataset.theme||'system',next=modes[(modes.indexOf(current)+1)%3];document.documentElement.dataset.theme=next;try{localStorage.setItem('model-select:theme',next);}catch{}updateThemeLabel();};
 const $ = s => document.querySelector(s);
+const escapeHTML=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 const fmt = n => (n === null || n === undefined) ? 'N/A' : Number(n).toFixed(Number(n)%1?1:0);
 const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1200); };
 const copy = async text => { try { await navigator.clipboard.writeText(text); toast(`已复制 ${text}`); } catch { toast("复制失败，请手动选择代码复制"); } };
-const modelLabel = m => `${m.name} (${m.code})`;
+const modelLabel = m => `${escapeHTML(m.name)} (${escapeHTML(m.code)})`;
 
 const complete = snapshot => {
-  if(!snapshot?.modelsDoc?.models?.length || !snapshot?.data?.roles) return false;
-  const models=snapshot.modelsDoc.models;
-  const codes=new Set(models.map(m=>m.code));
-  return models.every(m=>m.name && m.code && Number.isFinite(m.scores?.coding) && Number.isFinite(m.scores?.agentic) && m.scores?.comparable_scale===true && Number.isFinite(m.scores?.capability) && Number.isFinite(m.speed?.tokens_per_second) && Number.isFinite(m.pricing?.beijing?.input) && Number.isFinite(m.pricing?.beijing?.output) && Number.isFinite(m.context_k)) && ['fable','opus','sonnet','haiku'].every(r=>snapshot.data.roles[r]?.candidates?.length>=3 && snapshot.data.roles[r].candidates.every(c=>codes.has(c)) && codes.has(snapshot.data.roles[r].best));
+  const doc=snapshot?.modelsDoc,roles=snapshot?.data?.roles;
+  if(doc?.schema_version!==2||doc.verified_catalog!==true||!doc.models?.length||!roles)return false;
+  const codes=new Set(doc.models.map(m=>m.code));
+  return codes.size===doc.models.length&&doc.models.every(m=>m.name&&m.code&&m.provenance?.catalog?.fetched_at&&m.provenance?.catalog?.model_id===m.code)&&['fable','opus','sonnet','haiku'].every(r=>Array.isArray(roles[r]?.candidates)&&roles[r].candidates.every(c=>codes.has(c)));
 };
 async function loadSnapshot(){
-  const key='model-select:last-good:v1';
+  const key='model-select:last-good:v2';
   const get=async path=>{const r=await fetch(path,{signal:AbortSignal.timeout(4000)});if(!r.ok)throw Error('Unavailable');return r.json();};
   if(new URLSearchParams(location.search).get('demo')==='1')return window.MODEL_SELECT_DEMO;
   try{
@@ -31,19 +32,30 @@ async function loadSnapshot(){
 async function boot(){
   const {data,modelsDoc,mode}=await loadSnapshot();
   $('#demoWarning').hidden=mode!=='demo';
+  try {
+    const response=await fetch('data/update-status.json',{signal:AbortSignal.timeout(4000)});
+    const status=response.ok?await response.json():null;
+    if(mode!=='demo'&&status?.execution==='github-actions'&&status.status!=='updated'){
+      const warning=$('#updateWarning');warning.hidden=false;
+      warning.textContent=status.status==='partial'?'评测采集未完成：当前仅展示已核实的目录和指标。':'最近采集未成功：当前展示上次有效快照，请核对快照时间。';
+    }
+  }catch{}
+
   const models = Object.fromEntries(modelsDoc.models.map(m=>[m.code,m]));
   $('#updatedAt').textContent = new Date(data.updated_at).toLocaleString('zh-CN',{hour12:false});
   $('#evidenceNote').textContent = mode==='demo'?'演示数据':mode==='cached'?'最近有效快照':data.region;
 
   let activeTool='claude';
   const profiles={claude:['fable','opus','sonnet','haiku'].map(key=>({key,label:key, ...data.roles[key]})),codex:[{key:'astra',label:'Astra',positioning:'高难度分析、复杂 Agent 任务',candidates:data.roles.fable.candidates},{key:'sol',label:'Sol',positioning:'复杂编程与日常主力',candidates:data.roles.opus.candidates},{key:'terra',label:'Terra',positioning:'能力与成本均衡',candidates:data.roles.sonnet.candidates},{key:'luna',label:'Luna',positioning:'明确的小任务、快速响应',candidates:data.roles.haiku.candidates}]};
+  if(mode!=='demo'&&data.tier_method){const note=document.createElement('p');note.className='table-note';note.textContent=data.tier_method;$('.recommendations').append(note);}
   const valid = n => typeof n === 'number' && Number.isFinite(n);
-  // Compare coding and agentic only when they are supplied on the same scale.
-  const ability = m => valid(m.scores?.coding) && valid(m.scores?.agentic) && m.scores?.comparable_scale === true ? (m.scores.coding+m.scores.agentic)/2 : null;
+  // Preserve the original AA Intelligence Index; do not average different indices.
+  const ability = m => m.scores?.capability ?? null;
   const cost = m => { const p=m.pricing?.beijing; return valid(p?.input)&&valid(p?.output) ? p.input*.01+p.output*.002 : null; };
-  const entry = (m, value, rank) => `<button class="model-trigger" data-model="${m.code}" data-status="${valid(value)?'排序值 '+fmt(value):'数据快照'}" aria-describedby="modelPopover">${rank?`<span class="rank-number">${rank}</span>`:''}${m.name}</button>`;
+  const entry = (m, value, rank) => `<button class="model-trigger" data-model="${escapeHTML(m.code)}" data-status="${valid(value)?'排序值 '+fmt(value):'数据快照'}" aria-describedby="modelPopover">${rank?`<span class="rank-number">${rank}</span>`:''}${escapeHTML(m.name)}</button>`;
   const ranking = (pool, metric) => {
     const ranked=pool.map(m=>({m,value:metric(m)})).filter(x=>valid(x.value)).sort((a,b)=>b.value-a.value || a.m.code.localeCompare(b.m.code));
+    if(!ranked.length)return '<span class="muted">暂无可靠指标</span>';
     return ranked.slice(0,3).map(x=>entry(x.m,x.value,1+ranked.filter(y=>y.value>x.value).length)).join('');
   };
   const metrics={ability:ability,speed:m=>m.speed?.tokens_per_second,value:m=>{const a=ability(m),c=cost(m);return valid(a)&&c>0?a/c:null;}};
@@ -62,10 +74,12 @@ async function boot(){
     const next=profiles[activeTool].map(role=>{
       const pool=role.candidates.map(c=>models[c]).filter(Boolean);
       const m=pool.filter(m=>valid(metric(m))).sort((a,b)=>metric(b)-metric(a)||a.code.localeCompare(b.code))[0];
-      return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">${m.name}</div><button class="code copy" data-copy="${m.code}">${m.code}</button></article>`;
+      if(!m)return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">暂无可靠推荐</div><p class="muted">等待指标核实</p></article>`;
+      return `<article class="summary-card"><div class="role">${role.label}</div><div class="pick">${escapeHTML(m.name)}</div><button class="code copy" data-copy="${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></article>`;
     });
     if(animateChanges&&previous.length===next.length){
       next.forEach((html,i)=>{const template=document.createElement('template');template.innerHTML=html;const fresh=template.content.firstElementChild,old=previous[i];
+        if(!old.querySelector('.copy')||!fresh.querySelector('.copy')){old.replaceWith(fresh);return;}
         if(old.querySelector('.copy').dataset.copy===fresh.querySelector('.copy').dataset.copy)return;
         ['.pick','.copy'].forEach(selector=>{const element=old.querySelector(selector);element.replaceWith(fresh.querySelector(selector));});
         if(motionAllowed())old.querySelectorAll('.pick,.copy').forEach(el=>el.animate([{opacity:0,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:210,easing:'ease-out'}));
@@ -94,7 +108,7 @@ async function boot(){
   const renderRanking=()=>{
     $('#recommendationRows').innerHTML=profiles[activeTool].map(x=>{
       const pool=x.candidates.map(c=>models[c]).filter(Boolean);
-      return `<tr><td class="role-cell"><strong>${x.label==='fable'?'Fable':x.label==='opus'?'Opus':x.label==='sonnet'?'Sonnet':x.label==='haiku'?'Haiku':x.label}</strong><p class="field-description">${x.positioning}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,metrics.speed)}</td><td>${ranking(pool,metrics.value)}</td></tr>`;
+      return `<tr><td class="role-cell"><strong>${x.label==='fable'?'Fable':x.label==='opus'?'Opus':x.label==='sonnet'?'Sonnet':x.label==='haiku'?'Haiku':x.label}</strong><p class="field-description">${escapeHTML(x.positioning)}</p></td><td>${ranking(pool,ability)}</td><td>${ranking(pool,metrics.speed)}</td><td>${ranking(pool,metrics.value)}</td></tr>`;
     }).join('');
     $('.selection-table th').textContent=activeTool==='claude'?'Claude 档位':'GPT 档位';
     $('.field-hint').hidden=activeTool!=='claude';
@@ -105,7 +119,9 @@ async function boot(){
   const close=()=>{popover.hidden=true;active=null;};
   const show=el=>{
     clearTimeout(closeTimer); active=el; const m=models[el.dataset.model],p=m.pricing?.beijing;
-    popover.innerHTML=`<strong>${m.name}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${m.code}" aria-label="复制模型代码">${m.code} ↗ 复制</button><dl><dt>输入 / 输出价格</dt><dd>¥${fmt(p?.input)} / ¥${fmt(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${modelsDoc.region}</p>`;
+    popover.innerHTML=`<strong>${escapeHTML(m.name)}</strong><div class="muted">${el.dataset.status}</div><button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制模型代码">${escapeHTML(m.code)} ↗ 复制</button><dl><dt>输入 / 输出价格 · 10k 输入口径</dt><dd>¥${fmt(p?.input)} / ¥${fmt(p?.output)} 每百万 token</dd><dt>上下文</dt><dd>${fmt(m.context_k)}K tokens</dd><dt>Coding / Agentic</dt><dd>${fmt(m.scores?.coding)} / ${fmt(m.scores?.agentic)}</dd><dt>输出速度 · AA 跨供应商参考</dt><dd>${fmt(m.speed?.tokens_per_second)} tok/s</dd></dl><p class="muted">${escapeHTML(modelsDoc.region)}</p>`;
+    const evidence=m.provenance;
+    if(evidence){const note=document.createElement('p');note.className='muted';note.textContent='目录核验：'+evidence.catalog.fetched_at+' · benchmark：'+(evidence.benchmark?'AA v'+evidence.benchmark.index_version:'未匹配');popover.append(note);}
     popover.querySelector('[data-copy]').onclick=()=>copy(m.code);
     const wasHidden=popover.hidden;
     popover.hidden=false;
@@ -141,12 +157,12 @@ async function boot(){
   const sortValues={name:m=>m.name,capability:m=>m.scores?.capability,coding:m=>m.scores?.coding,agentic:m=>m.scores?.agentic,speed:m=>m.speed?.tokens_per_second,input:m=>m.pricing?.beijing?.input,output:m=>m.pricing?.beijing?.output,context:m=>m.context_k,evidence:m=>m.evidence_coverage};
   const renderCards = q => {
     const needle=q.trim().toLowerCase();
-    const filtered=modelsDoc.models.filter(m=>!needle || `${m.name} ${m.code}`.toLowerCase().includes(needle));
+    const filtered=modelsDoc.models.filter(m=>!needle || `${escapeHTML(m.name)} ${escapeHTML(m.code)}`.toLowerCase().includes(needle));
     if(tableSort)filtered.sort((a,b)=>{const x=sortValues[tableSort](a),y=sortValues[tableSort](b);if(x==null)return y==null?0:1;if(y==null)return -1;return sortDirection*(typeof x==='string'?x.localeCompare(y):(x-y));});
     const cell = n => `<td class="numeric ${n==null?'missing':''}">${fmt(n)}</td>`;
     $('#modelCards').innerHTML=filtered.map(m=>{
       const p=m.pricing?.beijing||{};
-      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${m.name}</div><button class="code copy" data-copy="${m.code}" aria-label="复制 ${m.code}">${m.code}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
+      return `<tr id="model-${encodeURIComponent(m.code)}" tabindex="-1"><td><div class="model-name">${escapeHTML(m.name)}</div>${m.provenance?`<details class="data-source"><summary>来源</summary><p><a href="https://help.aliyun.com/zh/model-studio/list-models" target="_blank" rel="noopener">百炼模型目录 ↗</a><br>${escapeHTML(m.provenance.catalog.fetched_at)}</p>${m.provenance.benchmark?`<p><a href="https://artificialanalysis.ai/models/${encodeURIComponent(m.provenance.benchmark.aa_slug)}" target="_blank" rel="noopener">AA 模型测评 ↗</a><br>Index v${escapeHTML(m.provenance.benchmark.index_version)}<br>${escapeHTML(m.provenance.benchmark.fetched_at)}</p>`:'<p>benchmark 尚未匹配</p>'}<p>速度为 AA 跨供应商参考，非百炼实测。</p>${m.pricing?.raw?.length&&m.pricing.beijing.input==null?'<p>计费结构未能可靠解析，未参与性价比排序。</p>':''}</details>`:''}<button class="code copy" data-copy="${escapeHTML(m.code)}" aria-label="复制 ${escapeHTML(m.code)}">${escapeHTML(m.code)}</button></td>${cell(m.scores?.capability)}${cell(m.scores?.coding)}${cell(m.scores?.agentic)}${cell(m.speed?.tokens_per_second)}${cell(p.input)}${cell(p.output)}${cell(m.context_k)}<td class="numeric">${Math.round((m.evidence_coverage||0)*100)}%</td></tr>`;
     }).join('') || '<tr><td colspan="9">没有匹配的模型</td></tr>';
     reveal('#modelCards tr');
     $('#filterCount').textContent = `${filtered.length} / ${modelsDoc.models.length} MODELS`;
