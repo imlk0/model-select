@@ -74,3 +74,5 @@
 @media(max-width:600px){.source-tooltip{left:0;right:auto;width:min(250px,calc(100vw - 44px))}}
 
 .model-popover .popover-sources{margin:6px 0 12px;padding:0;border:0;gap:6px 16px;font-size:11px;color:var(--muted)}.model-popover .popover-sources a{transition:color .2s ease}.model-popover .popover-sources a:hover{color:var(--accent)}
+
+.model-popover .detail-prices{width:100%;border:0;margin:4px 0;border-collapse:collapse}.model-popover .detail-prices th,.model-popover .detail-prices td{padding:3px 8px 3px 0;border:0;text-align:left;font:11px var(--mono)}.model-popover .detail-prices th{color:var(--muted);font:10px system-ui}
