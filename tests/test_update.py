@@ -92,4 +92,5 @@ class PricingReleaseTests(unittest.TestCase):
         aa={'id':'correct','slug':'qwen3-6-max','name':'Qwen3.6 Max Preview'}
         self.assertEqual(u.match_aa(row,[aa,{'id':'wrong','slug':'qwen3-7-max','name':'Qwen3.7 Max Preview'}],{}),aa)
         row['name']='Qwen3.6 Max Thinking'
+        row['model']='qwen3.6-max-thinking'
         self.assertIsNone(u.match_aa(row,[aa],{}))
