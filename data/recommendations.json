@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T22:44:04.543711+00:00",
+  "updated_at": "2026-10-10T21:51:02.498359+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -86,7 +86,6 @@
         "deepseek-v4.1-flash",
         "deepseek-v4-pro",
         "deepseek-v4-pro-0813",
-        "deepseek-v4-flash",
         "deepseek-v4-flash-0731",
         "glm-5.2",
         "glm-5.2-fast-preview",
@@ -160,8 +159,8 @@
       "candidates": [
         "glm-5.2",
         "glm-5.2-fast-preview",
+        "qwen3.8-27b",
         "qwen3.7-max",
-        "qwen3.6-max-preview",
         "glm-5",
         "kimi-k2.6",
         "qwen3.6-plus"
@@ -181,14 +180,15 @@
     "luna": {
       "positioning": "轻量任务与快速响应",
       "candidates": [
+        "glm-5.2",
+        "glm-5.2-fast-preview",
         "qwen3.7-max",
-        "qwen3.6-max-preview",
         "glm-5",
         "kimi-k2.6",
         "qwen3.6-plus",
         "glm-5.1"
       ],
-      "best": "qwen3.7-max",
+      "best": "glm-5.2",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "36667da0-9222-4967-adbb-f7efa15ad213",
