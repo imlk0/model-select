@@ -7,7 +7,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "12adec16-19fe-4d92-aeff-5ef3eb7e780a",
         "aa_slug": "minimax-m2-5",
         "aa_name": "MiniMax-M2.5",
@@ -37,7 +37,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "444cdb1e-bab8-42cd-938c-b2d7a93e2da1",
         "aa_slug": "deepseek-r1-distill-qwen-1-5b",
         "aa_name": "DeepSeek R1 Distill Qwen 1.5B",
@@ -56,7 +56,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
         "aa_slug": "deepseek-v4-flash",
         "aa_name": "DeepSeek V4 Flash 0731 (Max)",
@@ -71,7 +71,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "83173329-c09a-41f1-a028-a282a5f908d7",
         "aa_slug": "deepseek-v4-pro",
         "aa_name": "DeepSeek V4 Pro 0813 (Max)",
@@ -86,7 +86,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "83173329-c09a-41f1-a028-a282a5f908d7",
         "aa_slug": "deepseek-v4-pro",
         "aa_name": "DeepSeek V4 Pro 0813 (Max)",
@@ -101,7 +101,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "dbe7c625-3100-4463-b479-a228c41f75dd",
         "aa_slug": "deepseek-v4-1-flash",
         "aa_name": "DeepSeek V4.1 Flash (Max)",
@@ -119,7 +119,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "40663ad2-b218-471e-bdd4-a1e0c2360e2b",
         "aa_slug": "glm-5",
         "aa_name": "GLM-5 (Reasoning)",
@@ -137,7 +137,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
         "aa_slug": "glm-5-1",
         "aa_name": "GLM-5.1 (Reasoning)",
@@ -152,7 +152,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
         "aa_slug": "glm-5-2",
         "aa_name": "GLM-5.2 (Max)",
@@ -167,7 +167,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
         "aa_slug": "glm-5-2",
         "aa_name": "GLM-5.2 (Max)",
@@ -185,7 +185,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
         "aa_slug": "glm-5-3",
         "aa_name": "GLM-5.3 (Max)",
@@ -200,7 +200,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
         "aa_slug": "glm-5-3",
         "aa_name": "GLM-5.3 (Max)",
@@ -218,7 +218,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
         "aa_slug": "kimi-k2-5",
         "aa_name": "Kimi K2.5 (Reasoning)",
@@ -235,7 +235,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "0de67206-4d36-4d10-b8f6-cf37fa747a03",
         "aa_slug": "kimi-k2-6",
         "aa_name": "Kimi K2.6 (Reasoning)",
@@ -250,7 +250,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "8d0cb231-7303-452c-9923-a9620b948475",
         "aa_slug": "kimi-k2-7-code",
         "aa_name": "Kimi K2.7 Code",
@@ -265,7 +265,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
         "aa_slug": "kimi-k3",
         "aa_name": "Kimi K3 (Max)",
@@ -648,7 +648,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "2236df45-0699-40d1-b5cc-69ee345d2257",
         "aa_slug": "qwen3-5-122b-a10b",
         "aa_name": "Qwen3.5 122B A10B (Reasoning)",
@@ -663,7 +663,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "169e47f5-3d4d-4ad4-8f8b-ab46f0c73f67",
         "aa_slug": "qwen3-5-27b",
         "aa_name": "Qwen3.5 27B (Reasoning)",
@@ -681,7 +681,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "46d8315e-1630-463f-ab62-84185fa0faab",
         "aa_slug": "qwen3-5-35b-a3b",
         "aa_name": "Qwen3.5 35B A3B (Reasoning)",
@@ -699,7 +699,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "0e66bae9-41f1-42fc-9276-ce8cb6f72919",
         "aa_slug": "qwen3-5-397b-a17b",
         "aa_name": "Qwen3.5 397B A17B (Reasoning)",
@@ -845,7 +845,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "8c29d66d-bf98-4ea3-8572-5409353ecc66",
         "aa_slug": "qwen3-6-27b",
         "aa_name": "Qwen3.6 27B (Reasoning)",
@@ -860,7 +860,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "8665ca00-c687-44c7-875c-22618cb31c4f",
         "aa_slug": "qwen3-6-35b-a3b",
         "aa_name": "Qwen3.6 35B A3B (Reasoning)",
@@ -899,7 +899,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
         "aa_slug": "qwen3-6-plus",
         "aa_name": "Qwen3.6 Plus",
@@ -965,7 +965,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
         "aa_slug": "qwen3-7-max",
         "aa_name": "Qwen3.7 Max",
@@ -1134,7 +1134,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
         "aa_slug": "qwen3-7-plus",
         "aa_name": "Qwen3.7 Plus",
@@ -1174,7 +1174,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "8df710d3-9dae-4498-9b4e-9818238e6f31",
         "aa_slug": "qwen3-8-2-4t-a95b",
         "aa_name": "Qwen3.8 2.4T A95B",
@@ -1189,7 +1189,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
         "aa_slug": "qwen3-8-27b",
         "aa_name": "Qwen3.8 27B (Xhigh)",
@@ -1204,7 +1204,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
         "aa_slug": "qwen3-8-flash-next",
         "aa_name": "Qwen3.8-Flash-Next",
@@ -1222,7 +1222,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
         "aa_slug": "qwen3-8-max",
         "aa_name": "Qwen3.8 Max (0902)",
@@ -1237,7 +1237,7 @@
       "status": "matched",
       "benchmark": {
         "url": "https://artificialanalysis.ai/data-api/docs",
-        "fetched_at": "2026-10-15T21:30:40.478936+00:00",
+        "fetched_at": "2026-10-16T21:20:35.302060+00:00",
         "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
         "aa_slug": "qwen3-8-max",
         "aa_name": "Qwen3.8 Max (0902)",
