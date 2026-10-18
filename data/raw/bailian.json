@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-10-17T20:43:09.004282+00:00",
+  "fetched_at": "2026-10-18T20:52:54.443163+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 70,
+        "total": 71,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -3881,6 +3881,93 @@
             "inference_offline_info": null
           },
           {
+            "model": "deepseek-v4.1-flash-1017",
+            "name": "DeepSeek-V4.1-Flash-1017",
+            "description": "DeepSeek-V4.1-Flash-1017 是 V4.1-Flash 的最新迭代版本，通过基于自反馈的强化学习（RL）训练，在 Terminal-Bench 4.0、DeepSWE v1.1、ProgramBench 等多项基准上较上版显著提升，同时缩短任务运行时间与输出长度，在多个 Harness 下达到新的性能–费用帕累托最优。模型从零构建完整项目的能力进一步增强，可支持游戏开发、3D 建模等“许愿式”编程任务，延续上一版的 552B 总参数 MoE、原生多模态视觉理解、1M 上下文与 384K 最大输出。",
+            "features": [
+              "cache",
+              "function-calling",
+              "structured-outputs",
+              "web-search"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "offpeak"
+                  },
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "peak"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "offpeak"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "peak"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "offpeak"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "peak"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-10-19 00:27:49",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1000000,
+              "max_output_tokens": 393216,
+              "max_reasoning_tokens": 393216,
+              "reasoning_max_input_tokens": 1000000,
+              "reasoning_max_output_tokens": 393216
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "aliyun-bailian",
+            "inference_offline_info": null
+          },
+          {
             "model": "deepseek-v4.1-flash",
             "name": "DeepSeek-V4.1-Flash",
             "description": "DeepSeek-V4.1-Flash 是 DeepSeek 全新架构系列中的轻量旗舰模型，以 552B 总参数 MoE 实现越级智能，在多项基准上超越包括 DeepSeek-V4-Pro 在内的主流旗舰模型。采用 Causal Encoder-Decoder 非对称架构，输入激活仅 8B、输出激活 16B，并具备原生多模态视觉理解能力。KV Cache 压缩至上一代 HBM 的 1/4、SSD 的 1/8，显著降低长上下文与 Agent 任务成本。支持 1M 上下文与 384K 最大输出，兼顾高吞吐、低延迟与极致性价比。",
@@ -7035,7 +7122,7 @@
           }
         ]
       },
-      "request_id": "f870042d-34e4-9dc9-ae9c-1e8cf4387d16"
+      "request_id": "e0f44b29-0386-9166-a326-bc8c6ce7148e"
     }
   ]
 }

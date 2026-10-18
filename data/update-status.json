@@ -1,10 +1,10 @@
 {
   "status": "updated",
-  "attempted_at": "2026-10-17T20:43:11.955289+00:00",
+  "attempted_at": "2026-10-18T20:52:55.949476+00:00",
   "execution": "github-actions",
-  "run_url": "https://github.com/imlk0/model-select/actions/runs/39067888524",
+  "run_url": "https://github.com/imlk0/model-select/actions/runs/39165309085",
   "reason": "Published dynamic provider catalog",
-  "models": 70,
+  "models": 71,
   "missing_references": [],
   "benchmark_matches": 30,
   "aa_status": "success",
