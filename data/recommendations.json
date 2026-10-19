@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T20:52:54.443163+00:00",
+  "updated_at": "2026-10-19T22:27:25.681147+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -13,12 +13,12 @@
       "candidates": [
         "qwen3.8-max",
         "qwen3.8-max-0902",
+        "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
         "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash",
-        "deepseek-v4.1-flash"
+        "qwen3.8-flash"
       ],
       "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
@@ -37,12 +37,12 @@
       "candidates": [
         "qwen3.8-max",
         "qwen3.8-max-0902",
+        "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
         "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash",
-        "deepseek-v4.1-flash"
+        "qwen3.8-flash"
       ],
       "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
@@ -59,8 +59,7 @@
     "sonnet": {
       "positioning": "日常开发与主力任务",
       "candidates": [
-        "qwen3.8-max",
-        "qwen3.8-max-0902",
+        "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
@@ -68,7 +67,7 @@
         "qwen3.8-flash",
         "deepseek-v4.1-flash"
       ],
-      "best": "qwen3.8-max",
+      "best": "deepseek-v4.1-flash-1017",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "042e8a37-fcd0-40f4-8f41-99215fb68eda",
@@ -111,12 +110,12 @@
       "candidates": [
         "qwen3.8-max",
         "qwen3.8-max-0902",
+        "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
         "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash",
-        "deepseek-v4.1-flash"
+        "qwen3.8-flash"
       ],
       "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
@@ -135,12 +134,12 @@
       "candidates": [
         "qwen3.8-max",
         "qwen3.8-max-0902",
+        "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
         "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash",
-        "deepseek-v4.1-flash"
+        "qwen3.8-flash"
       ],
       "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
