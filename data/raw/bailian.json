@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-19T22:27:25.681147+00:00",
+  "fetched_at": "2026-10-20T21:42:45.600938+00:00",
   "pages": [
     {
       "code": null,
@@ -2457,7 +2457,9 @@
             },
             "equivalent_snapshot": "qwen3.5-plus-2026-02-15",
             "inference_provider": "aliyun-bailian",
-            "inference_offline_info": null
+            "inference_offline_info": {
+              "offline_time": "2027-01-19 10:00:00"
+            }
           },
           {
             "model": "qwen3.5-plus-2026-04-20",
@@ -2599,7 +2601,9 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
-            "inference_offline_info": null
+            "inference_offline_info": {
+              "offline_time": "2027-01-19 10:00:00"
+            }
           },
           {
             "model": "qwen3.5-plus-2026-02-15",
@@ -2698,7 +2702,9 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
-            "inference_offline_info": null
+            "inference_offline_info": {
+              "offline_time": "2027-01-19 10:00:00"
+            }
           },
           {
             "model": "qwen3.5-flash-2026-02-23",
@@ -2878,7 +2884,9 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
-            "inference_offline_info": null
+            "inference_offline_info": {
+              "offline_time": "2027-01-19 10:00:00"
+            }
           },
           {
             "model": "qwen3.5-35b-a3b",
@@ -7122,7 +7130,7 @@
           }
         ]
       },
-      "request_id": "fa6890cb-8805-9ca5-8d69-65ea0b86851c"
+      "request_id": "3af99d76-1945-9dc9-a920-8223c7761a1f"
     }
   ]
 }
