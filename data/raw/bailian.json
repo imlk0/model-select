@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-10-21T01:29:27.365369+00:00",
+  "fetched_at": "2026-10-21T21:48:59.531942+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 103,
+        "total": 102,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -5964,133 +5964,6 @@
             "inference_offline_info": null
           },
           {
-            "model": "MiniMax/MiniMax-M3",
-            "name": "MiniMax/MiniMax-M3",
-            "description": "MiniMax M3 凭借业界领先的 Coding 与 Agentic 能力、1M 超长上下文窗口以及原生多模态特性，可出色胜任企业级长文档理解、高质量内容生成、代码编写、Bug 修复及原生应用构建等任务；强大的 Agentic 能力端到端贯通工作流，原生多模态更带来流畅自然的图文混合交互体验。",
-            "features": [
-              "function-calling",
-              "cache"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "4.2",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "16.8",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "input_token_cache",
-                    "price": "0.84",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入（缓存命中）",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "mini-max",
-            "capabilities": [
-              "TG",
-              "Reasoning",
-              "VU"
-            ],
-            "published_time": "2026-06-01 10:18:01",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Image",
-                "Text",
-                "Video"
-              ]
-            },
-            "model_info": {
-              "context_window": 1000000,
-              "max_input_tokens": 1048576,
-              "max_output_tokens": null,
-              "max_reasoning_tokens": null,
-              "reasoning_max_input_tokens": 1048576,
-              "reasoning_max_output_tokens": null
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "mini-max",
-            "inference_offline_info": null
-          },
-          {
-            "model": "MiniMax/MiniMax-M2.7",
-            "name": "MiniMax/MiniMax-M2.7",
-            "description": "M2.7 能够自行构建复杂 Agent Harness，并基于 Agent Teams、复杂 Skills、Tool Search tool 等能力，完成高度复杂的生产力任务。",
-            "features": [
-              "function-calling",
-              "cache"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "2.1",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "8.4",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "input_token_cache",
-                    "price": "0.42",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入（缓存命中）",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "mini-max",
-            "capabilities": [
-              "TG",
-              "Reasoning"
-            ],
-            "published_time": "2026-03-20 21:04:46",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Text"
-              ]
-            },
-            "model_info": {
-              "context_window": 204800,
-              "max_input_tokens": 204800,
-              "max_output_tokens": 131072,
-              "max_reasoning_tokens": 131072,
-              "reasoning_max_input_tokens": 204800,
-              "reasoning_max_output_tokens": 131072
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "mini-max",
-            "inference_offline_info": null
-          },
-          {
             "model": "qwen3-coder-flash-2025-07-28",
             "name": "Qwen3-Coder-Flash-2025-07-28",
             "description": "基于Qwen3的代码生成模型，继承Qwen3-Coder-Plus的coding agent能力，支持多轮工具交互，重点优化仓库级别理解能力并增加工具调用稳定性。本版本为2025年7月28日快照。",
@@ -6411,130 +6284,6 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
-            "inference_offline_info": null
-          },
-          {
-            "model": "MiniMax/MiniMax-M2.5",
-            "name": "MiniMax/MiniMax-M2.5",
-            "description": "智能体世界的SOTA，专为智能体2.0设计，将编码扩展到现实世界包括工作空间、娱乐和个人助理。模型亮点：全球SOTA开源编码与智能体模型；SWE-bench Pro和SWE-bench Verified得分高于Opus 4.6；在Excel、搜索与研究以及文档摘要方面的全球SOTA；未来工作空间的完美主力模型；闪电般快速：优化思维效率，100+ TPS，实现比 Opus 快 3 倍的速度；极致性价比，以支持始终在线的智能体。",
-            "features": [
-              "function-calling",
-              "cache"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "2.1",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "8.4",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "input_token_cache",
-                    "price": "0.21",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入（缓存命中）",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "mini-max",
-            "capabilities": [
-              "TG",
-              "Reasoning"
-            ],
-            "published_time": "2026-02-13 00:00:00",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Text"
-              ]
-            },
-            "model_info": {
-              "context_window": 204800,
-              "max_input_tokens": 204800,
-              "max_output_tokens": 131072,
-              "max_reasoning_tokens": 131072,
-              "reasoning_max_input_tokens": 204800,
-              "reasoning_max_output_tokens": 131072
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "mini-max",
-            "inference_offline_info": null
-          },
-          {
-            "model": "MiniMax/MiniMax-M2.1",
-            "name": "MiniMax/MiniMax-M2.1",
-            "description": "M2.1 的设计初衷在于打破“最顶级的 Agent 能力仅存在于闭源模型”的壁垒。我们在模型层面进行了针对性优化，显著提升了模型在代码生成、工具调用、复杂指令遵循及长程规划任务中的性能。从自动化进行多语言的软件开发，到执行多步骤的复杂办公工作流，MiniMax-M2.1 均表现出卓越的稳定性。我们致力于为开发者提供一个完全透明、可控且高可用的基础模型，以构建下一代自主智能体应用。",
-            "features": [
-              "function-calling",
-              "cache"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "2.1",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "8.4",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "input_token_cache",
-                    "price": "0.21",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入（缓存命中）",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "mini-max",
-            "capabilities": [
-              "TG",
-              "Reasoning"
-            ],
-            "published_time": "2026-02-13 00:00:00",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Text"
-              ]
-            },
-            "model_info": {
-              "context_window": 204800,
-              "max_input_tokens": 204800,
-              "max_output_tokens": 131072,
-              "max_reasoning_tokens": 131072,
-              "reasoning_max_input_tokens": 204800,
-              "reasoning_max_output_tokens": 131072
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "mini-max",
             "inference_offline_info": null
           },
           {
@@ -8421,70 +8170,6 @@
             "inference_offline_info": null
           },
           {
-            "model": "xiaomi/mimo-v2.5-pro",
-            "name": "xiaomi/mimo-v2.5-pro",
-            "description": "MiMo-V2.5-Pro 是小米发布的最新旗舰模型。与前代模型相比，它在通用智能体能力、复杂软件工程以及长程任务等方面都有显著提升，在 ClawEval、GDPVal 和 SWE-bench Pro 等基准测试中均位列前茅。它能够独立且完全自主地完成需要人类专家耗时数天甚至数周的专业任务，涉及上千次工具调用。其高达 100 万 token 的上下文长度，非常适合集成到各种智能体框架中使用。",
-            "features": [
-              "function-calling",
-              "structured-outputs",
-              "cache"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "7",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "21",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "input_token_cache",
-                    "price": "1.4",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入（缓存命中）",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "xiaomi",
-            "capabilities": [
-              "TG"
-            ],
-            "published_time": "2026-05-18 14:32:14",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Text"
-              ]
-            },
-            "model_info": {
-              "context_window": 1000000,
-              "max_input_tokens": 1048576,
-              "max_output_tokens": 131072,
-              "max_reasoning_tokens": 131072,
-              "reasoning_max_input_tokens": 1048576,
-              "reasoning_max_output_tokens": 131072
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "xiaomi",
-            "inference_offline_info": {
-              "offline_time": "2026-10-21 00:00:00"
-            }
-          },
-          {
             "model": "stepfun/step-3.7-flash",
             "name": "stepfun/step-3.7-flash",
             "description": "Step 3.7 Flash 是阶跃星辰最新推出的生产级 Agent 高效率 Flash 模型，专为 Agent、Coding、Search 与多模态工作流打造，在速度、成本、执行可靠性与复杂任务完成能力之间实现了更优平衡。具备多模态感知与执行、视觉搜索与工具增强、高可靠工具调用与编排，以及 Agent 生态兼容优化等核心能力。",
@@ -8954,20 +8639,7 @@
             "equivalent_snapshot": null,
             "inference_provider": "zhipu-ai",
             "inference_offline_info": null
-          }
-        ]
-      },
-      "request_id": "0ad6e65d-3d08-9588-8a79-bdfd52e2fd37"
-    },
-    {
-      "code": null,
-      "message": null,
-      "success": true,
-      "output": {
-        "total": 103,
-        "page_no": 2,
-        "page_size": 100,
-        "models": [
+          },
           {
             "model": "ZHIPU/GLM-5.1",
             "name": "ZHIPU/GLM-5.1",
@@ -9096,6 +8768,270 @@
             "inference_offline_info": null
           },
           {
+            "model": "MiniMax/MiniMax-M3",
+            "name": "MiniMax/MiniMax-M3",
+            "description": "MiniMax M3 凭借业界领先的 Coding 与 Agentic 能力、1M 超长上下文窗口以及原生多模态特性，可出色胜任企业级长文档理解、高质量内容生成、代码编写、Bug 修复及原生应用构建等任务；强大的 Agentic 能力端到端贯通工作流，原生多模态更带来流畅自然的图文混合交互体验。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "4.2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "16.8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.84",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-06-01 10:18:01",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Image",
+                "Text",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": null,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": null
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          },
+          {
+            "model": "MiniMax/MiniMax-M2.7",
+            "name": "MiniMax/MiniMax-M2.7",
+            "description": "M2.7 能够自行构建复杂 Agent Harness，并基于 Agent Teams、复杂 Skills、Tool Search tool 等能力，完成高度复杂的生产力任务。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8.4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.42",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-03-20 21:04:46",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          },
+          {
+            "model": "MiniMax/MiniMax-M2.5",
+            "name": "MiniMax/MiniMax-M2.5",
+            "description": "智能体世界的SOTA，专为智能体2.0设计，将编码扩展到现实世界包括工作空间、娱乐和个人助理。模型亮点：全球SOTA开源编码与智能体模型；SWE-bench Pro和SWE-bench Verified得分高于Opus 4.6；在Excel、搜索与研究以及文档摘要方面的全球SOTA；未来工作空间的完美主力模型；闪电般快速：优化思维效率，100+ TPS，实现比 Opus 快 3 倍的速度；极致性价比，以支持始终在线的智能体。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8.4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.21",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-02-13 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          }
+        ]
+      },
+      "request_id": "43d895f2-d383-9850-a40a-2754394c9346"
+    },
+    {
+      "code": null,
+      "message": null,
+      "success": true,
+      "output": {
+        "total": 102,
+        "page_no": 2,
+        "page_size": 100,
+        "models": [
+          {
+            "model": "MiniMax/MiniMax-M2.1",
+            "name": "MiniMax/MiniMax-M2.1",
+            "description": "M2.1 的设计初衷在于打破“最顶级的 Agent 能力仅存在于闭源模型”的壁垒。我们在模型层面进行了针对性优化，显著提升了模型在代码生成、工具调用、复杂指令遵循及长程规划任务中的性能。从自动化进行多语言的软件开发，到执行多步骤的复杂办公工作流，MiniMax-M2.1 均表现出卓越的稳定性。我们致力于为开发者提供一个完全透明、可控且高可用的基础模型，以构建下一代自主智能体应用。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8.4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.21",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-02-13 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          },
+          {
             "model": "MiniMax-M2.5",
             "name": "MiniMax-M2.5",
             "description": "MiniMax-M2.5是MiniMax推出的旗舰级开源大模型，经过数十万个真实复杂环境中的大规模强化学习训练，M2.5 在编程、工具调用和搜索、办公等生产力场景都达到或者刷新了行业的 SOTA。",
@@ -9160,7 +9096,7 @@
           }
         ]
       },
-      "request_id": "f6c0c8b6-fcf9-9a75-9213-7709bab2d6b5"
+      "request_id": "1d2c9d06-7006-9866-a077-dcdf80d2b17e"
     }
   ]
 }
