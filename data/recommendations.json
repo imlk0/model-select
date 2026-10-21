@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T21:42:45.600938+00:00",
+  "updated_at": "2026-10-21T01:29:27.365369+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -11,16 +11,16 @@
     "fable": {
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
-        "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash"
+        "qwen3.8-2.4t-a95b"
       ],
-      "best": "qwen3.8-max",
+      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "3b7de71c-e034-4591-8ca6-6b6be2fa471f",
@@ -35,16 +35,16 @@
     "opus": {
       "positioning": "复杂编程与长程任务",
       "candidates": [
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
-        "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash"
+        "qwen3.8-2.4t-a95b"
       ],
-      "best": "qwen3.8-max",
+      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "ea9e0da6-169f-43c6-92f5-730a10d6ff8d",
@@ -108,16 +108,16 @@
     "astra": {
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
-        "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash"
+        "qwen3.8-2.4t-a95b"
       ],
-      "best": "qwen3.8-max",
+      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
@@ -132,16 +132,16 @@
     "sol": {
       "positioning": "复杂编程与日常主力",
       "candidates": [
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "kimi-k3",
-        "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash"
+        "qwen3.8-2.4t-a95b"
       ],
-      "best": "qwen3.8-max",
+      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",

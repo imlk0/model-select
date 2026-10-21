@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-10-20T21:42:45.600938+00:00",
+  "fetched_at": "2026-10-21T01:29:27.365369+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 71,
+        "total": 103,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -5431,6 +5431,666 @@
             "inference_offline_info": null
           },
           {
+            "model": "ZHIPU/GLM-5.3",
+            "name": "ZHIPU/GLM-5.3",
+            "description": "GLM-5.3是智谱迄今编程能力最强的模型，在内部自建体感评测中较GLM-5.2提升50%；网络安全能力：在白盒代码审查与漏洞发现等安全任务中，GLM-5.3的表现持平Mythos 5，展现出面向网络安全防御场景的强大潜力。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "28",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "zhipu-ai",
+            "capabilities": [
+              "Reasoning",
+              "TG"
+            ],
+            "published_time": "2026-08-17 16:16:47",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "zhipu-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "ZHIPU/GLM-5.3-FlashX",
+            "name": "ZHIPU/GLM-5.3-FlashX",
+            "description": "GLM-5.3-FlashX ，推理速度达 200 tokens/s，提供更快、更流畅的模型体验。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "7",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.57",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "zhipu-ai",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-09-20 14:20:54",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "zhipu-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "ZHIPU/GLM-5.3-Flash",
+            "name": "ZHIPU/GLM-5.3-Flash",
+            "description": "GLM-5.3-Flash 是 GLM-5 系列首个原生多模态模型，以极致低成本架构实现超越 GLM-5.2 的更强智能。采用 320B 总参 / 18B 激活的稀疏+线性注意力混合架构，注意力计算量与 KV 缓存分别降低 3.01 倍和 4.44 倍。视觉能力原生融入 Coding 循环，可主动观察界面、渲染结果与交互反馈，跨代码、浏览器与图形界面协同完成任务。同时拓展至 Office、金融研究及专业文档场景，能自主拆解目标、调用工具并优化输出，交付 PPTX、PDF、DOCX、XLSX 等高质量成品。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "0.8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "2.8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.23",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "zhipu-ai",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-08-29 16:28:18",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "zhipu-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "kimi/kimi-k3",
+            "name": "kimi/kimi-k3",
+            "description": "Kimi K3 是 Kimi 迄今能力最强的旗舰模型，拥有 2.8 万亿参数，基于 KDA 混合线性注意力机制（Kimi Delta Attention）和注意力残差（Attention Residuals）技术构建，原生支持视觉理解，并拥有 100 万 token 上下文窗口。它是全球首个开源的 3 万亿级别模型，面向长程编程、知识工作和推理等前沿智能场景而设计。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache",
+              "prefix-completion"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "20",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "100",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "moonshot-ai",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-07-17 16:23:12",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 1048576,
+              "max_reasoning_tokens": 1048576,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 1048576
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "moonshot-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "kimi/kimi-k2.7-code-highspeed",
+            "name": "kimi/kimi-k2.7-code-highspeed",
+            "description": "K2.7 Code高速版与普通版是同一个模型，但输出速度约为普通版的 5-6 倍，常规编程场景下（取输入长度中位数）输出速度约 180 Token/s，短上下文场景可达 260 Token/s ，带来更极致的编程体验。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "13",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "54",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "2.6",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "moonshot-ai",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-06-17 19:23:33",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 262144,
+              "max_input_tokens": 262144,
+              "max_output_tokens": 262144,
+              "max_reasoning_tokens": 262144,
+              "reasoning_max_input_tokens": 262144,
+              "reasoning_max_output_tokens": 262144
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "moonshot-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "kimi/kimi-k2.8-preview",
+            "name": "kimi/kimi-k2.8-preview",
+            "description": "综合性能接近 K3，思考（thinking）效率更高；支持 thinking effort 档位调节（与 K3 的思考等级一致）；支持 1M 超长上下文",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "6.5",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "27",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.7",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "moonshot-ai",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-09-16 10:07:02",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 1048576,
+              "max_reasoning_tokens": 1048576,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 1048576
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "moonshot-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "kimi/kimi-k2.7-code",
+            "name": "kimi/kimi-k2.7-code",
+            "description": "Kimi K2.7 Code 是月之暗面 Kimi发布并开源的新一代编程专用模型，定位为 Kimi 迄今最智能的 Coding 模型。Kimi K2.7 Code 是一个以编码为中心的智能体模型（coding-focused agentic model），专为长程软件工程任务优化。它擅长跨多文件重构、功能实现、长会话调试等需要可靠指令遵循和端到端完成率的复杂工作流。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "6.5",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "27",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.3",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "moonshot-ai",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-06-15 09:49:13",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 262144,
+              "max_input_tokens": 262144,
+              "max_output_tokens": 262144,
+              "max_reasoning_tokens": 262144,
+              "reasoning_max_input_tokens": 262144,
+              "reasoning_max_output_tokens": 262144
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "moonshot-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "kimi/kimi-k2.6",
+            "name": "Kimi/Kimi K2.6",
+            "description": "Kimi K2.6 是 Kimi 最新最智能的模型，Kimi K2.6 的通用 Agent、代码、视觉理解等综合能力得到全面提升，其中在博士级难度的完整版人类最后的考试（Humanity’s Last Exam）、在考察模型真实软件工程能力的 SWE-Bench Pro、评估 Agent 深度检索能力的 DeepSearchQA 等基准测试中均取得行业领先的成绩，同时支持文本、图片与视频输入，思考与非思考模式，对话与 Agent 任务。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "6.5",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "27",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "moonshot-ai",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-04-26 16:54:45",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 262144,
+              "max_input_tokens": 262144,
+              "max_output_tokens": 262144,
+              "max_reasoning_tokens": 262144,
+              "reasoning_max_input_tokens": 262144,
+              "reasoning_max_output_tokens": 262144
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "moonshot-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "MiniMax/MiniMax-M3",
+            "name": "MiniMax/MiniMax-M3",
+            "description": "MiniMax M3 凭借业界领先的 Coding 与 Agentic 能力、1M 超长上下文窗口以及原生多模态特性，可出色胜任企业级长文档理解、高质量内容生成、代码编写、Bug 修复及原生应用构建等任务；强大的 Agentic 能力端到端贯通工作流，原生多模态更带来流畅自然的图文混合交互体验。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "4.2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "16.8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.84",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-06-01 10:18:01",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Image",
+                "Text",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": null,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": null
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          },
+          {
+            "model": "MiniMax/MiniMax-M2.7",
+            "name": "MiniMax/MiniMax-M2.7",
+            "description": "M2.7 能够自行构建复杂 Agent Harness，并基于 Agent Teams、复杂 Skills、Tool Search tool 等能力，完成高度复杂的生产力任务。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8.4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.42",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-03-20 21:04:46",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          },
+          {
             "model": "qwen3-coder-flash-2025-07-28",
             "name": "Qwen3-Coder-Flash-2025-07-28",
             "description": "基于Qwen3的代码生成模型，继承Qwen3-Coder-Plus的coding agent能力，支持多轮工具交互，重点优化仓库级别理解能力并增加工具调用稳定性。本版本为2025年7月28日快照。",
@@ -5751,6 +6411,130 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
+            "inference_offline_info": null
+          },
+          {
+            "model": "MiniMax/MiniMax-M2.5",
+            "name": "MiniMax/MiniMax-M2.5",
+            "description": "智能体世界的SOTA，专为智能体2.0设计，将编码扩展到现实世界包括工作空间、娱乐和个人助理。模型亮点：全球SOTA开源编码与智能体模型；SWE-bench Pro和SWE-bench Verified得分高于Opus 4.6；在Excel、搜索与研究以及文档摘要方面的全球SOTA；未来工作空间的完美主力模型；闪电般快速：优化思维效率，100+ TPS，实现比 Opus 快 3 倍的速度；极致性价比，以支持始终在线的智能体。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8.4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.21",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-02-13 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          },
+          {
+            "model": "MiniMax/MiniMax-M2.1",
+            "name": "MiniMax/MiniMax-M2.1",
+            "description": "M2.1 的设计初衷在于打破“最顶级的 Agent 能力仅存在于闭源模型”的壁垒。我们在模型层面进行了针对性优化，显著提升了模型在代码生成、工具调用、复杂指令遵循及长程规划任务中的性能。从自动化进行多语言的软件开发，到执行多步骤的复杂办公工作流，MiniMax-M2.1 均表现出卓越的稳定性。我们致力于为开发者提供一个完全透明、可控且高可用的基础模型，以构建下一代自主智能体应用。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8.4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.21",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-02-13 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
             "inference_offline_info": null
           },
           {
@@ -6430,6 +7214,195 @@
             "inference_offline_info": null
           },
           {
+            "model": "vanchin/deepseek-v4.1-flash",
+            "name": "vanchin/deepseek-v4.1-flash",
+            "description": "DeepSeek-V4.1-Flash 模型，全新模型结构系列中的最小尺寸的模型，具备原生多模态视觉理解能力。新模型结构的设计初衷是：能力上限更高、推理速度更快、吞吐更大、可扩展到更大参数模型。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "omni_input_token_cache",
+                    "price": "0.04",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-09-20 09:54:49",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 393216,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 393216
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
+            "model": "vanchin/deepseek-v4-pro-0813",
+            "name": "vanchin/deepseek-v4-pro-0813",
+            "description": "DeepSeek-V4系列是强大的混合专家（MoE）语言模型，包含DeepSeek-V4-Pro（1.6T总参数，49B激活参数）。支持高达100万（1M）token的上下文长度，是在超过32T高质量多样化token上预训练的开源模型。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "9",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "27",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.3",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG"
+            ],
+            "published_time": "2026-08-24 10:11:05",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 393216,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 393216
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
+            "model": "vanchin/deepseek-v4-pro",
+            "name": "vanchin/deepseek-v4-pro",
+            "description": "DeepSeek-V4系列是强大的混合专家（MoE）语言模型，包含DeepSeek-V4-Pro（1.6T总参数，49B激活参数）。支持高达100万（1M）token的上下文长度，是在超过32T高质量多样化token上预训练的开源模型。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "12",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "24",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG"
+            ],
+            "published_time": "2026-05-29 16:10:54",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 393216,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 393216
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
             "model": "deepseek-r1-distill-qwen-1.5b",
             "name": "DeepSeek-R1-Distill-Qwen-1.5B",
             "description": "DeepSeek-R1-Distill-Qwen-1.5B是一个基于Qwen2.5-Math-1.5B的蒸馏大型语言模型，使用了 DeepSeek R1 的输出。",
@@ -6460,6 +7433,70 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
+            "inference_offline_info": null
+          },
+          {
+            "model": "vanchin/deepseek-v3.2-think",
+            "name": "Vanchin/DeepSeek-V3.2-think",
+            "description": "DeepSeek-V3.2 是一款实现了高计算效率与卓越推理及代理（Agent）性能完美协调的模型。该模型建立在 DeepSeek-V3 的基础之上，通过引入 DeepSeek 稀疏注意力（DSA）、可扩展的强化学习框架以及大规模代理任务合成流水线等关键技术突破，推动了开源大语言模型的前沿发展。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "3",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "Reasoning",
+              "TG"
+            ],
+            "published_time": "2026-04-07 17:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 131072,
+              "max_input_tokens": 98304,
+              "max_output_tokens": 65536,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 98304,
+              "reasoning_max_output_tokens": 65536
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
             "inference_offline_info": null
           },
           {
@@ -6656,6 +7693,249 @@
             "inference_offline_info": null
           },
           {
+            "model": "vanchin/deepseek-v3.1-terminus",
+            "name": "Vanchin/DeepSeek-V3.1-Terminus",
+            "description": "DeepSeek-V3.1-Terminus 是 DeepSeek-V3.1 的更新版本，旨在保持模型原有核心能力的同时，针对用户反馈的问题进行了修复和优化。该版本的模型结构与 DeepSeek-V3 保持一致，并在特定领域进行了显著增强。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "12",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.6",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-04-07 16:57:08",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 131072,
+              "max_input_tokens": 32768,
+              "max_output_tokens": 65536,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 32768,
+              "reasoning_max_output_tokens": 65536
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
+            "model": "vanchin/deepseek-v3",
+            "name": "Vanchin/DeepSeek-V3",
+            "description": "DeepSeek-V3 由深度求索（DeepSeek）于 2024 年 12 月发布，是目前开源社区领先的混合专家（MoE）语言模型：总参数 671B，每个 token 仅激活 37B 参数。模型在 14.8 万亿高质量 tokens 上完成预训练，原生支持 128k 上下文。通过创新的无辅助损失负载均衡策略、多头潜在注意力（MLA）架构和 FP8 混合精度训练。",
+            "features": [
+              "structured-outputs",
+              "prefix-completion",
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG"
+            ],
+            "published_time": "2026-04-07 16:56:49",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 131072,
+              "max_input_tokens": 131072,
+              "max_output_tokens": 16384,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": null,
+              "reasoning_max_output_tokens": null
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
+            "model": "vanchin/deepseek-r1",
+            "name": "Vanchin/DeepSeek-R1",
+            "description": "DeepSeek-R1 是深度求索于 2025 年 1 月开源的 6710 亿参数混合专家（MoE）推理模型，推理时仅激活 370 亿参数。作为首个通过纯强化学习（无监督微调）训练的千亿级模型，实现了链式思维（CoT）的自然涌现。模型在 RL 前加入冷启动数据解决了 R1-Zero 的重复和混语问题，在数学、代码、推理任务上达到 OpenAI o1 水平。",
+            "features": [
+              "function-calling",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "16",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.6",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "Reasoning",
+              "TG"
+            ],
+            "published_time": "2026-04-07 16:56:31",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 131072,
+              "max_input_tokens": 98304,
+              "max_output_tokens": 32768,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 98304,
+              "reasoning_max_output_tokens": 32768
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
+            "model": "vanchin/deepseek-ocr",
+            "name": "Vanchin/DeepSeek-OCR",
+            "description": "DeepSeek-OCR以 “探索视觉 - 文本压缩边界” 为核心目标，从大语言模型（LLM）视角重新定义视觉编码器的功能定位，为文档识别、图像转文本等高频场景提供了兼顾精度与效率的全新解决方案。",
+            "features": [
+              "structured-outputs"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "0.216",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "0.216",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "VU",
+              "TG"
+            ],
+            "published_time": "2026-04-07 16:56:06",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image"
+              ]
+            },
+            "model_info": {
+              "context_window": 8192,
+              "max_input_tokens": 8192,
+              "max_output_tokens": 8192,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": null,
+              "reasoning_max_output_tokens": null
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
             "model": "qwen-plus-character",
             "name": "Qwen-Plus-Character",
             "description": "千问系列角色扮演模型，本模型是动态更新版本，模型更新会提前通知，适合拟人化的角色扮演，同时优化了限定人设指令遵循、话题推进、倾听共情等能力，支持个性化角色的深度还原。",
@@ -6733,6 +8013,140 @@
             "inference_offline_info": null
           },
           {
+            "model": "xiaomi/mimo-v2.6-pro-ultraspeed",
+            "name": "xiaomi/mimo-v2.6-pro-ultraspeed",
+            "description": "MiMo-V2.6-Pro-UltraSpeed 是小米旗舰模型 MiMo-V2.6-Pro 的高速版本。该模型基于同一 1 万亿参数 MiMo-V2.6-Pro 检查点构建，在保持与原模型同等质量的前提下，输出速度提升约 10 倍。\n模型支持 1百万 token 上下文窗口，具备原生多模态能力。针对智能体工作流做了专项优化，在代码、视觉、通用问答与科研场景下均拥有顶尖性能，擅长处理复杂、长周期任务，可在各类智能体测试框架中展现出色的泛化能力。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "30",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "60",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.25",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "xiaomi",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-10-19 09:48:52",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video",
+                "Audio"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "xiaomi",
+            "inference_offline_info": null
+          },
+          {
+            "model": "stepfun/step-5-preview",
+            "name": "stepfun/step-5-preview",
+            "description": "Step 5 Preview，一款面向真实世界 Agentic 任务的旗舰基座模型。Step 5 Preview 在 AI 编程、软件工程、专业知识工作等任务上达到前沿水平，并在金融领域展现出尤为突出的能力。Step 5 Preview 采用稀疏 MoE 架构，总参数量 600B，每个 Token 激活 27B 参数，支持 1M Token 上下文窗口和视觉输入。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "7",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "20",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.35",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "stepfun",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-09-20 15:58:15",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 1048576,
+              "max_reasoning_tokens": 1048576,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 1048576
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "stepfun",
+            "inference_offline_info": null
+          },
+          {
             "model": "glm-5.3-prime",
             "name": "GLM-5.3-Prime",
             "description": "GLM-5.3-Prime 是 GLM-5.3 的高速版本，编程与智能体能力全面进阶，达开源模型 SOTA 水平，内部编程基准较上代提升 50%，可端到端交付生产级成果。涌现网络安全能力，漏洞发现基准 CyberGym 创当前最佳。支持 1M 上下文、128K 输出与三档深度思考，胜任长程复杂任务。",
@@ -6794,6 +8208,69 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
+            "inference_offline_info": null
+          },
+          {
+            "model": "unisound/unisound-u2",
+            "name": "unisound/unisound-u2",
+            "description": "Unisound U2 是云知声最新推出的原生 Agent 旗舰模型，在代码开发、复杂推理、深度研究及一系列通用智能任务上具备出色表现。同时，Unisound U2 也是云知声面向 Agent 场景打造的高效智能模型，支持长文本理解、任务拆解、工具调用与多步骤执行，可广泛应用于智能体、软件工程、企业分析及自动化工作流等场景。",
+            "features": [
+              "function-calling",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "unisound",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-08-17 13:27:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 163840,
+              "max_input_tokens": 159744,
+              "max_output_tokens": 65536,
+              "max_reasoning_tokens": 65536,
+              "reasoning_max_input_tokens": 65536,
+              "reasoning_max_output_tokens": 65536
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "unisound",
             "inference_offline_info": null
           },
           {
@@ -6944,6 +8421,355 @@
             "inference_offline_info": null
           },
           {
+            "model": "xiaomi/mimo-v2.5-pro",
+            "name": "xiaomi/mimo-v2.5-pro",
+            "description": "MiMo-V2.5-Pro 是小米发布的最新旗舰模型。与前代模型相比，它在通用智能体能力、复杂软件工程以及长程任务等方面都有显著提升，在 ClawEval、GDPVal 和 SWE-bench Pro 等基准测试中均位列前茅。它能够独立且完全自主地完成需要人类专家耗时数天甚至数周的专业任务，涉及上千次工具调用。其高达 100 万 token 的上下文长度，非常适合集成到各种智能体框架中使用。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "7",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "21",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "xiaomi",
+            "capabilities": [
+              "TG"
+            ],
+            "published_time": "2026-05-18 14:32:14",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "xiaomi",
+            "inference_offline_info": {
+              "offline_time": "2026-10-21 00:00:00"
+            }
+          },
+          {
+            "model": "stepfun/step-3.7-flash",
+            "name": "stepfun/step-3.7-flash",
+            "description": "Step 3.7 Flash 是阶跃星辰最新推出的生产级 Agent 高效率 Flash 模型，专为 Agent、Coding、Search 与多模态工作流打造，在速度、成本、执行可靠性与复杂任务完成能力之间实现了更优平衡。具备多模态感知与执行、视觉搜索与工具增强、高可靠工具调用与编排，以及 Agent 生态兼容优化等核心能力。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache",
+              "batch"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "1.35",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.27",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "stepfun",
+            "capabilities": [
+              "TG",
+              "VU"
+            ],
+            "published_time": "2026-05-25 14:20:45",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 262144,
+              "max_input_tokens": 262144,
+              "max_output_tokens": 262144,
+              "max_reasoning_tokens": 262144,
+              "reasoning_max_input_tokens": 262144,
+              "reasoning_max_output_tokens": 262144
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "stepfun",
+            "inference_offline_info": null
+          },
+          {
+            "model": "siliconflow/deepseek-v3.2",
+            "name": "SiliconFlow DeepSeek-V3.2",
+            "description": "DeepSeek-V3.2 是一款兼具高计算效率与卓越推理和 Agent 性能的模型。其方法建立在三大关键技术突破之上：DeepSeek 稀疏注意力（DSA），一种高效的注意力机制，在保持模型性能的同时显著降低了计算复杂性，并特别针对长上下文场景进行了优化；可扩展的强化学习框架，通过该框架，模型性能可与 GPT-5 相媲美，其高算力版本在推理能力上可与 Gemini-3.0-Pro 匹敌；以及大规模 Agent 任务合成管线，旨在将推理能力整合到工具使用场景中，从而提高在复杂交互环境中的指令遵循和泛化能力。该模型在 2025 年国际数学奥林匹克（IMO）和国际信息学奥林匹克（IOI）中取得了金牌表现",
+            "features": [
+              "function-calling",
+              "prefix-completion"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "3",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-01-28 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 163840,
+              "max_input_tokens": 163840,
+              "max_output_tokens": 65536,
+              "max_reasoning_tokens": 65536,
+              "reasoning_max_input_tokens": 163840,
+              "reasoning_max_output_tokens": 65536
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "siliconflow",
+            "inference_offline_info": null
+          },
+          {
+            "model": "siliconflow/deepseek-v3.1-terminus",
+            "name": "SiliconFlow DeepSeek-V3.1-Terminus",
+            "description": "DeepSeek-V3.1-Terminus 是由深度求索（DeepSeek）发布的 V3.1 模型的更新版本，定位为混合智能体大语言模型。此次更新在保持模型原有能力的基础上，专注于修复用户反馈的问题并提升稳定性。它显著改善了语言一致性，减少了中英文混用和异常字符的出现。模型集成了“思考模式”（Thinking Mode）和“非思考模式”（Non-thinking Mode），用户可通过聊天模板灵活切换以适应不同任务。作为一个重要的优化，V3.1-Terminus 增强了代码智能体（Code Agent）和搜索智能体（Search Agent）的性能，使其在工具调用和执行多步复杂任务方面更加可靠",
+            "features": [
+              "function-calling",
+              "prefix-completion"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "12",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-01-28 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 163840,
+              "max_input_tokens": 163840,
+              "max_output_tokens": 65536,
+              "max_reasoning_tokens": 65536,
+              "reasoning_max_input_tokens": 163840,
+              "reasoning_max_output_tokens": 65536
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "siliconflow",
+            "inference_offline_info": null
+          },
+          {
+            "model": "siliconflow/deepseek-v3-0324",
+            "name": "SiliconFlow DeepSeek-V3-0324",
+            "description": "新版 DeepSeek-V3 （DeepSeek-V3-0324）与之前的 DeepSeek-V3-1226 使用同样的 base 模型，仅改进了后训练方法。新版 V3 模型借鉴 DeepSeek-R1 模型训练过程中所使用的强化学习技术，大幅提高了在推理类任务上的表现水平，在数学、代码类相关评测集上取得了超过 GPT-4.5 的得分成绩。此外该模型在工具调用、角色扮演、问答闲聊等方面也得到了一定幅度的能力提升。",
+            "features": [
+              "function-calling",
+              "prefix-completion"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG"
+            ],
+            "published_time": "2026-01-28 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 163840,
+              "max_input_tokens": 163840,
+              "max_output_tokens": 163840,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": null,
+              "reasoning_max_output_tokens": null
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "siliconflow",
+            "inference_offline_info": null
+          },
+          {
+            "model": "siliconflow/deepseek-r1-0528",
+            "name": "SiliconFlow DeepSeek-R1-0528",
+            "description": "DeepSeek-R1-0528 是一款强化学习（RL）驱动的推理模型，解决了模型中的重复性和可读性问题。在 RL 之前，DeepSeek-R1 引入了冷启动数据，进一步优化了推理性能。它在数学、代码和推理任务中与 OpenAI-o1 表现相当，并且通过精心设计的训练方法，提升了整体效果。",
+            "features": [
+              "function-calling",
+              "prefix-completion"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "16",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-01-28 00:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 163840,
+              "max_input_tokens": 163840,
+              "max_output_tokens": 32768,
+              "max_reasoning_tokens": 65536,
+              "reasoning_max_input_tokens": 163840,
+              "reasoning_max_output_tokens": 32768
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "siliconflow",
+            "inference_offline_info": null
+          },
+          {
             "model": "qwen3.6-27b",
             "name": "Qwen3.6-27B",
             "description": "Qwen3.6系列27B原生视觉语言Dense模型，模型效果相较3.5-27B重点提升了Agentic coding能力、模型STEM与推理能力进一步增强；视觉模态方面在空间智能、物体定位与检测能力上显著增强，视频理解、文档OCR及视觉Agent能力稳步提升。",
@@ -7066,6 +8892,210 @@
             "inference_offline_info": null
           },
           {
+            "model": "ZHIPU/GLM-5.2",
+            "name": "ZHIPU/GLM-5.2",
+            "description": "智谱原厂直供。GLM-5.2 支持真正可用的 1M 上下文，并在长程任务中继续保持领先。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "28",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "zhipu-ai",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-06-16 10:16:54",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 1000000,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "zhipu-ai",
+            "inference_offline_info": null
+          }
+        ]
+      },
+      "request_id": "0ad6e65d-3d08-9588-8a79-bdfd52e2fd37"
+    },
+    {
+      "code": null,
+      "message": null,
+      "success": true,
+      "output": {
+        "total": 103,
+        "page_no": 2,
+        "page_size": 100,
+        "models": [
+          {
+            "model": "ZHIPU/GLM-5.1",
+            "name": "ZHIPU/GLM-5.1",
+            "description": "GLM-5.1 是智谱最新旗舰模型，代码能力大大增强，长程任务显著提升，能够在单次任务中持续、自主地工作长达 8 小时，完成从规划、执行到迭代优化的完整闭环，交付工程级成果。\n在综合能力与 Coding 能力上，GLM-5.1 整体表现对齐 Claude Opus 4.6，并在长程自主执行、复杂工程优化与真实开发场景中展现出更强的持续工作能力，是构建 Autonomous Agent 与长程 Coding Agent 的理想基座。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache",
+              "prefix-completion"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "28",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "zhipu-ai",
+            "capabilities": [
+              "TG"
+            ],
+            "published_time": "2026-05-18 14:33:45",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "zhipu-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "ZHIPU/GLM-5",
+            "name": "ZHIPU/GLM-5",
+            "description": "智谱新一代旗舰基座,面向AgenticEngineering,实现从代码到工程的范式跃迁,擅长复杂系统工程与长程Agent任务。",
+            "features": [
+              "function-calling",
+              "cache",
+              "structured-outputs",
+              "prefix-completion"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "6",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "22",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.5",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": "standard"
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "zhipu-ai",
+            "capabilities": [
+              "TG",
+              "Reasoning"
+            ],
+            "published_time": "2026-03-26 18:47:50",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 204800,
+              "max_input_tokens": 204800,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 204800,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "zhipu-ai",
+            "inference_offline_info": null
+          },
+          {
             "model": "MiniMax-M2.5",
             "name": "MiniMax-M2.5",
             "description": "MiniMax-M2.5是MiniMax推出的旗舰级开源大模型，经过数十万个真实复杂环境中的大规模强化学习训练，M2.5 在编程、工具调用和搜索、办公等生产力场景都达到或者刷新了行业的 SOTA。",
@@ -7130,7 +9160,7 @@
           }
         ]
       },
-      "request_id": "3af99d76-1945-9dc9-a920-8223c7761a1f"
+      "request_id": "f6c0c8b6-fcf9-9a75-9213-7709bab2d6b5"
     }
   ]
 }
