@@ -9,6 +9,50 @@ spec=importlib.util.spec_from_file_location('updater','scripts/update.py');u=imp
 def model(code='new-model'):
     return {'model':code,'name':'New','inference_metadata':{'response_modality':['Text']},'features':['function-calling'],'model_info':{'context_window':32768},'prices':[{'range_name':'Default','prices':[{'type':'input_token','price':'1','price_unit':'每百万tokens'},{'type':'output_token','price':'2','price_unit':'每百万tokens'}]}]}
 class DataTests(unittest.TestCase):
+    def test_catalog_includes_all_marketplace_providers_on_every_page(self):
+        rows = [dict(model('legacy'), inference_provider='aliyun-bailian'),
+                dict(model('third-party/new-model'), inference_provider='new-provider')]
+        responses = [{'success':True,'output':{'total':2,'models':[row]}} for row in rows]
+        with patch.object(u,'get',side_effect=responses) as get:
+            fetched, pages = u.fetch_catalog('https://example','test-key')
+        self.assertEqual(fetched,rows)
+        self.assertEqual(len(pages),2)
+        for page, call in enumerate(get.call_args_list,1):
+            self.assertEqual(call.args[2],{'page_no':page,'page_size':100,'capabilities':'TG','service_site':'asia-pacific-china'})
+        self.assertEqual({m['code'] for m in u.build_models(fetched,[],None,{},'now')},
+                         {'legacy','third-party/new-model'})
+
+    def test_namespaced_speed_reference_requires_evidence_and_unique_base(self):
+        row = model('xiaomi/mimo-v2.6-pro-ultraspeed')
+        row.update(name='MiMo-V2.6-Pro-UltraSpeed',inference_provider='xiaomi',prices=[],model_info={})
+        aa = {'id':'base','slug':'mimo-v2-6-pro','name':'MiMo-V2.6-Pro',
+              'evaluations':{'artificial_analysis_intelligence_index':42},
+              'performance':{'median_output_tokens_per_second':99},'release_date':'2026-09-01'}
+        self.assertIsNone(u.match_aa(row,[aa]))
+        row['description']='MiMo-V2.6-Pro-UltraSpeed 是小米旗舰模型 MiMo-V2.6-Pro 的高速版本。'
+        self.assertEqual(u.provider_reference(row),'mimo-v2.6-pro')
+        result = u.build_models([row],[aa],4.3,{},'now')[0]
+        self.assertEqual(result['code'],row['model'])
+        self.assertEqual(result['provenance']['catalog']['model_id'],row['model'])
+        self.assertEqual(result['scores']['capability'],42)
+        self.assertEqual(result['provenance']['benchmark']['match_method'],'provider-confirmed-base-reference')
+        self.assertEqual(result['provenance']['benchmark']['reference_model'],'mimo-v2.6-pro')
+        self.assertIsNone(result['speed']['tokens_per_second'])
+        self.assertIsNone(result['release_date'])
+        self.assertIsNone(result['context_k'])
+        self.assertEqual(result['pricing']['beijing'],{'input':None,'output':None})
+        row['published_time']='2026-09-21 00:00:00'
+        result = u.build_models([row],[aa],4.3,{},'now')[0]
+        self.assertEqual((result['release_date'],result['release_date_source']),('2026-09-21','Bailian'))
+        self.assertIsNone(u.match_aa(row,[aa,dict(aa,id='duplicate')]))
+        row['model']='xiaomi/mimo-v2.5-pro-ultraspeed'
+        self.assertIsNone(u.match_aa(row,[aa]))
+
+    def test_non_text_models_still_excluded_for_direct_providers(self):
+        row = dict(model('provider/image-model'),inference_provider='provider',
+                   inference_metadata={'response_modality':['Image']})
+        self.assertEqual(u.build_models([row],[],None,{},'now'),[])
+
     def test_variant_reference_is_unique_same_generation_and_separate_date_speed(self):
         row=model('example-3.8-flash')
         row['published_time']='2026-08-25 00:00:00'

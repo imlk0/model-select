@@ -31,7 +31,8 @@ def get(url, headers, params):
 def fetch_catalog(endpoint, key):
     rows, pages = [], []
     for page in range(1, 1001):
-        payload = get(endpoint, {'Authorization':'Bearer '+key}, {'page_no':page, 'page_size':100, 'capabilities':'TG', 'inference_providers':'aliyun-bailian', 'service_site':'asia-pacific-china'})
+        # The Bailian marketplace includes direct providers, not only aliyun-bailian.
+        payload = get(endpoint, {'Authorization':'Bearer '+key}, {'page_no':page, 'page_size':100, 'capabilities':'TG', 'service_site':'asia-pacific-china'})
         if payload.get('success') is not True: raise ValueError('Bailian response not successful')
         output = payload.get('output', {})
         batch, total = output.get('models'), output.get('total')
@@ -123,7 +124,9 @@ def normalize_name(value):
     return re.sub(r'[^a-z0-9]', '', str(value).lower())
 
 def provider_reference(row):
-    code = str(row.get('model') or '').lower()
+    # Remove the provider namespace only for the description-backed base check.
+    # Keep the complete ID for calling the model and recording provenance.
+    code = str(row.get('model') or '').rsplit('/', 1)[-1].lower()
     description = row.get('description') or ''
     matches = re.findall(r'([a-z][a-z0-9]*(?:[.-][a-z0-9]+)+)\s*的高速版本', description, re.I)
     bases = {base.lower() for base in matches if code.startswith(base.lower() + '-')}
@@ -187,7 +190,7 @@ def build_models(rows, aa_rows, version, mappings, timestamp):
     models = []
     for row in rows:
         code = row.get('model')
-        if not code or row.get('inference_provider') not in (None, 'aliyun-bailian'): continue
+        if not code: continue
         if 'Text' not in (row.get('inference_metadata') or {}).get('response_modality', []): continue
         matched = match_aa(row, aa_rows, mappings)
         proxy = variant_reference(row, aa_rows) if not matched else None
