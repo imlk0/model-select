@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-10-21T21:48:59.531942+00:00",
+  "fetched_at": "2026-10-22T21:43:37.415820+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 102,
+        "total": 103,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -7762,6 +7762,71 @@
             "inference_offline_info": null
           },
           {
+            "model": "MiniMax/MiniMax-M3.1-Flash",
+            "name": "MiniMax/MiniMax-M3.1-Flash",
+            "description": "作为新⼀代flash模型，M3.1 Flash 在 Agentic 任务、编程及⽹络安全能⼒等⽅⾯实现了全⾯提升，同时保持了极具竞争⼒的使⽤成本，在性能与效率两⽅⾯同时取得了巨⼤的提升。相⽐上⼀代 M3，M3.1 Flash 在多项基准测试中取得了显著进步，尤其在复杂 agent 任务（cowork）、软件开发（coding）及⽹络安全⽅⾯，达到了全球领先模型⽔平。",
+            "features": [
+              "function-calling",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "4",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.1",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "mini-max",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-10-20 17:09:01",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": null,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": null
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "mini-max",
+            "inference_offline_info": null
+          },
+          {
             "model": "xiaomi/mimo-v2.6-pro-ultraspeed",
             "name": "xiaomi/mimo-v2.6-pro-ultraspeed",
             "description": "MiMo-V2.6-Pro-UltraSpeed 是小米旗舰模型 MiMo-V2.6-Pro 的高速版本。该模型基于同一 1 万亿参数 MiMo-V2.6-Pro 检查点构建，在保持与原模型同等质量的前提下，输出速度提升约 10 倍。\n模型支持 1百万 token 上下文窗口，具备原生多模态能力。针对智能体工作流做了专项优化，在代码、视觉、通用问答与科研场景下均拥有顶尖性能，擅长处理复杂、长周期任务，可在各类智能体测试框架中展现出色的泛化能力。",
@@ -8893,7 +8958,20 @@
             "equivalent_snapshot": null,
             "inference_provider": "mini-max",
             "inference_offline_info": null
-          },
+          }
+        ]
+      },
+      "request_id": "7ff9d29f-6f24-9cfd-af18-0bee3e74e898"
+    },
+    {
+      "code": null,
+      "message": null,
+      "success": true,
+      "output": {
+        "total": 103,
+        "page_no": 2,
+        "page_size": 100,
+        "models": [
           {
             "model": "MiniMax/MiniMax-M2.5",
             "name": "MiniMax/MiniMax-M2.5",
@@ -8955,20 +9033,7 @@
             "equivalent_snapshot": null,
             "inference_provider": "mini-max",
             "inference_offline_info": null
-          }
-        ]
-      },
-      "request_id": "43d895f2-d383-9850-a40a-2754394c9346"
-    },
-    {
-      "code": null,
-      "message": null,
-      "success": true,
-      "output": {
-        "total": 102,
-        "page_no": 2,
-        "page_size": 100,
-        "models": [
+          },
           {
             "model": "MiniMax/MiniMax-M2.1",
             "name": "MiniMax/MiniMax-M2.1",
@@ -9096,7 +9161,7 @@
           }
         ]
       },
-      "request_id": "1d2c9d06-7006-9866-a077-dcdf80d2b17e"
+      "request_id": "82b933e7-e843-92a7-b48c-94483d36d783"
     }
   ]
 }
