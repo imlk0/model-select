@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-10-23T21:30:11.672330+00:00",
+  "fetched_at": "2026-10-24T20:57:11.419684+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 103,
+        "total": 105,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -5495,6 +5495,140 @@
             "inference_offline_info": null
           },
           {
+            "model": "kimi/kimi-k3.1-pro-highspeed",
+            "name": "kimi/kimi-k3.1-pro-highspeed",
+            "description": "高速版模型 Kimi K3.1 Pro Highspeed，同等智能，输出速度约 2~3 倍。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "26",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "136",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.3",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "moonshot-ai",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-10-24 10:34:11",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 1048576,
+              "max_reasoning_tokens": 1048576,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 1048576
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "moonshot-ai",
+            "inference_offline_info": null
+          },
+          {
+            "model": "kimi/kimi-k3.1-pro",
+            "name": "kimi/kimi-k3.1-pro",
+            "description": "Kimi K3.1 Pro 是全新 K3.1 系列的第一个模型，也是我们迄今能力最强的 3 万亿级参数模型，支持 100 万上下文。K3.1 Pro 在代码、3D 创作、金融研究和其他长程 Agent 能力上的提升尤为显著。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "prefix-completion",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "13",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "68",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "1.3",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "moonshot-ai",
+            "capabilities": [
+              "TG",
+              "Reasoning",
+              "VU"
+            ],
+            "published_time": "2026-10-24 08:22:12",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image",
+                "Video"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 1048576,
+              "max_reasoning_tokens": 1048576,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 1048576
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "moonshot-ai",
+            "inference_offline_info": null
+          },
+          {
             "model": "ZHIPU/GLM-5.3-FlashX",
             "name": "ZHIPU/GLM-5.3-FlashX",
             "description": "GLM-5.3-FlashX ，推理速度达 200 tokens/s，提供更快、更流畅的模型体验。",
@@ -8831,7 +8965,20 @@
             "equivalent_snapshot": null,
             "inference_provider": "zhipu-ai",
             "inference_offline_info": null
-          },
+          }
+        ]
+      },
+      "request_id": "c94a95bc-deb1-94f9-9d28-1ded5c29b77f"
+    },
+    {
+      "code": null,
+      "message": null,
+      "success": true,
+      "output": {
+        "total": 105,
+        "page_no": 2,
+        "page_size": 100,
+        "models": [
           {
             "model": "MiniMax/MiniMax-M3",
             "name": "MiniMax/MiniMax-M3",
@@ -8958,20 +9105,7 @@
             "equivalent_snapshot": null,
             "inference_provider": "mini-max",
             "inference_offline_info": null
-          }
-        ]
-      },
-      "request_id": "f881cf01-ed89-907c-87c9-33c014efb14d"
-    },
-    {
-      "code": null,
-      "message": null,
-      "success": true,
-      "output": {
-        "total": 103,
-        "page_no": 2,
-        "page_size": 100,
-        "models": [
+          },
           {
             "model": "MiniMax/MiniMax-M2.5",
             "name": "MiniMax/MiniMax-M2.5",
@@ -9161,7 +9295,7 @@
           }
         ]
       },
-      "request_id": "402d7eae-dbb2-9261-a43e-4bba8b32b874"
+      "request_id": "75428309-34c5-9f7e-9fea-b3f875c4c4ec"
     }
   ]
 }
