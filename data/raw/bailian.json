@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-25T20:57:20.994127+00:00",
+  "fetched_at": "2026-10-26T22:45:15.899983+00:00",
   "pages": [
     {
       "code": null,
@@ -6424,7 +6424,10 @@
             "model": "tongyi-xiaomi-analysis-pro",
             "name": "伶鹊-对话分析-pro",
             "description": "伶鹊-对话分析-pro是基于千问最新版本调优2026.09.20日更新、专注于高阶复杂分析的领域模型，如针对具备复杂业务逻辑的复杂质检规则等分析需求的模型，支持自定义更细粒度的分析标准，具备更强的多轮上下文建模、深层语义理解与推理能力。",
-            "features": [],
+            "features": [
+              "function-calling",
+              "cache"
+            ],
             "prices": [
               {
                 "prices": [
@@ -6482,7 +6485,10 @@
             "model": "tongyi-xiaomi-analysis-flash",
             "name": "伶鹊-对话分析-flash",
             "description": "伶鹊-对话分析-flash是基于千问最新版本调优2026.09.20日更新、专注于日常任务的领域模型，如对话信息抽取、场景分类等分析类需求的模型，自定义分析标准遵循与对话语义理解能力显著提升，适用于低时延的离线在线分析任务。",
-            "features": [],
+            "features": [
+              "function-calling",
+              "cache"
+            ],
             "prices": [
               {
                 "prices": [
@@ -8968,7 +8974,7 @@
           }
         ]
       },
-      "request_id": "46e226b9-e49e-9136-b986-d37b2c77c690"
+      "request_id": "b04fcc52-c4b2-9fc4-a08f-2c502bbd151c"
     },
     {
       "code": null,
@@ -9295,7 +9301,7 @@
           }
         ]
       },
-      "request_id": "ce61219f-026d-9f1e-b17b-53c5f31e4948"
+      "request_id": "5b083c9a-5081-9d05-8ae8-52a8348f18c3"
     }
   ]
 }

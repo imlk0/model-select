@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T20:57:20.994127+00:00",
+  "updated_at": "2026-10-26T22:45:15.899983+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -156,23 +156,23 @@
     "terra": {
       "positioning": "日常开发，兼顾成本",
       "candidates": [
-        "glm-5.2",
-        "glm-5.2-fast-preview",
-        "qwen3.8-27b",
-        "qwen3.7-max",
-        "glm-5",
-        "kimi-k2.6",
-        "qwen3.6-plus"
+        "deepseek-v4.1-flash-1017",
+        "glm-5.3",
+        "glm-5.3-prime",
+        "kimi-k3",
+        "qwen3.8-2.4t-a95b",
+        "qwen3.8-flash",
+        "deepseek-v4.1-flash"
       ],
-      "best": "glm-5.2",
+      "best": "deepseek-v4.1-flash-1017",
       "selection_method": "nearest-reference",
       "reference": {
-        "aa_id": "26e0f83a-ca98-4f34-94ac-7c5e251ee410",
-        "slug": "gpt-5-6-terra-medium",
-        "name": "GPT-5.6 Terra (Medium)",
-        "release_date": "2026-07-09",
-        "score": 30.1,
-        "url": "https://artificialanalysis.ai/models/gpt-5-6-terra-medium"
+        "aa_id": "c441e158-a87d-4116-911b-93325e4b4f1c",
+        "slug": "gpt-6-1-terra-medium",
+        "name": "GPT-6.1 Terra (Medium)",
+        "release_date": "2026-10-26",
+        "score": 41.3,
+        "url": "https://artificialanalysis.ai/models/gpt-6-1-terra-medium"
       },
       "empty_reason": null
     },
