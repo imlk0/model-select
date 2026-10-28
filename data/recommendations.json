@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T22:22:58.401872+00:00",
+  "updated_at": "2026-10-28T22:41:00.465317+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -11,23 +11,24 @@
     "fable": {
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "kimi-k3",
-        "qwen3.8-2.4t-a95b"
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "qwen3.8-27b"
       ],
-      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "3b7de71c-e034-4591-8ca6-6b6be2fa471f",
         "slug": "claude-fable-5-1-medium",
         "name": "Claude Fable 5.1 (Medium, Default Fallback)",
         "release_date": "2026-09-01",
-        "score": 48.9,
+        "score": 43.0,
         "url": "https://artificialanalysis.ai/models/claude-fable-5-1-medium"
       },
       "empty_reason": null
@@ -35,23 +36,24 @@
     "opus": {
       "positioning": "复杂编程与长程任务",
       "candidates": [
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "kimi-k3",
-        "qwen3.8-2.4t-a95b"
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "qwen3.8-27b"
       ],
-      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "ea9e0da6-169f-43c6-92f5-730a10d6ff8d",
         "slug": "claude-opus-5-5-medium",
         "name": "Claude Opus 5.5 (Medium, Default Fallback)",
         "release_date": "2026-09-22",
-        "score": 51.2,
+        "score": 48.1,
         "url": "https://artificialanalysis.ai/models/claude-opus-5-5-medium"
       },
       "empty_reason": null
@@ -59,22 +61,24 @@
     "sonnet": {
       "positioning": "日常开发与主力任务",
       "candidates": [
+        "qwen3.8-max",
+        "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "kimi-k3",
-        "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash",
-        "deepseek-v4.1-flash"
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "qwen3.8-27b"
       ],
-      "best": "deepseek-v4.1-flash-1017",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "042e8a37-fcd0-40f4-8f41-99215fb68eda",
         "slug": "claude-sonnet-5-5-medium",
         "name": "Claude Sonnet 5.5 (Medium, Default Fallback)",
         "release_date": "2026-09-28",
-        "score": 40.8,
+        "score": 30.3,
         "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5-medium"
       },
       "empty_reason": null
@@ -82,23 +86,24 @@
     "haiku": {
       "positioning": "轻量任务与 Subagent",
       "candidates": [
-        "deepseek-v4.1-flash",
+        "qwen3.8-max",
+        "qwen3.8-max-0902",
+        "deepseek-v4.1-flash-1017",
+        "glm-5.3",
+        "glm-5.3-prime",
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "deepseek-v4-pro",
         "deepseek-v4-pro-0813",
-        "deepseek-v4-flash-0731",
-        "glm-5.2",
-        "glm-5.2-fast-preview",
-        "qwen3.8-27b",
-        "qwen3.7-max"
+        "qwen3.8-27b"
       ],
-      "best": "deepseek-v4.1-flash",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "af26fff4-8120-41be-a5f0-86aaea023f20",
         "slug": "claude-haiku-5-5-medium",
         "name": "Claude Haiku 5.5 (Medium)",
         "release_date": "2026-10-07",
-        "score": 34.5,
+        "score": 24.6,
         "url": "https://artificialanalysis.ai/models/claude-haiku-5-5-medium"
       },
       "empty_reason": null
@@ -108,23 +113,24 @@
     "astra": {
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "kimi-k3",
-        "qwen3.8-2.4t-a95b"
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "qwen3.8-27b"
       ],
-      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
         "slug": "gpt-6-astra-medium",
         "name": "GPT-6 Astra (Medium)",
         "release_date": "2026-09-03",
-        "score": 49.6,
+        "score": 51.5,
         "url": "https://artificialanalysis.ai/models/gpt-6-astra-medium"
       },
       "empty_reason": null
@@ -132,23 +138,24 @@
     "sol": {
       "positioning": "复杂编程与日常主力",
       "candidates": [
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "kimi-k3",
-        "qwen3.8-2.4t-a95b"
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "qwen3.8-27b"
       ],
-      "best": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
         "slug": "gpt-6-1-sol-medium",
         "name": "GPT-6.1 Sol (Medium)",
         "release_date": "2026-09-29",
-        "score": 47.8,
+        "score": 46.1,
         "url": "https://artificialanalysis.ai/models/gpt-6-1-sol-medium"
       },
       "empty_reason": null
@@ -156,22 +163,24 @@
     "terra": {
       "positioning": "日常开发，兼顾成本",
       "candidates": [
+        "qwen3.8-max",
+        "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "kimi-k3",
-        "qwen3.8-2.4t-a95b",
-        "qwen3.8-flash",
-        "deepseek-v4.1-flash"
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "qwen3.8-27b"
       ],
-      "best": "deepseek-v4.1-flash-1017",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "c441e158-a87d-4116-911b-93325e4b4f1c",
         "slug": "gpt-6-1-terra-medium",
         "name": "GPT-6.1 Terra (Medium)",
         "release_date": "2026-10-26",
-        "score": 41.3,
+        "score": 38.1,
         "url": "https://artificialanalysis.ai/models/gpt-6-1-terra-medium"
       },
       "empty_reason": null
@@ -179,22 +188,24 @@
     "luna": {
       "positioning": "轻量任务与快速响应",
       "candidates": [
-        "glm-5.2",
-        "glm-5.2-fast-preview",
-        "qwen3.7-max",
-        "glm-5",
-        "kimi-k2.6",
-        "qwen3.6-plus",
-        "glm-5.1"
+        "qwen3.8-max",
+        "qwen3.8-max-0902",
+        "deepseek-v4.1-flash-1017",
+        "glm-5.3",
+        "glm-5.3-prime",
+        "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "qwen3.8-27b"
       ],
-      "best": "glm-5.2",
+      "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "36667da0-9222-4967-adbb-f7efa15ad213",
         "slug": "gpt-6-luna-medium",
         "name": "GPT-6 Luna (Medium)",
         "release_date": "2026-09-22",
-        "score": 29.9,
+        "score": 18.3,
         "url": "https://artificialanalysis.ai/models/gpt-6-luna-medium"
       },
       "empty_reason": null

@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-10-27T22:22:58.401872+00:00",
+  "fetched_at": "2026-10-28T22:41:00.465317+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 105,
+        "total": 106,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -7103,6 +7103,71 @@
             "inference_offline_info": null
           },
           {
+            "model": "vanchin/deepseek-v4.1-flash-1017",
+            "name": "vanchin/deepseek-v4.1-flash-1017",
+            "description": "DeepSeek-V4.1-Flash 模型，全新模型结构系列中的最小尺寸的模型，具备原生多模态视觉理解能力。新模型结构的设计初衷是：能力上限更高、推理速度更快、吞吐更大、可扩展到更大参数模型。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "2",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "8",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.04",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "deepseek",
+            "capabilities": [
+              "TG",
+              "VU",
+              "Reasoning"
+            ],
+            "published_time": "2026-10-27 11:17:15",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text",
+                "Image"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 1048576,
+              "max_output_tokens": 393216,
+              "max_reasoning_tokens": null,
+              "reasoning_max_input_tokens": 1048576,
+              "reasoning_max_output_tokens": 393216
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "vanchin",
+            "inference_offline_info": null
+          },
+          {
             "model": "vanchin/deepseek-v4.1-flash",
             "name": "vanchin/deepseek-v4.1-flash",
             "description": "由快手Vanchin提供的DeepSeek V4.1 Flash现已更新至 V4.1-Flash-1017 版本！相比上一版本的 DeepSeek V4.1 Flash，新模型在各方面的基准测试中取得了长足的提升，模型输出更精炼、任务完成速度更快，基于552B参数MoE架构，推理时仅激活约8B参数，显著降低调用成本。",
@@ -8907,7 +8972,20 @@
             "equivalent_snapshot": null,
             "inference_provider": "zhipu-ai",
             "inference_offline_info": null
-          },
+          }
+        ]
+      },
+      "request_id": "f081286a-e7be-9f55-b1fd-617de46b74a4"
+    },
+    {
+      "code": null,
+      "message": null,
+      "success": true,
+      "output": {
+        "total": 106,
+        "page_no": 2,
+        "page_size": 100,
+        "models": [
           {
             "model": "ZHIPU/GLM-5",
             "name": "ZHIPU/GLM-5",
@@ -8971,20 +9049,7 @@
             "equivalent_snapshot": null,
             "inference_provider": "zhipu-ai",
             "inference_offline_info": null
-          }
-        ]
-      },
-      "request_id": "b8ae9908-6ed2-93a0-a80b-0a7a70ffa121"
-    },
-    {
-      "code": null,
-      "message": null,
-      "success": true,
-      "output": {
-        "total": 105,
-        "page_no": 2,
-        "page_size": 100,
-        "models": [
+          },
           {
             "model": "MiniMax/MiniMax-M3",
             "name": "MiniMax/MiniMax-M3",
@@ -9301,7 +9366,7 @@
           }
         ]
       },
-      "request_id": "7c5b5e44-24c7-935f-afa3-d95b4bdaacae"
+      "request_id": "57bc5171-b1b8-9b77-9973-582a74844f7d"
     }
   ]
 }
