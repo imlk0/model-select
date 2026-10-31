@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "verified_catalog": true,
-  "updated_at": "2026-10-30T22:27:50.651327+00:00",
+  "updated_at": "2026-10-31T21:42:40.618166+00:00",
   "region": "华北2（北京）",
   "currency": "CNY",
   "price_unit": "per 1M tokens",
@@ -70,7 +70,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 34.73,
+        "tokens_per_second": 41.92,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -86,13 +86,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "MiniMax-M2.5",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "12adec16-19fe-4d92-aeff-5ef3eb7e780a",
           "aa_slug": "minimax-m2-5",
           "aa_name": "MiniMax-M2.5",
@@ -185,7 +185,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "MiniMax/MiniMax-M2.1",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -277,7 +277,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "MiniMax/MiniMax-M2.5",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -369,7 +369,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "MiniMax/MiniMax-M2.7",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -461,7 +461,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "MiniMax/MiniMax-M3",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -553,7 +553,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "MiniMax/MiniMax-M3.1-Flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -647,7 +647,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "ZHIPU/GLM-5",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -741,7 +741,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "ZHIPU/GLM-5.1",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -835,7 +835,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "ZHIPU/GLM-5.2",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -929,7 +929,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "ZHIPU/GLM-5.3",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -1023,7 +1023,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "ZHIPU/GLM-5.3-Flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -1117,7 +1117,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "ZHIPU/GLM-5.3-FlashX",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -1192,7 +1192,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "decision-model-preview",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -1250,13 +1250,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "deepseek-r1-distill-qwen-1.5b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "444cdb1e-bab8-42cd-938c-b2d7a93e2da1",
           "aa_slug": "deepseek-r1-distill-qwen-1-5b",
           "aa_name": "DeepSeek R1 Distill Qwen 1.5B",
@@ -1363,7 +1363,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 111.27,
+        "tokens_per_second": 135.81,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1381,13 +1381,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "deepseek-v4-flash-0731",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
           "aa_slug": "deepseek-v4-flash",
           "aa_name": "DeepSeek V4 Flash 0731 (Max)",
@@ -1466,7 +1466,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 80.73,
+        "tokens_per_second": 93.54,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1484,13 +1484,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "deepseek-v4-pro",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "83173329-c09a-41f1-a028-a282a5f908d7",
           "aa_slug": "deepseek-v4-pro",
           "aa_name": "DeepSeek V4 Pro 0813 (Max)",
@@ -1595,7 +1595,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 80.73,
+        "tokens_per_second": 93.54,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1613,13 +1613,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "deepseek-v4-pro-0813",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "83173329-c09a-41f1-a028-a282a5f908d7",
           "aa_slug": "deepseek-v4-pro",
           "aa_name": "DeepSeek V4 Pro 0813 (Max)",
@@ -1724,7 +1724,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 181.37,
+        "tokens_per_second": 197.48,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1741,13 +1741,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "deepseek-v4.1-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "dbe7c625-3100-4463-b479-a228c41f75dd",
           "aa_slug": "deepseek-v4-1-flash",
           "aa_name": "DeepSeek V4.1 Flash (Max)",
@@ -1853,7 +1853,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 175.1,
+        "tokens_per_second": 169.49,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1870,13 +1870,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "deepseek-v4.1-flash-1017",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "f151fd0b-2139-40cf-a3ec-995e8cedc592",
           "aa_slug": "deepseek-v4-1-flash-1017",
           "aa_name": "DeepSeek V4.1 Flash 1017 (Max)",
@@ -1980,7 +1980,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 67.73,
+        "tokens_per_second": 65.66,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -1996,13 +1996,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "glm-5",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "40663ad2-b218-471e-bdd4-a1e0c2360e2b",
           "aa_slug": "glm-5",
           "aa_name": "GLM-5 (Reasoning)",
@@ -2135,7 +2135,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 75.4,
+        "tokens_per_second": 79.56,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -2152,13 +2152,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "glm-5.1",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
           "aa_slug": "glm-5-1",
           "aa_name": "GLM-5.1 (Reasoning)",
@@ -2237,7 +2237,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 80.3,
+        "tokens_per_second": 82.18,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -2254,13 +2254,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "glm-5.2",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
           "aa_slug": "glm-5-2",
           "aa_name": "GLM-5.2 (Max)",
@@ -2357,13 +2357,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "glm-5.2-fast-preview",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
           "aa_slug": "glm-5-2",
           "aa_name": "GLM-5.2 (Max)",
@@ -2461,13 +2461,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "glm-5.3",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
           "aa_slug": "glm-5-3",
           "aa_name": "GLM-5.3 (Max)",
@@ -2562,13 +2562,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "glm-5.3-prime",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
           "aa_slug": "glm-5-3",
           "aa_name": "GLM-5.3 (Max)",
@@ -2678,13 +2678,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi-k2.5",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
           "aa_slug": "kimi-k2-5",
           "aa_name": "Kimi K2.5 (Reasoning)",
@@ -2777,7 +2777,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 46.04,
+        "tokens_per_second": 43.24,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -2793,13 +2793,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi-k2.6",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "0de67206-4d36-4d10-b8f6-cf37fa747a03",
           "aa_slug": "kimi-k2-6",
           "aa_name": "Kimi K2.6 (Reasoning)",
@@ -2892,7 +2892,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 46.66,
+        "tokens_per_second": 44.76,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -2911,13 +2911,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi-k2.7-code",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "8d0cb231-7303-452c-9923-a9620b948475",
           "aa_slug": "kimi-k2-7-code",
           "aa_name": "Kimi K2.7 Code",
@@ -2996,7 +2996,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 61.74,
+        "tokens_per_second": 65.07,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -3015,13 +3015,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi-k3",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
           "aa_slug": "kimi-k3",
           "aa_name": "Kimi K3 (Max)",
@@ -3116,7 +3116,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi/kimi-k2.6",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3210,7 +3210,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi/kimi-k2.7-code",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3304,7 +3304,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi/kimi-k2.7-code-highspeed",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3398,7 +3398,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi/kimi-k2.8-preview",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3492,7 +3492,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi/kimi-k3",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3586,7 +3586,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi/kimi-k3.1-pro",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3680,7 +3680,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "kimi/kimi-k3.1-pro-highspeed",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3762,7 +3762,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-deep-research",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3844,7 +3844,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-deep-research-2025-12-15",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -3950,7 +3950,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-doc-turbo",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4225,7 +4225,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4351,7 +4351,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-flash-2025-07-28",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4445,7 +4445,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-flash-character",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4537,7 +4537,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-flash-character-2026-02-26",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4635,7 +4635,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-long",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4746,7 +4746,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-max",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4830,7 +4830,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-mt-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4914,7 +4914,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-mt-lite",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -4998,7 +4998,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-mt-plus",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -5468,7 +5468,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-plus",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -5555,7 +5555,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-plus-2025-01-25",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -5662,7 +5662,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-plus-2025-04-28",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -5770,7 +5770,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-plus-2025-07-14",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -5944,7 +5944,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-plus-2025-12-01",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -6052,7 +6052,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-plus-character",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -6311,7 +6311,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen-plus-latest",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -6538,7 +6538,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3-coder-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -6680,7 +6680,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3-coder-flash-2025-07-28",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -6770,7 +6770,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 129.64,
+        "tokens_per_second": 129.06,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -6788,13 +6788,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-122b-a10b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "2236df45-0699-40d1-b5cc-69ee345d2257",
           "aa_slug": "qwen3-5-122b-a10b",
           "aa_name": "Qwen3.5 122B A10B (Reasoning)",
@@ -6885,7 +6885,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 78.29,
+        "tokens_per_second": 77.48,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -6904,13 +6904,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-27b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "169e47f5-3d4d-4ad4-8f8b-ab46f0c73f67",
           "aa_slug": "qwen3-5-27b",
           "aa_name": "Qwen3.5 27B (Reasoning)",
@@ -7019,13 +7019,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-35b-a3b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "46d8315e-1630-463f-ab62-84185fa0faab",
           "aa_slug": "qwen3-5-35b-a3b",
           "aa_name": "Qwen3.5 35B A3B (Reasoning)",
@@ -7116,7 +7116,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 59.38,
+        "tokens_per_second": 58.35,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -7134,13 +7134,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-397b-a17b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "0e66bae9-41f1-42fc-9276-ce8cb6f72919",
           "aa_slug": "qwen3-5-397b-a17b",
           "aa_name": "Qwen3.5 397B A17B (Reasoning)",
@@ -7395,7 +7395,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -7522,7 +7522,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-flash-2026-02-23",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -7776,7 +7776,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-plus",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -7902,7 +7902,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-plus-2026-02-15",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -8071,7 +8071,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.5-plus-2026-04-20",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -8142,7 +8142,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 57.93,
+        "tokens_per_second": 57.91,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -8160,13 +8160,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.6-27b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "8c29d66d-bf98-4ea3-8572-5409353ecc66",
           "aa_slug": "qwen3-6-27b",
           "aa_name": "Qwen3.6 27B (Reasoning)",
@@ -8238,7 +8238,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 133.19,
+        "tokens_per_second": 132.25,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -8256,13 +8256,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.6-35b-a3b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "8665ca00-c687-44c7-875c-22618cb31c4f",
           "aa_slug": "qwen3-6-35b-a3b",
           "aa_name": "Qwen3.6 35B A3B (Reasoning)",
@@ -8456,7 +8456,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.6-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -8564,7 +8564,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.6-flash-2026-04-16",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -8738,7 +8738,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 55.68,
+        "tokens_per_second": 54.22,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -8758,13 +8758,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.6-plus",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
           "aa_slug": "qwen3-6-plus",
           "aa_name": "Qwen3.6 Plus",
@@ -8873,7 +8873,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.6-plus-2026-04-02",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -9148,7 +9148,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -9338,7 +9338,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-flash-2026-07-15",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -9458,7 +9458,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 198.01,
+        "tokens_per_second": 198.49,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -9478,13 +9478,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-max",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "69534bed-2ffd-4235-832b-e20a810333ab",
           "aa_slug": "qwen3-7-max",
           "aa_name": "Qwen3.7 Max",
@@ -9572,7 +9572,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-max-2026-05-17",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -9674,7 +9674,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-max-2026-05-20",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -9783,7 +9783,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-max-2026-06-08",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -9870,7 +9870,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-max-preview",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -10058,7 +10058,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 57.25,
+        "tokens_per_second": 57.1,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -10078,13 +10078,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-plus",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "a87fce42-eea3-4e45-a96d-fe057814f371",
           "aa_slug": "qwen3-7-plus",
           "aa_name": "Qwen3.7 Plus",
@@ -10235,7 +10235,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.7-plus-2026-05-26",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -10327,7 +10327,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 39.59,
+        "tokens_per_second": 38.48,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -10346,13 +10346,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.8-2.4t-a95b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "8df710d3-9dae-4498-9b4e-9818238e6f31",
           "aa_slug": "qwen3-8-2-4t-a95b",
           "aa_name": "Qwen3.8 2.4T A95B",
@@ -10445,7 +10445,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 38.23,
+        "tokens_per_second": 39.11,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -10464,13 +10464,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.8-27b",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
           "aa_slug": "qwen3-8-27b",
           "aa_name": "Qwen3.8 27B (Xhigh)",
@@ -10610,13 +10610,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.8-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
           "aa_slug": "qwen3-8-flash-next",
           "aa_name": "Qwen3.8-Flash-Next",
@@ -10739,7 +10739,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 40.16,
+        "tokens_per_second": 39.82,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -10759,13 +10759,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.8-max",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
           "aa_slug": "qwen3-8-max",
           "aa_name": "Qwen3.8 Max (0902)",
@@ -10857,7 +10857,7 @@
         "version": 5
       },
       "speed": {
-        "tokens_per_second": 40.16,
+        "tokens_per_second": 39.82,
         "scope": "AA 跨供应商中位数，非百炼实测速率",
         "prompt_type": "free-endpoint-default"
       },
@@ -10876,13 +10876,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "qwen3.8-max-0902",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "b112af07-3bd5-4647-b09f-b23204361bb2",
           "aa_slug": "qwen3-8-max",
           "aa_name": "Qwen3.8 Max (0902)",
@@ -10967,7 +10967,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "siliconflow/deepseek-r1-0528",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11052,7 +11052,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "siliconflow/deepseek-v3-0324",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11137,7 +11137,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "siliconflow/deepseek-v3.1-terminus",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11222,7 +11222,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "siliconflow/deepseek-v3.2",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11316,7 +11316,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "stepfun/step-3.7-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11410,7 +11410,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "stepfun/step-5-preview",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11492,7 +11492,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "tongyi-intent-detect-v3",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11584,7 +11584,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "tongyi-xiaomi-analysis-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11676,7 +11676,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "tongyi-xiaomi-analysis-pro",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11769,7 +11769,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "unisound/unisound-u2",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11853,7 +11853,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-ocr",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -11946,7 +11946,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-r1",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12040,7 +12040,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-v3",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12132,7 +12132,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-v3.1-terminus",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12226,7 +12226,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-v3.2-think",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12319,7 +12319,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-v4-pro",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12412,7 +12412,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-v4-pro-0813",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12505,7 +12505,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-v4.1-flash",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12598,7 +12598,7 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "vanchin/deepseek-v4.1-flash-1017",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
@@ -12692,13 +12692,13 @@
       "provenance": {
         "catalog": {
           "url": "https://help.aliyun.com/zh/model-studio/list-models",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "model_id": "xiaomi/mimo-v2.6-pro-ultraspeed",
           "endpoint": "https://dashscope.aliyuncs.com/api/v1/models"
         },
         "benchmark": {
           "url": "https://artificialanalysis.ai/data-api/docs",
-          "fetched_at": "2026-10-30T22:27:50.651327+00:00",
+          "fetched_at": "2026-10-31T21:42:40.618166+00:00",
           "aa_id": "24d8fdfe-6241-424e-b7b7-1b6efb06e4fb",
           "aa_slug": "mimo-v2-6-pro",
           "aa_name": "MiMo-V2.6-Pro",
