@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T23:29:18.029704+00:00",
+  "updated_at": "2026-11-04T23:45:19.623720+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -11,6 +11,7 @@
     "fable": {
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
+        "kimi-k3.1-pro",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
@@ -18,10 +19,9 @@
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
         "deepseek-v4-pro",
-        "deepseek-v4-pro-0813",
-        "qwen3.8-27b"
+        "deepseek-v4-pro-0813"
       ],
-      "best": "qwen3.8-max",
+      "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "3b7de71c-e034-4591-8ca6-6b6be2fa471f",
@@ -36,6 +36,7 @@
     "opus": {
       "positioning": "复杂编程与长程任务",
       "candidates": [
+        "kimi-k3.1-pro",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
@@ -43,10 +44,9 @@
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
         "deepseek-v4-pro",
-        "deepseek-v4-pro-0813",
-        "qwen3.8-27b"
+        "deepseek-v4-pro-0813"
       ],
-      "best": "qwen3.8-max",
+      "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "ea9e0da6-169f-43c6-92f5-730a10d6ff8d",
@@ -113,6 +113,7 @@
     "astra": {
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
+        "kimi-k3.1-pro",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
@@ -120,10 +121,9 @@
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
         "deepseek-v4-pro",
-        "deepseek-v4-pro-0813",
-        "qwen3.8-27b"
+        "deepseek-v4-pro-0813"
       ],
-      "best": "qwen3.8-max",
+      "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
@@ -138,6 +138,7 @@
     "sol": {
       "positioning": "复杂编程与日常主力",
       "candidates": [
+        "kimi-k3.1-pro",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
@@ -145,10 +146,9 @@
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
         "deepseek-v4-pro",
-        "deepseek-v4-pro-0813",
-        "qwen3.8-27b"
+        "deepseek-v4-pro-0813"
       ],
-      "best": "qwen3.8-max",
+      "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
@@ -163,6 +163,7 @@
     "terra": {
       "positioning": "日常开发，兼顾成本",
       "candidates": [
+        "kimi-k3.1-pro",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
@@ -170,10 +171,9 @@
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
         "deepseek-v4-pro",
-        "deepseek-v4-pro-0813",
-        "qwen3.8-27b"
+        "deepseek-v4-pro-0813"
       ],
-      "best": "qwen3.8-max",
+      "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "c441e158-a87d-4116-911b-93325e4b4f1c",
