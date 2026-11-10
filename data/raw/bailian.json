@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T01:37:58.076950+00:00",
+  "fetched_at": "2026-11-10T23:29:46.338630+00:00",
   "pages": [
     {
       "code": null,
@@ -5961,7 +5961,9 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "moonshot-ai",
-            "inference_offline_info": null
+            "inference_offline_info": {
+              "offline_time": "2026-12-31 23:59:59"
+            }
           },
           {
             "model": "kimi/kimi-k2.8-preview",
@@ -6095,7 +6097,9 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "moonshot-ai",
-            "inference_offline_info": null
+            "inference_offline_info": {
+              "offline_time": "2026-12-31 23:59:59"
+            }
           },
           {
             "model": "kimi/kimi-k2.6",
@@ -6162,7 +6166,9 @@
             },
             "equivalent_snapshot": null,
             "inference_provider": "moonshot-ai",
-            "inference_offline_info": null
+            "inference_offline_info": {
+              "offline_time": "2026-12-31 23:59:59"
+            }
           },
           {
             "model": "qwen3-coder-flash-2025-07-28",
@@ -8978,7 +8984,7 @@
           }
         ]
       },
-      "request_id": "2d527eb7-909d-98c3-a5f3-57ac016222ea"
+      "request_id": "4abaaa98-5838-930c-86c5-a28e06ac452c"
     },
     {
       "code": null,
@@ -9496,7 +9502,7 @@
           }
         ]
       },
-      "request_id": "fed05b48-8483-9a1c-9870-77243a8ee115"
+      "request_id": "b2ba89c5-58e8-953c-9994-d1febb05f1a5"
     }
   ]
 }
