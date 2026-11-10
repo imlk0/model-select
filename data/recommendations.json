@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T22:14:41.796915+00:00",
+  "updated_at": "2026-11-10T01:37:58.076950+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -24,12 +24,12 @@
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
       "reference": {
-        "aa_id": "3b7de71c-e034-4591-8ca6-6b6be2fa471f",
-        "slug": "claude-fable-5-1-medium",
-        "name": "Claude Fable 5.1 (Medium, Default Fallback)",
-        "release_date": "2026-09-01",
-        "score": 43.2,
-        "url": "https://artificialanalysis.ai/models/claude-fable-5-1-medium"
+        "aa_id": "0c9b4e05-9259-42cc-b40e-d6acbbeaa7e8",
+        "slug": "claude-fable-5-2-medium",
+        "name": "Claude Fable 5.2 (Medium, Default Fallback)",
+        "release_date": "2026-11-09",
+        "score": 56.4,
+        "url": "https://artificialanalysis.ai/models/claude-fable-5-2-medium"
       },
       "empty_reason": null
     },
