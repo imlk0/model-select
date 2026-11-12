@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T23:29:46.338630+00:00",
+  "updated_at": "2026-11-12T00:49:26.198649+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -18,8 +18,7 @@
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0813"
+        "qwen3.8-flash"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -43,8 +42,7 @@
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0813"
+        "qwen3.8-flash"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -67,9 +65,9 @@
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "qwen3.8-flash",
         "deepseek-v4-pro",
-        "deepseek-v4-pro-0813",
-        "qwen3.8-27b"
+        "deepseek-v4-pro-0813"
       ],
       "best": "qwen3.8-max",
       "selection_method": "nearest-reference",
@@ -86,17 +84,16 @@
     "haiku": {
       "positioning": "轻量任务与 Subagent",
       "candidates": [
-        "qwen3.8-max",
-        "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "qwen3.8-flash",
         "deepseek-v4-pro",
         "deepseek-v4-pro-0813",
         "qwen3.8-27b"
       ],
-      "best": "qwen3.8-max",
+      "best": "deepseek-v4.1-flash-1017",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "af26fff4-8120-41be-a5f0-86aaea023f20",
@@ -120,8 +117,7 @@
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0813"
+        "qwen3.8-flash"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -145,8 +141,7 @@
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0813"
+        "qwen3.8-flash"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -170,8 +165,7 @@
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0813"
+        "qwen3.8-flash"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -188,17 +182,16 @@
     "luna": {
       "positioning": "轻量任务与快速响应",
       "candidates": [
-        "qwen3.8-max",
-        "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
         "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "qwen3.8-flash",
         "deepseek-v4-pro",
         "deepseek-v4-pro-0813",
         "qwen3.8-27b"
       ],
-      "best": "qwen3.8-max",
+      "best": "deepseek-v4.1-flash-1017",
       "selection_method": "nearest-reference",
       "reference": {
         "aa_id": "36667da0-9222-4967-adbb-f7efa15ad213",

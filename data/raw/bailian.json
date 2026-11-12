@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T23:29:46.338630+00:00",
+  "fetched_at": "2026-11-12T00:49:26.198649+00:00",
   "pages": [
     {
       "code": null,
@@ -3931,14 +3931,14 @@
                   },
                   {
                     "type": "input_token_cache",
-                    "price": "0.1",
+                    "price": "0.02",
                     "price_unit": "每百万tokens",
                     "price_name": "输入（缓存命中）",
                     "time_band": "offpeak"
                   },
                   {
                     "type": "input_token_cache",
-                    "price": "0.2",
+                    "price": "0.04",
                     "price_unit": "每百万tokens",
                     "price_name": "输入（缓存命中）",
                     "time_band": "peak"
@@ -4018,14 +4018,14 @@
                   },
                   {
                     "type": "input_token_cache",
-                    "price": "0.1",
+                    "price": "0.02",
                     "price_unit": "每百万tokens",
                     "price_name": "输入（缓存命中）",
                     "time_band": "offpeak"
                   },
                   {
                     "type": "input_token_cache",
-                    "price": "0.2",
+                    "price": "0.04",
                     "price_unit": "每百万tokens",
                     "price_name": "输入（缓存命中）",
                     "time_band": "peak"
@@ -8984,7 +8984,7 @@
           }
         ]
       },
-      "request_id": "4abaaa98-5838-930c-86c5-a28e06ac452c"
+      "request_id": "5017345f-4aaf-98f6-8a2c-3ecc063cd3d0"
     },
     {
       "code": null,
@@ -9502,7 +9502,7 @@
           }
         ]
       },
-      "request_id": "b2ba89c5-58e8-953c-9994-d1febb05f1a5"
+      "request_id": "00ea616b-bac7-9fef-b467-a1d9d8ce0a24"
     }
   ]
 }
