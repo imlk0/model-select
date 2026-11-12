@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-12T00:49:26.198649+00:00",
+  "fetched_at": "2026-11-12T23:41:52.857074+00:00",
   "pages": [
     {
       "code": null,
@@ -65,7 +65,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "15",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -206,7 +206,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "15",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -304,7 +304,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.25",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -416,7 +416,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "2.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -484,7 +484,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "7.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -596,7 +596,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "15",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -705,7 +705,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.25",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -773,7 +773,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.75",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -841,7 +841,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -938,7 +938,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.25",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": null
                   },
                   {
@@ -978,7 +978,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.75",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": null
                   },
                   {
@@ -1018,7 +1018,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": null
                   },
                   {
@@ -1109,7 +1109,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "2.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1170,7 +1170,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "10",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1266,7 +1266,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "15",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1349,7 +1349,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "2.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1389,7 +1389,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "7.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1464,7 +1464,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "15",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1552,7 +1552,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1613,7 +1613,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "6",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -1848,7 +1848,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "15",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": null
                   },
                   {
@@ -2053,7 +2053,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.25",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2114,7 +2114,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2175,7 +2175,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2280,7 +2280,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2341,7 +2341,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "2.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2402,7 +2402,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2494,7 +2494,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2527,7 +2527,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "2.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -2560,7 +2560,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -3219,7 +3219,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -3350,7 +3350,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "3",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -3481,7 +3481,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "6",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -3698,7 +3698,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.188",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -3766,7 +3766,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.75",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -3834,7 +3834,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -4336,7 +4336,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.25",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -4376,7 +4376,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1.875",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -4416,7 +4416,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "3.125",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -4456,7 +4456,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "6.25",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -4878,7 +4878,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "8.125",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -4958,7 +4958,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "8.125",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -5038,7 +5038,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -5328,7 +5328,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "7.5",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -5368,7 +5368,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "10",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -7680,7 +7680,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "0.75",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -8000,7 +8000,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "1",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": "standard"
                   },
                   {
@@ -8468,7 +8468,7 @@
                     "type": "input_token_cache_creation_5m",
                     "price": "3.75",
                     "price_unit": "每百万tokens",
-                    "price_name": "显式缓存创建",
+                    "price_name": "5分钟显式缓存创建",
                     "time_band": null
                   },
                   {
@@ -8984,7 +8984,7 @@
           }
         ]
       },
-      "request_id": "5017345f-4aaf-98f6-8a2c-3ecc063cd3d0"
+      "request_id": "1dd7eede-0ed9-93b3-b5e0-24b6617030b4"
     },
     {
       "code": null,
@@ -9502,7 +9502,7 @@
           }
         ]
       },
-      "request_id": "00ea616b-bac7-9fef-b467-a1d9d8ce0a24"
+      "request_id": "089b7f6f-cf42-950f-b2db-659953d7014e"
     }
   ]
 }
