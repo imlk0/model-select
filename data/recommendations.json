@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T22:56:54.865846+00:00",
+  "updated_at": "2026-11-17T01:53:35.104415+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -12,13 +12,13 @@
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
         "kimi-k3.1-pro",
+        "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "qwen3.8-flash"
+        "xiaomi/mimo-v2.6-pro-ultraspeed"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -36,13 +36,13 @@
       "positioning": "复杂编程与长程任务",
       "candidates": [
         "kimi-k3.1-pro",
+        "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "qwen3.8-flash"
+        "xiaomi/mimo-v2.6-pro-ultraspeed"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -111,13 +111,13 @@
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
         "kimi-k3.1-pro",
+        "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "qwen3.8-flash"
+        "xiaomi/mimo-v2.6-pro-ultraspeed"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -135,13 +135,13 @@
       "positioning": "复杂编程与日常主力",
       "candidates": [
         "kimi-k3.1-pro",
+        "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "qwen3.8-flash"
+        "xiaomi/mimo-v2.6-pro-ultraspeed"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
@@ -159,13 +159,13 @@
       "positioning": "日常开发，兼顾成本",
       "candidates": [
         "kimi-k3.1-pro",
+        "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
         "deepseek-v4.1-flash-1017",
         "glm-5.3",
         "glm-5.3-prime",
-        "xiaomi/mimo-v2.6-pro-ultraspeed",
-        "qwen3.8-flash"
+        "xiaomi/mimo-v2.6-pro-ultraspeed"
       ],
       "best": "kimi-k3.1-pro",
       "selection_method": "nearest-reference",
