@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-17T01:53:35.104415+00:00",
+  "fetched_at": "2026-11-18T01:00:31.269706+00:00",
   "pages": [
     {
       "code": null,
@@ -19,7 +19,8 @@
               "function-calling",
               "prefix-completion",
               "structured-outputs",
-              "web-search"
+              "web-search",
+              "batch"
             ],
             "prices": [
               {
@@ -46,6 +47,20 @@
                     "time_band": "standard"
                   },
                   {
+                    "type": "input_token_batch",
+                    "price": "5",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（Batch File）",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token_batch",
+                    "price": "15",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出（Batch File）",
+                    "time_band": "standard"
+                  },
+                  {
                     "type": "input_token_cache_creation_5m",
                     "price": "12.5",
                     "price_unit": "每百万tokens",
@@ -64,6 +79,20 @@
                     "price": "0.5",
                     "price_unit": "每百万tokens",
                     "price_name": "显式缓存命中",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "input_token_batch_chat",
+                    "price": "10",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（Batch Chat)",
+                    "time_band": "standard"
+                  },
+                  {
+                    "type": "output_token_batch_chat",
+                    "price": "30",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出（Batch Chat)",
                     "time_band": "standard"
                   }
                 ],
@@ -9012,7 +9041,7 @@
           }
         ]
       },
-      "request_id": "94850a12-2b2f-990d-b4b4-fa2998e1d64a"
+      "request_id": "8cbe8fdc-669a-9708-b195-9312b2206519"
     },
     {
       "code": null,
@@ -9591,7 +9620,7 @@
           }
         ]
       },
-      "request_id": "54ae3719-3088-9ce5-a152-f8ae712c8a00"
+      "request_id": "912951a0-bb44-947e-8e8f-df49e2f2a891"
     }
   ]
 }
