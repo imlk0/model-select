@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T00:30:18.387208+00:00",
+  "updated_at": "2026-11-20T00:41:34.302375+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -12,6 +12,7 @@
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
         "kimi-k3.1-pro",
+        "kimi-k3.1-pro-prime",
         "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
@@ -36,6 +37,7 @@
       "positioning": "复杂编程与长程任务",
       "candidates": [
         "kimi-k3.1-pro",
+        "kimi-k3.1-pro-prime",
         "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
@@ -111,6 +113,7 @@
       "positioning": "高难度分析与复杂 Agent 任务",
       "candidates": [
         "kimi-k3.1-pro",
+        "kimi-k3.1-pro-prime",
         "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
@@ -135,6 +138,7 @@
       "positioning": "复杂编程与日常主力",
       "candidates": [
         "kimi-k3.1-pro",
+        "kimi-k3.1-pro-prime",
         "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
@@ -159,6 +163,7 @@
       "positioning": "日常开发，兼顾成本",
       "candidates": [
         "kimi-k3.1-pro",
+        "kimi-k3.1-pro-prime",
         "qwen4-max",
         "qwen3.8-max",
         "qwen3.8-max-0902",
