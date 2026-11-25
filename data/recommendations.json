@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T03:58:45.210667+00:00",
+  "updated_at": "2026-11-25T02:34:48.871671+00:00",
   "region": "华北2（北京）",
   "schema_version": 2,
   "standard_task": {
@@ -28,7 +28,7 @@
         "slug": "claude-fable-5-2-medium",
         "name": "Claude Fable 5.2 (Medium, Default Fallback)",
         "release_date": "2026-11-09",
-        "score": 56.4,
+        "score": 56.3,
         "url": "https://artificialanalysis.ai/models/claude-fable-5-2-medium"
       },
       "empty_reason": null
@@ -53,7 +53,7 @@
         "slug": "claude-opus-5-5-medium",
         "name": "Claude Opus 5.5 (Medium, Default Fallback)",
         "release_date": "2026-09-22",
-        "score": 48.2,
+        "score": 48.3,
         "url": "https://artificialanalysis.ai/models/claude-opus-5-5-medium"
       },
       "empty_reason": null
@@ -78,7 +78,7 @@
         "slug": "claude-sonnet-5-5-medium",
         "name": "Claude Sonnet 5.5 (Medium, Default Fallback)",
         "release_date": "2026-09-28",
-        "score": 30.8,
+        "score": 30.9,
         "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5-medium"
       },
       "empty_reason": null
@@ -154,7 +154,7 @@
         "slug": "gpt-6-2-sol-medium",
         "name": "GPT-6.2 Sol (Medium)",
         "release_date": "2026-11-17",
-        "score": 52.7,
+        "score": 52.4,
         "url": "https://artificialanalysis.ai/models/gpt-6-2-sol-medium"
       },
       "empty_reason": null
@@ -179,7 +179,7 @@
         "slug": "gpt-6-1-terra-medium",
         "name": "GPT-6.1 Terra (Medium)",
         "release_date": "2026-10-26",
-        "score": 38.2,
+        "score": 38.1,
         "url": "https://artificialanalysis.ai/models/gpt-6-1-terra-medium"
       },
       "empty_reason": null
