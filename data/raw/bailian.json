@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-11-26T01:49:31.383666+00:00",
+  "fetched_at": "2026-11-27T01:47:25.481791+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 111,
+        "total": 108,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -7693,70 +7693,6 @@
             "inference_offline_info": null
           },
           {
-            "model": "vanchin/deepseek-v3.2-think",
-            "name": "Vanchin/DeepSeek-V3.2-think",
-            "description": "DeepSeek-V3.2 是一款实现了高计算效率与卓越推理及代理（Agent）性能完美协调的模型。该模型建立在 DeepSeek-V3 的基础之上，通过引入 DeepSeek 稀疏注意力（DSA）、可扩展的强化学习框架以及大规模代理任务合成流水线等关键技术突破，推动了开源大语言模型的前沿发展。",
-            "features": [
-              "function-calling",
-              "structured-outputs",
-              "prefix-completion",
-              "cache"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "2",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "3",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "input_token_cache",
-                    "price": "0.2",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入（缓存命中）",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "deepseek",
-            "capabilities": [
-              "Reasoning",
-              "TG"
-            ],
-            "published_time": "2026-04-07 17:00:00",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Text"
-              ]
-            },
-            "model_info": {
-              "context_window": 131072,
-              "max_input_tokens": 98304,
-              "max_output_tokens": 65536,
-              "max_reasoning_tokens": null,
-              "reasoning_max_input_tokens": 98304,
-              "reasoning_max_output_tokens": 65536
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "vanchin",
-            "inference_offline_info": null
-          },
-          {
             "model": "tongyi-intent-detect-v3",
             "name": "意图分类模型",
             "description": "意图识别和槽位填充是对话系统中的基础任务。本模型实现了一个基于 API的意图（intent）和槽位参数（slots）联合预测。在一次模型输出中，同时完成多个指令API的返回和槽位参数的填充。返回的结果为标准json格式。",
@@ -7950,68 +7886,6 @@
             "inference_offline_info": null
           },
           {
-            "model": "vanchin/deepseek-v3.1-terminus",
-            "name": "Vanchin/DeepSeek-V3.1-Terminus",
-            "description": "DeepSeek-V3.1-Terminus 是 DeepSeek-V3.1 的更新版本，旨在保持模型原有核心能力的同时，针对用户反馈的问题进行了修复和优化。该版本的模型结构与 DeepSeek-V3 保持一致，并在特定领域进行了显著增强。",
-            "features": [
-              "function-calling",
-              "cache"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "4",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "12",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "input_token_cache",
-                    "price": "1.6",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入（缓存命中）",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "deepseek",
-            "capabilities": [
-              "TG",
-              "Reasoning"
-            ],
-            "published_time": "2026-04-07 16:57:08",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Text"
-              ]
-            },
-            "model_info": {
-              "context_window": 131072,
-              "max_input_tokens": 32768,
-              "max_output_tokens": 65536,
-              "max_reasoning_tokens": null,
-              "reasoning_max_input_tokens": 32768,
-              "reasoning_max_output_tokens": 65536
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "vanchin",
-            "inference_offline_info": null
-          },
-          {
             "model": "vanchin/deepseek-v3",
             "name": "Vanchin/DeepSeek-V3",
             "description": "DeepSeek-V3 由深度求索（DeepSeek）于 2024 年 12 月发布，是目前开源社区领先的混合专家（MoE）语言模型：总参数 671B，每个 token 仅激活 37B 参数。模型在 14.8 万亿高质量 tokens 上完成预训练，原生支持 128k 上下文。通过创新的无辅助损失负载均衡策略、多头潜在注意力（MLA）架构和 FP8 混合精度训练。",
@@ -8132,61 +8006,6 @@
               "max_reasoning_tokens": null,
               "reasoning_max_input_tokens": 98304,
               "reasoning_max_output_tokens": 32768
-            },
-            "equivalent_snapshot": null,
-            "inference_provider": "vanchin",
-            "inference_offline_info": null
-          },
-          {
-            "model": "vanchin/deepseek-ocr",
-            "name": "Vanchin/DeepSeek-OCR",
-            "description": "DeepSeek-OCR以 “探索视觉 - 文本压缩边界” 为核心目标，从大语言模型（LLM）视角重新定义视觉编码器的功能定位，为文档识别、图像转文本等高频场景提供了兼顾精度与效率的全新解决方案。",
-            "features": [
-              "structured-outputs"
-            ],
-            "prices": [
-              {
-                "prices": [
-                  {
-                    "type": "input_token",
-                    "price": "0.216",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输入",
-                    "time_band": "standard"
-                  },
-                  {
-                    "type": "output_token",
-                    "price": "0.216",
-                    "price_unit": "每百万tokens",
-                    "price_name": "输出",
-                    "time_band": "standard"
-                  }
-                ],
-                "range_name": "Default"
-              }
-            ],
-            "provider": "deepseek",
-            "capabilities": [
-              "VU",
-              "TG"
-            ],
-            "published_time": "2026-04-07 16:56:06",
-            "inference_metadata": {
-              "response_modality": [
-                "Text"
-              ],
-              "request_modality": [
-                "Text",
-                "Image"
-              ]
-            },
-            "model_info": {
-              "context_window": 8192,
-              "max_input_tokens": 8192,
-              "max_output_tokens": 8192,
-              "max_reasoning_tokens": null,
-              "reasoning_max_input_tokens": null,
-              "reasoning_max_output_tokens": null
             },
             "equivalent_snapshot": null,
             "inference_provider": "vanchin",
@@ -9034,20 +8853,7 @@
             "equivalent_snapshot": null,
             "inference_provider": "siliconflow",
             "inference_offline_info": null
-          }
-        ]
-      },
-      "request_id": "daab6516-e69a-9774-8255-b68b4a6e5bcc"
-    },
-    {
-      "code": null,
-      "message": null,
-      "success": true,
-      "output": {
-        "total": 111,
-        "page_no": 2,
-        "page_size": 100,
-        "models": [
+          },
           {
             "model": "siliconflow/deepseek-r1-0528",
             "name": "SiliconFlow DeepSeek-R1-0528",
@@ -9224,7 +9030,20 @@
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
             "inference_offline_info": null
-          },
+          }
+        ]
+      },
+      "request_id": "4658035a-b75b-9089-ae8f-57d8748f9f9a"
+    },
+    {
+      "code": null,
+      "message": null,
+      "success": true,
+      "output": {
+        "total": 108,
+        "page_no": 2,
+        "page_size": 100,
+        "models": [
           {
             "model": "ZHIPU/GLM-5.2",
             "name": "ZHIPU/GLM-5.2",
@@ -9732,7 +9551,7 @@
           }
         ]
       },
-      "request_id": "5a17b8b6-04e5-9d9e-8135-ee26b687039a"
+      "request_id": "8b0f6af7-e784-9609-829f-bbc798f7c0bc"
     }
   ]
 }
