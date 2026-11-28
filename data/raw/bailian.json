@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-11-27T01:47:25.481791+00:00",
+  "fetched_at": "2026-11-28T01:29:40.664102+00:00",
   "pages": [
     {
       "code": null,
       "message": null,
       "success": true,
       "output": {
-        "total": 108,
+        "total": 109,
         "page_no": 1,
         "page_size": 100,
         "models": [
@@ -8089,6 +8089,68 @@
             "inference_offline_info": null
           },
           {
+            "model": "Xing/Xing4.1-Preview",
+            "name": "Xing/Xing4.1-Preview",
+            "description": "让大模型从“会回答”升级为“会做事”的任务执行者。总参数 285B，单次激活 17B，基于全国产昇腾算力生态训练，是面向政企知识库、文档处理与数据分析等复杂任务场景深度优化的 Preview 档大模型。原生支持 1M 超长上下文，可高效处理长程 Agent 任务，支持多步骤规划、工具调用与复杂推理链路执行，保障长会话上下文下任务逻辑连贯、执行稳定。",
+            "features": [
+              "function-calling",
+              "structured-outputs",
+              "cache"
+            ],
+            "prices": [
+              {
+                "prices": [
+                  {
+                    "type": "input_token",
+                    "price": "1.5",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入",
+                    "time_band": null
+                  },
+                  {
+                    "type": "output_token",
+                    "price": "6",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输出",
+                    "time_band": null
+                  },
+                  {
+                    "type": "input_token_cache",
+                    "price": "0.03",
+                    "price_unit": "每百万tokens",
+                    "price_name": "输入（缓存命中）",
+                    "time_band": null
+                  }
+                ],
+                "range_name": "Default"
+              }
+            ],
+            "provider": "xing",
+            "capabilities": [
+              "TG"
+            ],
+            "published_time": "2026-11-27 10:00:00",
+            "inference_metadata": {
+              "response_modality": [
+                "Text"
+              ],
+              "request_modality": [
+                "Text"
+              ]
+            },
+            "model_info": {
+              "context_window": 1048576,
+              "max_input_tokens": 917504,
+              "max_output_tokens": 131072,
+              "max_reasoning_tokens": 131072,
+              "reasoning_max_input_tokens": 917504,
+              "reasoning_max_output_tokens": 131072
+            },
+            "equivalent_snapshot": null,
+            "inference_provider": "xing",
+            "inference_offline_info": null
+          },
+          {
             "model": "antdigital/Ling-3.1-flash",
             "name": "antdigital/Ling-3.1-flash",
             "description": "Ling-3.1-flash 拥有约 560B 总参数，每个 Token 激活约 25B 参数；模型上下文窗口上限为 1M，可容纳更长的文档、代码和任务历史。在研发过程中，我们围绕通用智能体、搜索、日常办公和软件研发等任务持续优化，并在医疗、金融和材料科学研究等场景持续提升模型能力。",
@@ -8969,7 +9031,20 @@
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
             "inference_offline_info": null
-          },
+          }
+        ]
+      },
+      "request_id": "3357d7e1-c940-9b49-9694-76ac296d412b"
+    },
+    {
+      "code": null,
+      "message": null,
+      "success": true,
+      "output": {
+        "total": 109,
+        "page_no": 2,
+        "page_size": 100,
+        "models": [
           {
             "model": "qwen-flash-character-2026-02-26",
             "name": "Qwen-Flash-Character-2026-02-26",
@@ -9030,20 +9105,7 @@
             "equivalent_snapshot": null,
             "inference_provider": "aliyun-bailian",
             "inference_offline_info": null
-          }
-        ]
-      },
-      "request_id": "4658035a-b75b-9089-ae8f-57d8748f9f9a"
-    },
-    {
-      "code": null,
-      "message": null,
-      "success": true,
-      "output": {
-        "total": 108,
-        "page_no": 2,
-        "page_size": 100,
-        "models": [
+          },
           {
             "model": "ZHIPU/GLM-5.2",
             "name": "ZHIPU/GLM-5.2",
@@ -9551,7 +9613,7 @@
           }
         ]
       },
-      "request_id": "8b0f6af7-e784-9609-829f-bbc798f7c0bc"
+      "request_id": "4eb88430-ed2a-9693-a5e9-877e8a0d5e8c"
     }
   ]
 }
